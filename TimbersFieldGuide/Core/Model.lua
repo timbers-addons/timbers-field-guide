@@ -23,11 +23,10 @@ local function isEntryAvailableInPhase(spell)
     local entryPhase = getEffectivePhase(spell)
     if entryPhase == nil then return true end
     if TFG.selectedPhase == "ALL" then return true end
-    local expansion = TFG.DATABASE_FILES[TFG.selectedExpansion]
     local selectedPhase = tonumber(TFG.selectedPhase)
-        or tonumber(expansion and expansion.currentPhase)
+        or tonumber(TFG.GetCurrentPhase(TFG.selectedExpansion))
     if not selectedPhase then
-        -- Incomplete phase data must favor showing the entry.
+        -- Unknown and completed versions must favor showing the entry.
         return true
     end
     return entryPhase <= selectedPhase

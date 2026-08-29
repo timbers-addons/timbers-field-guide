@@ -985,9 +985,9 @@ local function ensureTestFrame()
         end
         phaseDropdown:Show()
 
+        local currentPhase = TFG.GetCurrentPhase(TFG.selectedExpansion)
         if TFG.selectedPhase == nil then
-            local e = TFG.DATABASE_FILES[TFG.selectedExpansion]
-            TFG.selectedPhase = tonumber(e and e.currentPhase) or 1
+            TFG.selectedPhase = tonumber(currentPhase) or "ALL"
         end
 
         local sig = tostring(maxPhase)
@@ -1023,7 +1023,9 @@ local function ensureTestFrame()
         end
 
         UIDropDownMenu_SetSelectedValue(phaseDropdown, TFG.selectedPhase)
-        UIDropDownMenu_SetText(phaseDropdown, TFG.selectedPhase == "ALL" and "All Phases" or ("Phase " .. tostring(TFG.selectedPhase)))
+        UIDropDownMenu_SetText(phaseDropdown, TFG.selectedPhase == "ALL"
+            and "All Phases"
+            or ("Phase " .. tostring(TFG.selectedPhase)))
     end
 
     -- Position the dropdowns between the "Show Known" label and the search box,

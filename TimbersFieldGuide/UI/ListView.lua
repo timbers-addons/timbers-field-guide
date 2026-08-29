@@ -1733,10 +1733,7 @@ function frame:Relayout()
                         -- NOTE: Source/location/cost info is intentionally not shown on the main list tooltip.
                         -- It is shown only on the popup's recipe-source icon tooltip.
 
-                        local currentPhase = tonumber(
-                            TFG.DATABASE_FILES[TFG.selectedExpansion]
-                                and TFG.DATABASE_FILES[TFG.selectedExpansion].currentPhase
-                        )
+                        local currentPhase = tonumber(TFG.GetCurrentPhase(TFG.selectedExpansion))
                         local entryPhase = getEffectivePhase(data)
                         if isProfession and currentPhase and entryPhase and entryPhase > currentPhase then
                             GameTooltip:AddLine(" ")

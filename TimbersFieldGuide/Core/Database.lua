@@ -1,6 +1,6 @@
 local _, TFG = ...
 
--- TFG.selectedExpansion holds the internal *version key* (CLASSIC_ERA /
+-- TFG.selectedExpansion holds the internal *database key* (CLASSIC_ERA /
 -- BURNING_CRUSADE / WRATH_CLASSIC), not a display label. The field name is kept
 -- for now to avoid churn across the codebase.
 TFG.selectedExpansion = "CLASSIC_ERA" -- Default version
@@ -13,8 +13,18 @@ TFG.selectedPhase = nil
 
 TFG.DISCOVERY_BUCKET = 999
 
--- Detect client version
-if WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
+-- Select the database for the detected game version. Unknown future versions
+-- fall back by client family so their shared base data remains usable.
+local _, activeGameVersion
+if TFG.GetActiveGameVersion then
+    _, activeGameVersion = TFG.GetActiveGameVersion()
+end
+if not TFG.GetCurrentPhase then
+    TFG.GetCurrentPhase = function() return "ALL" end
+end
+if activeGameVersion then
+    TFG.selectedExpansion = activeGameVersion.databaseKey
+elseif WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
     TFG.selectedExpansion = "WRATH_CLASSIC"
 elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
     TFG.selectedExpansion = "BURNING_CRUSADE"
@@ -141,7 +151,6 @@ TFG.DATABASE_FILES = {
         key = "BURNING_CRUSADE",
         name = "The Burning Crusade",
         color = "|cFFCBD96B",
-        currentPhase = 2,
         files = {
             classes = {
                 druid = {
