@@ -1,8 +1,9 @@
 # Changelog
 
-## v2026.07.23 (2026-07-23)
+## v2026.08.29 (2026-08-29)
 
-
+- Updated current phase logic
+- Bumped TBC Anniversary to P3
 
 
 ## v2026.07.23 (2026-07-23)
