@@ -14,7 +14,12 @@ local buildSourceLine = TFG.BuildSourceLine
 local resolveQuestTitle = TFG.ResolveQuestTitle
 local MIDDOT = TFG.MIDDOT
 
--- ========================================================================== 
+-- Client-compat wrappers (see Core/Compat.lua); shadow the globals so the call
+-- sites below read unchanged.
+local GetItemInfo = TFG.GetItemInfo
+local GetItemQualityColor = TFG.GetItemQualityColor
+
+-- ==========================================================================
 -- Profession skill popup (product / recipe / materials)
 -- ==========================================================================
 

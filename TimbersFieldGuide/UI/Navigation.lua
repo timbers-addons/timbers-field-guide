@@ -187,12 +187,9 @@ local function getPlayerProfessions(vkey)
     for _, p in ipairs(available) do byName[p.name] = p end
 
     local out = {}
-    if GetNumSkillLines and GetSkillLineInfo then
-        for index = 1, GetNumSkillLines() do
-            local name, isHeader = GetSkillLineInfo(index)
-            if name and not isHeader and byName[name] then
-                out[#out + 1] = byName[name]
-            end
+    for _, skill in ipairs(TFG.GetPlayerSkillLines()) do
+        if byName[skill.name] then
+            out[#out + 1] = byName[skill.name]
         end
     end
     return out

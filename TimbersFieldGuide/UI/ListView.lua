@@ -97,6 +97,11 @@ local resolveQuestTitle = TFG.ResolveQuestTitle
 local getMaxExplicitPhase = TFG.GetMaxExplicitPhase
 local MIDDOT = TFG.MIDDOT
 
+-- Client-compat wrappers (see Core/Compat.lua); shadow the globals so the call
+-- sites below read unchanged.
+local GetSpellInfo = TFG.GetSpellInfo
+local GetItemInfo = TFG.GetItemInfo
+
 -- Store both current and inferred max cap for skills/professions.
 -- Classic Era PTR appears to return 0 for the "max" fields from GetSkillLineInfo,
 -- so we infer a reasonable cap from the current rank and expected tier table.
@@ -190,24 +195,17 @@ function TFG.RefreshPlayerState()
     clearTable(skillLevels)
     clearTable(skillCaps)
 
-    for i = 1, GetNumSkillLines() do
-        local skillName = select(1, GetSkillLineInfo(i))
-        local isHeader = select(2, GetSkillLineInfo(i))
-        local skillRank = select(4, GetSkillLineInfo(i))
-        -- Return ordering differs by client; on Classic Era PTR, the cap appears to be select(7).
-        local maybeCap = select(7, GetSkillLineInfo(i))
+    for _, skill in ipairs(TFG.GetPlayerSkillLines()) do
+        local key = normalizeSkillKey(skill.name)
+        local rank = tonumber(skill.rank or 0) or 0
+        skillLevels[key] = rank
 
-        if not isHeader and skillName then
-            local key = normalizeSkillKey(skillName)
-            local rank = tonumber(skillRank or 0) or 0
-            skillLevels[key] = rank
-
-            local maxRank = tonumber(maybeCap or 0) or 0
-            if maxRank <= 0 then
-                maxRank = inferProfessionCapFromRank(rank)
-            end
-            skillCaps[key] = maxRank
+        -- Classic Era PTR reports 0 for the cap; infer it from the rank then.
+        local maxRank = tonumber(skill.maxRank or 0) or 0
+        if maxRank <= 0 then
+            maxRank = inferProfessionCapFromRank(rank)
         end
+        skillCaps[key] = maxRank
     end
 end
 
@@ -529,9 +527,8 @@ TFG.GetProfessionName = getProfessionNameForCurrentView
 local function playerHasSkill(skillName)
     if not skillName or tostring(skillName) == "" then return false end
     local target = tostring(skillName):lower()
-    for i = 1, GetNumSkillLines() do
-        local name = select(1, GetSkillLineInfo(i))
-        if name and tostring(name):lower() == target then
+    for _, skill in ipairs(TFG.GetPlayerSkillLines()) do
+        if tostring(skill.name):lower() == target then
             return true
         end
     end
