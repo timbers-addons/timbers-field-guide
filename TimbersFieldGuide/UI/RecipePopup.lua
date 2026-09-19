@@ -723,6 +723,12 @@ local function ensureProfessionPopup()
                         titleText = (s.location and s.location ~= "") and tostring(s.location) or sourceTypeLabel(s)
                         card.title:SetTextColor(unpack(POPUP.body))
                     end
+                    -- "Trainer . Requires Tailoring (150)": this source asks for more skill
+                    -- than the recipe's own bracket.
+                    local skillText = TFG.FormatSourceSkill(s)
+                    if skillText and not hasIcon then
+                        titleText = titleText .. "  |cff808080" .. MIDDOT .. "|r  " .. skillText
+                    end
                     card.title:ClearAllPoints()
                     card.title:SetPoint("TOPLEFT", card, "TOPLEFT", textX, -7)
                     card.title:SetText(titleText)
@@ -745,6 +751,7 @@ local function ensureProfessionPopup()
                     if hasIcon and s.location and s.location ~= "" then
                         subSegs[#subSegs + 1] = tostring(s.location)
                     end
+                    if skillText and hasIcon then subSegs[#subSegs + 1] = skillText end
                     local goldText = TFG.FormatCost(tonumber(s.cost))
                     if goldText then subSegs[#subSegs + 1] = goldText end
                     local separator = "  |cff808080" .. MIDDOT .. "|r  "

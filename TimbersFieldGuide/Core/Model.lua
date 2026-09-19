@@ -172,6 +172,7 @@ local function normalizeSource(s)
         type = s.type,
         cost = s.cost,
         currencies = s.currencies,
+        skill = tonumber(s.skill),
         location = s.location,
         reputation = s.reputation,
         faction = s.faction,
@@ -223,10 +224,20 @@ local MIDDOT = "\194\183"  -- UTF-8 U+00B7, kept out of source as raw bytes
 -- Leads with the descriptive location (which already names the vendor/drop, so the
 -- faction is implied), falling back to the type word only when there is no
 -- location. Segments are joined by a muted middot.
+-- "Requires Tailoring (150)" for a source that asks for more skill than the
+-- recipe's own bracket (it can be learned earlier some other way). Nil otherwise.
+function TFG.FormatSourceSkill(s)
+    if not s.skill or s.skill <= 0 then return nil end
+    local profession = TFG.GetProfessionName and TFG.GetProfessionName() or nil
+    return ("Requires %s (%d)"):format(profession or "skill", s.skill)
+end
+
 local function buildSourceLine(s)
     local primary = (s.location and tostring(s.location) ~= "")
         and tostring(s.location) or sourceTypeLabel(s)
     local segs = { primary }
+    local skillText = TFG.FormatSourceSkill(s)
+    if skillText then segs[#segs + 1] = skillText end
     if s.cost and tonumber(s.cost) and tonumber(s.cost) > 0 then
         local costText = TFG.FormatCost(s.cost)
         if costText then segs[#segs + 1] = costText end
