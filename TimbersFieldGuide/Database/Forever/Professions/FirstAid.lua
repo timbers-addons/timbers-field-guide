@@ -3,18 +3,6 @@ local _, TFG = ...
 TFG.FIRST_AID_FOREVER = {
     [1] = {
         {
-            spell_id = 30021,
-            name = "Crystal Infused Bandage",
-            categories = { "Bandages" },
-            icon = "inv_misc_bandage_16",
-            product = { item_id = 23684, qty = 4 },
-            materials = {
-                { item_id = 23567, qty = 1 },
-                { item_id = 14047, qty = 10 },
-            },
-            levels = { 1, 300, 330, 360 },
-        },
-        {
             spell_id = 3275,
             name = "Linen Bandage",
             categories = { "Bandages" },
