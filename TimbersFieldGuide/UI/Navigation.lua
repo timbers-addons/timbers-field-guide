@@ -929,9 +929,9 @@ local function ensureTestFrame()
         return c
     end
 
-    -- Build the Category dropdown from the active profession database.
+    -- Build the Category dropdown from the active database.
     local function refreshCategoryDropdown()
-        if not TFG.IsProfessionView() then
+        if not TFG.HasCategoryFilter() then
             categoryDropdown:Hide()
             return
         end

@@ -390,20 +390,33 @@ end
 
 local function extractCategoriesFromDatabase(database)
     local set = {}
+    local counts, categorised = {}, 0
     local hasDiscoveries = false
     for _, spells in pairs(database or {}) do
         if type(spells) == "table" then
             for _, spell in ipairs(spells) do
                 if spell.categories and type(spell.categories) == "table" then
+                    categorised = categorised + 1
                     for _, cat in ipairs(spell.categories) do
                         if cat and cat ~= "" then
                             set[cat] = true
+                            counts[cat] = (counts[cat] or 0) + 1
                         end
                     end
                 elseif spell.category and spell.category ~= "" then
                     set[spell.category] = true
                 end
             end
+        end
+    end
+
+    -- A label on every categorised entry ("Pets" on the demon page, "Poisons" on the
+    -- poison page) filters nothing; keep it only when it is the sole category.
+    local distinct = 0
+    for _ in pairs(set) do distinct = distinct + 1 end
+    if distinct > 1 then
+        for cat, n in pairs(counts) do
+            if n == categorised then set[cat] = nil end
         end
     end
 
@@ -436,6 +449,13 @@ end
 TFG.IsProfessionView = isProfessionView
 function TFG.GetCategoryOptions()
     return extractCategoriesFromDatabase(TFG.activeDatabase)
+end
+-- Professions always filter by category; any other page does once its data
+-- has two or more to choose from (demons, pets, poisons).
+function TFG.HasCategoryFilter()
+    if isProfessionView() then return true end
+    local options = extractCategoriesFromDatabase(TFG.activeDatabase)
+    return #options > 2
 end
 function TFG.GetMaxPhase()
     return getMaxExplicitPhase(TFG.activeDatabase)
@@ -596,6 +616,7 @@ function frame:Relayout()
     local totalSpellsShown = 0
 
     local isProfession = isProfessionView()
+    local hasCategoryFilter = isProfession or TFG.HasCategoryFilter()
     local professionLevel = isProfession and getProfessionLevelForCurrentView() or 0
     local professionMaxCap = isProfession and getProfessionMaxCapForCurrentView() or 0
     local profName = isProfession and getProfessionNameForCurrentView() or nil
@@ -1227,7 +1248,7 @@ function frame:Relayout()
             return true, "syntheticUnlock"
         end
 
-        if isProfession and TFG.selectedCategory and TFG.selectedCategory ~= "ALL" then
+        if hasCategoryFilter and TFG.selectedCategory and TFG.selectedCategory ~= "ALL" then
             local isDiscovery = row.isDiscovery or levelRequired == TFG.DISCOVERY_BUCKET
             if TFG.selectedCategory == "DISCOVERIES" then
                 if not isDiscovery then return true, "category" end
