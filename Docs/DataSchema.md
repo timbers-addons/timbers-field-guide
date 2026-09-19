@@ -9,7 +9,7 @@ code ever disagree, the code wins and this file needs updating.
 
 ```
 Database/
-  <Expansion>/            ClassicEra, BurningCrusade
+  <Expansion>/            ClassicEra, BurningCrusade, Forever
     Classes/              one file per class, plus HunterPets, WarlockPets, RoguePoisons
     Professions/          one file per profession
     Skills/               WeaponSkills, Riding (BC only)
@@ -18,7 +18,22 @@ Database/
 Each file defines one global table on the addon namespace, named
 `TFG.<NAME>_<EXPANSION>`, e.g. `TFG.ALCHEMY_BURNING_CRUSADE`. New tables must
 be registered in `Core/Database.lua` (`TFG.DATABASE_FILES`) and the file added
-to the `.toc`, or they will never load.
+to that game's toc, or they will never load.
+
+There is one toc per client, and a client shows its own game only: names, icons
+and tooltips come from the running client, so another game's page would show
+this client's numbers under that game's heading.
+
+| Toc | Client | Loads |
+|---|---|---|
+| `TimbersFieldGuide_Vanilla.toc` | Classic Era, Hardcore, Season of Discovery | `Database/ClassicEra` |
+| `TimbersFieldGuide_TBC.toc` | TBC Anniversary | `Database/BurningCrusade` |
+| `TimbersFieldGuide.toc` | WoW: Forever | `Database/Forever` |
+
+The plain toc is Forever's because it is the only name that client is known to
+read. Everything outside `Database/` and the header (apart from `## Interface:`)
+must be identical in all three; `Tests/Validate.ps1` fails when they differ. A
+code file added to one toc has to be added to all of them.
 
 ## Common shape
 

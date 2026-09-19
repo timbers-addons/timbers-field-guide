@@ -20,13 +20,37 @@ function Get-RelativePath {
     return $Path.Substring($Root.Length + 1).Replace("\", "/")
 }
 
-$tocPath = Join-Path $Root "TimbersFieldGuide.toc"
-$tocLines = Get-Content -LiteralPath $tocPath |
-    Where-Object { $_ -and -not $_.StartsWith("#") }
-$tocFiles = $tocLines | ForEach-Object { $_.Replace("\", "/") }
-
-foreach ($relativePath in $tocFiles) {
-    Assert-True (Test-Path -LiteralPath (Join-Path $Root $relativePath)) "TOC references missing file: $relativePath"
+# One toc per client. A client shows its own game only, so each toc loads the
+# shared code plus its own game's data and nothing else. The plain toc is
+# Forever's: it is the only name that client is known to read.
+$tocGames = [ordered]@{
+    "TimbersFieldGuide.toc"         = "Forever"
+    "TimbersFieldGuide_Vanilla.toc" = "ClassicEra"
+    "TimbersFieldGuide_TBC.toc"     = "BurningCrusade"
+}
+$tocFiles = @()
+$tocShared = @{}
+$tocHeader = @{}
+foreach ($tocName in $tocGames.Keys) {
+    $tocPath = Join-Path $Root $tocName
+    Assert-True (Test-Path -LiteralPath $tocPath) "Missing toc: $tocName"
+    if (-not (Test-Path -LiteralPath $tocPath)) { continue }
+    $allLines = Get-Content -LiteralPath $tocPath
+    $files = $allLines | Where-Object { $_ -and -not $_.StartsWith("#") } | ForEach-Object { $_.Replace("\", "/") }
+    foreach ($relativePath in $files) {
+        Assert-True (Test-Path -LiteralPath (Join-Path $Root $relativePath)) "$tocName references missing file: $relativePath"
+        if ($relativePath -like "Database/*") {
+            Assert-True ($relativePath -like "Database/$($tocGames[$tocName])/*") "$tocName loads another game's data: $relativePath"
+        }
+    }
+    $tocShared[$tocName] = ($files | Where-Object { $_ -notlike "Database/*" }) -join "`n"
+    $tocHeader[$tocName] = ($allLines | Where-Object { $_.StartsWith("##") -and -not $_.StartsWith("## Interface:") }) -join "`n"
+    $tocFiles += $files
+}
+$firstToc = @($tocGames.Keys)[0]
+foreach ($tocName in $tocGames.Keys) {
+    Assert-True ($tocShared[$tocName] -eq $tocShared[$firstToc]) "$tocName loads different code files than $firstToc; a file added to one toc must be added to all."
+    Assert-True ($tocHeader[$tocName] -eq $tocHeader[$firstToc]) "$tocName has a different header (version, title, ...) than $firstToc."
 }
 
 $databaseFiles = Get-ChildItem -LiteralPath (Join-Path $Root "Database") -Recurse -Filter "*.lua"
@@ -57,6 +81,7 @@ $gameVersions = Get-Content -LiteralPath (Join-Path $Root "Core/GameVersions.lua
 Assert-True ($gameVersions -match 'TBC_ANNIVERSARY\s*=\s*\{[\s\S]*?currentPhase\s*=\s*\d+') "TBC Anniversary must declare a numeric currentPhase in Core/GameVersions.lua."
 Assert-True ($gameVersions -match 'FOREVER\s*=\s*\{[\s\S]*?interfaceMin\s*=\s*16000[\s\S]*?interfaceMax\s*=\s*16999') "Forever must be told from retail by its interface range in Core/GameVersions.lua."
 Assert-True ($databaseCoreWithoutComments -notmatch 'WOW_PROJECT_ID\s*==\s*WOW_PROJECT_MAINLINE') "Core/Database.lua must not treat every mainline client as Forever."
+Assert-True ($databaseCoreWithoutComments -match 'key\s*~=\s*TFG\.selectedExpansion\s+then\s+TFG\.DATABASE_FILES\[key\]\s*=\s*nil') "A client must only offer its own game: tooltips come from the running client, so another game's page would show wrong numbers."
 Assert-True ($databaseCore -match "DISCOVERY_BUCKET\s*=\s*999") "Discovery bucket constant must remain 999."
 Assert-True ($databaseCore -match 'shaman\s*=\s*\{[\s\S]*?color\s*=\s*TFG\.CLASS_COLORS\["PALADIN"\]') "Vanilla Shaman must retain the intentional Paladin color."
 Assert-True ($databaseCoreWithoutComments -notmatch '\{\s*name\s*=\s*"[^"]+"\s*,\s*file\s*=\s*TFG\.') "Selectable child views must define a stable key before name/file."
