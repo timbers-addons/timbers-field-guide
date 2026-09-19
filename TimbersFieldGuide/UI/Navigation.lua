@@ -70,17 +70,6 @@ local PROFESSION_ICONS = {
     Fishing = "Interface\\Icons\\Trade_Fishing",
 }
 
--- Versions exposed in the UI, in display order. WRATH_CLASSIC is intentionally
--- omitted until its data exists; adding a new version (e.g. Season of Discovery)
--- is a registry change, not a UI change.
-local VERSION_ORDER = { "CLASSIC_ERA", "BURNING_CRUSADE", "FOREVER" }
-local VERSION_ICONS = {
-    CLASSIC_ERA     = "Interface\\Icons\\INV_Misc_Map_01",
-    BURNING_CRUSADE = "Interface\\Icons\\Spell_Arcane_PortalShattrath",
-    FOREVER         = "Interface\\Icons\\INV_Misc_Map02",
-    WRATH_CLASSIC   = "Interface\\Icons\\Spell_Frost_FrostArmor02",
-}
-
 -- ==========================================================================
 -- Registry access helpers (single source of truth = TFG.DATABASE_FILES)
 -- ==========================================================================
@@ -154,15 +143,6 @@ local function getSkills(vkey)
                 out[#out + 1] = { key = ch.key, name = ch.name }
             end
         end
-    end
-    return out
-end
-
-local function getVersions()
-    local out = {}
-    for _, vk in ipairs(VERSION_ORDER) do
-        local v = TFG.DATABASE_FILES[vk]
-        if v then out[#out + 1] = { key = vk, name = v.name, icon = VERSION_ICONS[vk] or DEFAULT_ICON } end
     end
     return out
 end
@@ -566,14 +546,9 @@ local function ensureTestFrame()
     expansionTab.inactiveColor = COLORS.chromeTab
     expansionTab.hoverColor = COLORS.chromeTabHover
     expansionTab:SetPoint("TOPRIGHT", closeTab, "TOPLEFT", -TAB_GAP, 0)
-    do
-        local baseSetSelected = expansionTab.SetSelected
-        function expansionTab:SetSelected(selected)
-            baseSetSelected(self, selected)
-            self:SetHeight(selected and (TAB_HEIGHT + 1) or TAB_HEIGHT)
-            self:SetFrameLevel(selected and (body:GetFrameLevel() + 5) or (body:GetFrameLevel() + 1))
-        end
-    end
+    -- A label, not a button: it names the game whose data this client shows.
+    expansionTab:SetSelected(false)
+    expansionTab:EnableMouse(false)
 
     local secondaryBar = CreateFrame("Frame", nil, body)
     secondaryBar:SetPoint("TOPLEFT", 8, -8)
@@ -891,7 +866,6 @@ local function ensureTestFrame()
         childKey = "abilities",
         profession = nil,
         skill = nil,
-        returnPage = nil,
         unavailablePage = nil,
         searchText = "",
     }
@@ -905,17 +879,6 @@ local function ensureTestFrame()
 
     local function isDetailMode(mode)
         return mode == "class" or mode == "profession" or mode == "skill"
-    end
-
-    local function snapshotPage()
-        local s = frame.state
-        if s.mode == "unavailable" and s.unavailablePage then
-            return s.unavailablePage
-        end
-        if isDetailMode(s.mode) then
-            return { mode = s.mode, classKey = s.classKey, childKey = s.childKey, profession = s.profession, skill = s.skill }
-        end
-        return nil
     end
 
     local function applyEngineSelection()
@@ -1207,9 +1170,6 @@ local function ensureTestFrame()
         TFG.searchText = ""
         searchInput:SetText("")
 
-        if mode == "expansions" and frame.state.mode ~= "expansions" then
-            frame.state.returnPage = snapshotPage()
-        end
         frame.state.unavailablePage = nil
 
         if isDetailMode(mode) then
@@ -1250,29 +1210,6 @@ local function ensureTestFrame()
 
         frame.state.mode = mode
         render()
-    end
-
-    local function switchVersion(vkey)
-        if not TFG.DATABASE_FILES[vkey] then return end
-        TFG.selectedExpansion = vkey
-        local target = frame.state.returnPage or { mode = "class", classKey = getPlayerClass(), childKey = "abilities" }
-        frame.state.returnPage = nil
-
-        if pageExistsInVersion(vkey, target) then
-            if target.mode == "class" then
-                selectPage("class", target.classKey, target.childKey)
-            elseif target.mode == "profession" then
-                selectPage("profession", target.profession)
-            elseif target.mode == "skill" then
-                selectPage("skill", target.skill)
-            else
-                selectPage(target.mode)
-            end
-        else
-            frame.state.mode = "unavailable"
-            frame.state.unavailablePage = target
-            render()
-        end
     end
 
     local function renderTopTabs()
@@ -1364,11 +1301,9 @@ local function ensureTestFrame()
     local function createDirectoryCard(texture, titleText, subtitleText, onClick, classKey, options)
         options = options or {}
         local selected = options.selected
-        local isExpansionCard = options.cardStyle == "expansion"
-        local isExpansionSelected = isExpansionCard and selected
-        local baseColor = isExpansionSelected and COLORS.expansionCardSelected or (isExpansionCard and COLORS.expansionCard or (selected and COLORS.cardSelected or COLORS.card))
+        local baseColor = selected and COLORS.cardSelected or COLORS.card
         local baseBorder = selected and COLORS.borderBright or COLORS.border
-        local hoverColor = isExpansionCard and COLORS.cardHover or (selected and COLORS.contentTabHover or COLORS.cardHover)
+        local hoverColor = selected and COLORS.contentTabHover or COLORS.cardHover
         local hoverBorder = COLORS.borderBright
 
         local card = CreateFrame("Button", nil, scrollContent, "BackdropTemplate")
@@ -1390,7 +1325,7 @@ local function ensureTestFrame()
         subtitle:SetWidth(198)
         subtitle:SetJustifyH("LEFT")
         subtitle:SetText(subtitleText or "Open page")
-        subtitle:SetTextColor(unpack(isExpansionSelected and COLORS.textSystemYellow or COLORS.textLight))
+        subtitle:SetTextColor(unpack(COLORS.textLight))
 
         if selected then
             local selectedMark = card:CreateTexture(nil, "OVERLAY")
@@ -1432,14 +1367,14 @@ local function ensureTestFrame()
         end
         local title = subject .. " isn't available in " .. vname
         local body = "There's no data for " .. subject .. " in " .. vname ..
-            ". Choose another version, or pick a different page."
+            ". Pick a different page."
         return icon, title, body, classKey
     end
 
     local function renderDirectoryPage()
         clearControls(frame.directoryControls)
         local mode = frame.state.mode
-        local isDirectory = mode == "about" or mode == "expansions" or mode == "unavailable"
+        local isDirectory = mode == "about" or mode == "unavailable"
             or mode == "classes" or mode == "professions" or mode == "skills"
         local showAbout = mode == "about"
         local showUnavailable = mode == "unavailable"
@@ -1478,22 +1413,7 @@ local function ensureTestFrame()
         end
 
         local entries = {}
-        if mode == "expansions" then
-            frame.pageHeading:SetText("Game Versions")
-            frame.pageDescription:SetText("Choose which game version this guide should present. Current selection: " .. versionName(TFG.selectedExpansion) .. ".")
-            for _, version in ipairs(getVersions()) do
-                local vkey = version.key
-                local isCurrent = TFG.selectedExpansion == vkey
-                entries[#entries + 1] = {
-                    icon = version.icon,
-                    title = version.name,
-                    subtitle = isCurrent and "Current version" or "Switch the guide to this version",
-                    selected = isCurrent,
-                    cardStyle = "expansion",
-                    onClick = function() switchVersion(vkey) end,
-                }
-            end
-        elseif mode == "classes" then
+        if mode == "classes" then
             frame.pageHeading:SetText("Classes")
             frame.pageDescription:SetText("Choose a class to open its abilities and related subpages.")
             for _, class in ipairs(getClasses(TFG.selectedExpansion)) do
@@ -1536,7 +1456,7 @@ local function ensureTestFrame()
         for index, entry in ipairs(entries) do
             local column = (index - 1) % 3
             local row = math.floor((index - 1) / 3)
-            local card = createDirectoryCard(entry.icon, entry.title, entry.subtitle, entry.onClick, entry.classKey, { selected = entry.selected, cardStyle = entry.cardStyle })
+            local card = createDirectoryCard(entry.icon, entry.title, entry.subtitle, entry.onClick, entry.classKey, { selected = entry.selected })
             card:SetPoint("TOPLEFT", 18 + (column * 310), -92 - (row * 96))
         end
 
@@ -1616,10 +1536,6 @@ local function ensureTestFrame()
         frame.titleTab:SetSelected(mode == "about")
         frame.expansionTab.label:SetText(versionName(TFG.selectedExpansion))
         frame.expansionTab:SetWidth(math.max(88, frame.expansionTab.label:GetStringWidth() + (TAB_TEXT_PADDING * 2)))
-        frame.expansionTab:SetSelected(mode == "expansions")
-        frame.expansionTab:SetScript("OnClick", function()
-            selectPage("expansions")
-        end)
 
         renderTopTabs()
         renderSecondaryTabs()

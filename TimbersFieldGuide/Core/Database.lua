@@ -378,6 +378,32 @@ TFG.DATABASE_FILES = {
 }
 
 
+-- A client shows its own game only. Names, icons and tooltips come from the
+-- running client, so another game's page would show this client's numbers under
+-- that game's heading (Forever kept Battle Shout's spell ids and changed what
+-- they do). Each client's toc loads only its own game's data to match.
+for key in pairs(TFG.DATABASE_FILES) do
+    if key ~= TFG.selectedExpansion then TFG.DATABASE_FILES[key] = nil end
+end
+
+-- Whether any data table of a registry entry was loaded by the toc.
+local function hasLoadedData(node)
+    for key, value in pairs(node) do
+        if key == "file" then return true end
+        if type(value) == "table" and hasLoadedData(value) then return true end
+    end
+    return false
+end
+
+-- A client that read another client's toc has the code and none of its data.
+-- Say so instead of opening an empty guide.
+local ownGame = TFG.DATABASE_FILES[TFG.selectedExpansion]
+if ownGame and not hasLoadedData(ownGame.files or {}) then
+    TFG.dataMissing = true
+    print(("|cffff6060Timber's Field Guide:|r no %s data was loaded. The game read a .toc file meant for another version of WoW; please report this with your game version."):format(
+        tostring(ownGame.name)))
+end
+
 local function normalizeChildKey(name)
     return tostring(name or ""):lower():gsub("[^%w]+", "-"):gsub("^%-+", ""):gsub("%-+$", "")
 end
