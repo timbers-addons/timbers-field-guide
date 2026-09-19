@@ -3,18 +3,6 @@ local _, TFG = ...
 TFG.FISHING_FOREVER = {
     [1] = {
         {
-            spell_id = 43308,
-            name = "Find Fish",
-            icon = "inv_misc_fish_02",
-            levels = { 1, 1, 1, 1 },
-        },
-        {
-            spell_id = 1278067,
-            name = "Bait and Tackle",
-            icon = "inv_misc_enggizmos_39",
-            levels = { 1 },
-        },
-        {
             spell_id = 7620,
             name = "Fishing",
             categories = { "Profession Training" },
@@ -260,6 +248,19 @@ TFG.FISHING_FOREVER = {
                     quest_id = 10037,
                 },
             },
+        },
+    },
+    [980] = {
+        {
+            spell_id = 43308,
+            name = "Find Fish",
+            icon = "inv_misc_fish_02",
+            levels = { 0, 1, 1, 1 },
+        },
+        {
+            spell_id = 1278067,
+            name = "Bait and Tackle",
+            icon = "inv_misc_enggizmos_39",
         },
     },
 }

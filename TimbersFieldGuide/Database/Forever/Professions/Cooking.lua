@@ -50,19 +50,6 @@ TFG.COOKING_FOREVER = {
             levels = { 1, 45, 65, 85 },
         },
         {
-            spell_id = 1255241,
-            name = "Cleansing Stew",
-            categories = { "Everyday Meals" },
-            icon = "inv_misc_frostystew",
-            product = { item_id = 252683, qty = 1 },
-            materials = {
-                { item_id = 252948, qty = 1 },
-                { item_id = 5471, qty = 1 },
-                { item_id = 12207, qty = 1 },
-            },
-            levels = { 1 },
-        },
-        {
             spell_id = 15935,
             name = "Crispy Bat Wing",
             categories = { "Intellect Food" },
@@ -79,17 +66,6 @@ TFG.COOKING_FOREVER = {
                 { item_id = 2678, qty = 1 },
             },
             levels = { 1, 45, 65, 85 },
-        },
-        {
-            spell_id = 1270632,
-            name = "Critter Cookie",
-            categories = { "Miscellaneous Cuisines" },
-            icon = "inv_misc_food_150_cookie",
-            product = { item_id = 263507, qty = 1 },
-            materials = {
-                { item_id = 10284, qty = 5 },
-            },
-            levels = { 1, 80, 82, 85 },
         },
         {
             spell_id = 21143,
@@ -160,17 +136,6 @@ TFG.COOKING_FOREVER = {
                 { item_id = 6303, qty = 1 },
             },
             levels = { 1, 45, 65, 85 },
-        },
-        {
-            spell_id = 1247741,
-            name = "Spinefin Halibut",
-            categories = { "Fisherman's Delights" },
-            icon = "inv_misc_fish_22",
-            product = { item_id = 8957, qty = 1 },
-            materials = {
-                { item_id = 8959, qty = 1 },
-            },
-            levels = { 1, 210, 215, 220 },
         },
         {
             spell_id = 2550,
@@ -2525,6 +2490,42 @@ TFG.COOKING_FOREVER = {
                 { item_id = 3713, qty = 4 },
             },
             levels = { 300, 300, 300, 300 },
+        },
+    },
+    [980] = {
+        {
+            spell_id = 1255241,
+            name = "Cleansing Stew",
+            categories = { "Everyday Meals" },
+            icon = "inv_misc_frostystew",
+            product = { item_id = 252683, qty = 1 },
+            materials = {
+                { item_id = 252948, qty = 1 },
+                { item_id = 5471, qty = 1 },
+                { item_id = 12207, qty = 1 },
+            },
+        },
+        {
+            spell_id = 1270632,
+            name = "Critter Cookie",
+            categories = { "Miscellaneous Cuisines" },
+            icon = "inv_misc_food_150_cookie",
+            product = { item_id = 263507, qty = 1 },
+            materials = {
+                { item_id = 10284, qty = 5 },
+            },
+            levels = { 0, 80, 82, 85 },
+        },
+        {
+            spell_id = 1247741,
+            name = "Spinefin Halibut",
+            categories = { "Fisherman's Delights" },
+            icon = "inv_misc_fish_22",
+            product = { item_id = 8957, qty = 1 },
+            materials = {
+                { item_id = 8959, qty = 1 },
+            },
+            levels = { 0, 210, 215, 220 },
         },
     },
 }

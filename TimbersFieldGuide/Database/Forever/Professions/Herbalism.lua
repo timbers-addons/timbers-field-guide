@@ -3,13 +3,6 @@ local _, TFG = ...
 TFG.HERBALISM_FOREVER = {
     [1] = {
         {
-            spell_id = 1278062,
-            name = "Gardening",
-            categories = { "Camping" },
-            icon = "inv_misc_shovel_01",
-            levels = { 1 },
-        },
-        {
             spell_id = 2383,
             name = "Find Herbs",
             icon = "inv_misc_flower_02",
@@ -384,6 +377,14 @@ TFG.HERBALISM_FOREVER = {
             categories = { "Gathered Herbs" },
             icon = "inv_misc_herb_blacklotus",
             levels = { 300, 325, 362, 400 },
+        },
+    },
+    [980] = {
+        {
+            spell_id = 1278062,
+            name = "Gardening",
+            categories = { "Camping" },
+            icon = "inv_misc_shovel_01",
         },
     },
 }

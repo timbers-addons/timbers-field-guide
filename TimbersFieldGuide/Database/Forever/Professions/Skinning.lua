@@ -3,13 +3,6 @@ local _, TFG = ...
 TFG.SKINNING_FOREVER = {
     [1] = {
         {
-            spell_id = 1278068,
-            name = "Tanning",
-            categories = { "Camping" },
-            icon = "10prof_table_leatherworking01",
-            levels = { 1 },
-        },
-        {
             spell_id = 8613,
             name = "Skinning",
             categories = { "Profession Training" },
@@ -133,6 +126,14 @@ TFG.SKINNING_FOREVER = {
                 { item_id = 3575, qty = 1 },
             },
             levels = { 300, 300, 300, 300 },
+        },
+    },
+    [980] = {
+        {
+            spell_id = 1278068,
+            name = "Tanning",
+            categories = { "Camping" },
+            icon = "10prof_table_leatherworking01",
         },
     },
 }
