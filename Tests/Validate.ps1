@@ -53,7 +53,8 @@ foreach ($reference in $references) {
     Assert-True $definitions.ContainsKey($reference) "Database registry reference has no definition: TFG.$reference"
 }
 
-Assert-True ($databaseCore -match "currentPhase\s*=\s*2") "TBC currentPhase must default to 2."
+$gameVersions = Get-Content -LiteralPath (Join-Path $Root "Core/GameVersions.lua") -Raw
+Assert-True ($gameVersions -match 'TBC_ANNIVERSARY\s*=\s*\{[\s\S]*?currentPhase\s*=\s*\d+') "TBC Anniversary must declare a numeric currentPhase in Core/GameVersions.lua."
 Assert-True ($databaseCore -match "DISCOVERY_BUCKET\s*=\s*999") "Discovery bucket constant must remain 999."
 Assert-True ($databaseCore -match 'shaman\s*=\s*\{[\s\S]*?color\s*=\s*TFG\.CLASS_COLORS\["PALADIN"\]') "Vanilla Shaman must retain the intentional Paladin color."
 Assert-True ($databaseCoreWithoutComments -notmatch '\{\s*name\s*=\s*"[^"]+"\s*,\s*file\s*=\s*TFG\.') "Selectable child views must define a stable key before name/file."
