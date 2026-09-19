@@ -22,6 +22,15 @@ SlashCmdList["TFG"] = function(msg)
         end
     end
 
+    -- Optional window button controls:
+    --   /tfg button <character|spellbook> [show|hide]
+    if TFG.FrameButtons and TFG.FrameButtons.HandleSlash then
+        local ok, handled = pcall(function() return TFG.FrameButtons:HandleSlash(input) end)
+        if ok and handled then
+            return
+        end
+    end
+
     if not TFG.frame then
         print("TFG: frame not created yet")
         return

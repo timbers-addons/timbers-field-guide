@@ -37,6 +37,28 @@ function TFG.GetPlayerSkillLines()
     return out
 end
 
+-- WoW: Forever's character window has a column of side tabs down its right edge
+-- (CharacterFrame.ModeTabs); no other client does. Returns the tab container,
+-- its ordered tab list and the template the tabs are built from, or nil.
+function TFG.GetCharacterSideTabs()
+    local modeTabs = CharacterFrame and CharacterFrame.ModeTabs
+    if modeTabs and modeTabs.Tabs then
+        return modeTabs, modeTabs.Tabs, "LargeSideTabButtonTemplate"
+    end
+end
+
+-- The retail-engine spellbook lives in a load-on-demand Blizzard addon and
+-- keeps its category tabs in a tab system along the top. Returns the spellbook
+-- frame and that tab system, or nil (not loaded yet, or a pre-Cata client).
+TFG.SPELLBOOK_ADDON = "Blizzard_PlayerSpells"
+
+function TFG.GetSpellBookTabs()
+    local book = PlayerSpellsFrame and PlayerSpellsFrame.SpellBookFrame
+    if book and book.CategoryTabSystem then
+        return book, book.CategoryTabSystem
+    end
+end
+
 -- Newer engines moved spell/item lookups under C_Spell / C_Item and removed
 -- the globals. Keep the old positional return shape so call sites are unchanged.
 function TFG.GetSpellInfo(spell)

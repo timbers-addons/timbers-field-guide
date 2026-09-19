@@ -103,4 +103,5 @@ UI/RecipePopup.lua
 UI/Navigation.lua
 Launchers/Keybind.lua
 Launchers/Minimap.lua
+Launchers/FrameButtons.lua
 Launchers/Slash.lua
