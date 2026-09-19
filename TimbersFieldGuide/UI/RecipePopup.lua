@@ -170,6 +170,45 @@ local function ensureProfessionPopup()
         card.phaseTag:SetWordWrap(false)
         card.phaseTag:Hide()
 
+        -- Quest layout: the quest title in a larger font, the giver and place under
+        -- it, and the reward recipe in a box of its own (absent when the quest
+        -- teaches the spell outright).
+        card.questTitle = card:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+        card.questTitle:SetJustifyH("LEFT")
+        card.questTitle:SetTextColor(1, 0.82, 0)
+        card.questTitle:SetWordWrap(false)
+        do
+            -- A size of its own rather than a named font object: those differ per client.
+            local file, _, flags = card.questTitle:GetFont()
+            if file then card.questTitle:SetFont(file, 14, flags) end
+        end
+        card.questTitle:Hide()
+
+        -- The yellow "quest available" exclamation mark.
+        card.questIcon = card:CreateTexture(nil, "OVERLAY")
+        card.questIcon:SetTexture("Interface\\GossipFrame\\AvailableQuestIcon")
+        card.questIcon:SetSize(16, 16)
+        card.questIcon:Hide()
+
+        card.kindTag = card:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+        card.kindTag:SetJustifyH("RIGHT")
+        card.kindTag:SetTextColor(unpack(POPUP.muted))
+        card.kindTag:SetText("QUEST")
+        card.kindTag:Hide()
+
+        card.reward = CreateFrame("Frame", nil, card, "BackdropTemplate")
+        card.reward:SetBackdrop({
+            bgFile = "Interface\\Buttons\\WHITE8X8",
+            edgeFile = "Interface\\Buttons\\WHITE8X8",
+            edgeSize = 1,
+        })
+        card.reward:SetBackdropColor(0, 0, 0, 0.35)
+        card.reward:SetBackdropBorderColor(unpack(POPUP.cardBorder))
+        card.reward:Hide()
+        card.rewardName = card.reward:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+        card.rewardName:SetJustifyH("LEFT")
+        card.rewardName:SetWordWrap(false)
+
         self.sourceCards[index] = card
         return card
     end
@@ -521,97 +560,196 @@ local function ensureProfessionPopup()
                 card:ClearAllPoints()
                 card:SetPoint("TOPLEFT", self, "TOPLEFT", xPad, cursorY)
                 card:SetPoint("TOPRIGHT", self, "TOPRIGHT", -xPad, cursorY)
-                card:SetHeight(cardH)
-
                 local hasIcon = (s.item_id and s.item_id > 0)
-                local textX
-                if hasIcon then
-                    local tex = select(10, GetItemInfo(s.item_id)) or "Interface/ICONS/INV_Scroll_03"
-                    card.icon.tex:SetTexture(tex)
-                    card.icon.itemId = s.item_id
-                    card.icon:ClearAllPoints()
-                    card.icon:SetPoint("LEFT", card, "LEFT", 7, 0)
-                    card.icon:Show()
-                    textX = 7 + 32 + 10
-                else
-                    card.icon.itemId = nil
-                    card.icon:Hide()
-                    textX = 10
-                end
+                local thisH = cardH
 
-                -- Title: recipe item name (quality coloured), else the source type.
-                local titleText
-                if hasIcon then
-                    local nm, _, quality = GetItemInfo(s.item_id)
-                    titleText = nm or "Recipe"
-                    if quality then
-                        local qr, qg, qb = GetItemQualityColor(quality)
-                        card.title:SetTextColor(qr, qg, qb)
+                if s.type == "Quest" then
+                    card.title:Hide()
+                    card.icon:SetSize(32, 32)
+
+                    -- Row 1: quest marker, your-faction square, quest title, kind tag.
+                    card.questIcon:ClearAllPoints()
+                    card.questIcon:SetPoint("LEFT", card, "TOPLEFT", 8, -15)
+                    card.questIcon:Show()
+                    local titleX = 8 + 16 + 4
+                    if s.faction ~= nil then
+                        card.square:ClearAllPoints()
+                        card.square:SetPoint("LEFT", card, "TOPLEFT", titleX, -15)
+                        if s.faction == "Horde" then
+                            card.square:SetColorTexture(unpack(POPUP.horde))
+                        else
+                            card.square:SetColorTexture(unpack(POPUP.alliance))
+                        end
+                        card.square:Show()
+                        titleX = titleX + 12
                     else
+                        card.square:Hide()
+                    end
+                    card.questTitle:ClearAllPoints()
+                    card.questTitle:SetPoint("TOPLEFT", card, "TOPLEFT", titleX, -7)
+                    card.questTitle:SetText(resolveQuestTitle(s) or "Quest")
+                    card.questTitle:Show()
+                    card.kindTag:ClearAllPoints()
+                    card.kindTag:SetPoint("TOPRIGHT", card, "TOPRIGHT", -10, -9)
+                    card.kindTag:Show()
+                    local rowRight = xPad + titleX + card.questTitle:GetStringWidth() + 16 + card.kindTag:GetStringWidth() + 10
+                    if s.phase and s.phase > 1 then
+                        card.phaseTag:ClearAllPoints()
+                        card.phaseTag:SetPoint("TOPRIGHT", card.kindTag, "TOPLEFT", -8, 0)
+                        card.phaseTag:SetText("Phase " .. tostring(s.phase))
+                        card.phaseTag:Show()
+                        rowRight = rowRight + 8 + card.phaseTag:GetStringWidth()
+                    else
+                        card.phaseTag:Hide()
+                    end
+                    contentRight = math.max(contentRight, rowRight)
+
+                    -- Row 2: who gives it and where.
+                    local y = -28
+                    card.sub:ClearAllPoints()
+                    card.sub:SetPoint("TOPLEFT", card, "TOPLEFT", 10, y)
+                    if s.location and s.location ~= "" then
+                        card.sub:SetText(tostring(s.location))
+                        contentRight = math.max(contentRight, xPad + 10 + card.sub:GetStringWidth() + 10)
+                        y = y - 16
+                    else
+                        card.sub:SetText("")
+                    end
+
+                    -- Row 3: the recipe the quest hands over, in a box of its own.
+                    if hasIcon then
+                        local name, _, quality = GetItemInfo(s.item_id)
+                        card.reward:ClearAllPoints()
+                        card.reward:SetPoint("TOPLEFT", card, "TOPLEFT", 8, y - 2)
+                        card.reward:SetPoint("TOPRIGHT", card, "TOPRIGHT", -8, y - 2)
+                        card.reward:SetHeight(40)
+                        card.reward:Show()
+                        card.icon.tex:SetTexture(select(10, GetItemInfo(s.item_id)) or "Interface/ICONS/INV_Scroll_03")
+                        card.icon.itemId = s.item_id
+                        card.icon:ClearAllPoints()
+                        card.icon:SetPoint("LEFT", card.reward, "LEFT", 4, 0)
+                        card.icon:SetFrameLevel(card.reward:GetFrameLevel() + 1)
+                        card.icon:Show()
+                        card.rewardName:ClearAllPoints()
+                        card.rewardName:SetPoint("LEFT", card.reward, "LEFT", 4 + 32 + 8, 0)
+                        card.rewardName:SetText(name or "Recipe")
+                        if quality then
+                            local qr, qg, qb = GetItemQualityColor(quality)
+                            card.rewardName:SetTextColor(qr, qg, qb)
+                        else
+                            card.rewardName:SetTextColor(unpack(POPUP.body))
+                        end
+                        contentRight = math.max(contentRight, xPad + 8 + 4 + 32 + 8 + card.rewardName:GetStringWidth() + 8 + 8)
+                        y = y - 2 - 40
+                    else
+                        card.reward:Hide()
+                        card.icon:Hide()
+                        card.icon.itemId = nil
+                    end
+                    thisH = -y + 8
+                else
+                    card.title:Show()
+                    card.questTitle:Hide()
+                    card.questIcon:Hide()
+                    card.kindTag:Hide()
+                    card.reward:Hide()
+                    card.icon:SetSize(32, 32)
+
+                    local textX
+                    if hasIcon then
+                        local tex = select(10, GetItemInfo(s.item_id)) or "Interface/ICONS/INV_Scroll_03"
+                        card.icon.tex:SetTexture(tex)
+                        card.icon.itemId = s.item_id
+                        card.icon:ClearAllPoints()
+                        card.icon:SetPoint("LEFT", card, "LEFT", 7, 0)
+                        card.icon:Show()
+                        textX = 7 + 32 + 10
+                    else
+                        card.icon.itemId = nil
+                        card.icon:Hide()
+                        textX = 10
+                    end
+
+                    -- Title: recipe item name (quality coloured), else the source type.
+                    local titleText
+                    if hasIcon then
+                        local nm, _, quality = GetItemInfo(s.item_id)
+                        titleText = nm or "Recipe"
+                        if quality then
+                            local qr, qg, qb = GetItemQualityColor(quality)
+                            card.title:SetTextColor(qr, qg, qb)
+                        else
+                            card.title:SetTextColor(unpack(POPUP.body))
+                        end
+                    else
+                        titleText = (s.location and s.location ~= "") and tostring(s.location) or sourceTypeLabel(s)
                         card.title:SetTextColor(unpack(POPUP.body))
                     end
-                else
-                    titleText = (s.location and s.location ~= "") and tostring(s.location) or sourceTypeLabel(s)
-                    card.title:SetTextColor(unpack(POPUP.body))
-                end
-                card.title:ClearAllPoints()
-                card.title:SetPoint("TOPLEFT", card, "TOPLEFT", textX, -7)
-                card.title:SetText(titleText)
-                local titleRight = xPad + textX + card.title:GetStringWidth() + 8
+                    card.title:ClearAllPoints()
+                    card.title:SetPoint("TOPLEFT", card, "TOPLEFT", textX, -7)
+                    card.title:SetText(titleText)
+                    local titleRight = xPad + textX + card.title:GetStringWidth() + 8
 
-                -- Phase tag: right-aligned on the title row when later than launch.
-                if s.phase and s.phase > 1 then
-                    card.phaseTag:ClearAllPoints()
-                    card.phaseTag:SetPoint("TOPRIGHT", card, "TOPRIGHT", -10, -7)
-                    card.phaseTag:SetText("Phase " .. tostring(s.phase))
-                    card.phaseTag:Show()
-                    titleRight = titleRight + 12 + card.phaseTag:GetStringWidth() + 2
-                else
-                    card.phaseTag:Hide()
-                end
-                contentRight = math.max(contentRight, titleRight)
-
-                -- Sub line: location . cost (+ quest title) and a faction square.
-                local subSegs = {}
-                if hasIcon and s.location and s.location ~= "" then
-                    subSegs[#subSegs + 1] = tostring(s.location)
-                end
-                if s.cost and tonumber(s.cost) and tonumber(s.cost) > 0 then
-                    local costText = TFG.FormatCost(s.cost)
-                    if costText then subSegs[#subSegs + 1] = costText end
-                end
-                local subText = table.concat(subSegs, "  |cff808080" .. MIDDOT .. "|r  ")
-                if s.type == "Quest" then
-                    local qt = resolveQuestTitle(s)
-                    if qt then
-                        subText = (subText ~= "" and (subText .. "  |cff808080" .. MIDDOT .. "|r  ") or "")
-                            .. "|cffffd200" .. qt .. "|r"
-                    end
-                end
-
-                local showSquare = (s.faction ~= nil)
-                local subX = textX + (showSquare and 12 or 0)
-                if showSquare then
-                    card.square:ClearAllPoints()
-                    card.square:SetPoint("LEFT", card, "TOPLEFT", textX, -27)
-                    if s.faction == "Horde" then
-                        card.square:SetColorTexture(unpack(POPUP.horde))
+                    -- Phase tag: right-aligned on the title row when later than launch.
+                    if s.phase and s.phase > 1 then
+                        card.phaseTag:ClearAllPoints()
+                        card.phaseTag:SetPoint("TOPRIGHT", card, "TOPRIGHT", -10, -7)
+                        card.phaseTag:SetText("Phase " .. tostring(s.phase))
+                        card.phaseTag:Show()
+                        titleRight = titleRight + 12 + card.phaseTag:GetStringWidth() + 2
                     else
-                        card.square:SetColorTexture(unpack(POPUP.alliance))
+                        card.phaseTag:Hide()
                     end
-                    card.square:Show()
-                else
-                    card.square:Hide()
+                    contentRight = math.max(contentRight, titleRight)
+
+                    -- Sub line: location . cost (+ quest title) and a faction square.
+                    local subSegs = {}
+                    if hasIcon and s.location and s.location ~= "" then
+                        subSegs[#subSegs + 1] = tostring(s.location)
+                    end
+                    if s.cost and tonumber(s.cost) and tonumber(s.cost) > 0 then
+                        local costText = TFG.FormatCost(s.cost)
+                        if costText then subSegs[#subSegs + 1] = costText end
+                    end
+                    local subText = table.concat(subSegs, "  |cff808080" .. MIDDOT .. "|r  ")
+
+                    local showSquare = (s.faction ~= nil)
+                    local subX = textX + (showSquare and 12 or 0)
+                    if showSquare then
+                        card.square:ClearAllPoints()
+                        card.square:SetPoint("LEFT", card, "TOPLEFT", textX, -27)
+                        if s.faction == "Horde" then
+                            card.square:SetColorTexture(unpack(POPUP.horde))
+                        else
+                            card.square:SetColorTexture(unpack(POPUP.alliance))
+                        end
+                        card.square:Show()
+                    else
+                        card.square:Hide()
+                    end
+
+                    card.sub:ClearAllPoints()
+                    card.sub:SetPoint("TOPLEFT", card, "TOPLEFT", subX, -23)
+                    card.sub:SetText(subText)
+                    if subText ~= "" then
+                        contentRight = math.max(contentRight, xPad + subX + card.sub:GetStringWidth() + 8)
+                    end
+
+                    -- Nothing to put on the second line (no location, cost or faction): the
+                    -- name sits in the middle of the card instead of above an empty row.
+                    if subText == "" and not showSquare then
+                        card.title:ClearAllPoints()
+                        card.title:SetPoint("LEFT", card, "LEFT", textX, 0)
+                        if card.phaseTag:IsShown() then
+                            card.phaseTag:ClearAllPoints()
+                            card.phaseTag:SetPoint("RIGHT", card, "RIGHT", -10, 0)
+                        end
+                    end
+
                 end
 
-                card.sub:ClearAllPoints()
-                card.sub:SetPoint("TOPLEFT", card, "TOPLEFT", subX, -23)
-                card.sub:SetText(subText)
-                if subText ~= "" then
-                    contentRight = math.max(contentRight, xPad + subX + card.sub:GetStringWidth() + 8)
-                end
-
-                cursorY = cursorY - cardH - 6
+                card:SetHeight(thisH)
+                cursorY = cursorY - thisH - 6
             end
         else
             self.sourcesLabel:Hide()
