@@ -1547,8 +1547,10 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_06",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 6057,
+                    cost = 2000,
+                    location = "Alchemist Pestlezugg, Tanaris",
                 },
             },
             product = { item_id = 6052, qty = 1 },
@@ -1845,8 +1847,10 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_misc_orb_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 9303,
+                    cost = 8000,
+                    location = "Alchemist Pestlezugg, Tanaris",
                 },
             },
             product = { item_id = 9149, qty = 1 },
@@ -1865,8 +1869,10 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_ingot_03",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 9304,
+                    cost = 8000,
+                    location = "Alchemist Pestlezugg, Tanaris",
                 },
             },
             product = { item_id = 3577, qty = 1 },
@@ -1882,8 +1888,10 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_ingot_08",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 9305,
+                    cost = 8000,
+                    location = "Alchemist Pestlezugg, Tanaris",
                 },
             },
             product = { item_id = 6037, qty = 1 },
@@ -2652,8 +2660,10 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_misc_stonetablet_05",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 12958,
+                    cost = 50000,
+                    location = "Alchemist Pestlezugg, Tanaris",
                 },
             },
             product = { item_id = 12360, qty = 1 },

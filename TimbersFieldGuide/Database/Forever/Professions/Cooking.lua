@@ -565,6 +565,12 @@ TFG.COOKING_FOREVER = {
                     type = "Vendor",
                     item_id = 6368,
                     cost = 400,
+                    location = "Gritta Chumwater, Riverglades",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 6368,
+                    cost = 400,
                     location = "Stuart Fleming, Wetlands",
                 },
                 {
@@ -778,6 +784,18 @@ TFG.COOKING_FOREVER = {
                     type = "Vendor",
                     item_id = 21099,
                     cost = 500,
+                    location = "Fimbo Greasemitz, Riverglades",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 21099,
+                    cost = 500,
+                    location = "Miranda Turner, Riverglades",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 21099,
+                    cost = 500,
                     location = "Fyldan, Darnassus",
                 },
                 {
@@ -937,6 +955,12 @@ TFG.COOKING_FOREVER = {
             categories = { "Fisherman's Delights" },
             icon = "inv_misc_fish_30",
             source = {
+                {
+                    type = "Vendor",
+                    item_id = 6330,
+                    cost = 1200,
+                    location = "Gritta Chumwater, Riverglades",
+                },
                 {
                     type = "Vendor",
                     item_id = 6330,
@@ -1487,8 +1511,10 @@ TFG.COOKING_FOREVER = {
             icon = "inv_drink_19",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 12233,
+                    cost = 3000,
+                    location = "Helenia Olden, Dustwallow Marsh",
                 },
             },
             product = { item_id = 12214, qty = 1 },
@@ -1505,8 +1531,10 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_food_50",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 12228,
+                    cost = 5000,
+                    location = "Helenia Olden, Dustwallow Marsh",
                 },
             },
             product = { item_id = 12210, qty = 1 },
@@ -1541,6 +1569,18 @@ TFG.COOKING_FOREVER = {
             categories = { "Spell Damage Food" },
             icon = "inv_misc_fish_21",
             source = {
+                {
+                    type = "Vendor",
+                    item_id = 21219,
+                    cost = 5000,
+                    location = "Fimbo Greasemitz, Riverglades",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 21219,
+                    cost = 5000,
+                    location = "Miranda Turner, Riverglades",
+                },
                 {
                     type = "Vendor",
                     item_id = 21219,
@@ -1633,8 +1673,10 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_food_16",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 274977,
+                    cost = 2000,
+                    location = "Martha Wellsworth, Riverglades",
                 },
             },
             product = { item_id = 274976, qty = 1 },
@@ -1908,8 +1950,10 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_fish_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 13939,
+                    cost = 16000,
+                    location = "Gikkix, Tanaris",
                 },
             },
             product = { item_id = 6887, qty = 1 },
@@ -1925,8 +1969,22 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_food_47",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 18046,
+                    cost = 12000,
+                    location = "Innkeeper Zizplink, Riverglades",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 18046,
+                    cost = 12000,
+                    location = "Innkeeper Fizzgrimble, Tanaris",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 18046,
+                    cost = 12000,
+                    location = "Dirge Quikcleave, Tanaris",
                 },
             },
             product = { item_id = 18045, qty = 1 },
@@ -1943,8 +2001,10 @@ TFG.COOKING_FOREVER = {
             icon = "inv_drink_17",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 16767,
+                    cost = 3000,
+                    location = "Grizzek, Riverglades",
                 },
             },
             product = { item_id = 16766, qty = 2 },
@@ -1972,8 +2032,10 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_fish_13",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 13942,
+                    cost = 16000,
+                    location = "Gikkix, Tanaris",
                 },
             },
             product = { item_id = 13928, qty = 1 },
@@ -2010,8 +2072,10 @@ TFG.COOKING_FOREVER = {
             icon = "inv_drink_17",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 13945,
+                    cost = 20000,
+                    location = "Gikkix, Tanaris",
                 },
             },
             product = { item_id = 13931, qty = 1 },
@@ -2028,8 +2092,10 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_fish_19",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 13946,
+                    cost = 20000,
+                    location = "Gikkix, Tanaris",
                 },
             },
             product = { item_id = 13932, qty = 1 },

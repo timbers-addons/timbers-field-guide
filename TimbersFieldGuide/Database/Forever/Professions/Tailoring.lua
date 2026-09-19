@@ -929,6 +929,12 @@ TFG.TAILORING_FOREVER = {
                     type = "Vendor",
                     item_id = 253665,
                     cost = 150,
+                    location = "Jennabink Powerseam, Wetlands",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 253665,
+                    cost = 150,
                     location = "Ellie Stonebrow, Ironforge",
                 },
                 {
@@ -941,6 +947,12 @@ TFG.TAILORING_FOREVER = {
                     type = "Vendor",
                     item_id = 253665,
                     cost = 150,
+                    location = "Stitch Pinwizzle, Riverglades",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 253665,
+                    cost = 150,
                     location = "Elynna, Darnassus",
                 },
                 {
@@ -948,6 +960,12 @@ TFG.TAILORING_FOREVER = {
                     item_id = 253665,
                     cost = 150,
                     location = "Poranna Snowbraid, Ironforge",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 253665,
+                    cost = 150,
+                    location = "Vizzklick, Tanaris",
                 },
             },
             product = { item_id = 253664, qty = 1 },
@@ -1882,6 +1900,12 @@ TFG.TAILORING_FOREVER = {
                     type = "Vendor",
                     item_id = 253668,
                     cost = 250,
+                    location = "Jennabink Powerseam, Wetlands",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 253668,
+                    cost = 250,
                     location = "Ellie Stonebrow, Ironforge",
                 },
                 {
@@ -1894,6 +1918,12 @@ TFG.TAILORING_FOREVER = {
                     type = "Vendor",
                     item_id = 253668,
                     cost = 250,
+                    location = "Stitch Pinwizzle, Riverglades",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 253668,
+                    cost = 250,
                     location = "Elynna, Darnassus",
                 },
                 {
@@ -1901,6 +1931,12 @@ TFG.TAILORING_FOREVER = {
                     item_id = 253668,
                     cost = 250,
                     location = "Poranna Snowbraid, Ironforge",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 253668,
+                    cost = 250,
+                    location = "Vizzklick, Tanaris",
                 },
             },
             product = { item_id = 253667, qty = 1 },
@@ -2387,6 +2423,12 @@ TFG.TAILORING_FOREVER = {
                     type = "Vendor",
                     item_id = 6275,
                     cost = 800,
+                    location = "Jennabink Powerseam, Wetlands",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 6275,
+                    cost = 800,
                     location = "Elynna, Darnassus",
                 },
             },
@@ -2404,6 +2446,12 @@ TFG.TAILORING_FOREVER = {
             categories = { "Bags" },
             icon = "inv_misc_bag_10_red",
             source = {
+                {
+                    type = "Vendor",
+                    item_id = 5772,
+                    cost = 500,
+                    location = "Jennabink Powerseam, Wetlands",
+                },
                 {
                     type = "Vendor",
                     item_id = 5772,
@@ -4174,8 +4222,16 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_chest_cloth_25",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 7088,
+                    cost = 5000,
+                    location = "Stitch Pinwizzle, Riverglades",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 7088,
+                    cost = 5000,
+                    location = "Vizzklick, Tanaris",
                 },
             },
             product = { item_id = 7063, qty = 1 },
@@ -5491,8 +5547,16 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_misc_bag_soulbag",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 21358,
+                    cost = 12000,
+                    location = "Stitch Pinwizzle, Riverglades",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 21358,
+                    cost = 12000,
+                    location = "Vizzklick, Tanaris",
                 },
             },
             product = { item_id = 21340, qty = 1 },

@@ -3885,8 +3885,10 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_bracer_05",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 5789,
+                    cost = 2800,
+                    location = "Helenia Olden, Dustwallow Marsh",
                 },
             },
             product = { item_id = 5783, qty = 1 },

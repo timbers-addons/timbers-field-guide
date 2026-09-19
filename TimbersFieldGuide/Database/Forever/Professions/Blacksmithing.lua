@@ -3622,8 +3622,10 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_helmet_36",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 6047,
+                    cost = 4400,
+                    location = "Krinkle Goodsteel, Tanaris",
                 },
             },
             product = { item_id = 3837, qty = 1 },
@@ -4148,8 +4150,10 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_hammer_03",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251460,
+                    cost = 7500,
+                    location = "Martha Wellsworth, Riverglades",
                 },
             },
             product = { item_id = 250608, qty = 1 },

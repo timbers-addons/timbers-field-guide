@@ -1060,27 +1060,6 @@ TFG.ENGINEERING_FOREVER = {
             levels = { 130, 130, 155, 180 },
         },
         {
-            spell_id = 8895,
-            name = "Goblin Rocket Boots",
-            categories = { "Gadgets" },
-            icon = "inv_gizmo_rocketboot_01",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 7192,
-                },
-            },
-            product = { item_id = 7189, qty = 1 },
-            materials = {
-                { item_id = 10026, qty = 1 },
-                { item_id = 10559, qty = 2 },
-                { item_id = 4234, qty = 4 },
-                { item_id = 9061, qty = 2 },
-                { item_id = 10560, qty = 1 },
-            },
-            levels = { 130, 245, 255, 265 },
-        },
-        {
             spell_id = 3949,
             name = "Silver-plated Shotgun",
             categories = { "Ranged Weapons" },
@@ -2177,8 +2156,16 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_misc_bomb_03",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 18650,
+                    cost = 5000,
+                    location = "Fizzix Boomshot, Riverglades",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 18650,
+                    cost = 5000,
+                    location = "Blizrik Buckshot, Tanaris",
                 },
             },
             product = { item_id = 18588, qty = 1 },
@@ -2406,6 +2393,7 @@ TFG.ENGINEERING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 1500,
                 },
             },
             product = { item_id = 10543, qty = 1 },
@@ -2426,6 +2414,10 @@ TFG.ENGINEERING_FOREVER = {
                     type = "Item",
                     item_id = 221336,
                 },
+                {
+                    type = "Trainer",
+                    cost = 1500,
+                },
             },
             product = { item_id = 10542, qty = 1 },
             materials = {
@@ -2443,6 +2435,7 @@ TFG.ENGINEERING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 1000,
                 },
             },
             product = { item_id = 10644, qty = 1 },
@@ -2460,6 +2453,7 @@ TFG.ENGINEERING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 1500,
                 },
             },
             product = { item_id = 10646, qty = 1 },
@@ -3008,6 +3002,31 @@ TFG.ENGINEERING_FOREVER = {
             },
             levels = { 225, 225, 237, 250 },
         },
+        {
+            spell_id = 8895,
+            name = "Goblin Rocket Boots",
+            categories = { "Gadgets" },
+            icon = "inv_gizmo_rocketboot_01",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 7192,
+                },
+                {
+                    type = "Trainer",
+                    cost = 2200,
+                },
+            },
+            product = { item_id = 7189, qty = 1 },
+            materials = {
+                { item_id = 10026, qty = 1 },
+                { item_id = 10559, qty = 2 },
+                { item_id = 4234, qty = 4 },
+                { item_id = 9061, qty = 2 },
+                { item_id = 10560, qty = 1 },
+            },
+            levels = { 225, 245, 255, 265 },
+        },
     },
     [230] = {
         {
@@ -3060,6 +3079,7 @@ TFG.ENGINEERING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 2400,
                 },
             },
             product = { item_id = 10587, qty = 1 },
@@ -3156,6 +3176,7 @@ TFG.ENGINEERING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 2600,
                 },
             },
             product = { item_id = 10586, qty = 2 },
@@ -3215,6 +3236,7 @@ TFG.ENGINEERING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 2800,
                 },
             },
             product = { item_id = 10727, qty = 1 },
@@ -3276,6 +3298,7 @@ TFG.ENGINEERING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 3000,
                 },
             },
             product = { item_id = 10588, qty = 1 },
@@ -3954,8 +3977,10 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_crate_02",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 16046,
+                    cost = 16000,
+                    location = "Kor'gar, Riverglades",
                 },
             },
             product = { item_id = 16023, qty = 1 },
@@ -4052,8 +4077,10 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_gizmo_pipe_04",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 16047,
+                    cost = 16000,
+                    location = "Kor'gar, Riverglades",
                 },
             },
             product = { item_id = 16000, qty = 1 },
