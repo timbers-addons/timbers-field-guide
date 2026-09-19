@@ -620,6 +620,23 @@ function frame:Relayout()
     local professionLevel = isProfession and getProfessionLevelForCurrentView() or 0
     local professionMaxCap = isProfession and getProfessionMaxCapForCurrentView() or 0
     local profName = isProfession and getProfessionNameForCurrentView() or nil
+
+    -- The database entry (the rank spell) a synthetic "Skill Unlock" row stands in
+    -- for; found once and kept on the row.
+    local function rankEntryFor(unlock)
+        if unlock._tfgRankEntry == nil then
+            unlock._tfgRankEntry = false
+            local wanted = tonumber(unlock.trainingSpellId)
+            for _, spells in pairs(TFG.activeDatabase or {}) do
+                for _, e in ipairs(type(spells) == "table" and spells or {}) do
+                    if wanted and not unlock._tfgRankEntry and getSpellId(e) == wanted then
+                        unlock._tfgRankEntry = e
+                    end
+                end
+            end
+        end
+        return unlock._tfgRankEntry or nil
+    end
     local hasProfession = false
     if isProfession and profName then
         hasProfession = playerHasSkill(profName)
@@ -1053,6 +1070,9 @@ function frame:Relayout()
                 -- Put the unlock entry first so it reads like a normal skill in that bracket.
                 table.insert(row.spells, 1, {
                     _tfgType = "PROFESSION_RANK_UNLOCK",
+                    -- Same category as the rank spell it stands in for, so the
+                    -- "Profession Training" filter shows these and not the raw spell.
+                    categories = { "Profession Training" },
                     required = newCap,
                     trainAt = trainAt,
                     effectiveTrainAt = effectiveTrainAt,
@@ -1256,7 +1276,7 @@ function frame:Relayout()
         local isProfessionTraining = isProfession and spell and hasSpellCategory(spell, "Profession Training")
 
         if isProfessionTraining
-            and TFG.selectedCategory ~= "Profession Training"
+            and spell._tfgType ~= "PROFESSION_RANK_UNLOCK"
             and syntheticUnlockByBracket
             and syntheticUnlockByBracket[levelRequired] then
             return true, "syntheticUnlock"
@@ -1460,15 +1480,20 @@ function frame:Relayout()
                         icon.tfgClickableIndicator = indicator
                     end
 
-                    -- Determine if this icon would show a popup
-                    local recipeSourceId = getRecipeSourceId(spell)
+                    -- Determine if this icon would show a popup. An unlock row opens the
+                    -- popup of its rank spell, so it is judged by that entry.
+                    local popupSubject = spell
+                    if spell and spell._tfgType == "PROFESSION_RANK_UNLOCK" then
+                        popupSubject = rankEntryFor(spell)
+                    end
+                    local recipeSourceId = getRecipeSourceId(popupSubject)
                     -- Show recipe item if recipe_item_ids exists, regardless of source type
                     local hasRecipeItem = (recipeSourceId and recipeSourceId > 0)
-                    local productItemId = getProductItemId(spell)
+                    local productItemId = getProductItemId(popupSubject)
                     local hasProduct = (productItemId and productItemId > 0)
-                    local hasMaterials = (spell and spell.materials
-                        and type(spell.materials) == "table" and #spell.materials > 0)
-                    local hasSourceInfo = (#TFG.GetSources(spell) > 0)
+                    local hasMaterials = (popupSubject and popupSubject.materials
+                        and type(popupSubject.materials) == "table" and #popupSubject.materials > 0)
+                    local hasSourceInfo = (popupSubject ~= nil and #TFG.GetSources(popupSubject) > 0)
                     local wouldShowPopup = hasRecipeItem or hasProduct or hasMaterials or hasSourceInfo
 
                     -- Show the clickable indicator only if popup would appear
@@ -1544,8 +1569,24 @@ function frame:Relayout()
                     icon:SetScript("OnMouseDown", function(self, button)
                         if not isIconInsideScrollViewport(self) then return end
                         if button == "LeftButton" then
-                            -- Rank unlock rows are informational; no popup.
+                            -- A rank unlock row opens the popup on the rank spell it stands in
+                            -- for, under the row's own title. The copy is kept on the row so a
+                            -- second click finds the same table and toggles the popup shut.
                             if self.spellData and self.spellData._tfgType == "PROFESSION_RANK_UNLOCK" then
+                                local unlock = self.spellData
+                                local rankEntry = rankEntryFor(unlock)
+                                if not unlock._tfgPopupData and rankEntry then
+                                    local copy = {}
+                                    for k, v in pairs(rankEntry) do copy[k] = v end
+                                    local cap = tonumber(unlock.required) or 0
+                                    copy.name = ("%s Skill Unlock: %s (%d-%d)"):format(
+                                        tostring(profName or "Profession"), tostring(unlock.rankName or ""),
+                                        cap > 75 and cap - 75 or 1, cap)
+                                    unlock._tfgPopupData = copy
+                                end
+                                if unlock._tfgPopupData then
+                                    TFG.EnsureProfessionPopup():ShowForSpell(self, unlock._tfgPopupData)
+                                end
                                 return
                             end
 
@@ -1690,6 +1731,23 @@ function frame:Relayout()
                             else
                                 -- Fallback: no training spell found; show our synthetic tooltip only.
                                 GameTooltip:AddLine(titleText, 1, 1, 1)
+                            end
+
+                            -- Where the rank comes from and what it costs, as any other entry
+                            -- shows it, from the rank spell this row stands in for.
+                            if trainingSpellId and type(TFG.activeDatabase) == "table" then
+                                local shown = false
+                                for _, spells in pairs(TFG.activeDatabase) do
+                                    for _, e in ipairs(type(spells) == "table" and spells or {}) do
+                                        if not shown and getSpellId(e) == trainingSpellId then
+                                            for _, src in ipairs(TFG.GetSources(e)) do
+                                                if not shown then GameTooltip:AddLine(" ") end
+                                                GameTooltip:AddLine(buildSourceLine(src), 1, 1, 1)
+                                                shown = true
+                                            end
+                                        end
+                                    end
+                                end
                             end
 
                             GameTooltip:AddLine(" ")

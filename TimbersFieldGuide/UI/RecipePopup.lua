@@ -368,7 +368,10 @@ local function ensureProfessionPopup()
         -- Colored crafting-difficulty numbers (the profession name lives in the eyebrow).
         local diffColors = { "|cFFFF7F00", "|cFFFFFF00", "|cFF00FF00", "|cFF9D9D9D" }
         local diffParts = {}
-        if spellData.levels and type(spellData.levels) == "table" then
+        -- A profession rank is trained, not crafted: its one level is the skill it
+        -- is learned at (already in the eyebrow), not a skill-up range.
+        local isRank = TFG.HasSpellCategory(spellData, "Profession Training")
+        if not isRank and spellData.levels and type(spellData.levels) == "table" then
             for i = 1, 4 do
                 local v = tonumber(spellData.levels[i] or 0) or 0
                 if v > 0 then diffParts[#diffParts + 1] = diffColors[i] .. tostring(v) .. "|r" end
