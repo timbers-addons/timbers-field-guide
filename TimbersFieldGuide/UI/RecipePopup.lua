@@ -164,6 +164,38 @@ local function ensureProfessionPopup()
         card.sub:SetTextColor(unpack(POPUP.muted))
         card.sub:SetWordWrap(false)
 
+        -- Reputation the vendor asks for, on a row of its own under the sub line.
+        card.rep = card:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+        card.rep:SetJustifyH("LEFT")
+        card.rep:SetTextColor(unpack(POPUP.muted))
+        card.rep:SetWordWrap(false)
+        card.rep:Hide()
+
+        -- Non-gold price components, after the sub line's text: the amount, then an
+        -- icon that names the currency on hover as the merchant window does.
+        card.chips = {}
+        function card:AcquireChip(index)
+            local chip = self.chips[index]
+            if chip then return chip end
+            chip = CreateFrame("Button", nil, self)
+            chip:SetSize(12, 12)
+            chip.tex = chip:CreateTexture(nil, "ARTWORK")
+            chip.tex:SetAllPoints()
+            chip.amount = self:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+            chip.amount:SetJustifyH("LEFT")
+            chip.amount:SetTextColor(unpack(POPUP.body))
+            chip.amount:SetWordWrap(false)
+            chip:SetScript("OnEnter", function(self)
+                if not self.component then return end
+                GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+                TFG.SetCostTooltip(GameTooltip, self.component)
+                GameTooltip:Show()
+            end)
+            chip:SetScript("OnLeave", GameTooltip_Hide)
+            self.chips[index] = chip
+            return chip
+        end
+
         card.phaseTag = card:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
         card.phaseTag:SetJustifyH("RIGHT")
         card.phaseTag:SetTextColor(unpack(POPUP.phase))
@@ -562,6 +594,11 @@ local function ensureProfessionPopup()
                 card:SetPoint("TOPRIGHT", self, "TOPRIGHT", -xPad, cursorY)
                 local hasIcon = (s.item_id and s.item_id > 0)
                 local thisH = cardH
+                card.rep:Hide()
+                for _, chip in ipairs(card.chips) do
+                    chip:Hide()
+                    chip.amount:Hide()
+                end
 
                 if s.type == "Quest" then
                     card.title:Hide()
@@ -707,11 +744,12 @@ local function ensureProfessionPopup()
                     if hasIcon and s.location and s.location ~= "" then
                         subSegs[#subSegs + 1] = tostring(s.location)
                     end
-                    if s.cost and tonumber(s.cost) and tonumber(s.cost) > 0 then
-                        local costText = TFG.FormatCost(s.cost)
-                        if costText then subSegs[#subSegs + 1] = costText end
-                    end
-                    local subText = table.concat(subSegs, "  |cff808080" .. MIDDOT .. "|r  ")
+                    local goldText = TFG.FormatCost(tonumber(s.cost))
+                    if goldText then subSegs[#subSegs + 1] = goldText end
+                    local separator = "  |cff808080" .. MIDDOT .. "|r  "
+                    local subText = table.concat(subSegs, separator)
+                    local components = s.currencies or {}
+                    if #components > 0 and subText ~= "" then subText = subText .. separator end
 
                     local showSquare = (s.faction ~= nil)
                     local subX = textX + (showSquare and 12 or 0)
@@ -735,9 +773,44 @@ local function ensureProfessionPopup()
                         contentRight = math.max(contentRight, xPad + subX + card.sub:GetStringWidth() + 8)
                     end
 
+                    -- Non-gold price: "240" and the currency's icon, per component.
+                    local chipX = subX + (subText ~= "" and card.sub:GetStringWidth() or 0)
+                    for ci, component in ipairs(components) do
+                        local chip = card:AcquireChip(ci)
+                        local name, tex = TFG.ResolveCostComponent(component)
+                        chip.component = component
+                        -- No icon (a client that does not know the currency): spell it out.
+                        chip.amount:SetText(tex and tostring(tonumber(component.qty) or 1)
+                            or ("%d %s"):format(tonumber(component.qty) or 1, name))
+                        chip.amount:ClearAllPoints()
+                        chip.amount:SetPoint("TOPLEFT", card, "TOPLEFT", chipX, -23)
+                        chip.amount:Show()
+                        chipX = chipX + chip.amount:GetStringWidth()
+                        if tex then
+                            chip.tex:SetTexture(tex)
+                            chip:ClearAllPoints()
+                            chip:SetPoint("LEFT", chip.amount, "RIGHT", 2, 0)
+                            chip:Show()
+                            chipX = chipX + 2 + 12
+                        end
+                        chipX = chipX + 8
+                    end
+                    if #components > 0 then contentRight = math.max(contentRight, xPad + chipX) end
+
+                    -- Reputation the vendor asks for, on a third row.
+                    local repText = TFG.FormatReputation(s)
+                    if repText then
+                        card.rep:SetText(repText)
+                        card.rep:ClearAllPoints()
+                        card.rep:SetPoint("TOPLEFT", card, "TOPLEFT", textX, -38)
+                        card.rep:Show()
+                        contentRight = math.max(contentRight, xPad + textX + card.rep:GetStringWidth() + 8)
+                        thisH = cardH + 13
+                    end
+
                     -- Nothing to put on the second line (no location, cost or faction): the
                     -- name sits in the middle of the card instead of above an empty row.
-                    if subText == "" and not showSquare then
+                    if subText == "" and not showSquare and #components == 0 and not card.rep:IsShown() then
                         card.title:ClearAllPoints()
                         card.title:SetPoint("LEFT", card, "LEFT", textX, 0)
                         if card.phaseTag:IsShown() then

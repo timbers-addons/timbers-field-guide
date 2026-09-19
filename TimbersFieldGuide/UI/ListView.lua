@@ -1812,6 +1812,14 @@ function frame:Relayout()
                                 -- phase, faction).
                                 for _, s in ipairs(TFG.GetSources(data)) do
                                     GameTooltip:AddLine("Source: " .. buildSourceLine(s), 0.8, 0.8, 0.8)
+                                    -- A price that is not gold, and the standing the vendor
+                                    -- asks for, each on a line of their own under it.
+                                    local currencyText = TFG.FormatCurrencies(s)
+                                    if currencyText then
+                                        GameTooltip:AddLine("Cost: " .. currencyText, 0.8, 0.8, 0.8)
+                                    end
+                                    local repText = TFG.FormatReputation(s)
+                                    if repText then GameTooltip:AddLine(repText) end
                                 end
 
                                 if wouldShowPopup then

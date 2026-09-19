@@ -149,7 +149,9 @@ local function normalizeSource(s)
     return {
         type = s.type,
         cost = s.cost,
+        currencies = s.currencies,
         location = s.location,
+        reputation = s.reputation,
         faction = s.faction,
         phase = tonumber(s.phase),
         item_id = tonumber(s.item_id),
