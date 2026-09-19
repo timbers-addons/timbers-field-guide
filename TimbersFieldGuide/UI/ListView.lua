@@ -640,12 +640,20 @@ function frame:Relayout()
     end
 
     local knownRanksByNameIcon = {}
-    local knownRanksByGroup = {}
+    -- A group ties together spells that replace one another under different names
+    -- (Bear Form and Dire Bear Form, the ranks of a poison). Its members are ordered
+    -- by the level they are learned at, then by rank: knowing one means knowing
+    -- every member at or below it, and nothing above it.
+    local knownByGroup = {}
+    local groupLevelOf = {}
     TFG._knownTalentKeys = {}
 
-    for _, spells in pairs(TFG.activeDatabase or {}) do
+    for bucket, spells in pairs(TFG.activeDatabase or {}) do
         if type(spells) == "table" then
             for _, spell in ipairs(spells) do
+                if spell.group and tostring(spell.group) ~= "" then
+                    groupLevelOf[spell] = tonumber(tostring(bucket)) or 0
+                end
                 local sid = getSpellId(spell)
                 local applicable = (not spell.faction or spell.faction == playerFaction)
                     and matchesPlayerRace(spell)
@@ -661,7 +669,10 @@ function frame:Relayout()
                     end
                     if spell.group and tostring(spell.group) ~= "" then
                         local key = tostring(spell.group) .. "\031" .. restrictions
-                        knownRanksByGroup[key] = math.max(knownRanksByGroup[key] or 0, rank)
+                        local level, best = groupLevelOf[spell] or 0, knownByGroup[key]
+                        if not best or level > best.level or (level == best.level and rank > best.rank) then
+                            knownByGroup[key] = { level = level, rank = rank }
+                        end
                     end
                     if isTalentSpell(spell) and name ~= "" then
                         TFG._knownTalentKeys[name .. "\031" .. tostring(spell.icon or "")] = true
@@ -683,13 +694,19 @@ function frame:Relayout()
         ]
     end
 
-    local function getHighestKnownRankForGroup(groupKey, targetSpell)
-        if not groupKey or tostring(groupKey) == "" then return nil end
-        if targetSpell then
-            if targetSpell.faction and targetSpell.faction ~= playerFaction then return nil end
-            if not matchesPlayerRace(targetSpell) then return nil end
-        end
-        return knownRanksByGroup[tostring(groupKey) .. "\031" .. restrictionKey(targetSpell)]
+    -- Whether the player knows a member of targetSpell's group at or above it.
+    local function isKnownThroughGroup(targetSpell)
+        local groupKey = targetSpell and targetSpell.group
+        if not groupKey or tostring(groupKey) == "" then return false end
+        if targetSpell.faction and targetSpell.faction ~= playerFaction then return false end
+        if not matchesPlayerRace(targetSpell) then return false end
+        local best = knownByGroup[tostring(groupKey) .. "\031" .. restrictionKey(targetSpell)]
+        if not best then return false end
+        -- No level to order it by: say nothing rather than mark it known.
+        local level = groupLevelOf[targetSpell]
+        if not level then return false end
+        if best.level ~= level then return best.level > level end
+        return best.rank >= (getSpellRank(targetSpell) or 0)
     end
 
     local function isSpellKnownDBAware(sid, spellObj)
@@ -715,14 +732,11 @@ function frame:Relayout()
         -- For class views, consult DB ranks: if player knows a DB-listed id for the same
         -- base name with rank >= this entry's rank, consider it known. While scanning the
         -- DB, ignore candidate entries that are not applicable to the player's faction/race.
+        -- Group members need no rank of their own (the two bear forms have none).
+        if isClassView and isKnownThroughGroup(spellObj) then return true end
         if isClassView and spellObj and tonumber(spellObj.rank) then
             local dbRank = tonumber(spellObj.rank) or 0
-            -- Prefer group-based matching when available
-            if spellObj.group and tostring(spellObj.group) ~= "" then
-                local known = getHighestKnownRankForGroup(spellObj.group, spellObj)
-                if known and known >= dbRank then return true end
-            end
-            -- Fallback to name-based matching
+            -- Name-based matching
             if spellObj.name and tostring(spellObj.name) ~= "" then
                 local known = getHighestKnownRankForSpellName(spellObj.name, spellObj)
                 if known and known >= dbRank then return true end
