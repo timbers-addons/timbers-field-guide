@@ -541,14 +541,6 @@ local function ensureTestFrame()
     closeTab:SetScript("OnClick", function() frame:Hide() end)
     closeTab:SetSelected(false)
 
-    local expansionTab = createFlatTextTab(frame, versionName(), 88, TAB_HEIGHT)
-    expansionTab.attachedEdge = "BOTTOM"
-    expansionTab.inactiveColor = COLORS.chromeTab
-    expansionTab.hoverColor = COLORS.chromeTabHover
-    expansionTab:SetPoint("TOPRIGHT", closeTab, "TOPLEFT", -TAB_GAP, 0)
-    -- A label, not a button: it names the game whose data this client shows.
-    expansionTab:SetSelected(false)
-    expansionTab:EnableMouse(false)
 
     local secondaryBar = CreateFrame("Frame", nil, body)
     secondaryBar:SetPoint("TOPLEFT", 8, -8)
@@ -832,7 +824,6 @@ local function ensureTestFrame()
     frame.scrollFrame = scrollFrame
     frame.scrollContent = scrollContent
     frame.bottomTabs = bottomTabs
-    frame.expansionTab = expansionTab
     frame.titleTab = titleTab
     frame.pageHeading = pageHeading
     frame.pageDescription = pageDescription
@@ -1534,8 +1525,6 @@ local function ensureTestFrame()
         local isDetail = isDetailMode(mode)
 
         frame.titleTab:SetSelected(mode == "about")
-        frame.expansionTab.label:SetText(versionName(TFG.selectedExpansion))
-        frame.expansionTab:SetWidth(math.max(88, frame.expansionTab.label:GetStringWidth() + (TAB_TEXT_PADDING * 2)))
 
         renderTopTabs()
         renderSecondaryTabs()

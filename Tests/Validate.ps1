@@ -155,7 +155,8 @@ $testUI = Get-Content -LiteralPath (Join-Path $Root "UI/Navigation.lua") -Raw
 $slash = Get-Content -LiteralPath (Join-Path $Root "Launchers/Slash.lua") -Raw
 Assert-True ($testUI -match "function TFG\.ToggleTestUI") "Navigation mockup toggle is missing."
 Assert-True ($testUI -match '"Classes"[\s\S]*"Professions"[\s\S]*"Skills"') "Navigation mockup bottom tabs are missing."
-Assert-True ($testUI -match 'closeTab[\s\S]*expansionTab') "Navigation mockup expansion and close controls must be adjacent top tabs."
+Assert-True ($testUI -match 'closeTab') "Navigation mockup close control is missing."
+Assert-True ($testUI -notmatch 'expansionTab|selectPage\("expansions"\)') "There is no game version control: a client shows its own game only."
 Assert-True ($testUI -match 'selectPage\("about"\)') "The title tab must open the About page."
 Assert-True ($testUI -notmatch 'browserPanel|renderBrowser') "Bottom navigation must use dedicated pages, not an overlay browser."
 Assert-True ($testUI -match 'TAB_HEIGHT\s*=\s*42') "Navigation mockup tabs must share the reduced common height."
