@@ -106,6 +106,18 @@ local function hasSpellCategory(spell, category)
     return false
 end
 
+-- Whether an entry gives skill-ups. `levels` always starts with the skill it is
+-- learned at; only a recipe goes on to yellow, green and grey. Find Minerals,
+-- Smelting and the profession's own ranks carry that first value alone.
+function TFG.HasSkillUps(entry)
+    local levels = entry and entry.levels
+    if type(levels) ~= "table" then return false end
+    for i = 2, 4 do
+        if (tonumber(levels[i]) or 0) > 0 then return true end
+    end
+    return false
+end
+
 -- Whether any of an entry's sources asks for standing with this faction.
 local function hasReputationFaction(entry, faction)
     if not entry or not faction or type(entry.source) ~= "table" then return false end

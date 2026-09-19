@@ -1811,7 +1811,7 @@ function frame:Relayout()
                         end
 
                         -- Crafting difficulty levels display (orange/yellow/green/gray)
-                        if data.levels and type(data.levels) == "table" then
+                        if TFG.HasSkillUps(data) then
                             local colors = { "|cFFFF7F00", "|cFFFFFF00", "|cFF00FF00", "|cFF9D9D9D" }
                             local parts = {}
                             for i = 1, 4 do
