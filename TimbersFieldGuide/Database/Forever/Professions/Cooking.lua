@@ -820,6 +820,12 @@ TFG.COOKING_FOREVER = {
                     cost = 500,
                     location = "Emrul Riknussun, Ironforge",
                 },
+                {
+                    type = "Vendor",
+                    item_id = 21099,
+                    cost = 500,
+                    location = "Erika Tate, Stormwind City",
+                },
             },
             product = { item_id = 21072, qty = 1 },
             materials = {
@@ -1622,6 +1628,12 @@ TFG.COOKING_FOREVER = {
                     item_id = 21219,
                     cost = 5000,
                     location = "Emrul Riknussun, Ironforge",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 21219,
+                    cost = 5000,
+                    location = "Erika Tate, Stormwind City",
                 },
             },
             product = { item_id = 21217, qty = 1 },

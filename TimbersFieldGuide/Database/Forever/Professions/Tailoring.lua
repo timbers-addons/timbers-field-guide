@@ -18,44 +18,6 @@ TFG.TAILORING_FOREVER = {
             levels = { 1, 160, 175, 190 },
         },
         {
-            spell_id = 8760,
-            name = "Azure Silk Hood",
-            categories = { "Hoods" },
-            icon = "inv_helmet_29",
-            product = { item_id = 7048, qty = 1 },
-            materials = {
-                { item_id = 4305, qty = 2 },
-                { item_id = 6260, qty = 2 },
-                { item_id = 2321, qty = 1 },
-            },
-            levels = { 1, 130, 135, 140 },
-        },
-        {
-            spell_id = 8758,
-            name = "Azure Silk Pants",
-            categories = { "Leggings" },
-            icon = "inv_pants_08",
-            product = { item_id = 7046, qty = 1 },
-            materials = {
-                { item_id = 4305, qty = 4 },
-                { item_id = 6260, qty = 2 },
-                { item_id = 2321, qty = 3 },
-            },
-            levels = { 1, 135, 150, 165 },
-        },
-        {
-            spell_id = 3859,
-            name = "Azure Silk Vest",
-            categories = { "Robes and Vests" },
-            icon = "inv_chest_cloth_37",
-            product = { item_id = 4324, qty = 1 },
-            materials = {
-                { item_id = 4305, qty = 5 },
-                { item_id = 6260, qty = 4 },
-            },
-            levels = { 1, 145, 160, 175 },
-        },
-        {
             spell_id = 12073,
             name = "Black Mageweave Boots",
             categories = { "Shoes" },
@@ -179,17 +141,6 @@ TFG.TAILORING_FOREVER = {
             levels = { 1, 210, 212, 215 },
         },
         {
-            spell_id = 3839,
-            name = "Bolt of Silk Cloth",
-            categories = { "Reagents" },
-            icon = "inv_fabric_silk_03",
-            product = { item_id = 4305, qty = 1 },
-            materials = {
-                { item_id = 4306, qty = 4 },
-            },
-            levels = { 1, 110, 115, 120 },
-        },
-        {
             spell_id = 8778,
             name = "Boots of Darkness",
             categories = { "Shoes" },
@@ -304,18 +255,6 @@ TFG.TAILORING_FOREVER = {
             levels = { 1, 170, 180, 190 },
         },
         {
-            spell_id = 3848,
-            name = "Double-stitched Woolen Shoulders",
-            categories = { "Spaulders" },
-            icon = "inv_shoulder_06",
-            product = { item_id = 4314, qty = 1 },
-            materials = {
-                { item_id = 2997, qty = 3 },
-                { item_id = 2321, qty = 2 },
-            },
-            levels = { 1, 110, 127, 145 },
-        },
-        {
             spell_id = 12092,
             name = "Dreamweave Circlet",
             categories = { "Hoods" },
@@ -412,32 +351,6 @@ TFG.TAILORING_FOREVER = {
             levels = { 1, 145, 150, 155 },
         },
         {
-            spell_id = 3852,
-            name = "Gloves of Meditation",
-            categories = { "Gloves" },
-            icon = "inv_gauntlets_05",
-            product = { item_id = 4318, qty = 1 },
-            materials = {
-                { item_id = 2997, qty = 4 },
-                { item_id = 2321, qty = 3 },
-                { item_id = 3383, qty = 1 },
-            },
-            levels = { 1, 125, 140, 155 },
-        },
-        {
-            spell_id = 2406,
-            name = "Gray Woolen Shirt",
-            categories = { "Shirts" },
-            icon = "inv_shirt_grey_01",
-            product = { item_id = 2587, qty = 1 },
-            materials = {
-                { item_id = 2997, qty = 2 },
-                { item_id = 2321, qty = 1 },
-                { item_id = 4340, qty = 1 },
-            },
-            levels = { 1, 90, 100, 110 },
-        },
-        {
             spell_id = 8774,
             name = "Green Silken Shoulders",
             categories = { "Spaulders" },
@@ -461,56 +374,6 @@ TFG.TAILORING_FOREVER = {
                 { item_id = 2605, qty = 1 },
             },
             levels = { 1, 90, 107, 125 },
-        },
-        {
-            spell_id = 2399,
-            name = "Green Woolen Vest",
-            categories = { "Robes and Vests" },
-            icon = "inv_chest_cloth_39",
-            product = { item_id = 2582, qty = 1 },
-            materials = {
-                { item_id = 2997, qty = 2 },
-                { item_id = 2321, qty = 2 },
-                { item_id = 2605, qty = 1 },
-            },
-            levels = { 1, 85, 102, 120 },
-        },
-        {
-            spell_id = 3843,
-            name = "Heavy Woolen Gloves",
-            categories = { "Gloves" },
-            icon = "inv_gauntlets_05",
-            product = { item_id = 4310, qty = 1 },
-            materials = {
-                { item_id = 2997, qty = 3 },
-                { item_id = 2321, qty = 1 },
-            },
-            levels = { 1, 85, 102, 120 },
-        },
-        {
-            spell_id = 3850,
-            name = "Heavy Woolen Pants",
-            categories = { "Leggings" },
-            icon = "inv_pants_01",
-            product = { item_id = 4316, qty = 1 },
-            materials = {
-                { item_id = 2997, qty = 5 },
-                { item_id = 2321, qty = 4 },
-            },
-            levels = { 1, 110, 127, 145 },
-        },
-        {
-            spell_id = 6690,
-            name = "Lesser Wizard's Robe",
-            categories = { "Robes and Vests" },
-            icon = "inv_chest_cloth_17",
-            product = { item_id = 5766, qty = 1 },
-            materials = {
-                { item_id = 4305, qty = 2 },
-                { item_id = 2321, qty = 2 },
-                { item_id = 3182, qty = 2 },
-            },
-            levels = { 1, 130, 145, 160 },
         },
         {
             spell_id = 2387,
@@ -580,19 +443,6 @@ TFG.TAILORING_FOREVER = {
                 { item_id = 8343, qty = 1 },
             },
             levels = { 1, 185, 190, 195 },
-        },
-        {
-            spell_id = 6521,
-            name = "Pearl-clasped Cloak",
-            categories = { "Cloaks" },
-            icon = "inv_misc_cape_11",
-            product = { item_id = 5542, qty = 1 },
-            materials = {
-                { item_id = 2997, qty = 3 },
-                { item_id = 2321, qty = 2 },
-                { item_id = 5498, qty = 1 },
-            },
-            levels = { 1, 95, 112, 130 },
         },
         {
             spell_id = 12079,
@@ -758,59 +608,6 @@ TFG.TAILORING_FOREVER = {
             levels = { 1, 40, 50, 60 },
         },
         {
-            spell_id = 3813,
-            name = "Small Silk Pack",
-            categories = { "Bags" },
-            icon = "inv_misc_bag_07",
-            product = { item_id = 4245, qty = 1 },
-            materials = {
-                { item_id = 4305, qty = 3 },
-                { item_id = 4234, qty = 2 },
-                { item_id = 2321, qty = 3 },
-            },
-            levels = { 1, 145, 160, 175 },
-        },
-        {
-            spell_id = 3845,
-            name = "Soft-soled Linen Boots",
-            categories = { "Shoes" },
-            icon = "inv_boots_09",
-            product = { item_id = 4312, qty = 1 },
-            materials = {
-                { item_id = 2996, qty = 5 },
-                { item_id = 2318, qty = 2 },
-                { item_id = 2321, qty = 1 },
-            },
-            levels = { 1, 80, 97, 115 },
-        },
-        {
-            spell_id = 3855,
-            name = "Spidersilk Boots",
-            categories = { "Shoes" },
-            icon = "inv_boots_05",
-            product = { item_id = 4320, qty = 1 },
-            materials = {
-                { item_id = 4305, qty = 2 },
-                { item_id = 2319, qty = 4 },
-                { item_id = 3182, qty = 4 },
-                { item_id = 5500, qty = 1 },
-            },
-            levels = { 1, 125, 142, 160 },
-        },
-        {
-            spell_id = 3866,
-            name = "Stylish Red Shirt",
-            categories = { "Shirts" },
-            icon = "inv_shirt_red_01",
-            product = { item_id = 4330, qty = 1 },
-            materials = {
-                { item_id = 2997, qty = 3 },
-                { item_id = 2604, qty = 2 },
-                { item_id = 2321, qty = 1 },
-            },
-            levels = { 1, 110, 127, 145 },
-        },
-        {
             spell_id = 2393,
             name = "White Linen Shirt",
             categories = { "Shirts" },
@@ -841,44 +638,6 @@ TFG.TAILORING_FOREVER = {
                 { item_id = 4291, qty = 1 },
             },
             levels = { 1, 135, 140, 145 },
-        },
-        {
-            spell_id = 8467,
-            name = "White Woolen Dress",
-            categories = { "Dressed for the Occasion" },
-            icon = "inv_shirt_12",
-            product = { item_id = 6787, qty = 1 },
-            materials = {
-                { item_id = 2997, qty = 3 },
-                { item_id = 2324, qty = 4 },
-                { item_id = 2321, qty = 1 },
-            },
-            levels = { 1, 110, 127, 145 },
-        },
-        {
-            spell_id = 3757,
-            name = "Woolen Bag",
-            categories = { "Bags" },
-            icon = "inv_misc_bag_10",
-            product = { item_id = 4240, qty = 1 },
-            materials = {
-                { item_id = 2997, qty = 3 },
-                { item_id = 2321, qty = 1 },
-            },
-            levels = { 1, 75, 92, 110 },
-        },
-        {
-            spell_id = 2401,
-            name = "Woolen Boots",
-            categories = { "Shoes" },
-            icon = "inv_boots_09",
-            product = { item_id = 2583, qty = 1 },
-            materials = {
-                { item_id = 2997, qty = 4 },
-                { item_id = 2321, qty = 2 },
-                { item_id = 2318, qty = 2 },
-            },
-            levels = { 1, 95, 112, 130 },
         },
         {
             spell_id = 3908,
@@ -1548,6 +1307,24 @@ TFG.TAILORING_FOREVER = {
             levels = { 50, 75, 92, 110 },
         },
         {
+            spell_id = 3757,
+            name = "Woolen Bag",
+            categories = { "Bags" },
+            icon = "inv_misc_bag_10",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 200,
+                },
+            },
+            product = { item_id = 4240, qty = 1 },
+            materials = {
+                { item_id = 2997, qty = 3 },
+                { item_id = 2321, qty = 1 },
+            },
+            levels = { 50, 75, 92, 110 },
+        },
+        {
             spell_id = 3909,
             name = "Tailoring",
             categories = { "Profession Training" },
@@ -1650,6 +1427,25 @@ TFG.TAILORING_FOREVER = {
                 { item_id = 2320, qty = 3 },
             },
             levels = { 55, 60, 62, 65 },
+        },
+        {
+            spell_id = 3845,
+            name = "Soft-soled Linen Boots",
+            categories = { "Shoes" },
+            icon = "inv_boots_09",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 300,
+                },
+            },
+            product = { item_id = 4312, qty = 1 },
+            materials = {
+                { item_id = 2996, qty = 5 },
+                { item_id = 2318, qty = 2 },
+                { item_id = 2321, qty = 1 },
+            },
+            levels = { 55, 80, 97, 115 },
         },
         {
             spell_id = 2402,
@@ -1764,6 +1560,43 @@ TFG.TAILORING_FOREVER = {
                 { item_id = 2321, qty = 2 },
                 { item_id = 249409, qty = 2 },
                 { item_id = 6371, qty = 1 },
+            },
+            levels = { 60, 85, 102, 120 },
+        },
+        {
+            spell_id = 2399,
+            name = "Green Woolen Vest",
+            categories = { "Robes and Vests" },
+            icon = "inv_chest_cloth_39",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 300,
+                },
+            },
+            product = { item_id = 2582, qty = 1 },
+            materials = {
+                { item_id = 2997, qty = 2 },
+                { item_id = 2321, qty = 2 },
+                { item_id = 2605, qty = 1 },
+            },
+            levels = { 60, 85, 102, 120 },
+        },
+        {
+            spell_id = 3843,
+            name = "Heavy Woolen Gloves",
+            categories = { "Gloves" },
+            icon = "inv_gauntlets_05",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 400,
+                },
+            },
+            product = { item_id = 4310, qty = 1 },
+            materials = {
+                { item_id = 2997, qty = 3 },
+                { item_id = 2321, qty = 1 },
             },
             levels = { 60, 85, 102, 120 },
         },
@@ -1905,6 +1738,44 @@ TFG.TAILORING_FOREVER = {
                 { item_id = 2997, qty = 5 },
                 { item_id = 2604, qty = 3 },
                 { item_id = 2321, qty = 1 },
+            },
+            levels = { 70, 95, 112, 130 },
+        },
+        {
+            spell_id = 6521,
+            name = "Pearl-clasped Cloak",
+            categories = { "Cloaks" },
+            icon = "inv_misc_cape_11",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 400,
+                },
+            },
+            product = { item_id = 5542, qty = 1 },
+            materials = {
+                { item_id = 2997, qty = 3 },
+                { item_id = 2321, qty = 2 },
+                { item_id = 5498, qty = 1 },
+            },
+            levels = { 70, 95, 112, 130 },
+        },
+        {
+            spell_id = 2401,
+            name = "Woolen Boots",
+            categories = { "Shoes" },
+            icon = "inv_boots_09",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 300,
+                },
+            },
+            product = { item_id = 2583, qty = 1 },
+            materials = {
+                { item_id = 2997, qty = 4 },
+                { item_id = 2321, qty = 2 },
+                { item_id = 2318, qty = 2 },
             },
             levels = { 70, 95, 112, 130 },
         },
@@ -2319,6 +2190,25 @@ TFG.TAILORING_FOREVER = {
             levels = { 80, 105, 122, 140 },
         },
         {
+            spell_id = 2406,
+            name = "Gray Woolen Shirt",
+            categories = { "Shirts" },
+            icon = "inv_shirt_grey_01",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 200,
+                },
+            },
+            product = { item_id = 2587, qty = 1 },
+            materials = {
+                { item_id = 2997, qty = 2 },
+                { item_id = 2321, qty = 1 },
+                { item_id = 4340, qty = 1 },
+            },
+            levels = { 80, 90, 100, 110 },
+        },
+        {
             spell_id = 3844,
             name = "Heavy Woolen Cloak",
             categories = { "Cloaks" },
@@ -2340,6 +2230,24 @@ TFG.TAILORING_FOREVER = {
     },
     [85] = {
         {
+            spell_id = 3848,
+            name = "Double-stitched Woolen Shoulders",
+            categories = { "Spaulders" },
+            icon = "inv_shoulder_06",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                },
+            },
+            product = { item_id = 4314, qty = 1 },
+            materials = {
+                { item_id = 2997, qty = 3 },
+                { item_id = 2321, qty = 2 },
+            },
+            levels = { 85, 110, 127, 145 },
+        },
+        {
             spell_id = 1257390,
             name = "Flame Sash",
             categories = { "Belts" },
@@ -2360,6 +2268,24 @@ TFG.TAILORING_FOREVER = {
                 { item_id = 2321, qty = 4 },
                 { item_id = 249409, qty = 3 },
                 { item_id = 6371, qty = 3 },
+            },
+            levels = { 85, 110, 127, 145 },
+        },
+        {
+            spell_id = 3850,
+            name = "Heavy Woolen Pants",
+            categories = { "Leggings" },
+            icon = "inv_pants_01",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                },
+            },
+            product = { item_id = 4316, qty = 1 },
+            materials = {
+                { item_id = 2997, qty = 5 },
+                { item_id = 2321, qty = 4 },
             },
             levels = { 85, 110, 127, 145 },
         },
@@ -2483,6 +2409,44 @@ TFG.TAILORING_FOREVER = {
             },
             levels = { 85, 110, 127, 145 },
         },
+        {
+            spell_id = 3866,
+            name = "Stylish Red Shirt",
+            categories = { "Shirts" },
+            icon = "inv_shirt_red_01",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 250,
+                },
+            },
+            product = { item_id = 4330, qty = 1 },
+            materials = {
+                { item_id = 2997, qty = 3 },
+                { item_id = 2604, qty = 2 },
+                { item_id = 2321, qty = 1 },
+            },
+            levels = { 85, 110, 127, 145 },
+        },
+        {
+            spell_id = 8467,
+            name = "White Woolen Dress",
+            categories = { "Dressed for the Occasion" },
+            icon = "inv_shirt_12",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 250,
+                },
+            },
+            product = { item_id = 6787, qty = 1 },
+            materials = {
+                { item_id = 2997, qty = 3 },
+                { item_id = 2324, qty = 4 },
+                { item_id = 2321, qty = 1 },
+            },
+            levels = { 85, 110, 127, 145 },
+        },
     },
     [90] = {
         {
@@ -2602,6 +2566,23 @@ TFG.TAILORING_FOREVER = {
         },
     },
     [100] = {
+        {
+            spell_id = 3839,
+            name = "Bolt of Silk Cloth",
+            categories = { "Reagents" },
+            icon = "inv_fabric_silk_03",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                },
+            },
+            product = { item_id = 4305, qty = 1 },
+            materials = {
+                { item_id = 4306, qty = 4 },
+            },
+            levels = { 100, 110, 115, 120 },
+        },
         {
             spell_id = 1257396,
             name = "Filigreed Flame Leggings",
@@ -2917,6 +2898,47 @@ TFG.TAILORING_FOREVER = {
             },
             levels = { 100, 125, 142, 160 },
         },
+        {
+            spell_id = 3855,
+            name = "Spidersilk Boots",
+            categories = { "Shoes" },
+            icon = "inv_boots_05",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 750,
+                },
+            },
+            product = { item_id = 4320, qty = 1 },
+            materials = {
+                { item_id = 4305, qty = 2 },
+                { item_id = 2319, qty = 4 },
+                { item_id = 3182, qty = 4 },
+                { item_id = 5500, qty = 1 },
+            },
+            levels = { 100, 125, 142, 160 },
+        },
+    },
+    [105] = {
+        {
+            spell_id = 3852,
+            name = "Gloves of Meditation",
+            categories = { "Gloves" },
+            icon = "inv_gauntlets_05",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 750,
+                },
+            },
+            product = { item_id = 4318, qty = 1 },
+            materials = {
+                { item_id = 2997, qty = 4 },
+                { item_id = 2321, qty = 3 },
+                { item_id = 3383, qty = 1 },
+            },
+            levels = { 105, 125, 140, 155 },
+        },
     },
     [110] = {
         {
@@ -2961,6 +2983,25 @@ TFG.TAILORING_FOREVER = {
                 { item_id = 6371, qty = 6 },
                 { item_id = 2842, qty = 2 },
                 { item_id = 11082, qty = 2 },
+            },
+            levels = { 110, 130, 145, 160 },
+        },
+        {
+            spell_id = 6690,
+            name = "Lesser Wizard's Robe",
+            categories = { "Robes and Vests" },
+            icon = "inv_chest_cloth_17",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 1000,
+                },
+            },
+            product = { item_id = 5766, qty = 1 },
+            materials = {
+                { item_id = 4305, qty = 2 },
+                { item_id = 2321, qty = 2 },
+                { item_id = 3182, qty = 2 },
             },
             levels = { 110, 130, 145, 160 },
         },
@@ -3097,6 +3138,25 @@ TFG.TAILORING_FOREVER = {
     },
     [115] = {
         {
+            spell_id = 8758,
+            name = "Azure Silk Pants",
+            categories = { "Leggings" },
+            icon = "inv_pants_08",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 600,
+                },
+            },
+            product = { item_id = 7046, qty = 1 },
+            materials = {
+                { item_id = 4305, qty = 4 },
+                { item_id = 6260, qty = 2 },
+                { item_id = 2321, qty = 3 },
+            },
+            levels = { 115, 135, 150, 165 },
+        },
+        {
             spell_id = 3856,
             name = "Spider Silk Slippers",
             categories = { "Shoes" },
@@ -3136,6 +3196,25 @@ TFG.TAILORING_FOREVER = {
                 { item_id = 2321, qty = 2 },
             },
             levels = { 120, 140, 155, 170 },
+        },
+        {
+            spell_id = 8760,
+            name = "Azure Silk Hood",
+            categories = { "Hoods" },
+            icon = "inv_helmet_29",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 600,
+                },
+            },
+            product = { item_id = 7048, qty = 1 },
+            materials = {
+                { item_id = 4305, qty = 2 },
+                { item_id = 6260, qty = 2 },
+                { item_id = 2321, qty = 1 },
+            },
+            levels = { 120, 130, 135, 140 },
         },
         {
             spell_id = 3870,
@@ -3178,6 +3257,24 @@ TFG.TAILORING_FOREVER = {
         },
     },
     [125] = {
+        {
+            spell_id = 3859,
+            name = "Azure Silk Vest",
+            categories = { "Robes and Vests" },
+            icon = "inv_chest_cloth_37",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 750,
+                },
+            },
+            product = { item_id = 4324, qty = 1 },
+            materials = {
+                { item_id = 4305, qty = 5 },
+                { item_id = 6260, qty = 4 },
+            },
+            levels = { 125, 145, 160, 175 },
+        },
         {
             spell_id = 1257415,
             name = "Filigreed Flame Circlet",
@@ -3513,6 +3610,25 @@ TFG.TAILORING_FOREVER = {
             levels = { 125, 145, 160, 175 },
         },
         {
+            spell_id = 3813,
+            name = "Small Silk Pack",
+            categories = { "Bags" },
+            icon = "inv_misc_bag_07",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 800,
+                },
+            },
+            product = { item_id = 4245, qty = 1 },
+            materials = {
+                { item_id = 4305, qty = 3 },
+                { item_id = 4234, qty = 2 },
+                { item_id = 2321, qty = 3 },
+            },
+            levels = { 125, 145, 160, 175 },
+        },
+        {
             spell_id = 8782,
             name = "Truefaith Gloves",
             categories = { "Gloves" },
@@ -3637,6 +3753,10 @@ TFG.TAILORING_FOREVER = {
                     type = "Item",
                     item_id = 254008,
                 },
+                {
+                    type = "Trainer",
+                    cost = 1450,
+                },
             },
             product = { item_id = 254007, qty = 1 },
             materials = {
@@ -3696,6 +3816,10 @@ TFG.TAILORING_FOREVER = {
                     type = "Item",
                     item_id = 254006,
                 },
+                {
+                    type = "Trainer",
+                    cost = 1450,
+                },
             },
             product = { item_id = 254005, qty = 1 },
             materials = {
@@ -3716,6 +3840,10 @@ TFG.TAILORING_FOREVER = {
                 {
                     type = "Item",
                     item_id = 254004,
+                },
+                {
+                    type = "Trainer",
+                    cost = 1450,
                 },
             },
             product = { item_id = 254003, qty = 1 },
@@ -3738,6 +3866,10 @@ TFG.TAILORING_FOREVER = {
                     type = "Item",
                     item_id = 254002,
                 },
+                {
+                    type = "Trainer",
+                    cost = 1450,
+                },
             },
             product = { item_id = 254001, qty = 1 },
             materials = {
@@ -3758,6 +3890,10 @@ TFG.TAILORING_FOREVER = {
                 {
                     type = "Item",
                     item_id = 254010,
+                },
+                {
+                    type = "Trainer",
+                    cost = 1450,
                 },
             },
             product = { item_id = 254009, qty = 1 },
@@ -3799,6 +3935,10 @@ TFG.TAILORING_FOREVER = {
                 {
                     type = "Item",
                     item_id = 254012,
+                },
+                {
+                    type = "Trainer",
+                    cost = 1450,
                 },
             },
             product = { item_id = 254011, qty = 1 },
