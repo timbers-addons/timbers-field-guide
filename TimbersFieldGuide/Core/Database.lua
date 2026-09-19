@@ -15,6 +15,8 @@ TFG.DISCOVERY_BUCKET = 999
 
 -- Select the database for the detected game version. Unknown future versions
 -- fall back by client family so their shared base data remains usable.
+local clientInterface = tonumber((select(4, GetBuildInfo()))) or 0
+local foreverVersion = TFG.GAME_VERSIONS and TFG.GAME_VERSIONS.FOREVER
 local _, activeGameVersion
 if TFG.GetActiveGameVersion then
     _, activeGameVersion = TFG.GetActiveGameVersion()
@@ -28,9 +30,10 @@ elseif WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
     TFG.selectedExpansion = "WRATH_CLASSIC"
 elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
     TFG.selectedExpansion = "BURNING_CRUSADE"
-elseif WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
-    -- WoW: Forever runs the Midnight engine. Assumes it reports the mainline
-    -- project id; replace with a GameVersions entry once its ids are known.
+elseif foreverVersion and clientInterface >= foreverVersion.interfaceMin
+    and clientInterface <= foreverVersion.interfaceMax then
+    -- A Forever client the registry did not match (a season id, say). Retail
+    -- shares its project id, so the family is told by the interface range.
     TFG.selectedExpansion = "FOREVER"
 else
     TFG.selectedExpansion = "CLASSIC_ERA"

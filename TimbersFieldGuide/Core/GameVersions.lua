@@ -44,6 +44,17 @@ TFG.GAME_VERSIONS = {
         --     { phase = 3, activatesAt = 1787868000 }, -- 2026-08-27 22:00 UTC
         -- },
     },
+    -- WoW: Forever runs the retail engine and reports itself as mainline with
+    -- expansion level 0 and no season (seen on 1.60.1, interface 16001), so the
+    -- interface range is the only thing that tells it from retail.
+    FOREVER = {
+        projectID = WOW_PROJECT_MAINLINE,
+        expansionLevel = LE_EXPANSION_CLASSIC,
+        seasonID = 0,
+        databaseKey = "FOREVER",
+        interfaceMin = 16000,
+        interfaceMax = 16999,
+    },
     WRATH_CLASSIC = {
         projectID = WOW_PROJECT_WRATH_CLASSIC,
         expansionLevel = LE_EXPANSION_WRATH_OF_THE_LICH_KING,

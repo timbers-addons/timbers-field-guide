@@ -55,6 +55,8 @@ foreach ($reference in $references) {
 
 $gameVersions = Get-Content -LiteralPath (Join-Path $Root "Core/GameVersions.lua") -Raw
 Assert-True ($gameVersions -match 'TBC_ANNIVERSARY\s*=\s*\{[\s\S]*?currentPhase\s*=\s*\d+') "TBC Anniversary must declare a numeric currentPhase in Core/GameVersions.lua."
+Assert-True ($gameVersions -match 'FOREVER\s*=\s*\{[\s\S]*?interfaceMin\s*=\s*16000[\s\S]*?interfaceMax\s*=\s*16999') "Forever must be told from retail by its interface range in Core/GameVersions.lua."
+Assert-True ($databaseCoreWithoutComments -notmatch 'WOW_PROJECT_ID\s*==\s*WOW_PROJECT_MAINLINE') "Core/Database.lua must not treat every mainline client as Forever."
 Assert-True ($databaseCore -match "DISCOVERY_BUCKET\s*=\s*999") "Discovery bucket constant must remain 999."
 Assert-True ($databaseCore -match 'shaman\s*=\s*\{[\s\S]*?color\s*=\s*TFG\.CLASS_COLORS\["PALADIN"\]') "Vanilla Shaman must retain the intentional Paladin color."
 Assert-True ($databaseCoreWithoutComments -notmatch '\{\s*name\s*=\s*"[^"]+"\s*,\s*file\s*=\s*TFG\.') "Selectable child views must define a stable key before name/file."
