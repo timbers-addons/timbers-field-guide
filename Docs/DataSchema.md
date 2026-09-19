@@ -52,7 +52,7 @@ What the bucket key means depends on the file:
 | File kind      | Bucket key                                  |
 |----------------|---------------------------------------------|
 | Classes / Pets | character level the ability trains at       |
-| Professions    | profession skill level the recipe trains at |
+| Professions    | profession skill level the recipe trains at; the 900s are groups shown differently: `930` is Discoveries, `980` is Unknown |
 | RoguePoisons   | character level                             |
 | Riding         | character level                             |
 | WeaponSkills   | not numeric: keyed by class token (`druid`, `warrior`, ...) |
@@ -108,6 +108,7 @@ Fields, all optional except `type`:
 | `type`       | string | How it is obtained: `Trainer`, `Vendor`, `Drop`, `Quest`, `Discovery`, `Reputation`. |
 | `item_id`    | number | Item ID of the recipe/pattern/design/tome the player learns from. Omit when there is no physical item (trainer-taught, discovery). |
 | `cost`       | number | Price in copper (vendor price or training cost). Omit if free. |
+| `skill`      | number | Profession skill this source asks for, only when it is more than the entry's own bucket: the recipe can be learned earlier another way (a pattern at 140, the trainer at 150). Shown as "Requires Tailoring (150)". Omit otherwise. |
 | `currencies` | array  | What it costs besides gold, one row per component: `{ currency_id = 3402, qty = 240, name = "Merchant's Favor" }` for a currency, `{ item_id = 20558, qty = 3 }` for an item. Name and icon come from the client at runtime; `name` is the fallback when the client cannot resolve a `currency_id`. Shown after the gold price. Omit if the price is gold only. |
 | `location`   | string | Human-readable "where": vendor name and spot, dungeon, quest giver, rep level. Shown as the primary text of the source line in the popup, so name the vendor/drop here rather than repeating the type. Omit if there is nothing useful to say. |
 | `reputation` | table  | Standing the vendor asks for: `{ faction = "Azeroth Commerce Authority", standing = "Honored" }`. Shown on a row of its own in the popup and the list tooltip, green or red by the player's standing, so keep it out of `location`. An optional `faction_id` makes that lookup exact; without it the faction is found by name in the reputation list. The Reputation dropdown lists every faction named here. The hand-written TBC files still put the standing in `location` ("Honor Hold (Honored)"); new data uses this field. |
@@ -218,6 +219,12 @@ Notes:
 - `levels` is always the four difficulty thresholds in
   orange/yellow/green/gray order. The first value doubles as the skill level
   shown as "learnable at".
+- Buckets in the 900s are reserved for groups the list shows differently from a
+  skill bracket; the gaps leave room for more. Bucket `930`
+  (`TFG.DISCOVERY_BUCKET`) is Discoveries.
+- Bucket `980` (`TFG.UNKNOWN_BUCKET`) holds entries that are in the game files
+  but whose learn skill nobody has seen. It shows last, under "Unknown", so skill
+  1 only holds what really is learned at 1. Their first `levels` value is `0`.
 - Profession rank entries (Apprentice/Journeyman/...) are ordinary entries in
   the `Profession Training` category with a `Trainer` source and no product.
 - `categories` is a list and an entry belongs to every category in it: the

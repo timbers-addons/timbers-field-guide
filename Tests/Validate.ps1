@@ -82,7 +82,8 @@ Assert-True ($gameVersions -match 'TBC_ANNIVERSARY\s*=\s*\{[\s\S]*?currentPhase\
 Assert-True ($gameVersions -match 'FOREVER\s*=\s*\{[\s\S]*?interfaceMin\s*=\s*16000[\s\S]*?interfaceMax\s*=\s*16999') "Forever must be told from retail by its interface range in Core/GameVersions.lua."
 Assert-True ($databaseCoreWithoutComments -notmatch 'WOW_PROJECT_ID\s*==\s*WOW_PROJECT_MAINLINE') "Core/Database.lua must not treat every mainline client as Forever."
 Assert-True ($databaseCoreWithoutComments -match 'key\s*~=\s*TFG\.selectedExpansion\s+then\s+TFG\.DATABASE_FILES\[key\]\s*=\s*nil') "A client must only offer its own game: tooltips come from the running client, so another game's page would show wrong numbers."
-Assert-True ($databaseCore -match "DISCOVERY_BUCKET\s*=\s*999") "Discovery bucket constant must remain 999."
+Assert-True ($databaseCore -match "UNKNOWN_BUCKET\s*=\s*980") "Unknown bucket constant must stay 980: the generated Forever files use it, and it sorts after Discoveries."
+Assert-True ($databaseCore -match "DISCOVERY_BUCKET\s*=\s*930") "Discovery bucket constant must stay 930: the TBC Alchemy file uses it."
 Assert-True ($databaseCore -match 'shaman\s*=\s*\{[\s\S]*?color\s*=\s*TFG\.CLASS_COLORS\["PALADIN"\]') "Vanilla Shaman must retain the intentional Paladin color."
 Assert-True ($databaseCoreWithoutComments -notmatch '\{\s*name\s*=\s*"[^"]+"\s*,\s*file\s*=\s*TFG\.') "Selectable child views must define a stable key before name/file."
 

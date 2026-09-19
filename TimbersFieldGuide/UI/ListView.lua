@@ -887,6 +887,7 @@ function frame:Relayout()
                 label = r.label,
                 level = r.level,
                 isDiscovery = r.isDiscovery,
+                isUnknown = r.isUnknown,
                 _tfgDisplayLabel = r._tfgDisplayLabel,
                 _tfgIsClassGroup = r._tfgIsClassGroup,
                 _tfgClassKey = r._tfgClassKey,
@@ -1015,6 +1016,7 @@ function frame:Relayout()
                         label = r.label,
                         level = r.level or lvl,
                         isDiscovery = r.isDiscovery,
+                        isUnknown = r.isUnknown,
                         _tfgDisplayLabel = r._tfgDisplayLabel,
                         _tfgIsClassGroup = r._tfgIsClassGroup,
                         _tfgClassKey = r._tfgClassKey,
@@ -1371,8 +1373,8 @@ function frame:Relayout()
                 -- Match class-style coloring:
                 --  * Green if your profession skill meets/exceeds the bracket
                 --  * White otherwise
-                --  * Do not color Discoveries
-                if not row.isDiscovery and ((tostring(activeMode) == "level" and playerLevel >= levelRequired) or (tostring(activeMode) ~= "level" and professionLevel >= levelRequired)) then
+                --  * Do not color Discoveries or Unknown
+                if not row.isDiscovery and not row.isUnknown and ((tostring(activeMode) == "level" and playerLevel >= levelRequired) or (tostring(activeMode) ~= "level" and professionLevel >= levelRequired)) then
                     label:SetTextColor(0.5, 1, 0)
                 else
                     label:SetTextColor(1, 1, 1)
@@ -1407,6 +1409,8 @@ function frame:Relayout()
                     if isProfession then
                         if row.isDiscovery then
                             label:SetText("Discoveries")
+                        elseif row.isUnknown then
+                            label:SetText("Unknown")
                         else
                             -- If this profession-like view originates from a skill DB configured
                             -- with mode = "level", prefer the "Level" label instead of "Skill".
@@ -1439,6 +1443,7 @@ function frame:Relayout()
                     end
 
                     local icon = acquireEntryIcon()
+                    icon.tfgUnknown = row.isUnknown
                     icon:SetSize(UI.ICON_SIZE, UI.ICON_SIZE)
                     icon:SetPoint("TOPLEFT", xOffset, yOffset)
                     -- Resolve texture: prefer explicit texture, then spell icon, then item icon if present.
@@ -1846,6 +1851,9 @@ function frame:Relayout()
                                     end
                                     local repText = TFG.FormatReputation(s)
                                     if repText then GameTooltip:AddLine(repText) end
+                                end
+                                if self.tfgUnknown then
+                                    GameTooltip:AddLine("In the game files, but not yet seen in game.", 0.6, 0.6, 0.6, true)
                                 end
 
                                 if wouldShowPopup then

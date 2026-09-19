@@ -3324,7 +3324,7 @@ TFG.ALCHEMY_BURNING_CRUSADE = {
             levels = { 375, 380, 385, 390 },
         },
     },
-    [999] = {
+    [930] = {
         {
             spell_id = 28586,
             name = "Super Rejuvenation Potion",

@@ -11,7 +11,12 @@ TFG.isSkill = false
 TFG.viewAvailable = true
 TFG.selectedPhase = nil
 
-TFG.DISCOVERY_BUCKET = 999
+-- Buckets in the 900s are groups the list shows differently from a skill
+-- bracket, sorted after every real skill level. The gaps leave room for more.
+TFG.DISCOVERY_BUCKET = 930
+-- Entries that are in the game files but whose learn skill nobody has seen yet.
+-- Shown last, under "Unknown", instead of crowding skill 1.
+TFG.UNKNOWN_BUCKET = 980
 
 -- Select the database for the detected game version. Unknown future versions
 -- fall back by client family so their shared base data remains usable.
@@ -464,6 +469,7 @@ function TFG.GenerateRows(database)
                 label = "Level " .. tostring(n),
                 level = n,
                 isDiscovery = n == TFG.DISCOVERY_BUCKET,
+                isUnknown = n == TFG.UNKNOWN_BUCKET,
                 spells = spells,
             }
         end
