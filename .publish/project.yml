@@ -23,5 +23,5 @@ curseforge:
     allow_comments: true
     project_distribution: allow
     source_code: github
-    source_code_url: https://github.com/mhco/TimbersFieldGuide
+    source_code_url: https://github.com/timbers-addons/timbers-field-guide
     automatic_packaging: tagged-commits

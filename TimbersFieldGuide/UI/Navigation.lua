@@ -18,7 +18,7 @@ local CLASS_NAMES = {
 
 local CLASS_ICON_TEXTURE = "Interface\\GLUES\\CHARACTERCREATE\\UI-CHARACTERCREATE-CLASSES"
 local ABOUT_LOGO = "Interface\\AddOns\\TimbersFieldGuide\\Media\\logo-wide-new.blp"
-local ABOUT_URL = "https://github.com/mhco/TimbersFieldGuide"
+local ABOUT_URL = "https://github.com/timbers-addons/timbers-field-guide"
 local DEFAULT_ICON = "Interface\\Icons\\INV_Misc_QuestionMark"
 
 -- Standard class-icon atlas coordinates (fallback if the client global is absent).
