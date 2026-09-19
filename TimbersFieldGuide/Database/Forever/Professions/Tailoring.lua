@@ -232,6 +232,7 @@ TFG.TAILORING_FOREVER = {
             rank = 1,
             categories = { "Camping" },
             icon = "inv_banner_03",
+            faction = "Alliance",
             source = {
                 {
                     type = "Trainer",
@@ -8477,6 +8478,7 @@ TFG.TAILORING_FOREVER = {
             name = "Faction Banner",
             categories = { "Camping" },
             icon = "inv_banner_03",
+            faction = "Horde",
             product = { item_id = 279972, qty = 1 },
             materials = {
                 { item_id = 2996, qty = 1 },
