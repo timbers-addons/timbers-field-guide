@@ -106,6 +106,16 @@ local function hasSpellCategory(spell, category)
     return false
 end
 
+-- Whether any of an entry's sources asks for standing with this faction.
+local function hasReputationFaction(entry, faction)
+    if not entry or not faction or type(entry.source) ~= "table" then return false end
+    for _, s in ipairs(entry.source) do
+        if type(s) == "table" and s.reputation and s.reputation.faction == faction then return true end
+    end
+    return false
+end
+TFG.HasReputationFaction = hasReputationFaction
+
 -- Get training cost from ability object (supports both 'cost' and 'source.cost')
 local function getTrainingCost(spell)
     if not spell then return nil end

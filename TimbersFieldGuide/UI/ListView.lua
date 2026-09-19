@@ -365,6 +365,7 @@ message2:SetShown(false)
 
 
 TFG.selectedCategory = TFG.selectedCategory or "ALL"
+TFG.selectedReputation = TFG.selectedReputation or "ALL"
 
 -- Safe close helper (avoids calling a local function before it's defined).
 local function safeCloseProfessionPopup()
@@ -456,6 +457,26 @@ function TFG.HasCategoryFilter()
     if isProfessionView() then return true end
     local options = extractCategoriesFromDatabase(TFG.activeDatabase)
     return #options > 2
+end
+-- "ALL", then every faction a source in the active database asks standing with.
+function TFG.GetReputationOptions()
+    local set, list = {}, { "ALL" }
+    for _, spells in pairs(TFG.activeDatabase or {}) do
+        for _, spell in ipairs(type(spells) == "table" and spells or {}) do
+            for _, s in ipairs(type(spell.source) == "table" and spell.source or {}) do
+                local faction = type(s) == "table" and s.reputation and s.reputation.faction
+                if faction and not set[faction] then
+                    set[faction] = true
+                    list[#list + 1] = faction
+                end
+            end
+        end
+    end
+    table.sort(list, function(a, b)
+        if a == "ALL" or b == "ALL" then return a == "ALL" and b ~= "ALL" end
+        return a < b
+    end)
+    return list
 end
 function TFG.GetMaxPhase()
     return getMaxExplicitPhase(TFG.activeDatabase)
@@ -1289,6 +1310,11 @@ function frame:Relayout()
             elseif not hasSpellCategory(spell, TFG.selectedCategory) then
                 return true, "category"
             end
+        end
+
+        if TFG.selectedReputation and TFG.selectedReputation ~= "ALL"
+            and not TFG.HasReputationFaction(spell, TFG.selectedReputation) then
+            return true, "reputation"
         end
 
         if isTalentSpell(spell) and not TFG.showTalents and not isAnyTalentRankKnown(spell) then

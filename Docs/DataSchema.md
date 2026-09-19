@@ -93,7 +93,9 @@ Fields, all optional except `type`:
 | `type`       | string | How it is obtained: `Trainer`, `Vendor`, `Drop`, `Quest`, `Discovery`, `Reputation`. |
 | `item_id`    | number | Item ID of the recipe/pattern/design/tome the player learns from. Omit when there is no physical item (trainer-taught, discovery). |
 | `cost`       | number | Price in copper (vendor price or training cost). Omit if free. |
+| `currencies` | array  | What it costs besides gold, one row per component: `{ currency_id = 3402, qty = 240, name = "Merchant's Favor" }` for a currency, `{ item_id = 20558, qty = 3 }` for an item. Name and icon come from the client at runtime; `name` is the fallback when the client cannot resolve a `currency_id`. Shown after the gold price. Omit if the price is gold only. |
 | `location`   | string | Human-readable "where": vendor name and spot, dungeon, quest giver, rep level. Shown as the primary text of the source line in the popup, so name the vendor/drop here rather than repeating the type. Omit if there is nothing useful to say. |
+| `reputation` | table  | Standing the vendor asks for: `{ faction = "Azeroth Commerce Authority", standing = "Honored" }`. Shown on a row of its own in the popup and the list tooltip, green or red by the player's standing, so keep it out of `location`. An optional `faction_id` makes that lookup exact; without it the faction is found by name in the reputation list. The Reputation dropdown lists every faction named here. The hand-written TBC files still put the standing in `location` ("Honor Hold (Honored)"); new data uses this field. |
 | `faction`    | string | `Alliance` or `Horde`. Display label only, see Faction below. Only used on entries whose top-level faction is neutral. Omit otherwise. |
 | `quest_id`   | number | For `Quest` sources: the quest ID. The popup resolves the quest title from the client API at runtime. |
 | `quest_name` | string | Optional authored fallback title for a `Quest` source, used only when the client API cannot resolve `quest_id` to a name. |
@@ -203,6 +205,11 @@ Notes:
   shown as "learnable at".
 - Profession rank entries (Apprentice/Journeyman/...) are ordinary entries in
   the `Profession Training` category with a `Trainer` source and no product.
+- `categories` is a list and an entry belongs to every category in it: the
+  Category dropdown offers them all and each one's results include the entry.
+  The first is the craft category and heads the popup. Factions do not go here:
+  the Reputation dropdown is built from the sources' `reputation` field and
+  narrows the list together with Category.
 
 ## Skill entries
 

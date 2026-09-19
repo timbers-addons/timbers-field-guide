@@ -682,6 +682,12 @@ local function ensureTestFrame()
     UIDropDownMenu_SetWidth(categoryDropdown, 130)
     categoryDropdown:Hide()
 
+    -- Reputation dropdown: the factions whose standing gates a recipe in this view.
+    -- Single choice like the others; the dropdowns narrow the list together.
+    local reputationDropdown = CreateFrame("Frame", "TFG_NavReputationDropdown", detailFilters, "UIDropDownMenuTemplate")
+    UIDropDownMenu_SetWidth(reputationDropdown, 130)
+    reputationDropdown:Hide()
+
     local phaseDropdown = CreateFrame("Frame", "TFG_NavPhaseDropdown", detailFilters, "UIDropDownMenuTemplate")
     UIDropDownMenu_SetWidth(phaseDropdown, 80)
     phaseDropdown:Hide()
@@ -917,6 +923,7 @@ local function ensureTestFrame()
         if not token then return end
         if TFG.selectedFile ~= token or TFG._loadedVersion ~= TFG.selectedExpansion then
             TFG.selectedCategory = nil
+            TFG.selectedReputation = nil
             TFG.selectedPhase = nil
             TFG._loadedVersion = TFG.selectedExpansion
             TFG.LoadDatabase(token, TFG.selectedExpansion)
@@ -972,6 +979,45 @@ local function ensureTestFrame()
         if not found then TFG.selectedCategory = "ALL" end
         UIDropDownMenu_SetSelectedValue(categoryDropdown, TFG.selectedCategory)
         UIDropDownMenu_SetText(categoryDropdown, categoryLabel(TFG.selectedCategory))
+    end
+
+    -- Build the Reputation dropdown when the active database has a recipe that
+    -- needs standing with a faction.
+    local function refreshReputationDropdown()
+        local options = TFG.GetReputationOptions()
+        if #options <= 1 then
+            TFG.selectedReputation = "ALL"
+            reputationDropdown:Hide()
+            return
+        end
+        reputationDropdown:Show()
+
+        local function label(value) return value == "ALL" and "All Reputations" or value end
+        local sig = table.concat(options, "\031")
+        if reputationDropdown._sig ~= sig then
+            reputationDropdown._sig = sig
+            UIDropDownMenu_Initialize(reputationDropdown, function()
+                for _, value in ipairs(options) do
+                    local info = UIDropDownMenu_CreateInfo()
+                    info.text = label(value)
+                    info.value = value
+                    info.func = function()
+                        TFG.selectedReputation = value
+                        UIDropDownMenu_SetSelectedValue(reputationDropdown, value)
+                        UIDropDownMenu_SetText(reputationDropdown, label(value))
+                        CloseDropDownMenus()
+                        TFG.RequestRelayout()
+                    end
+                    UIDropDownMenu_AddButton(info)
+                end
+            end)
+        end
+
+        local found = false
+        for _, value in ipairs(options) do if value == TFG.selectedReputation then found = true end end
+        if not found then TFG.selectedReputation = "ALL" end
+        UIDropDownMenu_SetSelectedValue(reputationDropdown, TFG.selectedReputation)
+        UIDropDownMenu_SetText(reputationDropdown, label(TFG.selectedReputation))
     end
 
     -- Build the Phase dropdown when the active profession exposes future phases.
@@ -1051,11 +1097,13 @@ local function ensureTestFrame()
     -- window resizes; it re-runs on every relayout.
     local function layoutFilterRow()
         local catShown = categoryDropdown:IsShown()
+        local repShown = reputationDropdown:IsShown()
         local phaseShown = phaseDropdown:IsShown()
 
         local searchLeft = searchInput:GetLeft()
         local ready = searchLeft
             and (not phaseShown or phaseDropdown:GetRight())
+            and (not repShown or reputationDropdown:GetRight())
             and (not catShown or categoryDropdown:GetRight())
 
         if not ready then
@@ -1064,12 +1112,18 @@ local function ensureTestFrame()
                 phaseDropdown:ClearAllPoints()
                 phaseDropdown:SetPoint("RIGHT", searchInput, "LEFT", 0, 0)
             end
+            local rightOfRep = phaseShown and phaseDropdown or searchInput
+            if repShown then
+                reputationDropdown:ClearAllPoints()
+                reputationDropdown:SetPoint("RIGHT", rightOfRep, "LEFT", 0, 0)
+            end
+            local rightOfCat = repShown and reputationDropdown or rightOfRep
             if catShown then
                 categoryDropdown:ClearAllPoints()
-                categoryDropdown:SetPoint("RIGHT", phaseShown and phaseDropdown or searchInput, "LEFT", 0, 0)
+                categoryDropdown:SetPoint("RIGHT", rightOfCat, "LEFT", 0, 0)
             end
             knownLabel:ClearAllPoints()
-            knownLabel:SetPoint("RIGHT", (catShown and categoryDropdown) or (phaseShown and phaseDropdown) or searchInput, "LEFT", -FILTER_GAP, 0)
+            knownLabel:SetPoint("RIGHT", catShown and categoryDropdown or rightOfCat, "LEFT", -FILTER_GAP, 0)
             if C_Timer and C_Timer.After then C_Timer.After(0, layoutFilterRow) end
             return
         end
@@ -1100,6 +1154,7 @@ local function ensureTestFrame()
         end
 
         if phaseShown then placeDropdown(phaseDropdown) end
+        if repShown then placeDropdown(reputationDropdown) end
         if catShown then placeDropdown(categoryDropdown) end
         placeCheckUnit(knownLabel, knownCheck)
         placeCheckUnit(talentLabel, talentCheck)
@@ -1134,6 +1189,7 @@ local function ensureTestFrame()
         raceLabel:SetSize(raceLabel.label:GetStringWidth(), 20)
 
         refreshCategoryDropdown()
+        refreshReputationDropdown()
         refreshPhaseDropdown()
         layoutFilterRow()
     end
