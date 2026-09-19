@@ -647,6 +647,7 @@ TFG.TAILORING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 10,
                 },
             },
             levels = { 1 },
@@ -1332,6 +1333,7 @@ TFG.TAILORING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 500,
                 },
             },
             levels = { 50 },

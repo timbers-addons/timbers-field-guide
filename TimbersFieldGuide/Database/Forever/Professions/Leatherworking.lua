@@ -1188,6 +1188,7 @@ TFG.LEATHERWORKING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 10,
                 },
             },
             levels = { 1 },

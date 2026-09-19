@@ -23,7 +23,6 @@ TFG.MINING_FOREVER = {
         {
             spell_id = 1235230,
             name = "Mining",
-            categories = { "Profession Training" },
             icon = "trade_engineering",
             source = {
                 {
@@ -31,7 +30,6 @@ TFG.MINING_FOREVER = {
                 },
             },
             levels = { 1, 1, 1, 1 },
-            cap = 75,
         },
         {
             spell_id = 2657,
@@ -80,13 +78,16 @@ TFG.MINING_FOREVER = {
         {
             spell_id = 2575,
             name = "Mining",
+            categories = { "Profession Training" },
             icon = "trade_mining",
             source = {
                 {
                     type = "Trainer",
+                    cost = 10,
                 },
             },
             levels = { 1 },
+            cap = 75,
         },
         {
             spell_id = 2656,
