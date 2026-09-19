@@ -770,6 +770,17 @@ TFG.BLACKSMITHING_FOREVER = {
             name = "Prefect's Waistguard",
             categories = { "Plate Belts" },
             icon = "inv_belt_08",
+            source = {
+                {
+                    type = "Vendor",
+                    item_id = 251426,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
+                },
+            },
             product = { item_id = 250574, qty = 1 },
             materials = {
                 { item_id = 12359, qty = 24 },
@@ -1694,8 +1705,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_belt_23",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251368,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250516, qty = 1 },
@@ -1714,8 +1729,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_belt_22",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251369,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250517, qty = 1 },
@@ -1734,8 +1753,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_belt_15",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251366,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250514, qty = 1 },
@@ -1754,8 +1777,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_belt_17",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251367,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250515, qty = 1 },
@@ -1812,8 +1839,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_belt_17",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251365,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250513, qty = 1 },
@@ -2114,8 +2145,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_gauntlets_11",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251363,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250511, qty = 1 },
@@ -2155,8 +2190,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_gauntlets_12",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251364,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250512, qty = 1 },
@@ -2194,8 +2233,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_gauntlets_15",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251361,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250509, qty = 1 },
@@ -2214,8 +2257,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_gauntlets_26",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251362,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250510, qty = 1 },
@@ -2234,8 +2281,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_gauntlets_26",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251360,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250508, qty = 1 },
@@ -2256,8 +2307,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_boots_chain_02",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251358,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250506, qty = 1 },
@@ -2276,8 +2331,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_boots_chain_05",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251359,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250507, qty = 1 },
@@ -2296,8 +2355,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_boots_chain_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251356,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250504, qty = 1 },
@@ -2316,8 +2379,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_boots_chain_03",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251357,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250505, qty = 1 },
@@ -2336,8 +2403,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_boots_chain_03",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251355,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250503, qty = 1 },
@@ -2358,8 +2429,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_helmet_36",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251383,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250531, qty = 1 },
@@ -2398,8 +2473,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_helmet_37",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251384,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250532, qty = 1 },
@@ -2419,8 +2498,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_helmet_38",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251381,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250529, qty = 1 },
@@ -2440,8 +2523,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_helmet_39",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251382,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250530, qty = 1 },
@@ -2461,8 +2548,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_helmet_39",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251380,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250528, qty = 1 },
@@ -2626,8 +2717,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_chest_chain_08",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251373,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250521, qty = 1 },
@@ -2666,8 +2761,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_chest_chain_09",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251374,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250522, qty = 1 },
@@ -2687,8 +2786,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_chest_chain_09",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251371,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250519, qty = 1 },
@@ -2708,8 +2811,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_chest_chain_07",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251372,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250520, qty = 1 },
@@ -2748,8 +2855,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_chest_chain_07",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251370,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250518, qty = 1 },
@@ -2838,8 +2949,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_pants_mail_10",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251378,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250526, qty = 1 },
@@ -2877,8 +2992,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_pants_mail_13",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251379,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250527, qty = 1 },
@@ -2918,8 +3037,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_pants_mail_16",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251376,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250524, qty = 1 },
@@ -2957,8 +3080,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_pants_mail_05",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251377,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250525, qty = 1 },
@@ -2997,8 +3124,12 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_pants_mail_05",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251375,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
                 },
             },
             product = { item_id = 250523, qty = 1 },
@@ -3921,8 +4052,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_gauntlets_30",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251422,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 250570, qty = 1 },
@@ -3942,8 +4078,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_gauntlets_51",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251418,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 250566, qty = 1 },
@@ -3963,8 +4104,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_gauntlets_26",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251421,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 250569, qty = 1 },
@@ -3984,8 +4130,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_gauntlets_22",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251419,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 250567, qty = 1 },
@@ -4027,8 +4178,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_gauntlets_50",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251420,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 250568, qty = 1 },
@@ -4523,8 +4679,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_shoulder_22",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251432,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 250580, qty = 1 },
@@ -4602,8 +4763,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_shoulder_13",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251428,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 250576, qty = 1 },
@@ -4624,8 +4790,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_shoulder_20",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251431,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 250579, qty = 1 },
@@ -4646,8 +4817,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_shoulder_12",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251429,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 250577, qty = 1 },
@@ -4668,8 +4844,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_shoulder_03",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251430,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 250578, qty = 1 },
@@ -4816,8 +4997,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_bracer_22a",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251437,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250585, qty = 1 },
@@ -4838,8 +5024,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_bracer_22c",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251433,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250581, qty = 1 },
@@ -4860,8 +5051,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_bracer_21b",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251436,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250584, qty = 1 },
@@ -4882,8 +5078,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_bracer_23a",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251434,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250582, qty = 1 },
@@ -4941,8 +5142,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_bracer_14",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251435,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250583, qty = 1 },
@@ -5120,8 +5326,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_boots_plate_05",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251417,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250565, qty = 1 },
@@ -5142,8 +5353,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_boots_plate_19v2",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251413,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250561, qty = 1 },
@@ -5164,8 +5380,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_boots_plate_19v3",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251416,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250564, qty = 1 },
@@ -5186,8 +5407,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_boots_plate_20v1",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251414,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250562, qty = 1 },
@@ -5208,8 +5434,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_boots_plate_19v1",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251415,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250563, qty = 1 },
@@ -5366,8 +5597,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_belt_13",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251427,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250575, qty = 1 },
@@ -5406,8 +5642,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_belt_20",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251423,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250571, qty = 1 },
@@ -5485,8 +5726,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_belt_37a",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251424,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250572, qty = 1 },
@@ -5506,8 +5752,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_gauntlets_11",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251466,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250614, qty = 1 },
@@ -5527,8 +5778,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_hammer_10",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251465,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250613, qty = 1 },
@@ -5586,8 +5842,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_belt_29",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251425,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250573, qty = 1 },
@@ -7271,8 +7532,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_chest_plate11",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251447,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250595, qty = 1 },
@@ -7292,8 +7558,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_helmet_10",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251449,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250597, qty = 1 },
@@ -7312,8 +7583,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_pants_plate_10",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251448,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250596, qty = 1 },
@@ -7983,8 +8259,13 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_spear_05",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 251471,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250619, qty = 1 },

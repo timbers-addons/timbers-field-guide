@@ -344,8 +344,12 @@ TFG.COOKING_FOREVER = {
             icon = "inv_drink_21",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249885,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Kalsey Sanden, Redridge Mountains",
                 },
             },
             product = { item_id = 249871, qty = 1 },
@@ -784,6 +788,12 @@ TFG.COOKING_FOREVER = {
                     type = "Vendor",
                     item_id = 21099,
                     cost = 500,
+                    location = "Kalsey Sanden, Redridge Mountains",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 21099,
+                    cost = 500,
                     location = "Fimbo Greasemitz, Riverglades",
                 },
                 {
@@ -1053,8 +1063,12 @@ TFG.COOKING_FOREVER = {
             icon = "inv_drink_15_color03",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249886,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Kalsey Sanden, Redridge Mountains",
                 },
             },
             product = { item_id = 249872, qty = 1 },
@@ -1222,8 +1236,12 @@ TFG.COOKING_FOREVER = {
             icon = "inv_drink_21_color01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249887,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Kalsey Sanden, Redridge Mountains",
                 },
             },
             product = { item_id = 249873, qty = 1 },
@@ -1573,6 +1591,12 @@ TFG.COOKING_FOREVER = {
                     type = "Vendor",
                     item_id = 21219,
                     cost = 5000,
+                    location = "Kalsey Sanden, Redridge Mountains",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 21219,
+                    cost = 5000,
                     location = "Fimbo Greasemitz, Riverglades",
                 },
                 {
@@ -1634,8 +1658,13 @@ TFG.COOKING_FOREVER = {
             icon = "inv_drink_15_color01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249888,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Kalsey Sanden, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 249874, qty = 1 },
@@ -1769,8 +1798,13 @@ TFG.COOKING_FOREVER = {
             icon = "inv_drink_21_color04",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249889,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Kalsey Sanden, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 249875, qty = 1 },
@@ -2129,8 +2163,13 @@ TFG.COOKING_FOREVER = {
             icon = "inv_drink_15_color04",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249890,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Kalsey Sanden, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 249876, qty = 1 },

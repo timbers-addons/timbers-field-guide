@@ -819,8 +819,12 @@ TFG.ENCHANTING_FOREVER = {
             icon = "inv_mushroom_11",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249476,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
                 },
             },
             product = { item_id = 249396, qty = 1 },
@@ -839,8 +843,12 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_shaman_totemrecall",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249478,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
                 },
             },
             product = { item_id = 249398, qty = 1 },
@@ -859,8 +867,12 @@ TFG.ENCHANTING_FOREVER = {
             icon = "inv_misc_book_13",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249477,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
                 },
             },
             product = { item_id = 249397, qty = 1 },
@@ -967,8 +979,12 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249479,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
                 },
             },
             materials = {
@@ -1003,8 +1019,12 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249480,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
                 },
             },
             materials = {
@@ -1023,8 +1043,12 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249481,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
                 },
             },
             materials = {
@@ -1043,8 +1067,12 @@ TFG.ENCHANTING_FOREVER = {
             icon = "inv_staff_19",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249482,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
                 },
             },
             product = { item_id = 249392, qty = 1 },
@@ -1065,8 +1093,12 @@ TFG.ENCHANTING_FOREVER = {
             icon = "inv_misc_orb_blue",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249484,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
                 },
             },
             product = { item_id = 249394, qty = 1 },
@@ -1084,8 +1116,12 @@ TFG.ENCHANTING_FOREVER = {
             icon = "inv_misc_orb_04",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249485,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
                 },
             },
             product = { item_id = 249395, qty = 1 },
@@ -1103,8 +1139,12 @@ TFG.ENCHANTING_FOREVER = {
             icon = "inv_staff_31",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249483,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
                 },
             },
             product = { item_id = 249393, qty = 1 },
@@ -1886,8 +1926,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249504,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             materials = {
@@ -1906,8 +1951,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249505,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             materials = {
@@ -1926,8 +1976,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249503,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             materials = {
@@ -1946,8 +2001,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249502,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             materials = {
@@ -1966,8 +2026,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249496,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             materials = {
@@ -2002,8 +2067,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "inv_relics_libramofhope",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249494,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 249442, qty = 1 },
@@ -2024,8 +2094,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_nature_natureswrath",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249493,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 249441, qty = 1 },
@@ -2046,8 +2121,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "inv_relics_totemofrage",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249495,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 249443, qty = 1 },
@@ -2123,8 +2203,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "inv_staff_14",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249507,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 249454, qty = 1 },
@@ -2181,8 +2266,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249510,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             materials = {
@@ -2214,8 +2304,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "inv_staff_13",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249506,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 249453, qty = 1 },
@@ -2237,8 +2332,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "inv_rod_enchantedadamantite",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249508,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 249455, qty = 1 },
@@ -2260,8 +2360,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "inv_10_misc_dragonorb_color1",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249509,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 249456, qty = 1 },
@@ -2830,8 +2935,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "inv_wand_07",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249537,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 249385, qty = 1 },
@@ -3329,8 +3439,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249526,
+                    currencies = {
+                        { currency_id = 3402, qty = 240, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             materials = {
@@ -3350,8 +3465,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249525,
+                    currencies = {
+                        { currency_id = 3402, qty = 240, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             materials = {
@@ -3371,8 +3491,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 274394,
+                    currencies = {
+                        { currency_id = 3402, qty = 240, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             materials = {
@@ -3390,8 +3515,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 274401,
+                    currencies = {
+                        { currency_id = 3402, qty = 240, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             materials = {
@@ -3428,8 +3558,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249539,
+                    currencies = {
+                        { currency_id = 3402, qty = 240, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             materials = {
@@ -3444,8 +3579,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249538,
+                    currencies = {
+                        { currency_id = 3402, qty = 240, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             materials = {
@@ -3494,8 +3634,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 274399,
+                    currencies = {
+                        { currency_id = 3402, qty = 240, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             materials = {
@@ -3604,6 +3749,29 @@ TFG.ENCHANTING_FOREVER = {
             levels = { 300, 320, 340, 360 },
         },
         {
+            spell_id = 1213626,
+            name = "Enchant Gloves - Arcane Power",
+            categories = { "Glove Enchants" },
+            icon = "spell_holy_greaterheal",
+            source = {
+                {
+                    type = "Vendor",
+                    item_id = 249534,
+                    currencies = {
+                        { currency_id = 3402, qty = 240, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
+                },
+            },
+            materials = {
+                { item_id = 20725, qty = 2 },
+                { item_id = 14344, qty = 5 },
+                { item_id = 12753, qty = 2 },
+            },
+            levels = { 300, 320, 340, 360 },
+        },
+        {
             spell_id = 25078,
             name = "Enchant Gloves - Fire Power",
             categories = { "Glove Enchants" },
@@ -3658,14 +3826,43 @@ TFG.ENCHANTING_FOREVER = {
             levels = { 300, 320, 340, 360 },
         },
         {
+            spell_id = 1213622,
+            name = "Enchant Gloves - Holy Power",
+            categories = { "Glove Enchants" },
+            icon = "spell_holy_greaterheal",
+            source = {
+                {
+                    type = "Vendor",
+                    item_id = 249536,
+                    currencies = {
+                        { currency_id = 3402, qty = 240, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
+                },
+            },
+            materials = {
+                { item_id = 20725, qty = 2 },
+                { item_id = 14344, qty = 5 },
+                { item_id = 13180, qty = 5 },
+                { item_id = 12735, qty = 2 },
+            },
+            levels = { 300, 320, 340, 360 },
+        },
+        {
             spell_id = 1248645,
             name = "Enchant Gloves - Natural Power",
             categories = { "Glove Enchants" },
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249535,
+                    currencies = {
+                        { currency_id = 3402, qty = 240, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             materials = {
@@ -3718,8 +3915,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 274398,
+                    currencies = {
+                        { currency_id = 3402, qty = 240, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             materials = {
@@ -3790,8 +3992,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 274393,
+                    currencies = {
+                        { currency_id = 3402, qty = 240, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             materials = {
@@ -3994,8 +4201,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "inv_relics_idolofferocity",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249529,
+                    currencies = {
+                        { currency_id = 3402, qty = 240, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 220606, qty = 1 },
@@ -4037,8 +4249,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "inv_relics_libramofhope",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249530,
+                    currencies = {
+                        { currency_id = 3402, qty = 240, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 228175, qty = 1 },
@@ -4120,8 +4337,13 @@ TFG.ENCHANTING_FOREVER = {
             icon = "inv_relics_totemofrebirth",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 249532,
+                    currencies = {
+                        { currency_id = 3402, qty = 240, name = "Merchant's Favor" },
+                    },
+                    location = "Alynsia, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 228176, qty = 1 },

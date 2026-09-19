@@ -2016,8 +2016,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_belt_04",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252765,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252428, qty = 1 },
@@ -2113,8 +2117,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_belt_24",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252767,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252430, qty = 1 },
@@ -2134,8 +2142,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_belt_16",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252769,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252432, qty = 1 },
@@ -2155,8 +2167,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_belt_06",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252768,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252431, qty = 1 },
@@ -2176,8 +2192,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_belt_05",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252766,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252429, qty = 1 },
@@ -2197,8 +2217,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_belt_06",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252770,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252433, qty = 1 },
@@ -2359,8 +2383,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_gauntlets_21",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252777,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252494, qty = 1 },
@@ -2399,8 +2427,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_gauntlets_24",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252779,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252496, qty = 1 },
@@ -2439,8 +2471,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_gauntlets_24",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252781,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252498, qty = 1 },
@@ -2460,8 +2496,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_gauntlets_12",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252780,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252497, qty = 1 },
@@ -2481,8 +2521,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_gauntlets_10",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252778,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252495, qty = 1 },
@@ -2502,8 +2546,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_gauntlets_60",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252782,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252499, qty = 1 },
@@ -2619,8 +2667,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_boots_09",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252786,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252439, qty = 1 },
@@ -2640,8 +2692,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_boots_cloth_07",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252788,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252441, qty = 1 },
@@ -2661,8 +2717,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_boots_chain_05",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252790,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252443, qty = 1 },
@@ -2682,8 +2742,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_boots_chain_12",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252789,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252442, qty = 1 },
@@ -2703,8 +2767,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_boots_cloth_04",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252787,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252440, qty = 1 },
@@ -2724,8 +2792,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_boots_chain_03",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252791,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252444, qty = 1 },
@@ -2828,8 +2900,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_helmet_31",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252798,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252504, qty = 1 },
@@ -2849,8 +2925,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_helmet_48",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252800,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252447, qty = 1 },
@@ -2870,8 +2950,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_helmet_29",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252802,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252506, qty = 1 },
@@ -2891,8 +2975,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_helmet_15",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252801,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252448, qty = 1 },
@@ -2912,8 +3000,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_helmet_33",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252799,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252505, qty = 1 },
@@ -2933,8 +3025,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_helmet_33",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252803,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252507, qty = 1 },
@@ -2956,8 +3052,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_chest_leather_02",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252805,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252508, qty = 1 },
@@ -2977,8 +3077,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_chest_leather_07",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252807,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252450, qty = 1 },
@@ -3057,8 +3161,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_chest_leather_02",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252809,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252510, qty = 1 },
@@ -3078,8 +3186,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_chest_leather_02",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252808,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252451, qty = 1 },
@@ -3099,8 +3211,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_chest_leather_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252806,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252509, qty = 1 },
@@ -3120,8 +3236,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_chest_leather_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252810,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252511, qty = 1 },
@@ -3225,8 +3345,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_pants_leather_19",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252820,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252516, qty = 1 },
@@ -3246,8 +3370,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_kilt_cloth_04v4",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252822,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252457, qty = 1 },
@@ -3310,8 +3438,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_kilt_cloth_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252824,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252518, qty = 1 },
@@ -3331,8 +3463,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_pants_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252823,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252458, qty = 1 },
@@ -3352,8 +3488,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_pants_05",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252821,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252517, qty = 1 },
@@ -3373,8 +3513,12 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_pants_02",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252825,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
                 },
             },
             product = { item_id = 252519, qty = 1 },
@@ -4151,8 +4295,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_gauntlets_20",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252842,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 252530, qty = 1 },
@@ -4173,8 +4322,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_gauntlets_18",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252836,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 252524, qty = 1 },
@@ -4217,8 +4371,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_gauntlets_22",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252840,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 252528, qty = 1 },
@@ -4239,8 +4398,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_gauntlets_22",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252837,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 252525, qty = 1 },
@@ -4261,8 +4425,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_gauntlets_14",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252841,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 252529, qty = 1 },
@@ -4283,8 +4452,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_gauntlets_51",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252838,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 252526, qty = 1 },
@@ -4325,8 +4499,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_gauntlets_18",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252839,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 252527, qty = 1 },
@@ -4370,8 +4549,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_misc_armorkit_07",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252834,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 252463, qty = 1 },
@@ -4791,8 +4975,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_shoulder_17",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252852,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 252538, qty = 1 },
@@ -4813,8 +5002,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_shoulder_08",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252903,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 252569, qty = 1 },
@@ -4835,8 +5029,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_shoulder_17",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252848,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 252534, qty = 1 },
@@ -4857,8 +5056,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_shoulder_23",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252902,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 252568, qty = 1 },
@@ -4879,8 +5083,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_shoulders_mail_warfrontsforsaken_d_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252849,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 252535, qty = 1 },
@@ -4901,8 +5110,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_shoulder_25",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252851,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 252537, qty = 1 },
@@ -4923,8 +5137,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_shoulder_12",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252901,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 252567, qty = 1 },
@@ -4945,8 +5164,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_shoulder_18",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252900,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 252566, qty = 1 },
@@ -4986,8 +5210,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_shoulder_06",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252850,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 252536, qty = 1 },
@@ -5109,8 +5338,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_bracer_07",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252857,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252543, qty = 1 },
@@ -5131,8 +5365,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_bracer_02",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252907,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252573, qty = 1 },
@@ -5153,8 +5392,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_bracer_21c",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252853,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252539, qty = 1 },
@@ -5175,8 +5419,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_bracer_31",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252906,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252572, qty = 1 },
@@ -5197,8 +5446,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_bracer_21c",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252854,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252540, qty = 1 },
@@ -5219,8 +5473,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_bracer_22a",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252856,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252542, qty = 1 },
@@ -5241,8 +5500,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_bracer_25",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252905,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252571, qty = 1 },
@@ -5263,8 +5527,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_bracer_31a",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252904,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252570, qty = 1 },
@@ -5304,8 +5573,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_bracer_22",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252855,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252541, qty = 1 },
@@ -5465,8 +5739,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_boots_cloth_03",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252864,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252472, qty = 1 },
@@ -5487,8 +5766,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_boots_chain_02",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252913,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252579, qty = 1 },
@@ -5509,8 +5793,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_misc_armorkit_09",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252941,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252487, qty = 1 },
@@ -5530,8 +5819,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_boots_chain_06",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252860,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252468, qty = 1 },
@@ -5552,8 +5846,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_boots_chain_13",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252912,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252578, qty = 1 },
@@ -5574,8 +5873,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_boots_cloth_25purple",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252861,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252469, qty = 1 },
@@ -5596,8 +5900,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_boots_leather_cataclysm_b_02",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252863,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252471, qty = 1 },
@@ -5618,8 +5927,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_boots_chain_12",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252911,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252577, qty = 1 },
@@ -5640,8 +5954,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_boots_chain_12",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252910,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252576, qty = 1 },
@@ -5681,8 +6000,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_boots_04",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252862,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252470, qty = 1 },
@@ -6077,8 +6401,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_belt_16",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252876,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252477, qty = 1 },
@@ -6099,8 +6428,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_belt_37c",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252925,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252591, qty = 1 },
@@ -6159,8 +6493,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_belt_37b",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252872,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252473, qty = 1 },
@@ -6201,8 +6540,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_belt_39c",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252924,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252590, qty = 1 },
@@ -6261,8 +6605,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_belt_43",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252873,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252474, qty = 1 },
@@ -6302,8 +6651,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_belt_43a",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252875,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252476, qty = 1 },
@@ -6324,8 +6678,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_belt_22",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252923,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252589, qty = 1 },
@@ -6365,8 +6724,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_belt_17",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252922,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252588, qty = 1 },
@@ -6487,8 +6851,13 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_belt_04",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 252874,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Daniel Stitchsong, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 252475, qty = 1 },

@@ -224,8 +224,12 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_misc_bomb_06",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 264202,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
                 },
             },
             product = { item_id = 260792, qty = 1 },
@@ -242,8 +246,12 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_misc_punchcards_white",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 264201,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
                 },
             },
             product = { item_id = 260784, qty = 1 },
@@ -370,8 +378,12 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_misc_bomb_09",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 264203,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
                 },
             },
             product = { item_id = 260793, qty = 1 },
@@ -529,8 +541,12 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_misc_bag_05",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 285285,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
                 },
             },
             product = { item_id = 285275, qty = 1 },
@@ -606,8 +622,12 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_misc_giftwrap_03",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 264204,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
                 },
             },
             product = { item_id = 260794, qty = 1 },
@@ -1046,8 +1066,12 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_misc_bomb_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 264205,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
                 },
             },
             product = { item_id = 260795, qty = 1 },
@@ -1245,8 +1269,12 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_misc_leatherscrap_11",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 264206,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
                 },
             },
             product = { item_id = 260796, qty = 1 },
@@ -1534,8 +1562,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_misc_bag_09_black",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 285286,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 285276, qty = 1 },
@@ -1592,8 +1625,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_belt_34",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 280323,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 280308, qty = 1 },
@@ -1630,8 +1668,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_belt_06",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 280322,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 280307, qty = 1 },
@@ -1791,8 +1834,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_misc_bell_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 264209,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 260799, qty = 1 },
@@ -1882,8 +1930,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_belt_06",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 280321,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 280306, qty = 1 },
@@ -2041,8 +2094,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_jewelcrafting_delicatecopperwire",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 264211,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 260801, qty = 1 },
@@ -2118,8 +2176,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_helmet_47",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 280326,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 280311, qty = 1 },
@@ -2137,8 +2200,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_helmet_47",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 280328,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 280313, qty = 1 },
@@ -2203,8 +2271,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_helmet_47",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 280325,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 280310, qty = 1 },
@@ -2301,8 +2374,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_helmet_47",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 280327,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 280312, qty = 1 },
@@ -2783,8 +2861,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_box_birdcage_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 264217,
+                    currencies = {
+                        { currency_id = 3402, qty = 270, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 260807, qty = 1 },
@@ -2803,8 +2886,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_misc_enggizmos_14",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 264216,
+                    currencies = {
+                        { currency_id = 3402, qty = 270, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 260806, qty = 1 },
@@ -3116,8 +3204,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_misc_bag_10_black",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 285287,
+                    currencies = {
+                        { currency_id = 3402, qty = 270, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 285277, qty = 1 },
@@ -3425,8 +3518,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_misc_enggizmos_swissarmy",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 264221,
+                    currencies = {
+                        { currency_id = 3402, qty = 270, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 260811, qty = 1 },
@@ -3466,8 +3564,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_misc_cape_11",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 264220,
+                    currencies = {
+                        { currency_id = 3402, qty = 270, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 260810, qty = 1 },
@@ -3940,8 +4043,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_eng_mechanicalboomerang",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 264222,
+                    currencies = {
+                        { currency_id = 3402, qty = 270, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 260812, qty = 1 },
@@ -4195,8 +4303,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_misc_bag_07_black",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 285288,
+                    currencies = {
+                        { currency_id = 3402, qty = 270, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 285278, qty = 1 },
@@ -4641,8 +4754,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_misc_enggizmos_06",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 264234,
+                    currencies = {
+                        { currency_id = 3402, qty = 360, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 260824, qty = 1 },
@@ -4774,8 +4892,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_misc_enggizmos_04",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 264237,
+                    currencies = {
+                        { currency_id = 3402, qty = 360, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 260827, qty = 1 },
@@ -4855,8 +4978,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_misc_clothscrap_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 264235,
+                    currencies = {
+                        { currency_id = 3402, qty = 360, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 260825, qty = 1 },
@@ -4875,8 +5003,13 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_gizmo_electrifiedether",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 264232,
+                    currencies = {
+                        { currency_id = 3402, qty = 360, name = "Merchant's Favor" },
+                    },
+                    location = "Fritz Fizzle, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 260822, qty = 1 },

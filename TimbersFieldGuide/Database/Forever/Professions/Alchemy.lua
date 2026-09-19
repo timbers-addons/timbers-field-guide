@@ -589,8 +589,12 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_114",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250381,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
                 },
             },
             product = { item_id = 250345, qty = 1 },
@@ -610,8 +614,12 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_126",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250376,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
                 },
             },
             product = { item_id = 250340, qty = 1 },
@@ -765,8 +773,12 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_43",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250388,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
                 },
             },
             product = { item_id = 250353, qty = 1 },
@@ -783,8 +795,12 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_128",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250367,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
                 },
             },
             product = { item_id = 250331, qty = 1 },
@@ -804,8 +820,10 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_09",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 6053,
+                    cost = 800,
+                    location = "Kzixx, Duskwood",
                 },
             },
             product = { item_id = 6051, qty = 1 },
@@ -885,8 +903,12 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_107",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250378,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
                 },
             },
             product = { item_id = 250342, qty = 1 },
@@ -991,8 +1013,12 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potiond_6",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250990,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
                 },
             },
             product = { item_id = 250946, qty = 1 },
@@ -1049,8 +1075,12 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potiond_2",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250978,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
                 },
             },
             product = { item_id = 250934, qty = 1 },
@@ -1126,8 +1156,12 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potiond_3",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250984,
+                    currencies = {
+                        { currency_id = 3402, qty = 45, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
                 },
             },
             product = { item_id = 250940, qty = 1 },
@@ -1273,8 +1307,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_116",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250383,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 250347, qty = 1 },
@@ -1390,8 +1429,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_168",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250377,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 250341, qty = 1 },
@@ -1411,8 +1455,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "trade_alchemy_dpotion_c24",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250996,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 250952, qty = 1 },
@@ -1626,8 +1675,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_150",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250369,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 250333, qty = 1 },
@@ -1665,8 +1719,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_45",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250371,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 250335, qty = 1 },
@@ -2135,8 +2194,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_33",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250997,
+                    currencies = {
+                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 250953, qty = 1 },
@@ -2267,8 +2331,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "trade_alchemy_dpotion_a25",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250365,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250329, qty = 1 },
@@ -2405,8 +2474,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "trade_alchemy_dpotion_c26",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250995,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250951, qty = 1 },
@@ -2510,8 +2584,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_166",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250364,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250328, qty = 1 },
@@ -2529,8 +2608,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_161",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250386,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250350, qty = 1 },
@@ -2548,8 +2632,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_165",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250374,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250338, qty = 1 },
@@ -2567,8 +2656,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_163",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250384,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250348, qty = 1 },
@@ -2624,8 +2718,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_19",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250994,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250950, qty = 1 },
@@ -2838,8 +2937,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_164",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250373,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250337, qty = 1 },
@@ -2876,8 +2980,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potione_2",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250993,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250949, qty = 1 },
@@ -2914,8 +3023,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_alchemy_80_potion02blue",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250998,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250954, qty = 1 },
@@ -2935,8 +3049,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_97",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250379,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250343, qty = 1 },
@@ -2954,8 +3073,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "trade_alchemy_dpotion_a22",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250372,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250336, qty = 1 },
@@ -3012,8 +3136,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potione_4",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250981,
+                    currencies = {
+                        { currency_id = 3402, qty = 180, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250937, qty = 1 },
@@ -3147,8 +3276,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potione_6",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250987,
+                    currencies = {
+                        { currency_id = 3402, qty = 240, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250943, qty = 1 },
@@ -3227,8 +3361,13 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_160",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 250387,
+                    currencies = {
+                        { currency_id = 3402, qty = 240, name = "Merchant's Favor" },
+                    },
+                    location = "Nina Surefire, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 250351, qty = 1 },

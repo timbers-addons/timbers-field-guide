@@ -1750,8 +1750,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_boots_cloth_02",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253894,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253893, qty = 1 },
@@ -1770,8 +1774,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_boots_05",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253898,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253897, qty = 1 },
@@ -1790,8 +1798,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_boots_cloth_03",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253890,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253889, qty = 1 },
@@ -1810,8 +1822,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_boots_cloth_05",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253896,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253895, qty = 1 },
@@ -1830,8 +1846,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_boots_cloth_08",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253900,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253899, qty = 1 },
@@ -1850,8 +1870,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_boots_cloth_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253892,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253891, qty = 1 },
@@ -2097,8 +2121,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_gauntlets_19",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253918,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253917, qty = 1 },
@@ -2136,8 +2164,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_gauntlets_20",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253922,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253921, qty = 1 },
@@ -2156,8 +2188,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_gauntlets_16",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253914,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253913, qty = 1 },
@@ -2196,8 +2232,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_gauntlets_27",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253920,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253919, qty = 1 },
@@ -2216,8 +2256,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_gauntlets_21",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253924,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253923, qty = 1 },
@@ -2236,8 +2280,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_gauntlets_17",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253916,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253915, qty = 1 },
@@ -2298,8 +2346,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_belt_43c",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253930,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253929, qty = 1 },
@@ -2318,8 +2370,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_belt_43a",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253934,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253933, qty = 1 },
@@ -2338,8 +2394,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_belt_43",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253926,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253925, qty = 1 },
@@ -2358,8 +2418,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_belt_43",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253932,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253931, qty = 1 },
@@ -2378,8 +2442,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_belt_43b",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253936,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253935, qty = 1 },
@@ -2398,8 +2466,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_belt_43a",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253928,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253927, qty = 1 },
@@ -2657,8 +2729,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_crown_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253954,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253953, qty = 1 },
@@ -2679,8 +2755,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_crown_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253958,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253957, qty = 1 },
@@ -2740,8 +2820,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_crown_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253950,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253949, qty = 1 },
@@ -2762,8 +2846,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_crown_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253956,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253955, qty = 1 },
@@ -2784,8 +2872,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_crown_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253960,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253959, qty = 1 },
@@ -2806,8 +2898,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_crown_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253952,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253951, qty = 1 },
@@ -2849,8 +2945,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_chest_cloth_02",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253966,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253965, qty = 1 },
@@ -2871,8 +2971,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_chest_cloth_51",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253970,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253969, qty = 1 },
@@ -2893,8 +2997,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_chest_cloth_32",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253962,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253961, qty = 1 },
@@ -2915,8 +3023,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_chest_cloth_48",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253968,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253967, qty = 1 },
@@ -2937,8 +3049,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_chest_cloth_26",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253972,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253971, qty = 1 },
@@ -2959,8 +3075,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_chest_cloth_03",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253964,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253963, qty = 1 },
@@ -3185,8 +3305,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_pants_06",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253992,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253991, qty = 1 },
@@ -3207,8 +3331,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_pants_10",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253996,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253995, qty = 1 },
@@ -3248,8 +3376,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_pants_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253988,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253987, qty = 1 },
@@ -3289,8 +3421,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_pants_11",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253994,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253993, qty = 1 },
@@ -3311,8 +3447,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_pants_cloth_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253998,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253997, qty = 1 },
@@ -3353,8 +3493,12 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_pants_08",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 253990,
+                    currencies = {
+                        { currency_id = 3402, qty = 30, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
                 },
             },
             product = { item_id = 253989, qty = 1 },
@@ -4015,8 +4159,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_gauntlets_27",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254028,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254027, qty = 1 },
@@ -4074,8 +4223,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_gauntlets_13",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254026,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254025, qty = 1 },
@@ -4095,8 +4249,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_gauntlets_30",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254024,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254023, qty = 1 },
@@ -4137,8 +4296,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_gauntlets_23",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254030,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254029, qty = 1 },
@@ -4178,8 +4342,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_gauntlets_16",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254032,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254031, qty = 1 },
@@ -4631,8 +4800,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_misc_bag_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254036,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254035, qty = 1 },
@@ -4712,8 +4886,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_shoulder_23",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254054,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254053, qty = 1 },
@@ -4734,8 +4913,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_shoulder_02",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254052,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254051, qty = 1 },
@@ -4756,8 +4940,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_shoulder_22",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254050,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254049, qty = 1 },
@@ -4778,8 +4967,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_shoulder_05",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254060,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254059, qty = 1 },
@@ -4800,8 +4994,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_shoulder_25",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254056,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254055, qty = 1 },
@@ -4822,8 +5021,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_shoulder_09",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254058,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254057, qty = 1 },
@@ -5052,8 +5256,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_bracer_23a",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254066,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254065, qty = 1 },
@@ -5074,8 +5283,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_bracer_22a",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254064,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254063, qty = 1 },
@@ -5096,8 +5310,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_bracer_23b",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254062,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254061, qty = 1 },
@@ -5118,8 +5337,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_bracer_20b",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254072,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254071, qty = 1 },
@@ -5140,8 +5364,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_bracer_13",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254068,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254067, qty = 1 },
@@ -5162,8 +5391,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_bracer_21b",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254070,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254069, qty = 1 },
@@ -5246,8 +5480,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_belt_04",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254088,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254087, qty = 1 },
@@ -5324,8 +5563,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_belt_37a",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254086,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254085, qty = 1 },
@@ -5364,8 +5608,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_belt_39a",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254084,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254083, qty = 1 },
@@ -5405,8 +5654,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_belt_07",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254082,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254081, qty = 1 },
@@ -5426,8 +5680,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_belt_32",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254090,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254089, qty = 1 },
@@ -5447,8 +5706,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_belt_43",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254092,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254091, qty = 1 },
@@ -5489,8 +5753,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_misc_bag_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254080,
+                    currencies = {
+                        { currency_id = 3402, qty = 60, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
                 },
             },
             product = { item_id = 254079, qty = 1 },
@@ -5911,8 +6180,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_boots_05",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254114,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 254113, qty = 1 },
@@ -5994,8 +6268,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_boots_05",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254112,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 254111, qty = 1 },
@@ -6056,8 +6335,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_boots_07",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254110,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 254109, qty = 1 },
@@ -6099,8 +6383,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_boots_cloth_06",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254108,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 254107, qty = 1 },
@@ -6142,8 +6431,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_boots_cloth_11",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254116,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 254115, qty = 1 },
@@ -6185,8 +6479,13 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_boots_cloth_03",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 254118,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Mivin Shadowweave, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
                 },
             },
             product = { item_id = 254117, qty = 1 },
