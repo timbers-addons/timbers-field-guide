@@ -337,7 +337,7 @@ TFG.MAGE_CLASSIC_ERA = {
             name = "Teleport: Ironforge",
             rank = 1,
             icon = "spell_arcane_teleportironforge",
-            faction = "1",
+            faction = "Alliance",
             source = {
                 {
                     type = "Trainer",
@@ -350,7 +350,7 @@ TFG.MAGE_CLASSIC_ERA = {
             name = "Teleport: Stormwind",
             rank = 1,
             icon = "spell_arcane_teleportstormwind",
-            faction = "1",
+            faction = "Alliance",
             source = {
                 {
                     type = "Trainer",
@@ -363,7 +363,7 @@ TFG.MAGE_CLASSIC_ERA = {
             name = "Teleport: Orgrimmar",
             rank = 1,
             icon = "spell_arcane_teleportorgrimmar",
-            faction = "2",
+            faction = "Horde",
             source = {
                 {
                     type = "Trainer",
@@ -376,7 +376,7 @@ TFG.MAGE_CLASSIC_ERA = {
             name = "Teleport: Undercity",
             rank = 1,
             icon = "spell_arcane_teleportundercity",
-            faction = "2",
+            faction = "Horde",
             source = {
                 {
                     type = "Trainer",
@@ -736,7 +736,7 @@ TFG.MAGE_CLASSIC_ERA = {
             name = "Teleport: Darnassus",
             rank = 1,
             icon = "spell_arcane_teleportdarnassus",
-            faction = "1",
+            faction = "Alliance",
             source = {
                 {
                     type = "Trainer",
@@ -749,7 +749,7 @@ TFG.MAGE_CLASSIC_ERA = {
             name = "Teleport: Thunder Bluff",
             rank = 1,
             icon = "spell_arcane_teleportthunderbluff",
-            faction = "2",
+            faction = "Horde",
             source = {
                 {
                     type = "Trainer",
@@ -1087,7 +1087,7 @@ TFG.MAGE_CLASSIC_ERA = {
             name = "Portal: Ironforge",
             rank = 1,
             icon = "spell_arcane_portalironforge",
-            faction = "1",
+            faction = "Alliance",
             source = {
                 {
                     type = "Trainer",
@@ -1100,7 +1100,7 @@ TFG.MAGE_CLASSIC_ERA = {
             name = "Portal: Stormwind",
             rank = 1,
             icon = "spell_arcane_portalstormwind",
-            faction = "1",
+            faction = "Alliance",
             source = {
                 {
                     type = "Trainer",
@@ -1113,7 +1113,7 @@ TFG.MAGE_CLASSIC_ERA = {
             name = "Portal: Orgrimmar",
             rank = 1,
             icon = "spell_arcane_portalorgrimmar",
-            faction = "2",
+            faction = "Horde",
             source = {
                 {
                     type = "Trainer",
@@ -1126,7 +1126,7 @@ TFG.MAGE_CLASSIC_ERA = {
             name = "Portal: Undercity",
             rank = 1,
             icon = "spell_arcane_portalundercity",
-            faction = "2",
+            faction = "Horde",
             source = {
                 {
                     type = "Trainer",
@@ -1513,7 +1513,7 @@ TFG.MAGE_CLASSIC_ERA = {
             name = "Portal: Darnassus",
             rank = 1,
             icon = "spell_arcane_portaldarnassus",
-            faction = "1",
+            faction = "Alliance",
             source = {
                 {
                     type = "Trainer",
@@ -1526,7 +1526,7 @@ TFG.MAGE_CLASSIC_ERA = {
             name = "Portal: Thunder Bluff",
             rank = 1,
             icon = "spell_arcane_portalthunderbluff",
-            faction = "2",
+            faction = "Horde",
             source = {
                 {
                     type = "Trainer",

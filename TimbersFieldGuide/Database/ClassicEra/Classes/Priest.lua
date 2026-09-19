@@ -99,7 +99,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Starshards",
             rank = 1,
             icon = "spell_arcane_starfire",
-            faction = "1",
+            faction = "Alliance",
             races = { "Night Elf" },
         },
         {
@@ -107,7 +107,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Desperate Prayer",
             rank = 1,
             icon = "spell_holy_restoration",
-            faction = "1",
+            faction = "Alliance",
             races = { "Dwarf", "Human" },
         },
         {
@@ -139,7 +139,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Hex of Weakness",
             rank = 1,
             icon = "spell_shadow_fingerofdeath",
-            faction = "2",
+            faction = "Horde",
             races = { "Troll" },
         },
         {
@@ -171,7 +171,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Touch of Weakness",
             rank = 1,
             icon = "spell_shadow_deadofnight",
-            faction = "2",
+            faction = "Horde",
             races = { "Undead" },
         },
     },
@@ -319,7 +319,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Starshards",
             rank = 2,
             icon = "spell_arcane_starfire",
-            faction = "1",
+            faction = "Alliance",
             races = { "Night Elf" },
             source = {
                 {
@@ -333,7 +333,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Desperate Prayer",
             rank = 2,
             icon = "spell_holy_restoration",
-            faction = "1",
+            faction = "Alliance",
             races = { "Dwarf", "Human" },
             source = {
                 {
@@ -361,7 +361,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Elune's Grace",
             rank = 1,
             icon = "spell_holy_elunesgrace",
-            faction = "1",
+            faction = "Alliance",
             races = { "Night Elf" },
         },
         {
@@ -369,7 +369,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Feedback",
             rank = 1,
             icon = "spell_shadow_ritualofsacrifice",
-            faction = "1",
+            faction = "Alliance",
             races = { "Human" },
         },
         {
@@ -401,7 +401,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Fear Ward",
             rank = 1,
             icon = "spell_holy_excorcism",
-            faction = "1",
+            faction = "Alliance",
             races = { "Dwarf" },
         },
         {
@@ -445,7 +445,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Devouring Plague",
             rank = 1,
             icon = "spell_shadow_blackplague",
-            faction = "2",
+            faction = "Horde",
             races = { "Undead" },
         },
         {
@@ -465,7 +465,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Hex of Weakness",
             rank = 2,
             icon = "spell_shadow_fingerofdeath",
-            faction = "2",
+            faction = "Horde",
             races = { "Troll" },
             source = {
                 {
@@ -491,7 +491,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Shadowguard",
             rank = 1,
             icon = "spell_nature_lightningshield",
-            faction = "2",
+            faction = "Horde",
             races = { "Troll" },
         },
         {
@@ -499,7 +499,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Touch of Weakness",
             rank = 2,
             icon = "spell_shadow_deadofnight",
-            faction = "2",
+            faction = "Horde",
             races = { "Undead" },
             source = {
                 {
@@ -627,7 +627,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Starshards",
             rank = 3,
             icon = "spell_arcane_starfire",
-            faction = "1",
+            faction = "Alliance",
             races = { "Night Elf" },
             source = {
                 {
@@ -641,7 +641,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Desperate Prayer",
             rank = 3,
             icon = "spell_holy_restoration",
-            faction = "1",
+            faction = "Alliance",
             races = { "Dwarf", "Human" },
             source = {
                 {
@@ -718,7 +718,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Devouring Plague",
             rank = 2,
             icon = "spell_shadow_blackplague",
-            faction = "2",
+            faction = "Horde",
             races = { "Undead" },
             source = {
                 {
@@ -769,7 +769,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Shadowguard",
             rank = 2,
             icon = "spell_nature_lightningshield",
-            faction = "2",
+            faction = "Horde",
             races = { "Troll" },
             source = {
                 {
@@ -785,7 +785,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Elune's Grace",
             rank = 2,
             icon = "spell_holy_elunesgrace",
-            faction = "1",
+            faction = "Alliance",
             races = { "Night Elf" },
             source = {
                 {
@@ -799,7 +799,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Feedback",
             rank = 2,
             icon = "spell_shadow_ritualofsacrifice",
-            faction = "1",
+            faction = "Alliance",
             races = { "Human" },
             source = {
                 {
@@ -885,7 +885,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Hex of Weakness",
             rank = 3,
             icon = "spell_shadow_fingerofdeath",
-            faction = "2",
+            faction = "Horde",
             races = { "Troll" },
             source = {
                 {
@@ -923,7 +923,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Touch of Weakness",
             rank = 3,
             icon = "spell_shadow_deadofnight",
-            faction = "2",
+            faction = "Horde",
             races = { "Undead" },
             source = {
                 {
@@ -1001,7 +1001,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Starshards",
             rank = 4,
             icon = "spell_arcane_starfire",
-            faction = "1",
+            faction = "Alliance",
             races = { "Night Elf" },
             source = {
                 {
@@ -1015,7 +1015,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Desperate Prayer",
             rank = 4,
             icon = "spell_holy_restoration",
-            faction = "1",
+            faction = "Alliance",
             races = { "Dwarf", "Human" },
             source = {
                 {
@@ -1165,7 +1165,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Devouring Plague",
             rank = 3,
             icon = "spell_shadow_blackplague",
-            faction = "2",
+            faction = "Horde",
             races = { "Undead" },
             source = {
                 {
@@ -1179,7 +1179,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Shadowguard",
             rank = 3,
             icon = "spell_nature_lightningshield",
-            faction = "2",
+            faction = "Horde",
             races = { "Troll" },
             source = {
                 {
@@ -1246,7 +1246,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Elune's Grace",
             rank = 3,
             icon = "spell_holy_elunesgrace",
-            faction = "1",
+            faction = "Alliance",
             races = { "Night Elf" },
             source = {
                 {
@@ -1260,7 +1260,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Feedback",
             rank = 3,
             icon = "spell_shadow_ritualofsacrifice",
-            faction = "1",
+            faction = "Alliance",
             races = { "Human" },
             source = {
                 {
@@ -1346,7 +1346,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Hex of Weakness",
             rank = 4,
             icon = "spell_shadow_fingerofdeath",
-            faction = "2",
+            faction = "Horde",
             races = { "Troll" },
             source = {
                 {
@@ -1372,7 +1372,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Touch of Weakness",
             rank = 4,
             icon = "spell_shadow_deadofnight",
-            faction = "2",
+            faction = "Horde",
             races = { "Undead" },
             source = {
                 {
@@ -1400,7 +1400,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Starshards",
             rank = 5,
             icon = "spell_arcane_starfire",
-            faction = "1",
+            faction = "Alliance",
             races = { "Night Elf" },
             source = {
                 {
@@ -1414,7 +1414,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Desperate Prayer",
             rank = 5,
             icon = "spell_holy_restoration",
-            faction = "1",
+            faction = "Alliance",
             races = { "Dwarf", "Human" },
             source = {
                 {
@@ -1515,7 +1515,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Devouring Plague",
             rank = 4,
             icon = "spell_shadow_blackplague",
-            faction = "2",
+            faction = "Horde",
             races = { "Undead" },
             source = {
                 {
@@ -1566,7 +1566,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Shadowguard",
             rank = 4,
             icon = "spell_nature_lightningshield",
-            faction = "2",
+            faction = "Horde",
             races = { "Troll" },
             source = {
                 {
@@ -1695,7 +1695,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Elune's Grace",
             rank = 4,
             icon = "spell_holy_elunesgrace",
-            faction = "1",
+            faction = "Alliance",
             races = { "Night Elf" },
             source = {
                 {
@@ -1709,7 +1709,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Feedback",
             rank = 4,
             icon = "spell_shadow_ritualofsacrifice",
-            faction = "1",
+            faction = "Alliance",
             races = { "Human" },
             source = {
                 {
@@ -1735,7 +1735,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Starshards",
             rank = 6,
             icon = "spell_arcane_starfire",
-            faction = "1",
+            faction = "Alliance",
             races = { "Night Elf" },
             source = {
                 {
@@ -1749,7 +1749,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Desperate Prayer",
             rank = 6,
             icon = "spell_holy_restoration",
-            faction = "1",
+            faction = "Alliance",
             races = { "Dwarf", "Human" },
             source = {
                 {
@@ -1824,7 +1824,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Hex of Weakness",
             rank = 5,
             icon = "spell_shadow_fingerofdeath",
-            faction = "2",
+            faction = "Horde",
             races = { "Troll" },
             source = {
                 {
@@ -1850,7 +1850,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Touch of Weakness",
             rank = 5,
             icon = "spell_shadow_deadofnight",
-            faction = "2",
+            faction = "Horde",
             races = { "Undead" },
             source = {
                 {
@@ -1891,7 +1891,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Devouring Plague",
             rank = 5,
             icon = "spell_shadow_blackplague",
-            faction = "2",
+            faction = "Horde",
             races = { "Undead" },
             source = {
                 {
@@ -1942,7 +1942,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Shadowguard",
             rank = 5,
             icon = "spell_nature_lightningshield",
-            faction = "2",
+            faction = "Horde",
             races = { "Troll" },
             source = {
                 {
@@ -2058,7 +2058,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Starshards",
             rank = 7,
             icon = "spell_arcane_starfire",
-            faction = "1",
+            faction = "Alliance",
             races = { "Night Elf" },
             source = {
                 {
@@ -2072,7 +2072,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Desperate Prayer",
             rank = 7,
             icon = "spell_holy_restoration",
-            faction = "1",
+            faction = "Alliance",
             races = { "Dwarf", "Human" },
             source = {
                 {
@@ -2161,7 +2161,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Elune's Grace",
             rank = 5,
             icon = "spell_holy_elunesgrace",
-            faction = "1",
+            faction = "Alliance",
             races = { "Night Elf" },
             source = {
                 {
@@ -2175,7 +2175,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Feedback",
             rank = 5,
             icon = "spell_shadow_ritualofsacrifice",
-            faction = "1",
+            faction = "Alliance",
             races = { "Human" },
             source = {
                 {
@@ -2288,7 +2288,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Devouring Plague",
             rank = 6,
             icon = "spell_shadow_blackplague",
-            faction = "2",
+            faction = "Horde",
             races = { "Undead" },
             source = {
                 {
@@ -2314,7 +2314,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Hex of Weakness",
             rank = 6,
             icon = "spell_shadow_fingerofdeath",
-            faction = "2",
+            faction = "Horde",
             races = { "Troll" },
             source = {
                 {
@@ -2353,7 +2353,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Shadowguard",
             rank = 6,
             icon = "spell_nature_lightningshield",
-            faction = "2",
+            faction = "Horde",
             races = { "Troll" },
             source = {
                 {
@@ -2367,7 +2367,7 @@ TFG.PRIEST_CLASSIC_ERA = {
             name = "Touch of Weakness",
             rank = 6,
             icon = "spell_shadow_deadofnight",
-            faction = "2",
+            faction = "Horde",
             races = { "Undead" },
             source = {
                 {
