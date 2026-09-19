@@ -73,10 +73,11 @@ local PROFESSION_ICONS = {
 -- Versions exposed in the UI, in display order. WRATH_CLASSIC is intentionally
 -- omitted until its data exists; adding a new version (e.g. Season of Discovery)
 -- is a registry change, not a UI change.
-local VERSION_ORDER = { "CLASSIC_ERA", "BURNING_CRUSADE" }
+local VERSION_ORDER = { "CLASSIC_ERA", "BURNING_CRUSADE", "FOREVER" }
 local VERSION_ICONS = {
     CLASSIC_ERA     = "Interface\\Icons\\INV_Misc_Map_01",
     BURNING_CRUSADE = "Interface\\Icons\\Spell_Arcane_PortalShattrath",
+    FOREVER         = "Interface\\Icons\\INV_Misc_Map02",
     WRATH_CLASSIC   = "Interface\\Icons\\Spell_Frost_FrostArmor02",
 }
 
@@ -1496,6 +1497,10 @@ local function ensureTestFrame()
             { key = "professions", text = "Professions", width = 136 },
             { key = "skills", text = "Skills", width = 86 },
         }
+        -- Versions without skill datasets (Forever) get no Skills tab.
+        if #getSkills(TFG.selectedExpansion) == 0 then
+            table.remove(tabs)
+        end
 
         local x = 0
         for _, data in ipairs(tabs) do

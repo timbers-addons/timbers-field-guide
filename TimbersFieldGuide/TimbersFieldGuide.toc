@@ -1,4 +1,4 @@
-## Interface: 11509, 20506
+## Interface: 11509, 20506, 16001
 ## Title: Timber's Field Guide
 ## Notes: A scrollable list of spells for each and every class. See what abilities and talents you can learn at any given level.
 ## Author: Timbervale-DreamscytheUS
@@ -61,6 +61,30 @@ Database/BurningCrusade/Professions/Skinning.lua
 Database/BurningCrusade/Professions/Tailoring.lua
 Database/BurningCrusade/Skills/Riding.lua
 Database/BurningCrusade/Skills/WeaponSkills.lua
+Database/Forever/Classes/Druid.lua
+Database/Forever/Classes/Hunter.lua
+Database/Forever/Classes/HunterPets.lua
+Database/Forever/Classes/Mage.lua
+Database/Forever/Classes/Paladin.lua
+Database/Forever/Classes/Priest.lua
+Database/Forever/Classes/Rogue.lua
+Database/Forever/Classes/RoguePoisons.lua
+Database/Forever/Classes/Shaman.lua
+Database/Forever/Classes/Warlock.lua
+Database/Forever/Classes/WarlockPets.lua
+Database/Forever/Classes/Warrior.lua
+Database/Forever/Professions/Alchemy.lua
+Database/Forever/Professions/Blacksmithing.lua
+Database/Forever/Professions/Cooking.lua
+Database/Forever/Professions/Enchanting.lua
+Database/Forever/Professions/Engineering.lua
+Database/Forever/Professions/FirstAid.lua
+Database/Forever/Professions/Fishing.lua
+Database/Forever/Professions/Herbalism.lua
+Database/Forever/Professions/Leatherworking.lua
+Database/Forever/Professions/Mining.lua
+Database/Forever/Professions/Skinning.lua
+Database/Forever/Professions/Tailoring.lua
 TimbersFieldGuide.lua
 Libs/LibStub/LibStub.lua
 Libs/CallbackHandler-1.0/CallbackHandler-1.0.lua

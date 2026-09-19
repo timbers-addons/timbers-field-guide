@@ -163,8 +163,9 @@ end
 local function inferProfessionCapFromRank(rank)
     rank = tonumber(rank) or 0
     if rank <= 0 then return 0 end
-    -- Classic Era cap
-    if TFG.selectedExpansion and TFG.selectedExpansion:upper() == "CLASSIC_ERA" then
+    -- Classic Era cap (Forever keeps the same tiers)
+    local vkey = TFG.selectedExpansion and TFG.selectedExpansion:upper()
+    if vkey == "CLASSIC_ERA" or vkey == "FOREVER" then
         if rank <= 75 then return 75 end
         if rank <= 150 then return 150 end
         if rank <= 225 then return 225 end

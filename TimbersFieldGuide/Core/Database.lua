@@ -28,6 +28,10 @@ elseif WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
     TFG.selectedExpansion = "WRATH_CLASSIC"
 elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
     TFG.selectedExpansion = "BURNING_CRUSADE"
+elseif WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+    -- WoW: Forever runs the Midnight engine. Assumes it reports the mainline
+    -- project id; replace with a GameVersions entry once its ids are known.
+    TFG.selectedExpansion = "FOREVER"
 else
     TFG.selectedExpansion = "CLASSIC_ERA"
 end
@@ -254,6 +258,108 @@ TFG.DATABASE_FILES = {
                         -- additional non-profession skills can be added here
                     },
                 },
+            },
+        }
+    },
+    FOREVER = {
+        key = "FOREVER",
+        name = "Forever",
+        color = "|cFF7FD3FF",
+        files = {
+            classes = {
+                druid = {
+                    name = "Druid",
+                    color = TFG.CLASS_COLORS["DRUID"],
+                    file = TFG.DRUID_FOREVER,
+                },
+                hunter = {
+                    name = "Hunter",
+                    color = TFG.CLASS_COLORS["HUNTER"],
+                    file = TFG.HUNTER_FOREVER,
+                    children = {
+                        {
+                            key = "pet-skills",
+                            name = "Pet Skills",
+                            sortOrder = 1,
+                            file = TFG.HUNTER_PETS_FOREVER,
+                        },
+                    },
+                },
+                mage = {
+                    name = "Mage",
+                    color = TFG.CLASS_COLORS["MAGE"],
+                    file = TFG.MAGE_FOREVER,
+                },
+                paladin = {
+                    name = "Paladin",
+                    color = TFG.CLASS_COLORS["PALADIN"],
+                    file = TFG.PALADIN_FOREVER,
+                },
+                priest = {
+                    name = "Priest",
+                    color = TFG.CLASS_COLORS["PRIEST"],
+                    file = TFG.PRIEST_FOREVER,
+                },
+                rogue = {
+                    name = "Rogue",
+                    color = TFG.CLASS_COLORS["ROGUE"],
+                    file = TFG.ROGUE_FOREVER,
+                    children = {
+                        {
+                            key = "poisons",
+                            name = "Poisons",
+                            sortOrder = 1,
+                            file = TFG.ROGUE_POISONS_FOREVER,
+                        },
+                    },
+                },
+                shaman = {
+                    name = "Shaman",
+                    color = TFG.CLASS_COLORS["PALADIN"],
+                    file = TFG.SHAMAN_FOREVER,
+                },
+                warlock = {
+                    name = "Warlock",
+                    color = TFG.CLASS_COLORS["WARLOCK"],
+                    file = TFG.WARLOCK_FOREVER,
+                    children = {
+                        {
+                            key = "demon-spells",
+                            name = "Demon Spells",
+                            sortOrder = 1,
+                            file = TFG.WARLOCK_PETS_FOREVER,
+                        },
+                    },
+                },
+                warrior = {
+                    name = "Warrior",
+                    color = TFG.CLASS_COLORS["WARRIOR"],
+                    file = TFG.WARRIOR_FOREVER,
+                },
+            },
+            skills = {
+                professions = {
+                    name = "Professions",
+                    children = {
+                        -- Primary professions (will be sorted alphabetically in the submenu)
+                        {key = "alchemy", name = "Alchemy", file = TFG.ALCHEMY_FOREVER},
+                        {key = "blacksmithing", name = "Blacksmithing", file = TFG.BLACKSMITHING_FOREVER},
+                        {key = "enchanting", name = "Enchanting", file = TFG.ENCHANTING_FOREVER},
+                        {key = "engineering", name = "Engineering", file = TFG.ENGINEERING_FOREVER},
+                        {key = "leatherworking", name = "Leatherworking", file = TFG.LEATHERWORKING_FOREVER},
+                        {key = "tailoring", name = "Tailoring", file = TFG.TAILORING_FOREVER},
+                        {key = "mining", name = "Mining", file = TFG.MINING_FOREVER},
+                        {key = "herbalism", name = "Herbalism", file = TFG.HERBALISM_FOREVER},
+                        {key = "skinning", name = "Skinning", file = TFG.SKINNING_FOREVER},
+                        -- Divider: secondary professions follow
+                        {name = "SecondaryProfessionsDivider", isHeader = true},
+                        -- Secondary professions (will be sorted alphabetically in the submenu)
+                        {key = "cooking", name = "Cooking", file = TFG.COOKING_FOREVER},
+                        {key = "first-aid", name = "First Aid", file = TFG.FIRST_AID_FOREVER},
+                        {key = "fishing", name = "Fishing", file = TFG.FISHING_FOREVER},
+                    },
+                },
+                -- No Skills section: the Midnight engine has no weapon-skill or Riding skill lines.
             },
         }
     },
