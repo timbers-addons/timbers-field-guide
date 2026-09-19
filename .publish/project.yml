@@ -5,7 +5,7 @@ license: gpl-3.0-only
 curseforge:
     project_id: "1413887"
     description: |-
-        A scrollable list of abilities and talents for each class. With an option to toggle between vanilla and TBC, you can use this addon to assist with leveling across multiple expansions. See the cost of each ability, what skills you have available to train, which ones you've already learned, and more.
+        A scrollable list of abilities and talents for each class, plus the recipes for every profession. Works on Classic Era, TBC Anniversary and WoW: Forever, and shows the data for the version you're playing. See the cost of each ability, what skills you have available to train, which ones you've already learned, and more.
 
         Access the window by typing "/tfg" or "/timbersfieldguide". You can set a keybind to open/close the window in the "Options > Keybinds > AddOns" menu. This addon comes with a minimap icon that can be toggled with "/tfg minimap".
 
