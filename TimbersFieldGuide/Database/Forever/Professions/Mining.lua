@@ -3,35 +3,6 @@ local _, TFG = ...
 TFG.MINING_FOREVER = {
     [1] = {
         {
-            spell_id = 2577,
-            name = "Mining",
-            icon = "spell_nature_earthquake",
-            levels = { 1, 100, 112, 125 },
-        },
-        {
-            spell_id = 2578,
-            name = "Mining",
-            icon = "spell_nature_earthquake",
-            levels = { 1, 125, 137, 150 },
-        },
-        {
-            spell_id = 2579,
-            name = "Mining",
-            icon = "spell_nature_earthquake",
-            levels = { 1, 150, 162, 175 },
-        },
-        {
-            spell_id = 1235230,
-            name = "Mining",
-            icon = "trade_engineering",
-            source = {
-                {
-                    type = "Trainer",
-                },
-            },
-            levels = { 1, 1, 1, 1 },
-        },
-        {
             spell_id = 2657,
             name = "Smelt Copper",
             categories = { "Smelted Bars" },
@@ -67,12 +38,6 @@ TFG.MINING_FOREVER = {
                     type = "Trainer",
                 },
             },
-            levels = { 1 },
-        },
-        {
-            spell_id = 8388,
-            name = "Find Minerals",
-            icon = "spell_nature_earthquake",
             levels = { 1 },
         },
         {

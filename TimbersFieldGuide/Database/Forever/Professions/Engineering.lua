@@ -47,17 +47,6 @@ TFG.ENGINEERING_FOREVER = {
             cap = 75,
         },
         {
-            spell_id = 1235244,
-            name = "Engineering",
-            icon = "trade_engineering",
-            source = {
-                {
-                    type = "Trainer",
-                },
-            },
-            levels = { 1, 1, 1, 1 },
-        },
-        {
             spell_id = 12719,
             name = "Explosive Arrow",
             categories = { "Ammunition" },

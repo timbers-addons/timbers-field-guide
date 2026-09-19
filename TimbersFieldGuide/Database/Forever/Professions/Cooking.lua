@@ -499,8 +499,11 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_food_10",
             source = {
                 {
-                    type = "Item",
+                    type = "Quest",
                     item_id = 2697,
+                    location = "Salma Saldean, Westfall",
+                    quest_id = 22,
+                    quest_name = "Goretusk Liver Pie",
                 },
             },
             product = { item_id = 724, qty = 1 },
@@ -728,8 +731,11 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_bowl_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Quest",
                     item_id = 728,
+                    location = "Salma Saldean, Westfall",
+                    quest_id = 38,
+                    quest_name = "Westfall Stew",
                 },
             },
             product = { item_id = 733, qty = 1 },

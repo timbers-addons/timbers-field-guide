@@ -10,17 +10,6 @@ TFG.HERBALISM_FOREVER = {
             levels = { 1 },
         },
         {
-            spell_id = 1235236,
-            name = "Herb Gathering",
-            icon = "trade_engineering",
-            source = {
-                {
-                    type = "Trainer",
-                },
-            },
-            levels = { 1, 1, 1, 1 },
-        },
-        {
             spell_id = 2383,
             name = "Find Herbs",
             icon = "inv_misc_flower_02",
@@ -29,12 +18,6 @@ TFG.HERBALISM_FOREVER = {
                     type = "Trainer",
                 },
             },
-            levels = { 1 },
-        },
-        {
-            spell_id = 8387,
-            name = "Find Herbs",
-            icon = "inv_misc_herb_03",
             levels = { 1 },
         },
         {
@@ -50,18 +33,6 @@ TFG.HERBALISM_FOREVER = {
             },
             levels = { 1 },
             cap = 75,
-        },
-        {
-            spell_id = 2369,
-            name = "Herbalism",
-            icon = "spell_nature_naturetouchgrow",
-            levels = { 1 },
-        },
-        {
-            spell_id = 2371,
-            name = "Herbalism",
-            icon = "spell_nature_naturetouchgrow",
-            levels = { 1 },
         },
         {
             item_id = 765,
