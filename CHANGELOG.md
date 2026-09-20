@@ -1,5 +1,19 @@
 # Changelog
 
+## v2026.09.19ad (2026-09-19)
+
+- Fixed faction on Era mage and priest spells, names instead of ids
+- Added WoW: Forever as a game version with its own database
+- Category filter on class subpages that have more than one category
+- Quest sources get their own card layout in the recipe popup
+- Added launcher buttons on the spellbook and character window
+- Sources show prices in currencies and the reputation a vendor asks for
+- Added a Reputation dropdown next to Category
+- Removed game version switching, a client shows its own game only
+- No skill levels shown for entries that give no skill-ups, like Find Minerals and Smelting
+- Forever recipes with no known learn skill moved from skill 1 to Unknown; I'm still working on finishing up Forever skills/abilities
+
+
 ## v2026.08.29 (2026-08-29)
 
 - Updated current phase logic
