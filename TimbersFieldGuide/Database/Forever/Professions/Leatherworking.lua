@@ -1161,8 +1161,10 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_misc_monsterscales_03",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 6474,
+                    cost = 550,
+                    location = "Kalldan Felmoon, The Wailing Caverns",
                 },
             },
             product = { item_id = 6466, qty = 1 },
@@ -1490,8 +1492,10 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_gauntlets_05",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 6475,
+                    cost = 1500,
+                    location = "Kalldan Felmoon, The Wailing Caverns",
                 },
             },
             product = { item_id = 6467, qty = 1 },
@@ -1736,8 +1740,11 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_belt_09",
             source = {
                 {
-                    type = "Item",
+                    type = "Quest",
                     item_id = 6476,
+                    location = "Ebru, The Wailing Caverns",
+                    quest_id = 1487,
+                    quest_name = "Deviate Eradication",
                 },
             },
             product = { item_id = 6468, qty = 1 },
@@ -2673,8 +2680,10 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_chest_chain_12",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 5788,
+                    cost = 650,
+                    location = "Blixrez Goodstitch, Stranglethorn Vale",
                 },
             },
             product = { item_id = 5782, qty = 1 },
@@ -2945,6 +2954,12 @@ TFG.LEATHERWORKING_FOREVER = {
             categories = { "Leather Bracers" },
             icon = "inv_bracer_05",
             source = {
+                {
+                    type = "Vendor",
+                    item_id = 5789,
+                    cost = 2800,
+                    location = "Blixrez Goodstitch, Stranglethorn Vale",
+                },
                 {
                     type = "Vendor",
                     item_id = 5789,

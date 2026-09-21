@@ -1828,8 +1828,10 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_misc_spyglass_02",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 13310,
+                    cost = 2000,
+                    location = "Mazk Snipeshot, Stranglethorn Vale",
                 },
             },
             product = { item_id = 4407, qty = 1 },
@@ -3617,8 +3619,10 @@ TFG.ENGINEERING_FOREVER = {
             icon = "inv_staff_18",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 18651,
+                    cost = 12000,
+                    location = "Mazk Snipeshot, Stranglethorn Vale",
                 },
             },
             product = { item_id = 18631, qty = 1 },

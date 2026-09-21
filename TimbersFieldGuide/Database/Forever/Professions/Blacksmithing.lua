@@ -2422,8 +2422,10 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_sword_25",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 12163,
+                    cost = 4400,
+                    location = "Zarena Cromwind, Stranglethorn Vale",
                 },
             },
             product = { item_id = 3853, qty = 1 },

@@ -771,6 +771,12 @@ TFG.COOKING_FOREVER = {
                     type = "Vendor",
                     item_id = 21099,
                     cost = 500,
+                    location = "Kelsey Yance, Stranglethorn Vale",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 21099,
+                    cost = 500,
                     location = "Miranda Turner, Riverglades",
                 },
                 {
@@ -1397,8 +1403,10 @@ TFG.COOKING_FOREVER = {
             icon = "inv_ammo_firetar",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 6039,
+                    cost = 5000,
+                    location = "Kelsey Yance, Stranglethorn Vale",
                 },
             },
             product = { item_id = 6038, qty = 1 },
@@ -1490,6 +1498,12 @@ TFG.COOKING_FOREVER = {
                     type = "Vendor",
                     item_id = 17062,
                     cost = 2200,
+                    location = "Kelsey Yance, Stranglethorn Vale",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 17062,
+                    cost = 2200,
                     location = "Stuart Fleming, Wetlands",
                 },
             },
@@ -1549,6 +1563,12 @@ TFG.COOKING_FOREVER = {
                     type = "Vendor",
                     item_id = 6369,
                     cost = 2200,
+                    location = "Kelsey Yance, Stranglethorn Vale",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 6369,
+                    cost = 2200,
                     location = "Stuart Fleming, Wetlands",
                 },
             },
@@ -1575,6 +1595,12 @@ TFG.COOKING_FOREVER = {
                     item_id = 21219,
                     cost = 5000,
                     location = "Fimbo Greasemitz, Riverglades",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 21219,
+                    cost = 5000,
+                    location = "Kelsey Yance, Stranglethorn Vale",
                 },
                 {
                     type = "Vendor",
@@ -1842,8 +1868,10 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_monsterhead_03",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 13940,
+                    cost = 16000,
+                    location = "Kelsey Yance, Stranglethorn Vale",
                 },
             },
             product = { item_id = 13927, qty = 1 },
@@ -1860,8 +1888,10 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_fish_06",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 13941,
+                    cost = 16000,
+                    location = "Kelsey Yance, Stranglethorn Vale",
                 },
             },
             product = { item_id = 13930, qty = 1 },
@@ -2069,8 +2099,10 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_fish_03",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 13943,
+                    cost = 16000,
+                    location = "Kelsey Yance, Stranglethorn Vale",
                 },
             },
             product = { item_id = 13929, qty = 1 },

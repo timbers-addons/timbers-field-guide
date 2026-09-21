@@ -411,8 +411,10 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_24",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 5640,
+                    cost = 100,
+                    location = "Ranik, The Barrens",
                 },
             },
             product = { item_id = 5631, qty = 1 },

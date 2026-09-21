@@ -617,6 +617,12 @@ TFG.TAILORING_FOREVER = {
                     type = "Vendor",
                     item_id = 6272,
                     cost = 300,
+                    location = "Ranik, The Barrens",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 6272,
+                    cost = 300,
                     location = "Elynna, Darnassus",
                 },
             },
@@ -1912,6 +1918,12 @@ TFG.TAILORING_FOREVER = {
                     item_id = 6275,
                     cost = 800,
                     location = "Jennabink Powerseam, Wetlands",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 6275,
+                    cost = 800,
+                    location = "Ranik, The Barrens",
                 },
                 {
                     type = "Vendor",
@@ -3783,8 +3795,10 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_shirt_black_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 10728,
+                    cost = 1500,
+                    location = "Narkk, Stranglethorn Vale",
                 },
             },
             product = { item_id = 4336, qty = 1 },
