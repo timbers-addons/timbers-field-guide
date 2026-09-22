@@ -1430,8 +1430,9 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_chest_cloth_03",
             source = {
                 {
-                    type = "Item",
+                    type = "Drop",
                     item_id = 253904,
+                    location = "Kresh, Wailing Caverns",
                 },
             },
             product = { item_id = 253903, qty = 1 },
