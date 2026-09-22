@@ -451,6 +451,14 @@ TFG.PRIEST_FOREVER = {
             rank = 1,
             icon = "spell_holy_chastise",
             races = { "Dwarf" },
+            source = {
+                {
+                    type = "Quest",
+                    location = "High Priestess Laurena, Stormwind City",
+                    quest_id = 5645,
+                    quest_name = "Chastise",
+                },
+            },
         },
         {
             spell_id = 6346,

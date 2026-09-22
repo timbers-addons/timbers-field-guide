@@ -2641,8 +2641,10 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_pants_12",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 5973,
+                    cost = 650,
+                    location = "Lardan, Ashenvale",
                 },
             },
             product = { item_id = 5963, qty = 1 },

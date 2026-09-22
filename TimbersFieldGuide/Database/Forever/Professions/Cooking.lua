@@ -446,8 +446,10 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_fish_05",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 5485,
+                    cost = 400,
+                    location = "Laird, Darkshore",
                 },
             },
             product = { item_id = 5476, qty = 2 },
@@ -1071,8 +1073,10 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_food_47",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 3734,
+                    cost = 1600,
+                    location = "Ulthaan, Ashenvale",
                 },
             },
             product = { item_id = 3726, qty = 1 },
@@ -1107,8 +1111,10 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_food_72",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 5489,
+                    cost = 1200,
+                    location = "Ulthaan, Ashenvale",
                 },
             },
             product = { item_id = 5480, qty = 2 },

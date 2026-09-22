@@ -920,8 +920,10 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_44",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 6054,
+                    cost = 900,
+                    location = "Harklan Moongrove, Ashenvale",
                 },
             },
             product = { item_id = 6048, qty = 1 },
