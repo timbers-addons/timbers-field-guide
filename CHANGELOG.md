@@ -1,5 +1,14 @@
 # Changelog
 
+## v2026.09.25 (2026-09-25)
+
+- Forever enchanting trainer costs up to journeyman, from the Stormwind enchanter
+- Forever vendor recipes from Booty Bay, Ratchet and Wailing Caverns; Deviate Eradication quest source
+- Forever vendor recipes from Ashenvale and Darkshore; Chastise rank 1 from its quest at High Priestess Laurena
+- Forever: Pattern: Filigreed Silky Gown drops from Kresh in Wailing Caverns
+- Forever data from build 70009: Mangle is Primal Bite, three potion renames, Adaptive recipes gone; Sense Undead no longer Alliance-only
+
+
 ## v2026.09.19ad (2026-09-19)
 
 - Fixed faction on Era mage and priest spells, names instead of ids
