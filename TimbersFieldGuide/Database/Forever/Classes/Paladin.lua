@@ -391,7 +391,6 @@ TFG.PALADIN_FOREVER = {
             spell_id = 5502,
             name = "Sense Undead",
             icon = "spell_holy_senseundead",
-            faction = "Alliance",
             source = {
                 {
                     type = "Item",

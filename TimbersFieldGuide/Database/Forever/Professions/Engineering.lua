@@ -3350,42 +3350,6 @@ TFG.ENGINEERING_FOREVER = {
             levels = { 250, 250, 260, 270 },
         },
         {
-            spell_id = 1253005,
-            name = "Enormous Tranquilizer Dart",
-            categories = { "Consumable Devices" },
-            icon = "inv_gizmo_runichealthinjector",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 251748,
-                },
-            },
-            product = { item_id = 251717, qty = 1 },
-            materials = {
-                { item_id = 238780, qty = 1 },
-                { item_id = 251650, qty = 1 },
-            },
-            levels = { 250 },
-        },
-        {
-            spell_id = 1253006,
-            name = "G.R.R.-Nade",
-            categories = { "Consumable Devices" },
-            icon = "inv_misc_pyriumgrenade",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 251749,
-                },
-            },
-            product = { item_id = 251718, qty = 1 },
-            materials = {
-                { item_id = 238780, qty = 1 },
-                { item_id = 251651, qty = 1 },
-            },
-            levels = { 250 },
-        },
-        {
             spell_id = 1266924,
             name = "Gnomish Army Knife",
             categories = { "Devices" },
@@ -3472,24 +3436,6 @@ TFG.ENGINEERING_FOREVER = {
                 { item_id = 10560, qty = 4 },
             },
             levels = { 250, 270, 280, 290 },
-        },
-        {
-            spell_id = 1253004,
-            name = "Sludge Suppressor",
-            categories = { "Consumable Devices" },
-            icon = "inv_6_2raid_trinket_3a",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 251747,
-                },
-            },
-            product = { item_id = 251716, qty = 1 },
-            materials = {
-                { item_id = 238780, qty = 1 },
-                { item_id = 251652, qty = 1 },
-            },
-            levels = { 250 },
         },
         {
             spell_id = 23507,

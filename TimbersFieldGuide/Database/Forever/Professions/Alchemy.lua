@@ -2254,7 +2254,7 @@ TFG.ALCHEMY_FOREVER = {
         },
         {
             spell_id = 11477,
-            name = "Potion of Demonslaying",
+            name = "Potion of Demon Slaying",
             categories = { "Elixirs" },
             icon = "inv_potion_27",
             source = {
@@ -2865,7 +2865,7 @@ TFG.ALCHEMY_FOREVER = {
         },
         {
             spell_id = 1251753,
-            name = "Potion of Beast Culling",
+            name = "Potion of Beast Slaying",
             categories = { "Potions" },
             icon = "inv_alchemy_80_potion02yellow",
             source = {
@@ -2884,7 +2884,7 @@ TFG.ALCHEMY_FOREVER = {
         },
         {
             spell_id = 1251752,
-            name = "Potion of Elemental Siphoning",
+            name = "Potion of Elemental Purging",
             categories = { "Potions" },
             icon = "inv_alchemy_80_potion02blue",
             source = {

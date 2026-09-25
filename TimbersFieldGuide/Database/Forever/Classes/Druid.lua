@@ -656,9 +656,9 @@ TFG.DRUID_FOREVER = {
         },
         {
             spell_id = 407995,
-            name = "Mangle",
+            name = "Primal Bite",
             rank = 1,
-            icon = "ability_druid_mangle2",
+            icon = "ability_racial_cannibalize",
             type = "Talent",
         },
         {

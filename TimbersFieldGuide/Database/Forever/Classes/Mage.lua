@@ -1941,7 +1941,6 @@ TFG.MAGE_FOREVER = {
         {
             spell_id = 23028,
             name = "Arcane Brilliance",
-            rank = 1,
             icon = "spell_holy_arcaneintellect",
             source = {
                 {

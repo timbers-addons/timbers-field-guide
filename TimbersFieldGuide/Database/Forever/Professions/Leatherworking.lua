@@ -883,7 +883,6 @@ TFG.LEATHERWORKING_FOREVER = {
             product = { item_id = 277026, qty = 1 },
             materials = {
                 { item_id = 2318, qty = 7 },
-                { item_id = 4321, qty = 1 },
                 { item_id = 2320, qty = 2 },
             },
             levels = { 60, 65, 67, 70 },
@@ -921,7 +920,6 @@ TFG.LEATHERWORKING_FOREVER = {
             product = { item_id = 277032, qty = 1 },
             materials = {
                 { item_id = 2318, qty = 7 },
-                { item_id = 4321, qty = 1 },
                 { item_id = 2320, qty = 2 },
             },
             levels = { 60, 65, 67, 70 },
@@ -984,7 +982,6 @@ TFG.LEATHERWORKING_FOREVER = {
             product = { item_id = 277002, qty = 1 },
             materials = {
                 { item_id = 2318, qty = 7 },
-                { item_id = 4321, qty = 1 },
                 { item_id = 2320, qty = 2 },
             },
             levels = { 60, 65, 67, 70 },
@@ -1022,7 +1019,6 @@ TFG.LEATHERWORKING_FOREVER = {
             product = { item_id = 277008, qty = 1 },
             materials = {
                 { item_id = 2318, qty = 7 },
-                { item_id = 4321, qty = 1 },
                 { item_id = 2320, qty = 2 },
             },
             levels = { 60, 65, 67, 70 },
@@ -6944,120 +6940,6 @@ TFG.LEATHERWORKING_FOREVER = {
     },
     [285] = {
         {
-            spell_id = 1252983,
-            name = "Beastculler's Adaptive Bracers",
-            categories = { "Leather Bracers" },
-            icon = "inv_bracer_02",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 251739,
-                },
-            },
-            product = { item_id = 251696, qty = 1 },
-            materials = {
-                { item_id = 251651, qty = 2 },
-                { item_id = 8170, qty = 12 },
-                { item_id = 7069, qty = 2 },
-            },
-            levels = { 285 },
-        },
-        {
-            spell_id = 1252982,
-            name = "Beastculler's Adaptive Vest",
-            categories = { "Leather Chestguards" },
-            icon = "inv_chest_leather_03",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 251738,
-                },
-            },
-            product = { item_id = 251695, qty = 1 },
-            materials = {
-                { item_id = 251651, qty = 6 },
-                { item_id = 8170, qty = 32 },
-                { item_id = 7082, qty = 2 },
-            },
-            levels = { 285 },
-        },
-        {
-            spell_id = 1252984,
-            name = "Beastculler's Adaptive Wrap",
-            categories = { "Leather Belts" },
-            icon = "inv_belt_37a",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 251740,
-                },
-            },
-            product = { item_id = 251697, qty = 1 },
-            materials = {
-                { item_id = 251651, qty = 3 },
-                { item_id = 8170, qty = 24 },
-                { item_id = 7081, qty = 2 },
-            },
-            levels = { 285 },
-        },
-        {
-            spell_id = 1252997,
-            name = "Beastmender's Adaptive Girdle",
-            categories = { "Mail Belts" },
-            icon = "inv_belt_37a",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 251755,
-                },
-            },
-            product = { item_id = 251709, qty = 1 },
-            materials = {
-                { item_id = 251651, qty = 3 },
-                { item_id = 8170, qty = 24 },
-                { item_id = 7081, qty = 2 },
-            },
-            levels = { 285 },
-        },
-        {
-            spell_id = 1252995,
-            name = "Beastmender's Adaptive Robe",
-            categories = { "Mail Chestguards" },
-            icon = "inv_chest_leather_03",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 251753,
-                },
-            },
-            product = { item_id = 251707, qty = 1 },
-            materials = {
-                { item_id = 251651, qty = 6 },
-                { item_id = 8170, qty = 32 },
-                { item_id = 7082, qty = 2 },
-            },
-            levels = { 285 },
-        },
-        {
-            spell_id = 1252996,
-            name = "Beastmender's Adaptive Wristlinks",
-            categories = { "Mail Bracers" },
-            icon = "inv_bracer_02",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 251754,
-                },
-            },
-            product = { item_id = 251708, qty = 1 },
-            materials = {
-                { item_id = 251651, qty = 2 },
-                { item_id = 8170, qty = 12 },
-                { item_id = 7069, qty = 2 },
-            },
-            levels = { 285 },
-        },
-        {
             spell_id = 1297126,
             name = "Bileblister Claws",
             categories = { "Leather Gauntlets" },
@@ -7096,120 +6978,6 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 14341, qty = 6 },
             },
             levels = { 285, 290, 292, 295 },
-        },
-        {
-            spell_id = 1252987,
-            name = "Dinodestroyer's Adaptive Belt",
-            categories = { "Leather Belts" },
-            icon = "inv_belt_09",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 251743,
-                },
-            },
-            product = { item_id = 251700, qty = 1 },
-            materials = {
-                { item_id = 251651, qty = 3 },
-                { item_id = 8170, qty = 24 },
-                { item_id = 7067, qty = 2 },
-            },
-            levels = { 285 },
-        },
-        {
-            spell_id = 1252985,
-            name = "Dinodestroyer's Adaptive Chestguard",
-            categories = { "Leather Chestguards" },
-            icon = "inv_chest_chain_07",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 251741,
-                },
-            },
-            product = { item_id = 251698, qty = 1 },
-            materials = {
-                { item_id = 251651, qty = 6 },
-                { item_id = 8170, qty = 32 },
-                { item_id = 7076, qty = 2 },
-            },
-            levels = { 285 },
-        },
-        {
-            spell_id = 1252986,
-            name = "Dinodestroyer's Adaptive Wrists",
-            categories = { "Leather Bracers" },
-            icon = "inv_bracer_23a",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 251742,
-                },
-            },
-            product = { item_id = 251699, qty = 1 },
-            materials = {
-                { item_id = 251651, qty = 2 },
-                { item_id = 8170, qty = 12 },
-                { item_id = 7075, qty = 2 },
-            },
-            levels = { 285 },
-        },
-        {
-            spell_id = 1253000,
-            name = "Dinomender's Adaptive Chain",
-            categories = { "Mail Belts" },
-            icon = "inv_belt_09",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 251758,
-                },
-            },
-            product = { item_id = 251712, qty = 1 },
-            materials = {
-                { item_id = 251651, qty = 3 },
-                { item_id = 8170, qty = 24 },
-                { item_id = 7067, qty = 2 },
-            },
-            levels = { 285 },
-        },
-        {
-            spell_id = 1252998,
-            name = "Dinomender's Adaptive Tunic",
-            categories = { "Mail Chestguards" },
-            icon = "inv_chest_chain_07",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 251756,
-                },
-            },
-            product = { item_id = 251710, qty = 1 },
-            materials = {
-                { item_id = 251651, qty = 6 },
-                { item_id = 8170, qty = 32 },
-                { item_id = 7076, qty = 2 },
-            },
-            levels = { 285 },
-        },
-        {
-            spell_id = 1252999,
-            name = "Dinomender's Adaptive Wrists",
-            categories = { "Mail Bracers" },
-            icon = "inv_bracer_23a",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 251757,
-                },
-            },
-            product = { item_id = 251711, qty = 1 },
-            materials = {
-                { item_id = 251651, qty = 2 },
-                { item_id = 8170, qty = 12 },
-                { item_id = 7075, qty = 2 },
-            },
-            levels = { 285 },
         },
         {
             spell_id = 22815,
@@ -9010,17 +8778,17 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 300, 320, 325, 330 },
         },
         {
-            spell_id = 1292970,
+            spell_id = 1299915,
             name = "Spiritcaller Gloves",
             categories = { "Mail Gauntlets" },
-            icon = "inv_glove_mail_raidshamanhyjalc60_d_01",
+            icon = "inv_misc_desecrated_mailglove",
             source = {
                 {
                     type = "Item",
-                    item_id = 274001,
+                    item_id = 276543,
                 },
             },
-            product = { item_id = 273933, qty = 1 },
+            product = { item_id = 276539, qty = 1 },
             materials = {
                 { item_id = 274030, qty = 3 },
                 { item_id = 15407, qty = 2 },
@@ -9050,17 +8818,17 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 300, 320, 325, 330 },
         },
         {
-            spell_id = 1299915,
+            spell_id = 1292970,
             name = "Spiritcaller Grips",
             categories = { "Mail Gauntlets" },
-            icon = "inv_misc_desecrated_mailglove",
+            icon = "inv_glove_mail_raidshamanhyjalc60_d_01",
             source = {
                 {
                     type = "Item",
-                    item_id = 276543,
+                    item_id = 274001,
                 },
             },
-            product = { item_id = 276539, qty = 1 },
+            product = { item_id = 273933, qty = 1 },
             materials = {
                 { item_id = 274030, qty = 3 },
                 { item_id = 15407, qty = 2 },
@@ -9070,28 +8838,8 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 300, 320, 325, 330 },
         },
         {
-            spell_id = 1292969,
-            name = "Spiritcaller Kilt",
-            categories = { "Mail Legguards" },
-            icon = "inv_pant_mail_raidshamanhyjalc60_d_01",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 274000,
-                },
-            },
-            product = { item_id = 273932, qty = 1 },
-            materials = {
-                { item_id = 274030, qty = 5 },
-                { item_id = 15407, qty = 4 },
-                { item_id = 248825, qty = 24 },
-                { item_id = 14341, qty = 8 },
-            },
-            levels = { 300, 320, 325, 330 },
-        },
-        {
             spell_id = 1299914,
-            name = "Spiritcaller Leggings",
+            name = "Spiritcaller Kilt",
             categories = { "Mail Legguards" },
             icon = "inv_misc_desecrated_mailpants",
             source = {
@@ -9110,17 +8858,37 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 300, 320, 325, 330 },
         },
         {
-            spell_id = 1292971,
-            name = "Spiritcaller Mantle",
-            categories = { "Mail Pauldrons" },
-            icon = "inv_shoulder_mail_raidshamanhyjalc60_d_01",
+            spell_id = 1292969,
+            name = "Spiritcaller Leggings",
+            categories = { "Mail Legguards" },
+            icon = "inv_pant_mail_raidshamanhyjalc60_d_01",
             source = {
                 {
                     type = "Item",
-                    item_id = 274002,
+                    item_id = 274000,
                 },
             },
-            product = { item_id = 273934, qty = 1 },
+            product = { item_id = 273932, qty = 1 },
+            materials = {
+                { item_id = 274030, qty = 5 },
+                { item_id = 15407, qty = 4 },
+                { item_id = 248825, qty = 24 },
+                { item_id = 14341, qty = 8 },
+            },
+            levels = { 300, 320, 325, 330 },
+        },
+        {
+            spell_id = 1299916,
+            name = "Spiritcaller Mantle",
+            categories = { "Mail Pauldrons" },
+            icon = "inv_misc_desecrated_mailshoulder",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 276544,
+                },
+            },
+            product = { item_id = 276540, qty = 1 },
             materials = {
                 { item_id = 274030, qty = 3 },
                 { item_id = 15407, qty = 2 },
@@ -9150,17 +8918,17 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 300, 320, 325, 330 },
         },
         {
-            spell_id = 1299916,
+            spell_id = 1292971,
             name = "Spiritcaller Spaulders",
             categories = { "Mail Pauldrons" },
-            icon = "inv_misc_desecrated_mailshoulder",
+            icon = "inv_shoulder_mail_raidshamanhyjalc60_d_01",
             source = {
                 {
                     type = "Item",
-                    item_id = 276544,
+                    item_id = 274002,
                 },
             },
-            product = { item_id = 276540, qty = 1 },
+            product = { item_id = 273934, qty = 1 },
             materials = {
                 { item_id = 274030, qty = 3 },
                 { item_id = 15407, qty = 2 },

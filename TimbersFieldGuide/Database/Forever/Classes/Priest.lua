@@ -2411,7 +2411,6 @@ TFG.PRIEST_FOREVER = {
         {
             spell_id = 27683,
             name = "Prayer of Shadow Protection",
-            rank = 1,
             icon = "spell_holy_prayerofshadowprotection",
             source = {
                 {

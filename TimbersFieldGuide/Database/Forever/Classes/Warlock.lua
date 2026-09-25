@@ -547,7 +547,7 @@ TFG.WARLOCK_FOREVER = {
             spell_id = 132,
             name = "Detect Invisibility",
             rank = 1,
-            icon = "spell_shadow_detectlesserinvisibility",
+            icon = "spell_shadow_detectinvisibility",
             source = {
                 {
                     type = "Trainer",
