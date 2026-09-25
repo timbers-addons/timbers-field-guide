@@ -1378,10 +1378,15 @@ local function ensureTestFrame()
 
         if mode == "about" then
             local author = C_AddOns.GetAddOnMetadata("TimbersFieldGuide", "Author") or "Unknown"
+            local gameVersion = versionName(TFG.selectedExpansion)
+            local clientVersion, clientBuild = GetBuildInfo()
+            if clientVersion and clientBuild then
+                gameVersion = ("%s (%s.%s)"):format(gameVersion, clientVersion, clientBuild)
+            end
             frame.aboutTitle:SetText(TFG.NAME)
             frame.aboutMeta:SetFormattedText(
                 "|cffffd100ADDON VERSION|r  |cffffffff%s|r   |cffffd100GAME VERSION|r  |cffffffff%s|r",
-                (TFG.VERSION or ""):gsub("^v", ""), versionName(TFG.selectedExpansion))
+                (TFG.VERSION or ""):gsub("^v", ""), gameVersion)
             frame.aboutBody:SetText("An in-game field reference for class abilities, profession recipes, and general skills. Every page reads from a database bundled with the addon, so lookups happen right in the game, with no alt-tabbing to a website to look things up.")
             frame.aboutAuthor:SetText(author:gsub("%-", " - "))
             frame.aboutUrlBox:SetText(ABOUT_URL)
