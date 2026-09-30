@@ -273,8 +273,11 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_food_cooked_fishcake",
             source = {
                 {
-                    type = "Item",
+                    type = "Quest",
                     item_id = 263511,
+                    location = "Zerril Softbreeze, Zephras Isle",
+                    quest_id = 92553,
+                    quest_name = "Restocking the Larders",
                 },
             },
             product = { item_id = 263509, qty = 1 },
