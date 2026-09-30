@@ -761,6 +761,12 @@ TFG.COOKING_FOREVER = {
                     type = "Vendor",
                     item_id = 21099,
                     cost = 500,
+                    location = "Zerril Softbreeze, Zephras Isle",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 21099,
+                    cost = 500,
                     location = "Kalsey Sanden, Redridge Mountains",
                 },
                 {
@@ -1590,6 +1596,12 @@ TFG.COOKING_FOREVER = {
             categories = { "Spell Damage Food" },
             icon = "inv_misc_fish_21",
             source = {
+                {
+                    type = "Vendor",
+                    item_id = 21219,
+                    cost = 5000,
+                    location = "Zerril Softbreeze, Zephras Isle",
+                },
                 {
                     type = "Vendor",
                     item_id = 21219,

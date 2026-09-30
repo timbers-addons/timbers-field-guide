@@ -144,6 +144,12 @@ TFG.TAILORING_FOREVER = {
                     type = "Vendor",
                     item_id = 253665,
                     cost = 150,
+                    location = "Taleen Shimmerthread, Zephras Isle",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 253665,
+                    cost = 150,
                     location = "Ellie Stonebrow, Ironforge",
                 },
                 {
@@ -1254,6 +1260,12 @@ TFG.TAILORING_FOREVER = {
                     item_id = 253668,
                     cost = 250,
                     location = "Jennabink Powerseam, Wetlands",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 253668,
+                    cost = 250,
+                    location = "Taleen Shimmerthread, Zephras Isle",
                 },
                 {
                     type = "Vendor",
