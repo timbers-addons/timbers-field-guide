@@ -26,6 +26,9 @@ local RACE_ALIASES = {
     undead = "SCOURGE",
     scourge = "SCOURGE",
     bloodelf = "BLOODELF",
+    -- Both Skyborne races report the token "Skyborne"; the faction tells them apart.
+    highorderskyborne = "SKYBORNE_ALLIANCE",
+    windshaperskyborne = "SKYBORNE_HORDE",
 }
 
 local function normalizeRaceKey(race)
@@ -190,6 +193,9 @@ function TFG.RefreshPlayerState()
     local localizedRace, englishRace = UnitRace("player")
     playerRaceName = localizedRace or englishRace or "Unknown"
     playerRaceKey = normalizeRaceKey(englishRace or localizedRace)
+    if playerRaceKey == "SKYBORNE" and playerFaction then
+        playerRaceKey = playerRaceKey .. "_" .. playerFaction:upper()
+    end
     playerClass = select(2, UnitClass("player")) or ""
     playerLevel = tonumber(UnitLevel("player")) or 0
 
