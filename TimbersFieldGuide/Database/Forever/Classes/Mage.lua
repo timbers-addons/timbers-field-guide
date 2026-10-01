@@ -2273,62 +2273,6 @@ TFG.MAGE_FOREVER = {
             },
         },
         {
-            spell_id = 28609,
-            name = "Frost Ward",
-            rank = 5,
-            icon = "spell_frost_frostward",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 967,
-                },
-                {
-                    type = "Item",
-                    item_id = 8811,
-                },
-                {
-                    type = "Item",
-                    item_id = 8819,
-                },
-                {
-                    type = "Item",
-                    item_id = 8825,
-                },
-                {
-                    type = "Item",
-                    item_id = 8830,
-                },
-                {
-                    type = "Item",
-                    item_id = 8847,
-                },
-                {
-                    type = "Item",
-                    item_id = 8874,
-                },
-                {
-                    type = "Item",
-                    item_id = 8875,
-                },
-                {
-                    type = "Item",
-                    item_id = 8876,
-                },
-                {
-                    type = "Item",
-                    item_id = 8887,
-                },
-                {
-                    type = "Item",
-                    item_id = 8899,
-                },
-                {
-                    type = "Item",
-                    item_id = 22890,
-                },
-            },
-        },
-        {
             spell_id = 25304,
             name = "Frostbolt",
             rank = 11,

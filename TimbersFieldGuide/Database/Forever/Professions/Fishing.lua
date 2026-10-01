@@ -111,6 +111,12 @@ TFG.FISHING_FOREVER = {
                     quest_id = 97920,
                     quest_name = "Camping 101: Fishing",
                 },
+                {
+                    type = "Quest",
+                    location = "Raan Wildwind, Zephras Isle",
+                    quest_id = 97967,
+                    quest_name = "Camping 101: Fishing",
+                },
             },
             product = { item_id = 279967, qty = 1 },
             materials = {

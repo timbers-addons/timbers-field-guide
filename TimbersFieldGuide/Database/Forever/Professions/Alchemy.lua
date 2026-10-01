@@ -397,6 +397,7 @@ TFG.ALCHEMY_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 500,
                 },
             },
             levels = { 50 },
@@ -503,6 +504,7 @@ TFG.ALCHEMY_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 250,
                 },
             },
             product = { item_id = 6370, qty = 1 },
@@ -562,6 +564,7 @@ TFG.ALCHEMY_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 450,
                 },
             },
             product = { item_id = 5996, qty = 1 },
@@ -599,6 +602,7 @@ TFG.ALCHEMY_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 500,
                 },
             },
             product = { item_id = 3383, qty = 1 },
@@ -706,6 +710,7 @@ TFG.ALCHEMY_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 1000,
                 },
             },
             product = { item_id = 6372, qty = 1 },
@@ -790,6 +795,7 @@ TFG.ALCHEMY_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 1500,
                 },
             },
             product = { item_id = 3385, qty = 1 },
@@ -799,6 +805,24 @@ TFG.ALCHEMY_FOREVER = {
                 { item_id = 3371, qty = 1 },
             },
             levels = { 120, 145, 165, 185 },
+        },
+        {
+            spell_id = 1249631,
+            name = "Magenta Dye",
+            categories = { "Reagents" },
+            icon = "inv_inscription_inkpurple02",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 1500,
+                },
+            },
+            product = { item_id = 249430, qty = 1 },
+            materials = {
+                { item_id = 249424, qty = 2 },
+                { item_id = 3372, qty = 1 },
+            },
+            levels = { 120, 130, 142, 155 },
         },
     },
     [125] = {
@@ -810,6 +834,7 @@ TFG.ALCHEMY_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 1500,
                 },
             },
             product = { item_id = 3388, qty = 1 },
@@ -828,6 +853,7 @@ TFG.ALCHEMY_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 5000,
                 },
             },
             levels = { 125 },
@@ -843,6 +869,7 @@ TFG.ALCHEMY_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 2000,
                 },
             },
             product = { item_id = 3389, qty = 1 },
@@ -861,6 +888,7 @@ TFG.ALCHEMY_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 1000,
                 },
             },
             product = { item_id = 6371, qty = 2 },
@@ -967,6 +995,7 @@ TFG.ALCHEMY_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 3000,
                 },
             },
             product = { item_id = 6373, qty = 1 },
@@ -1154,6 +1183,7 @@ TFG.ALCHEMY_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 5000,
                 },
             },
             product = { item_id = 3827, qty = 1 },
@@ -1217,6 +1247,7 @@ TFG.ALCHEMY_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 5000,
                 },
             },
             product = { item_id = 3823, qty = 1 },
@@ -1257,6 +1288,10 @@ TFG.ALCHEMY_FOREVER = {
                 {
                     type = "Item",
                     item_id = 3830,
+                },
+                {
+                    type = "Trainer",
+                    cost = 6000,
                 },
             },
             product = { item_id = 3825, qty = 1 },
@@ -1367,6 +1402,7 @@ TFG.ALCHEMY_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 6500,
                 },
             },
             product = { item_id = 8949, qty = 1 },
@@ -1524,6 +1560,7 @@ TFG.ALCHEMY_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 7500,
                 },
             },
             product = { item_id = 8951, qty = 1 },
@@ -1568,6 +1605,7 @@ TFG.ALCHEMY_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 8000,
                 },
             },
             product = { item_id = 10592, qty = 1 },
@@ -1643,6 +1681,7 @@ TFG.ALCHEMY_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 9000,
                 },
             },
             product = { item_id = 6149, qty = 1 },
@@ -1661,6 +1700,7 @@ TFG.ALCHEMY_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 8000,
                 },
             },
             product = { item_id = 8956, qty = 1 },
@@ -1721,6 +1761,7 @@ TFG.ALCHEMY_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 10000,
                 },
             },
             product = { item_id = 18294, qty = 1 },
@@ -1762,6 +1803,24 @@ TFG.ALCHEMY_FOREVER = {
                 { item_id = 8925, qty = 1 },
             },
             levels = { 215, 225, 245, 265 },
+        },
+        {
+            spell_id = 1249632,
+            name = "Viridian Dye",
+            categories = { "Reagents" },
+            icon = "inv_inscription_inkgreen01",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 10000,
+                },
+            },
+            product = { item_id = 249431, qty = 1 },
+            materials = {
+                { item_id = 249274, qty = 2 },
+                { item_id = 8925, qty = 1 },
+            },
+            levels = { 215, 230, 250, 270 },
         },
     },
     [225] = {
@@ -3561,18 +3620,6 @@ TFG.ALCHEMY_FOREVER = {
             levels = { 0, 85, 105, 125 },
         },
         {
-            spell_id = 1249631,
-            name = "Magenta Dye",
-            categories = { "Reagents" },
-            icon = "inv_inscription_inkpurple02",
-            product = { item_id = 249430, qty = 1 },
-            materials = {
-                { item_id = 249424, qty = 2 },
-                { item_id = 3372, qty = 1 },
-            },
-            levels = { 0, 130, 142, 155 },
-        },
-        {
             spell_id = 22430,
             name = "Refined Scale of Onyxia",
             categories = { "Reagents" },
@@ -3606,18 +3653,6 @@ TFG.ALCHEMY_FOREVER = {
                 { item_id = 8925, qty = 1 },
                 { item_id = 8838, qty = 1 },
                 { item_id = 730, qty = 1 },
-            },
-            levels = { 0, 230, 250, 270 },
-        },
-        {
-            spell_id = 1249632,
-            name = "Viridian Dye",
-            categories = { "Reagents" },
-            icon = "inv_inscription_inkgreen01",
-            product = { item_id = 249431, qty = 1 },
-            materials = {
-                { item_id = 249274, qty = 2 },
-                { item_id = 8925, qty = 1 },
             },
             levels = { 0, 230, 250, 270 },
         },

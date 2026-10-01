@@ -783,6 +783,7 @@ TFG.BLACKSMITHING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 500,
                 },
             },
             levels = { 50 },
@@ -952,6 +953,104 @@ TFG.BLACKSMITHING_FOREVER = {
             levels = { 60, 65, 67, 70 },
         },
     },
+    [65] = {
+        {
+            spell_id = 2664,
+            name = "Runed Copper Bracers",
+            categories = { "Mail Bracers" },
+            icon = "inv_bracer_03",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                },
+            },
+            product = { item_id = 2854, qty = 1 },
+            materials = {
+                { item_id = 2840, qty = 10 },
+                { item_id = 3470, qty = 3 },
+            },
+            levels = { 65, 90, 102, 115 },
+        },
+    },
+    [70] = {
+        {
+            spell_id = 3292,
+            name = "Heavy Copper Broadsword",
+            categories = { "Two-Handed Swords" },
+            icon = "inv_sword_14",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                },
+            },
+            product = { item_id = 3487, qty = 1 },
+            materials = {
+                { item_id = 2840, qty = 14 },
+                { item_id = 2880, qty = 2 },
+                { item_id = 818, qty = 2 },
+                { item_id = 2319, qty = 2 },
+            },
+            levels = { 70, 110, 130, 150 },
+        },
+        {
+            spell_id = 7817,
+            name = "Rough Bronze Boots",
+            categories = { "Mail Boots" },
+            icon = "inv_boots_01",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 200,
+                },
+            },
+            product = { item_id = 6350, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 6 },
+                { item_id = 3470, qty = 6 },
+            },
+            levels = { 70, 100, 115, 130 },
+        },
+    },
+    [75] = {
+        {
+            spell_id = 7818,
+            name = "Silver Rod",
+            categories = { "Inert Enchanting Rods" },
+            icon = "inv_staff_01",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 100,
+                },
+            },
+            product = { item_id = 6338, qty = 1 },
+            materials = {
+                { item_id = 2842, qty = 1 },
+                { item_id = 3470, qty = 2 },
+            },
+            levels = { 75, 80, 82, 85 },
+        },
+        {
+            spell_id = 19666,
+            name = "Silver Skeleton Key",
+            categories = { "Miscellaneous" },
+            icon = "inv_misc_key_03",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 100,
+                },
+            },
+            product = { item_id = 15869, qty = 2 },
+            materials = {
+                { item_id = 2842, qty = 1 },
+                { item_id = 3470, qty = 1 },
+            },
+            levels = { 75, 75, 85, 95 },
+        },
+    },
     [80] = {
         {
             spell_id = 1252260,
@@ -974,6 +1073,27 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 3470, qty = 4 },
                 { item_id = 249410, qty = 2 },
                 { item_id = 10940, qty = 3 },
+            },
+            levels = { 80, 110, 125, 140 },
+        },
+        {
+            spell_id = 3491,
+            name = "Big Bronze Knife",
+            categories = { "Daggers" },
+            icon = "inv_weapon_shortblade_04",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 600,
+                },
+            },
+            product = { item_id = 3848, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 6 },
+                { item_id = 2880, qty = 4 },
+                { item_id = 3470, qty = 2 },
+                { item_id = 818, qty = 1 },
+                { item_id = 2319, qty = 1 },
             },
             levels = { 80, 110, 125, 140 },
         },
@@ -1090,6 +1210,40 @@ TFG.BLACKSMITHING_FOREVER = {
             levels = { 80, 110, 125, 140 },
         },
         {
+            spell_id = 2670,
+            name = "Rough Bronze Cuirass",
+            categories = { "Mail Chestguards" },
+            icon = "inv_chest_chain_08",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                },
+            },
+            product = { item_id = 2866, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 7 },
+            },
+            levels = { 80, 120, 135, 150 },
+        },
+        {
+            spell_id = 2668,
+            name = "Rough Bronze Leggings",
+            categories = { "Mail Legguards" },
+            icon = "inv_pants_03",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 300,
+                },
+            },
+            product = { item_id = 2865, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 6 },
+            },
+            levels = { 80, 120, 135, 150 },
+        },
+        {
             spell_id = 1252257,
             name = "Veteran's Gloves",
             categories = { "Mail Gauntlets" },
@@ -1136,6 +1290,25 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 3478, qty = 2 },
                 { item_id = 249427, qty = 4 },
                 { item_id = 10940, qty = 5 },
+            },
+            levels = { 85, 115, 130, 145 },
+        },
+        {
+            spell_id = 2740,
+            name = "Bronze Mace",
+            categories = { "One-Handed Maces" },
+            icon = "inv_mace_08",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 200,
+                },
+            },
+            product = { item_id = 2848, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 6 },
+                { item_id = 2880, qty = 4 },
+                { item_id = 2319, qty = 1 },
             },
             levels = { 85, 115, 130, 145 },
         },
@@ -1188,6 +1361,26 @@ TFG.BLACKSMITHING_FOREVER = {
             levels = { 85, 115, 130, 145 },
         },
         {
+            spell_id = 6517,
+            name = "Pearl-handled Dagger",
+            categories = { "Daggers" },
+            icon = "inv_weapon_shortblade_05",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 800,
+                },
+            },
+            product = { item_id = 5540, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 6 },
+                { item_id = 3466, qty = 1 },
+                { item_id = 5498, qty = 2 },
+                { item_id = 3478, qty = 2 },
+            },
+            levels = { 85, 115, 130, 145 },
+        },
+        {
             spell_id = 1252254,
             name = "Protector's Boots",
             categories = { "Mail Boots" },
@@ -1208,6 +1401,25 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 3478, qty = 2 },
                 { item_id = 249427, qty = 4 },
                 { item_id = 818, qty = 5 },
+            },
+            levels = { 85, 115, 130, 145 },
+        },
+        {
+            spell_id = 3328,
+            name = "Rough Bronze Shoulders",
+            categories = { "Mail Pauldrons" },
+            icon = "inv_shoulder_05",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                },
+            },
+            product = { item_id = 3480, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 5 },
+                { item_id = 1210, qty = 1 },
+                { item_id = 3478, qty = 1 },
             },
             levels = { 85, 115, 130, 145 },
         },
@@ -1234,6 +1446,27 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 5498, qty = 5 },
             },
             levels = { 85, 115, 130, 145 },
+        },
+    },
+    [90] = {
+        {
+            spell_id = 2741,
+            name = "Bronze Axe",
+            categories = { "One-Handed Axes" },
+            icon = "inv_axe_17",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 200,
+                },
+            },
+            product = { item_id = 2849, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 7 },
+                { item_id = 2880, qty = 4 },
+                { item_id = 2319, qty = 1 },
+            },
+            levels = { 90, 120, 135, 150 },
         },
     },
     [95] = {
@@ -1278,6 +1511,25 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 2841, qty = 8 },
                 { item_id = 2880, qty = 4 },
                 { item_id = 2319, qty = 1 },
+            },
+            levels = { 95, 125, 140, 155 },
+        },
+        {
+            spell_id = 2742,
+            name = "Bronze Shortsword",
+            categories = { "One-Handed Swords" },
+            icon = "inv_sword_04",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 200,
+                },
+            },
+            product = { item_id = 2850, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 5 },
+                { item_id = 2880, qty = 4 },
+                { item_id = 2319, qty = 2 },
             },
             levels = { 95, 125, 140, 155 },
         },
@@ -1328,6 +1580,24 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 2842, qty = 4 },
                 { item_id = 249427, qty = 4 },
                 { item_id = 1210, qty = 6 },
+            },
+            levels = { 95, 125, 140, 155 },
+        },
+        {
+            spell_id = 2672,
+            name = "Patterned Bronze Bracers",
+            categories = { "Mail Bracers" },
+            icon = "inv_bracer_07",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                },
+            },
+            product = { item_id = 2868, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 5 },
+                { item_id = 3478, qty = 2 },
             },
             levels = { 95, 125, 140, 155 },
         },
@@ -1384,6 +1654,25 @@ TFG.BLACKSMITHING_FOREVER = {
     },
     [100] = {
         {
+            spell_id = 9985,
+            name = "Bronze Warhammer",
+            categories = { "Two-Handed Maces" },
+            icon = "inv_hammer_18",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 250,
+                },
+            },
+            product = { item_id = 7956, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 8 },
+                { item_id = 3466, qty = 1 },
+                { item_id = 2319, qty = 1 },
+            },
+            levels = { 100, 155, 170, 185 },
+        },
+        {
             spell_id = 3295,
             name = "Deadly Bronze Poniard",
             categories = { "Daggers" },
@@ -1404,6 +1693,57 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 2319, qty = 2 },
             },
             levels = { 100, 130, 145, 160 },
+        },
+        {
+            spell_id = 3337,
+            name = "Heavy Grinding Stone",
+            categories = { "Reagents" },
+            icon = "inv_stone_grindingstone_03",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 1000,
+                },
+            },
+            product = { item_id = 3486, qty = 1 },
+            materials = {
+                { item_id = 2838, qty = 3 },
+            },
+            levels = { 100, 100, 112, 125 },
+        },
+        {
+            spell_id = 2674,
+            name = "Heavy Sharpening Stone",
+            categories = { "Weapon Stones" },
+            icon = "inv_stone_sharpeningstone_03",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 1000,
+                },
+            },
+            product = { item_id = 2871, qty = 1 },
+            materials = {
+                { item_id = 2838, qty = 1 },
+            },
+            levels = { 100, 100, 107, 115 },
+        },
+        {
+            spell_id = 3117,
+            name = "Heavy Weightstone",
+            categories = { "Weapon Stones" },
+            icon = "inv_stone_weightstone_03",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 1000,
+                },
+            },
+            product = { item_id = 3241, qty = 1 },
+            materials = {
+                { item_id = 2838, qty = 1 },
+            },
+            levels = { 100, 100, 107, 115 },
         },
         {
             spell_id = 8367,
@@ -1465,6 +1805,66 @@ TFG.BLACKSMITHING_FOREVER = {
         },
     },
     [105] = {
+        {
+            spell_id = 9986,
+            name = "Bronze Greatsword",
+            categories = { "Two-Handed Swords" },
+            icon = "inv_sword_20",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                },
+            },
+            product = { item_id = 7957, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 12 },
+                { item_id = 3466, qty = 2 },
+                { item_id = 2319, qty = 2 },
+            },
+            levels = { 105, 135, 150, 165 },
+        },
+        {
+            spell_id = 3296,
+            name = "Heavy Bronze Mace",
+            categories = { "One-Handed Maces" },
+            icon = "inv_mace_08",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 1000,
+                },
+            },
+            product = { item_id = 3491, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 8 },
+                { item_id = 3466, qty = 1 },
+                { item_id = 1206, qty = 1 },
+                { item_id = 1210, qty = 1 },
+                { item_id = 3478, qty = 2 },
+                { item_id = 2319, qty = 2 },
+            },
+            levels = { 105, 135, 150, 165 },
+        },
+        {
+            spell_id = 3331,
+            name = "Silvered Bronze Boots",
+            categories = { "Mail Boots" },
+            icon = "inv_boots_01",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                },
+            },
+            product = { item_id = 3482, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 6 },
+                { item_id = 2842, qty = 1 },
+                { item_id = 3478, qty = 2 },
+            },
+            levels = { 105, 135, 150, 165 },
+        },
         {
             spell_id = 2673,
             name = "Silvered Bronze Breastplate",
@@ -1547,6 +1947,25 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 2842, qty = 5 },
                 { item_id = 249427, qty = 6 },
                 { item_id = 10940, qty = 8 },
+            },
+            levels = { 110, 140, 155, 170 },
+        },
+        {
+            spell_id = 9987,
+            name = "Bronze Battle Axe",
+            categories = { "Two-Handed Axes" },
+            icon = "inv_axe_21",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                },
+            },
+            product = { item_id = 7958, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 14 },
+                { item_id = 3466, qty = 1 },
+                { item_id = 2319, qty = 2 },
             },
             levels = { 110, 140, 155, 170 },
         },
@@ -1641,6 +2060,25 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 2842, qty = 5 },
                 { item_id = 249427, qty = 6 },
                 { item_id = 818, qty = 8 },
+            },
+            levels = { 110, 140, 155, 170 },
+        },
+        {
+            spell_id = 3333,
+            name = "Silvered Bronze Gauntlets",
+            categories = { "Mail Gauntlets" },
+            icon = "inv_gauntlets_05",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 1000,
+                },
+            },
+            product = { item_id = 3483, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 8 },
+                { item_id = 2842, qty = 1 },
+                { item_id = 3478, qty = 2 },
             },
             levels = { 110, 140, 155, 170 },
         },
@@ -1755,6 +2193,27 @@ TFG.BLACKSMITHING_FOREVER = {
             },
             levels = { 120, 150, 165, 180 },
         },
+        {
+            spell_id = 2675,
+            name = "Shining Silver Breastplate",
+            categories = { "Mail Chestguards" },
+            icon = "inv_chest_plate15",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 1000,
+                },
+            },
+            product = { item_id = 2870, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 20 },
+                { item_id = 1206, qty = 2 },
+                { item_id = 1705, qty = 2 },
+                { item_id = 5500, qty = 2 },
+                { item_id = 2842, qty = 4 },
+            },
+            levels = { 120, 150, 165, 180 },
+        },
     },
     [125] = {
         {
@@ -1783,24 +2242,6 @@ TFG.BLACKSMITHING_FOREVER = {
             levels = { 125, 155, 170, 185 },
         },
         {
-            spell_id = 9985,
-            name = "Bronze Warhammer",
-            categories = { "Two-Handed Maces" },
-            icon = "inv_hammer_18",
-            source = {
-                {
-                    type = "Trainer",
-                },
-            },
-            product = { item_id = 7956, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 8 },
-                { item_id = 3466, qty = 1 },
-                { item_id = 2319, qty = 1 },
-            },
-            levels = { 125, 155, 170, 185 },
-        },
-        {
             spell_id = 1252276,
             name = "Crusader's Silvered Chain Leggings",
             categories = { "Mail Legguards" },
@@ -1824,6 +2265,42 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 10938, qty = 8 },
             },
             levels = { 125, 155, 170, 185 },
+        },
+        {
+            spell_id = 14379,
+            name = "Golden Rod",
+            categories = { "Inert Enchanting Rods" },
+            icon = "inv_staff_10",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 250,
+                },
+            },
+            product = { item_id = 11128, qty = 1 },
+            materials = {
+                { item_id = 3577, qty = 1 },
+                { item_id = 3478, qty = 2 },
+            },
+            levels = { 125, 130, 132, 135 },
+        },
+        {
+            spell_id = 19667,
+            name = "Golden Skeleton Key",
+            categories = { "Miscellaneous" },
+            icon = "inv_misc_key_13",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 250,
+                },
+            },
+            product = { item_id = 15870, qty = 2 },
+            materials = {
+                { item_id = 3577, qty = 1 },
+                { item_id = 3486, qty = 1 },
+            },
+            levels = { 125, 125, 135, 145 },
         },
         {
             spell_id = 3336,
@@ -1869,6 +2346,23 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 1210, qty = 8 },
             },
             levels = { 125, 155, 170, 185 },
+        },
+        {
+            spell_id = 8768,
+            name = "Iron Buckle",
+            categories = { "Reagents" },
+            icon = "inv_misc_armorkit_12",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 250,
+                },
+            },
+            product = { item_id = 7071, qty = 2 },
+            materials = {
+                { item_id = 3575, qty = 1 },
+            },
+            levels = { 125, 125, 127, 130 },
         },
         {
             spell_id = 7221,
@@ -1965,6 +2459,7 @@ TFG.BLACKSMITHING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 5000,
                 },
             },
             levels = { 125 },
@@ -1972,6 +2467,25 @@ TFG.BLACKSMITHING_FOREVER = {
         },
     },
     [130] = {
+        {
+            spell_id = 3506,
+            name = "Green Iron Leggings",
+            categories = { "Mail Legguards" },
+            icon = "inv_pants_05",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 5000,
+                },
+            },
+            product = { item_id = 3842, qty = 1 },
+            materials = {
+                { item_id = 3575, qty = 8 },
+                { item_id = 3486, qty = 1 },
+                { item_id = 2605, qty = 1 },
+            },
+            levels = { 130, 155, 167, 180 },
+        },
         {
             spell_id = 1252353,
             name = "Iron Fists",
@@ -2137,6 +2651,24 @@ TFG.BLACKSMITHING_FOREVER = {
             levels = { 140, 140, 142, 145 },
         },
         {
+            spell_id = 3501,
+            name = "Green Iron Bracers",
+            categories = { "Mail Bracers" },
+            icon = "inv_bracer_06",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 1000,
+                },
+            },
+            product = { item_id = 3835, qty = 1 },
+            materials = {
+                { item_id = 3575, qty = 6 },
+                { item_id = 2605, qty = 1 },
+            },
+            levels = { 140, 165, 177, 190 },
+        },
+        {
             spell_id = 7222,
             name = "Iron Counterweight",
             categories = { "Miscellaneous" },
@@ -2195,6 +2727,25 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 3575, qty = 10 },
                 { item_id = 3577, qty = 2 },
                 { item_id = 3486, qty = 1 },
+            },
+            levels = { 145, 170, 182, 195 },
+        },
+        {
+            spell_id = 3502,
+            name = "Green Iron Helm",
+            categories = { "Mail Helmets" },
+            icon = "inv_helmet_03",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 1250,
+                },
+            },
+            product = { item_id = 3836, qty = 1 },
+            materials = {
+                { item_id = 3575, qty = 12 },
+                { item_id = 3864, qty = 1 },
+                { item_id = 2605, qty = 1 },
             },
             levels = { 145, 170, 182, 195 },
         },
@@ -2308,6 +2859,10 @@ TFG.BLACKSMITHING_FOREVER = {
                     type = "Item",
                     item_id = 251412,
                 },
+                {
+                    type = "Trainer",
+                    cost = 4250,
+                },
             },
             product = { item_id = 250560, qty = 1 },
             materials = {
@@ -2326,6 +2881,10 @@ TFG.BLACKSMITHING_FOREVER = {
                 {
                     type = "Item",
                     item_id = 251408,
+                },
+                {
+                    type = "Trainer",
+                    cost = 4250,
                 },
             },
             product = { item_id = 250556, qty = 1 },
@@ -2346,6 +2905,10 @@ TFG.BLACKSMITHING_FOREVER = {
                     type = "Item",
                     item_id = 251411,
                 },
+                {
+                    type = "Trainer",
+                    cost = 4250,
+                },
             },
             product = { item_id = 250559, qty = 1 },
             materials = {
@@ -2365,6 +2928,10 @@ TFG.BLACKSMITHING_FOREVER = {
                     type = "Item",
                     item_id = 251409,
                 },
+                {
+                    type = "Trainer",
+                    cost = 4250,
+                },
             },
             product = { item_id = 250557, qty = 1 },
             materials = {
@@ -2383,6 +2950,10 @@ TFG.BLACKSMITHING_FOREVER = {
                 {
                     type = "Item",
                     item_id = 251410,
+                },
+                {
+                    type = "Trainer",
+                    cost = 4250,
                 },
             },
             product = { item_id = 250558, qty = 1 },
@@ -2412,6 +2983,48 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 5637, qty = 4 },
                 { item_id = 818, qty = 4 },
                 { item_id = 3486, qty = 2 },
+            },
+            levels = { 155, 180, 192, 205 },
+        },
+        {
+            spell_id = 15972,
+            name = "Glinting Steel Dagger",
+            categories = { "Daggers" },
+            icon = "inv_weapon_shortblade_05",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 7500,
+                },
+            },
+            product = { item_id = 12259, qty = 1 },
+            materials = {
+                { item_id = 3859, qty = 10 },
+                { item_id = 3466, qty = 2 },
+                { item_id = 1206, qty = 1 },
+                { item_id = 7067, qty = 1 },
+                { item_id = 4234, qty = 1 },
+            },
+            levels = { 155, 180, 192, 205 },
+        },
+        {
+            spell_id = 3508,
+            name = "Green Iron Hauberk",
+            categories = { "Mail Chestguards" },
+            icon = "inv_chest_chain",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 7500,
+                },
+            },
+            product = { item_id = 3844, qty = 1 },
+            materials = {
+                { item_id = 3575, qty = 20 },
+                { item_id = 3486, qty = 4 },
+                { item_id = 1529, qty = 2 },
+                { item_id = 1206, qty = 2 },
+                { item_id = 4255, qty = 1 },
             },
             levels = { 155, 180, 192, 205 },
         },
@@ -2456,6 +3069,24 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 3575, qty = 14 },
                 { item_id = 3486, qty = 3 },
                 { item_id = 5637, qty = 2 },
+            },
+            levels = { 160, 185, 197, 210 },
+        },
+        {
+            spell_id = 7223,
+            name = "Golden Scale Bracers",
+            categories = { "Mail Bracers" },
+            icon = "inv_bracer_10",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 1000,
+                },
+            },
+            product = { item_id = 6040, qty = 1 },
+            materials = {
+                { item_id = 3859, qty = 5 },
+                { item_id = 3486, qty = 2 },
             },
             levels = { 160, 185, 197, 210 },
         },
@@ -2713,8 +3344,10 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_helm_mail_skybornec60_b_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 276984,
+                    cost = 100000,
+                    location = "Archmage Alvareaux, City of Dalaran",
                 },
             },
             product = { item_id = 277048, qty = 1 },
@@ -2732,8 +3365,10 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_shoulder_mail_skybornec60_b_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 276985,
+                    cost = 100000,
+                    location = "Archmage Alvareaux, City of Dalaran",
                 },
             },
             product = { item_id = 277049, qty = 1 },
@@ -2989,6 +3624,111 @@ TFG.BLACKSMITHING_FOREVER = {
             levels = { 175, 200, 212, 225 },
         },
         {
+            spell_id = 9920,
+            name = "Solid Grinding Stone",
+            categories = { "Reagents" },
+            icon = "inv_stone_grindingstone_04",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 2500,
+                },
+            },
+            product = { item_id = 7966, qty = 1 },
+            materials = {
+                { item_id = 7912, qty = 4 },
+            },
+            levels = { 175, 175, 180, 185 },
+        },
+        {
+            spell_id = 9918,
+            name = "Solid Sharpening Stone",
+            categories = { "Weapon Stones" },
+            icon = "inv_stone_sharpeningstone_04",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 2500,
+                },
+            },
+            product = { item_id = 7964, qty = 1 },
+            materials = {
+                { item_id = 7912, qty = 1 },
+            },
+            levels = { 175, 175, 180, 185 },
+        },
+        {
+            spell_id = 9921,
+            name = "Solid Weightstone",
+            categories = { "Weapon Stones" },
+            icon = "inv_stone_weightstone_04",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 2500,
+                },
+            },
+            product = { item_id = 7965, qty = 1 },
+            materials = {
+                { item_id = 7912, qty = 1 },
+            },
+            levels = { 175, 175, 180, 185 },
+        },
+        {
+            spell_id = 9916,
+            name = "Steel Breastplate",
+            categories = { "Mail Chestguards" },
+            icon = "inv_chest_plate05",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 2500,
+                },
+            },
+            product = { item_id = 7963, qty = 1 },
+            materials = {
+                { item_id = 3859, qty = 16 },
+                { item_id = 3486, qty = 3 },
+            },
+            levels = { 175, 200, 212, 225 },
+        },
+        {
+            spell_id = 14380,
+            name = "Truesilver Rod",
+            categories = { "Inert Enchanting Rods" },
+            icon = "inv_staff_11",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 2500,
+                },
+            },
+            product = { item_id = 11144, qty = 1 },
+            materials = {
+                { item_id = 6037, qty = 1 },
+                { item_id = 3486, qty = 1 },
+            },
+            levels = { 175, 180, 182, 185 },
+        },
+        {
+            spell_id = 19668,
+            name = "Truesilver Skeleton Key",
+            categories = { "Miscellaneous" },
+            icon = "inv_misc_key_11",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 2500,
+                },
+            },
+            product = { item_id = 15871, qty = 2 },
+            materials = {
+                { item_id = 6037, qty = 1 },
+                { item_id = 7966, qty = 1 },
+            },
+            levels = { 175, 175, 185, 195 },
+        },
+        {
             spell_id = 1252317,
             name = "Warder's Gauntlet",
             categories = { "Plate Gauntlets" },
@@ -3037,6 +3777,42 @@ TFG.BLACKSMITHING_FOREVER = {
             levels = { 180, 200, 210, 220 },
         },
         {
+            spell_id = 9928,
+            name = "Heavy Mithril Gauntlet",
+            categories = { "Plate Gauntlets" },
+            icon = "inv_gauntlets_27",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 5000,
+                },
+            },
+            product = { item_id = 7919, qty = 1 },
+            materials = {
+                { item_id = 3860, qty = 6 },
+                { item_id = 4338, qty = 4 },
+            },
+            levels = { 180, 200, 210, 220 },
+        },
+        {
+            spell_id = 9926,
+            name = "Heavy Mithril Shoulder",
+            categories = { "Plate Pauldrons" },
+            icon = "inv_shoulder_22",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 5000,
+                },
+            },
+            product = { item_id = 7918, qty = 1 },
+            materials = {
+                { item_id = 3860, qty = 8 },
+                { item_id = 4234, qty = 6 },
+            },
+            levels = { 180, 200, 210, 220 },
+        },
+        {
             spell_id = 1252356,
             name = "Mithril Shortsword",
             categories = { "Daggers" },
@@ -3060,6 +3836,26 @@ TFG.BLACKSMITHING_FOREVER = {
     },
     [185] = {
         {
+            spell_id = 9993,
+            name = "Heavy Mithril Axe",
+            categories = { "One-Handed Axes" },
+            icon = "inv_axe_14",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 10000,
+                },
+            },
+            product = { item_id = 7941, qty = 1 },
+            materials = {
+                { item_id = 3860, qty = 12 },
+                { item_id = 3864, qty = 2 },
+                { item_id = 7966, qty = 1 },
+                { item_id = 4234, qty = 4 },
+            },
+            levels = { 185, 210, 222, 235 },
+        },
+        {
             spell_id = 9933,
             name = "Heavy Mithril Pants",
             categories = { "Plate Legguards" },
@@ -3074,6 +3870,23 @@ TFG.BLACKSMITHING_FOREVER = {
             materials = {
                 { item_id = 3860, qty = 10 },
                 { item_id = 1705, qty = 2 },
+            },
+            levels = { 185, 205, 215, 225 },
+        },
+        {
+            spell_id = 9931,
+            name = "Mithril Plate Pants",
+            categories = { "Mail Legguards" },
+            icon = "inv_pants_04",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 5000,
+                },
+            },
+            product = { item_id = 7920, qty = 1 },
+            materials = {
+                { item_id = 3860, qty = 12 },
             },
             levels = { 185, 205, 215, 225 },
         },
@@ -3135,6 +3948,24 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 3864, qty = 2 },
                 { item_id = 7966, qty = 1 },
                 { item_id = 4234, qty = 4 },
+            },
+            levels = { 190, 210, 220, 230 },
+        },
+        {
+            spell_id = 9935,
+            name = "Steel Plate Helm",
+            categories = { "Plate Helmets" },
+            icon = "inv_helmet_03",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 5000,
+                },
+            },
+            product = { item_id = 7922, qty = 1 },
+            materials = {
+                { item_id = 3859, qty = 14 },
+                { item_id = 7966, qty = 1 },
             },
             levels = { 190, 210, 220, 230 },
         },
@@ -7448,21 +8279,6 @@ TFG.BLACKSMITHING_FOREVER = {
             levels = { 0, 230, 242, 255 },
         },
         {
-            spell_id = 3491,
-            name = "Big Bronze Knife",
-            categories = { "Daggers" },
-            icon = "inv_weapon_shortblade_04",
-            product = { item_id = 3848, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 6 },
-                { item_id = 2880, qty = 4 },
-                { item_id = 3470, qty = 2 },
-                { item_id = 818, qty = 1 },
-                { item_id = 2319, qty = 1 },
-            },
-            levels = { 0, 110, 125, 140 },
-        },
-        {
             spell_id = 16965,
             name = "Bleakwood Hew",
             categories = { "Two-Handed Axes" },
@@ -7507,71 +8323,6 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 12644, qty = 2 },
             },
             levels = { 0, 325, 337, 350 },
-        },
-        {
-            spell_id = 2741,
-            name = "Bronze Axe",
-            categories = { "One-Handed Axes" },
-            icon = "inv_axe_17",
-            product = { item_id = 2849, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 7 },
-                { item_id = 2880, qty = 4 },
-                { item_id = 2319, qty = 1 },
-            },
-            levels = { 0, 120, 135, 150 },
-        },
-        {
-            spell_id = 9987,
-            name = "Bronze Battle Axe",
-            categories = { "Two-Handed Axes" },
-            icon = "inv_axe_21",
-            product = { item_id = 7958, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 14 },
-                { item_id = 3466, qty = 1 },
-                { item_id = 2319, qty = 2 },
-            },
-            levels = { 0, 140, 155, 170 },
-        },
-        {
-            spell_id = 9986,
-            name = "Bronze Greatsword",
-            categories = { "Two-Handed Swords" },
-            icon = "inv_sword_20",
-            product = { item_id = 7957, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 12 },
-                { item_id = 3466, qty = 2 },
-                { item_id = 2319, qty = 2 },
-            },
-            levels = { 0, 135, 150, 165 },
-        },
-        {
-            spell_id = 2740,
-            name = "Bronze Mace",
-            categories = { "One-Handed Maces" },
-            icon = "inv_mace_08",
-            product = { item_id = 2848, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 6 },
-                { item_id = 2880, qty = 4 },
-                { item_id = 2319, qty = 1 },
-            },
-            levels = { 0, 115, 130, 145 },
-        },
-        {
-            spell_id = 2742,
-            name = "Bronze Shortsword",
-            categories = { "One-Handed Swords" },
-            icon = "inv_sword_04",
-            product = { item_id = 2850, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 5 },
-                { item_id = 2880, qty = 4 },
-                { item_id = 2319, qty = 2 },
-            },
-            levels = { 0, 125, 140, 155 },
         },
         {
             spell_id = 1252251,
@@ -7661,110 +8412,6 @@ TFG.BLACKSMITHING_FOREVER = {
             levels = { 0, 230, 232, 235 },
         },
         {
-            spell_id = 15972,
-            name = "Glinting Steel Dagger",
-            categories = { "Daggers" },
-            icon = "inv_weapon_shortblade_05",
-            product = { item_id = 12259, qty = 1 },
-            materials = {
-                { item_id = 3859, qty = 10 },
-                { item_id = 3466, qty = 2 },
-                { item_id = 1206, qty = 1 },
-                { item_id = 7067, qty = 1 },
-                { item_id = 4234, qty = 1 },
-            },
-            levels = { 0, 180, 192, 205 },
-        },
-        {
-            spell_id = 14379,
-            name = "Golden Rod",
-            categories = { "Inert Enchanting Rods" },
-            icon = "inv_staff_10",
-            product = { item_id = 11128, qty = 1 },
-            materials = {
-                { item_id = 3577, qty = 1 },
-                { item_id = 3478, qty = 2 },
-            },
-            levels = { 0, 130, 132, 135 },
-        },
-        {
-            spell_id = 7223,
-            name = "Golden Scale Bracers",
-            categories = { "Mail Bracers" },
-            icon = "inv_bracer_10",
-            product = { item_id = 6040, qty = 1 },
-            materials = {
-                { item_id = 3859, qty = 5 },
-                { item_id = 3486, qty = 2 },
-            },
-            levels = { 0, 185, 197, 210 },
-        },
-        {
-            spell_id = 19667,
-            name = "Golden Skeleton Key",
-            categories = { "Miscellaneous" },
-            icon = "inv_misc_key_13",
-            product = { item_id = 15870, qty = 2 },
-            materials = {
-                { item_id = 3577, qty = 1 },
-                { item_id = 3486, qty = 1 },
-            },
-            levels = { 0, 125, 135, 145 },
-        },
-        {
-            spell_id = 3501,
-            name = "Green Iron Bracers",
-            categories = { "Mail Bracers" },
-            icon = "inv_bracer_06",
-            product = { item_id = 3835, qty = 1 },
-            materials = {
-                { item_id = 3575, qty = 6 },
-                { item_id = 2605, qty = 1 },
-            },
-            levels = { 0, 165, 177, 190 },
-        },
-        {
-            spell_id = 3508,
-            name = "Green Iron Hauberk",
-            categories = { "Mail Chestguards" },
-            icon = "inv_chest_chain",
-            product = { item_id = 3844, qty = 1 },
-            materials = {
-                { item_id = 3575, qty = 20 },
-                { item_id = 3486, qty = 4 },
-                { item_id = 1529, qty = 2 },
-                { item_id = 1206, qty = 2 },
-                { item_id = 4255, qty = 1 },
-            },
-            levels = { 0, 180, 192, 205 },
-        },
-        {
-            spell_id = 3502,
-            name = "Green Iron Helm",
-            categories = { "Mail Helmets" },
-            icon = "inv_helmet_03",
-            product = { item_id = 3836, qty = 1 },
-            materials = {
-                { item_id = 3575, qty = 12 },
-                { item_id = 3864, qty = 1 },
-                { item_id = 2605, qty = 1 },
-            },
-            levels = { 0, 170, 182, 195 },
-        },
-        {
-            spell_id = 3506,
-            name = "Green Iron Leggings",
-            categories = { "Mail Legguards" },
-            icon = "inv_pants_05",
-            product = { item_id = 3842, qty = 1 },
-            materials = {
-                { item_id = 3575, qty = 8 },
-                { item_id = 3486, qty = 1 },
-                { item_id = 2605, qty = 1 },
-            },
-            levels = { 0, 155, 167, 180 },
-        },
-        {
             spell_id = 1252248,
             name = "Guard's Chain Helm",
             categories = { "Mail Helmets" },
@@ -7791,61 +8438,6 @@ TFG.BLACKSMITHING_FOREVER = {
             levels = { 0, 100, 100, 100 },
         },
         {
-            spell_id = 3296,
-            name = "Heavy Bronze Mace",
-            categories = { "One-Handed Maces" },
-            icon = "inv_mace_08",
-            product = { item_id = 3491, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 8 },
-                { item_id = 3466, qty = 1 },
-                { item_id = 1206, qty = 1 },
-                { item_id = 1210, qty = 1 },
-                { item_id = 3478, qty = 2 },
-                { item_id = 2319, qty = 2 },
-            },
-            levels = { 0, 135, 150, 165 },
-        },
-        {
-            spell_id = 3292,
-            name = "Heavy Copper Broadsword",
-            categories = { "Two-Handed Swords" },
-            icon = "inv_sword_14",
-            product = { item_id = 3487, qty = 1 },
-            materials = {
-                { item_id = 2840, qty = 14 },
-                { item_id = 2880, qty = 2 },
-                { item_id = 818, qty = 2 },
-                { item_id = 2319, qty = 2 },
-            },
-            levels = { 0, 110, 130, 150 },
-        },
-        {
-            spell_id = 3337,
-            name = "Heavy Grinding Stone",
-            categories = { "Reagents" },
-            icon = "inv_stone_grindingstone_03",
-            product = { item_id = 3486, qty = 1 },
-            materials = {
-                { item_id = 2838, qty = 3 },
-            },
-            levels = { 0, 100, 112, 125 },
-        },
-        {
-            spell_id = 9993,
-            name = "Heavy Mithril Axe",
-            categories = { "One-Handed Axes" },
-            icon = "inv_axe_14",
-            product = { item_id = 7941, qty = 1 },
-            materials = {
-                { item_id = 3860, qty = 12 },
-                { item_id = 3864, qty = 2 },
-                { item_id = 7966, qty = 1 },
-                { item_id = 4234, qty = 4 },
-            },
-            levels = { 0, 210, 222, 235 },
-        },
-        {
             spell_id = 9968,
             name = "Heavy Mithril Boots",
             categories = { "Plate Boots" },
@@ -7869,52 +8461,6 @@ TFG.BLACKSMITHING_FOREVER = {
             levels = { 0, 225, 235, 245 },
         },
         {
-            spell_id = 9928,
-            name = "Heavy Mithril Gauntlet",
-            categories = { "Plate Gauntlets" },
-            icon = "inv_gauntlets_27",
-            product = { item_id = 7919, qty = 1 },
-            materials = {
-                { item_id = 3860, qty = 6 },
-                { item_id = 4338, qty = 4 },
-            },
-            levels = { 0, 200, 210, 220 },
-        },
-        {
-            spell_id = 9926,
-            name = "Heavy Mithril Shoulder",
-            categories = { "Plate Pauldrons" },
-            icon = "inv_shoulder_22",
-            product = { item_id = 7918, qty = 1 },
-            materials = {
-                { item_id = 3860, qty = 8 },
-                { item_id = 4234, qty = 6 },
-            },
-            levels = { 0, 200, 210, 220 },
-        },
-        {
-            spell_id = 2674,
-            name = "Heavy Sharpening Stone",
-            categories = { "Weapon Stones" },
-            icon = "inv_stone_sharpeningstone_03",
-            product = { item_id = 2871, qty = 1 },
-            materials = {
-                { item_id = 2838, qty = 1 },
-            },
-            levels = { 0, 100, 107, 115 },
-        },
-        {
-            spell_id = 3117,
-            name = "Heavy Weightstone",
-            categories = { "Weapon Stones" },
-            icon = "inv_stone_weightstone_03",
-            product = { item_id = 3241, qty = 1 },
-            materials = {
-                { item_id = 2838, qty = 1 },
-            },
-            levels = { 0, 100, 107, 115 },
-        },
-        {
             spell_id = 16967,
             name = "Inlaid Thorium Hammer",
             categories = { "Two-Handed Maces" },
@@ -7928,17 +8474,6 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 8170, qty = 4 },
             },
             levels = { 0, 270, 282, 295 },
-        },
-        {
-            spell_id = 8768,
-            name = "Iron Buckle",
-            categories = { "Reagents" },
-            icon = "inv_misc_armorkit_12",
-            product = { item_id = 7071, qty = 2 },
-            materials = {
-                { item_id = 3575, qty = 1 },
-            },
-            levels = { 0, 125, 127, 130 },
         },
         {
             spell_id = 8366,
@@ -7990,17 +8525,6 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 4338, qty = 4 },
             },
             levels = { 0, 215, 225, 235 },
-        },
-        {
-            spell_id = 9931,
-            name = "Mithril Plate Pants",
-            categories = { "Mail Legguards" },
-            icon = "inv_pants_04",
-            product = { item_id = 7920, qty = 1 },
-            materials = {
-                { item_id = 3860, qty = 12 },
-            },
-            levels = { 0, 205, 215, 225 },
         },
         {
             spell_id = 9957,
@@ -8056,32 +8580,6 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 7966, qty = 1 },
             },
             levels = { 0, 240, 250, 260 },
-        },
-        {
-            spell_id = 2672,
-            name = "Patterned Bronze Bracers",
-            categories = { "Mail Bracers" },
-            icon = "inv_bracer_07",
-            product = { item_id = 2868, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 5 },
-                { item_id = 3478, qty = 2 },
-            },
-            levels = { 0, 125, 140, 155 },
-        },
-        {
-            spell_id = 6517,
-            name = "Pearl-handled Dagger",
-            categories = { "Daggers" },
-            icon = "inv_weapon_shortblade_05",
-            product = { item_id = 5540, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 6 },
-                { item_id = 3466, qty = 1 },
-                { item_id = 5498, qty = 2 },
-                { item_id = 3478, qty = 2 },
-            },
-            levels = { 0, 115, 130, 145 },
         },
         {
             spell_id = 10007,
@@ -8166,18 +8664,6 @@ TFG.BLACKSMITHING_FOREVER = {
             levels = { 0, 85, 85, 85 },
         },
         {
-            spell_id = 7817,
-            name = "Rough Bronze Boots",
-            categories = { "Mail Boots" },
-            icon = "inv_boots_01",
-            product = { item_id = 6350, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 6 },
-                { item_id = 3470, qty = 6 },
-            },
-            levels = { 0, 100, 115, 130 },
-        },
-        {
             spell_id = 2671,
             name = "Rough Bronze Bracers",
             categories = { "Mail Bracers" },
@@ -8185,41 +8671,6 @@ TFG.BLACKSMITHING_FOREVER = {
             product = { item_id = 2867, qty = 1 },
             materials = {
                 { item_id = 2841, qty = 4 },
-            },
-            levels = { 0, 115, 130, 145 },
-        },
-        {
-            spell_id = 2670,
-            name = "Rough Bronze Cuirass",
-            categories = { "Mail Chestguards" },
-            icon = "inv_chest_chain_08",
-            product = { item_id = 2866, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 7 },
-            },
-            levels = { 0, 120, 135, 150 },
-        },
-        {
-            spell_id = 2668,
-            name = "Rough Bronze Leggings",
-            categories = { "Mail Legguards" },
-            icon = "inv_pants_03",
-            product = { item_id = 2865, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 6 },
-            },
-            levels = { 0, 120, 135, 150 },
-        },
-        {
-            spell_id = 3328,
-            name = "Rough Bronze Shoulders",
-            categories = { "Mail Pauldrons" },
-            icon = "inv_shoulder_05",
-            product = { item_id = 3480, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 5 },
-                { item_id = 1210, qty = 1 },
-                { item_id = 3478, qty = 1 },
             },
             levels = { 0, 115, 130, 145 },
         },
@@ -8238,18 +8689,6 @@ TFG.BLACKSMITHING_FOREVER = {
             levels = { 0, 285, 297, 310 },
         },
         {
-            spell_id = 2664,
-            name = "Runed Copper Bracers",
-            categories = { "Mail Bracers" },
-            icon = "inv_bracer_03",
-            product = { item_id = 2854, qty = 1 },
-            materials = {
-                { item_id = 2840, qty = 10 },
-                { item_id = 3470, qty = 3 },
-            },
-            levels = { 0, 90, 102, 115 },
-        },
-        {
             spell_id = 1252292,
             name = "Shining Mithril Helm",
             categories = { "Plate Helmets" },
@@ -8262,128 +8701,6 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 7075, qty = 1 },
             },
             levels = { 0, 235, 245, 255 },
-        },
-        {
-            spell_id = 2675,
-            name = "Shining Silver Breastplate",
-            categories = { "Mail Chestguards" },
-            icon = "inv_chest_plate15",
-            product = { item_id = 2870, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 20 },
-                { item_id = 1206, qty = 2 },
-                { item_id = 1705, qty = 2 },
-                { item_id = 5500, qty = 2 },
-                { item_id = 2842, qty = 4 },
-            },
-            levels = { 0, 150, 165, 180 },
-        },
-        {
-            spell_id = 7818,
-            name = "Silver Rod",
-            categories = { "Inert Enchanting Rods" },
-            icon = "inv_staff_01",
-            product = { item_id = 6338, qty = 1 },
-            materials = {
-                { item_id = 2842, qty = 1 },
-                { item_id = 3470, qty = 2 },
-            },
-            levels = { 0, 80, 82, 85 },
-        },
-        {
-            spell_id = 19666,
-            name = "Silver Skeleton Key",
-            categories = { "Miscellaneous" },
-            icon = "inv_misc_key_03",
-            product = { item_id = 15869, qty = 2 },
-            materials = {
-                { item_id = 2842, qty = 1 },
-                { item_id = 3470, qty = 1 },
-            },
-            levels = { 0, 75, 85, 95 },
-        },
-        {
-            spell_id = 3331,
-            name = "Silvered Bronze Boots",
-            categories = { "Mail Boots" },
-            icon = "inv_boots_01",
-            product = { item_id = 3482, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 6 },
-                { item_id = 2842, qty = 1 },
-                { item_id = 3478, qty = 2 },
-            },
-            levels = { 0, 135, 150, 165 },
-        },
-        {
-            spell_id = 3333,
-            name = "Silvered Bronze Gauntlets",
-            categories = { "Mail Gauntlets" },
-            icon = "inv_gauntlets_05",
-            product = { item_id = 3483, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 8 },
-                { item_id = 2842, qty = 1 },
-                { item_id = 3478, qty = 2 },
-            },
-            levels = { 0, 140, 155, 170 },
-        },
-        {
-            spell_id = 9920,
-            name = "Solid Grinding Stone",
-            categories = { "Reagents" },
-            icon = "inv_stone_grindingstone_04",
-            product = { item_id = 7966, qty = 1 },
-            materials = {
-                { item_id = 7912, qty = 4 },
-            },
-            levels = { 0, 175, 180, 185 },
-        },
-        {
-            spell_id = 9918,
-            name = "Solid Sharpening Stone",
-            categories = { "Weapon Stones" },
-            icon = "inv_stone_sharpeningstone_04",
-            product = { item_id = 7964, qty = 1 },
-            materials = {
-                { item_id = 7912, qty = 1 },
-            },
-            levels = { 0, 175, 180, 185 },
-        },
-        {
-            spell_id = 9921,
-            name = "Solid Weightstone",
-            categories = { "Weapon Stones" },
-            icon = "inv_stone_weightstone_04",
-            product = { item_id = 7965, qty = 1 },
-            materials = {
-                { item_id = 7912, qty = 1 },
-            },
-            levels = { 0, 175, 180, 185 },
-        },
-        {
-            spell_id = 9916,
-            name = "Steel Breastplate",
-            categories = { "Mail Chestguards" },
-            icon = "inv_chest_plate05",
-            product = { item_id = 7963, qty = 1 },
-            materials = {
-                { item_id = 3859, qty = 16 },
-                { item_id = 3486, qty = 3 },
-            },
-            levels = { 0, 200, 212, 225 },
-        },
-        {
-            spell_id = 9935,
-            name = "Steel Plate Helm",
-            categories = { "Plate Helmets" },
-            icon = "inv_helmet_03",
-            product = { item_id = 7922, qty = 1 },
-            materials = {
-                { item_id = 3859, qty = 14 },
-                { item_id = 7966, qty = 1 },
-            },
-            levels = { 0, 210, 220, 230 },
         },
         {
             spell_id = 10003,
@@ -8461,30 +8778,6 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 7966, qty = 2 },
             },
             levels = { 0, 220, 230, 240 },
-        },
-        {
-            spell_id = 14380,
-            name = "Truesilver Rod",
-            categories = { "Inert Enchanting Rods" },
-            icon = "inv_staff_11",
-            product = { item_id = 11144, qty = 1 },
-            materials = {
-                { item_id = 6037, qty = 1 },
-                { item_id = 3486, qty = 1 },
-            },
-            levels = { 0, 180, 182, 185 },
-        },
-        {
-            spell_id = 19668,
-            name = "Truesilver Skeleton Key",
-            categories = { "Miscellaneous" },
-            icon = "inv_misc_key_11",
-            product = { item_id = 15871, qty = 2 },
-            materials = {
-                { item_id = 6037, qty = 1 },
-                { item_id = 7966, qty = 1 },
-            },
-            levels = { 0, 175, 185, 195 },
         },
         {
             spell_id = 1252247,

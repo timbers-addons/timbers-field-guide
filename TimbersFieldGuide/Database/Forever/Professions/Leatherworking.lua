@@ -149,6 +149,12 @@ TFG.LEATHERWORKING_FOREVER = {
                     type = "Trainer",
                     cost = 100,
                 },
+                {
+                    type = "Quest",
+                    location = "Raan Wildwind, Zephras Isle",
+                    quest_id = 97969,
+                    quest_name = "Camping 101: Leatherworking",
+                },
             },
             product = { item_id = 279978, qty = 1 },
             materials = {
@@ -3004,8 +3010,10 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_helm_leather_skybornec60_b_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 276986,
+                    cost = 100000,
+                    location = "Archmage Alvareaux, City of Dalaran",
                 },
             },
             product = { item_id = 277050, qty = 1 },
@@ -3024,8 +3032,10 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_shoulder_leather_skybornec60_b_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 276987,
+                    cost = 100000,
+                    location = "Archmage Alvareaux, City of Dalaran",
                 },
             },
             product = { item_id = 277051, qty = 1 },
@@ -3044,8 +3054,10 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_helm_leather_skybornec60_b_02",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 276988,
+                    cost = 100000,
+                    location = "Archmage Alvareaux, City of Dalaran",
                 },
             },
             product = { item_id = 277052, qty = 1 },
@@ -3064,8 +3076,10 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_shoulder_leather_skybornec60_b_02",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 276989,
+                    cost = 100000,
+                    location = "Archmage Alvareaux, City of Dalaran",
                 },
             },
             product = { item_id = 277053, qty = 1 },

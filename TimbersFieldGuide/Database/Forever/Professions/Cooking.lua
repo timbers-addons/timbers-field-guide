@@ -12,6 +12,12 @@ TFG.COOKING_FOREVER = {
                     type = "Vendor",
                     item_id = 6325,
                     cost = 40,
+                    location = "Nyalah Brightfire, Zephras Isle",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 6325,
+                    cost = 40,
                     location = "Nyoma, Teldrassil",
                 },
                 {
@@ -129,6 +135,12 @@ TFG.COOKING_FOREVER = {
                     item_id = 6326,
                     cost = 40,
                     location = "Nessa Shadowsong, Teldrassil",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 6326,
+                    cost = 40,
+                    location = "Nyalah Brightfire, Zephras Isle",
                 },
             },
             product = { item_id = 787, qty = 1 },
@@ -357,8 +369,11 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_claw_deepcrab_purple",
             source = {
                 {
-                    type = "Item",
+                    type = "Quest",
                     item_id = 263513,
+                    location = "Nyalah Brightfire, Zephras Isle",
+                    quest_id = 93317,
+                    quest_name = "Crab Season",
                 },
             },
             product = { item_id = 263512, qty = 1 },
@@ -507,6 +522,12 @@ TFG.COOKING_FOREVER = {
             categories = { "Attack Power Food" },
             icon = "inv_misc_fish_32",
             source = {
+                {
+                    type = "Vendor",
+                    item_id = 6328,
+                    cost = 400,
+                    location = "Nyalah Brightfire, Zephras Isle",
+                },
                 {
                     type = "Vendor",
                     item_id = 6328,
@@ -765,6 +786,12 @@ TFG.COOKING_FOREVER = {
                     item_id = 21099,
                     cost = 500,
                     location = "Zerril Softbreeze, Zephras Isle",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 21099,
+                    cost = 500,
+                    location = "Derek Odds, City of Dalaran",
                 },
                 {
                     type = "Vendor",
@@ -1604,6 +1631,12 @@ TFG.COOKING_FOREVER = {
                     item_id = 21219,
                     cost = 5000,
                     location = "Zerril Softbreeze, Zephras Isle",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 21219,
+                    cost = 5000,
+                    location = "Derek Odds, City of Dalaran",
                 },
                 {
                     type = "Vendor",

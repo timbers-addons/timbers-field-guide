@@ -198,6 +198,12 @@ TFG.ENCHANTING_FOREVER = {
                     type = "Vendor",
                     item_id = 6342,
                     cost = 300,
+                    location = "Eaysaa Brightgust, Zephras Isle",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 6342,
+                    cost = 300,
                     location = "Vaean, Darnassus",
                 },
                 {
@@ -749,6 +755,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 5000,
                 },
             },
             levels = { 125 },
@@ -1322,6 +1329,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 2600,
                 },
             },
             materials = {
@@ -1338,6 +1346,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 2600,
                 },
             },
             materials = {
@@ -1353,6 +1362,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 2600,
                 },
             },
             product = { item_id = 11289, qty = 1 },
@@ -1372,6 +1382,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 2800,
                 },
             },
             materials = {
@@ -1387,6 +1398,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 2700,
                 },
             },
             materials = {
@@ -1404,6 +1416,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 2800,
                 },
             },
             materials = {
@@ -1421,6 +1434,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 2800,
                 },
             },
             materials = {
@@ -1453,6 +1467,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 2800,
                 },
             },
             materials = {
@@ -1470,6 +1485,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 3000,
                 },
             },
             materials = {
@@ -1520,6 +1536,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 3000,
                 },
             },
             product = { item_id = 217287, qty = 1 },
@@ -1540,6 +1557,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 3600,
                 },
             },
             materials = {
@@ -1555,6 +1573,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 3200,
                 },
             },
             materials = {
@@ -1573,6 +1592,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 3800,
                 },
             },
             materials = {
@@ -1680,6 +1700,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 4000,
                 },
             },
             materials = {
@@ -1698,6 +1719,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 4000,
                 },
             },
             materials = {
@@ -1714,6 +1736,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 4000,
                 },
             },
             materials = {
@@ -1781,6 +1804,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 4000,
                 },
             },
             product = { item_id = 11145, qty = 1 },
@@ -1831,6 +1855,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 4200,
                 },
             },
             materials = {
@@ -1846,6 +1871,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 4200,
                 },
             },
             materials = {
@@ -1881,6 +1907,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 4400,
                 },
             },
             materials = {
@@ -1896,6 +1923,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 4400,
                 },
             },
             materials = {
@@ -2154,6 +2182,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 4600,
                 },
             },
             materials = {
@@ -2274,6 +2303,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 4800,
                 },
             },
             materials = {
@@ -2373,6 +2403,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 5000,
                 },
             },
             materials = {
@@ -2423,6 +2454,7 @@ TFG.ENCHANTING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 5000,
                 },
             },
             materials = {
@@ -3185,8 +3217,10 @@ TFG.ENCHANTING_FOREVER = {
             icon = "inv_wand_09",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 16243,
+                    cost = 22000,
+                    location = "Lorelae Wintersong, Moonglade",
                 },
             },
             product = { item_id = 16207, qty = 1 },
