@@ -42,8 +42,6 @@ TFG.POPUP = {
     body       = { 232 / 255, 225 / 255, 210 / 255, 1 },    -- cream
     muted      = { 158 / 255, 140 / 255, 112 / 255, 1 },    -- muted tan sub-text
     divider    = { 168 / 255, 136 / 255, 91 / 255, 0.30 },
-    alliance   = { 0.20, 0.45, 0.95, 1 },                   -- Alliance faction square
-    horde      = { 0.80, 0.20, 0.20, 1 },                   -- Horde faction square
     phase      = { 0.45, 0.75, 1, 1 },                      -- phase tag (matches list tooltip)
 }
 

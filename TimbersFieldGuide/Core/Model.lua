@@ -176,6 +176,7 @@ local function normalizeSource(s)
         location = s.location,
         reputation = s.reputation,
         faction = s.faction,
+        races = s.races,
         phase = tonumber(s.phase),
         item_id = tonumber(s.item_id),
         quest_id = tonumber(s.quest_id),
@@ -218,6 +219,106 @@ local function sourceTypeLabel(s)
     return t or "Recipe"
 end
 
+-- Sources that differ only in where they are, like one recipe sold for the same
+-- price by nine vendors or one quest offered in several places, share a key.
+-- Anything else (trainers, drops, a different price) gets none and stays apart.
+local function sourceGroupKey(s)
+    local label = sourceTypeLabel(s)
+    if label == "Quest" then
+        local quest = s.quest_name or (s.quest_id and tostring(s.quest_id))
+        if not quest then return nil end
+        return table.concat({ "Quest", quest, tostring(s.item_id), tostring(s.faction), tostring(s.phase) }, "|")
+    end
+    if label ~= "Vendor" then return nil end
+    local parts = { "Vendor", tostring(s.item_id), tostring(s.cost), tostring(s.faction), tostring(s.phase), tostring(s.skill) }
+    for _, c in ipairs(s.currencies or {}) do
+        parts[#parts + 1] = ("%s:%s:%s"):format(tostring(c.currency_id), tostring(c.item_id), tostring(c.qty))
+    end
+    if s.reputation then
+        parts[#parts + 1] = tostring(s.reputation.faction) .. ":" .. tostring(s.reputation.standing)
+    end
+    return table.concat(parts, "|")
+end
+
+local function inZone(location, zone)
+    return location == zone or location:sub(-(#zone + 2)) == ", " .. zone
+end
+
+-- Collapse sources that differ only in place into one: the first of them, with
+-- `count` (how many were merged) and `locations` (every place named, with the
+-- races a place is limited to). The place shown leads with one only the
+-- player's race can use (`isOwnRace(source)`, true for a source with no race
+-- limit), then one in `zone`, the player's current zone. Both are optional.
+-- Takes the normalized copies from GetSources, so it may annotate them.
+function TFG.GroupSources(sources, zone, isOwnRace)
+    local out, byKey = {}, {}
+    for _, s in ipairs(sources) do
+        local key = sourceGroupKey(s)
+        local group = key and byKey[key]
+        if group then
+            group.members[#group.members + 1] = s
+        else
+            s.members = { s }
+            out[#out + 1] = s
+            if key then byKey[key] = s end
+        end
+    end
+    for gi, g in ipairs(out) do
+        local members = g.members
+        if #members > 1 then
+            local function rank(m)
+                local r = 0
+                if isOwnRace and m.races and isOwnRace(m) then r = r + 2 end
+                if zone and zone ~= "" and m.location and inZone(m.location, zone) then r = r + 1 end
+                return r
+            end
+            for i, m in ipairs(members) do m._order = i end
+            table.sort(members, function(a, b)
+                local ra, rb = rank(a), rank(b)
+                if ra ~= rb then return ra > rb end
+                return a._order < b._order
+            end)
+            -- The leading member stands for the group; it carries the same key.
+            if members[1] ~= g then
+                members[1].members = members
+                out[gi] = members[1]
+                g = members[1]
+            end
+        end
+        g.count = #members
+        g.locations = {}
+        for _, m in ipairs(members) do
+            if m.location and m.location ~= "" then
+                local place = tostring(m.location)
+                if m.races and #m.races > 0 then place = place .. " (" .. table.concat(m.races, ", ") .. ")" end
+                g.locations[#g.locations + 1] = place
+            end
+        end
+    end
+    -- A card whose way in is for the player's race goes first (Bear Form: a
+    -- Skyborne sees Strength and Mercy before Body and Heart). Order otherwise kept.
+    if isOwnRace then
+        for i, g in ipairs(out) do g._order = i end
+        local function own(g) return (g.races and isOwnRace(g)) and 1 or 0 end
+        table.sort(out, function(a, b)
+            local oa, ob = own(a), own(b)
+            if oa ~= ob then return oa > ob end
+            return a._order < b._order
+        end)
+    end
+    return out
+end
+
+-- "Taleen Shimmerthread, Zephras Isle and 8 more" for a merged source; the plain
+-- location otherwise. Nil when there is nothing to name.
+function TFG.FormatSourcePlaces(s)
+    local count = s.count or 1
+    local first = s.location and s.location ~= "" and tostring(s.location) or nil
+    if count <= 1 then return first end
+    if not first then return ("%d places"):format(count) end
+    return ("%s and %d more"):format(first, count - 1)
+end
+
 local MIDDOT = "\194\183"  -- UTF-8 U+00B7, kept out of source as raw bytes
 
 -- Build the compact one-line summary for a source, e.g. "Honor Hold (Honored) . 5g".
@@ -233,8 +334,7 @@ function TFG.FormatSourceSkill(s)
 end
 
 local function buildSourceLine(s)
-    local primary = (s.location and tostring(s.location) ~= "")
-        and tostring(s.location) or sourceTypeLabel(s)
+    local primary = TFG.FormatSourcePlaces(s) or sourceTypeLabel(s)
     local segs = { primary }
     local skillText = TFG.FormatSourceSkill(s)
     if skillText then segs[#segs + 1] = skillText end

@@ -35,6 +35,21 @@ end
 
 local POPUP = TFG.POPUP  -- palette lives in UI/Theme.lua
 
+-- The faction emblems Blizzard's own friends and communities lists draw, whole;
+-- every client this addon supports ships them.
+local FACTION_ICON = {
+    Alliance = "Interface\\FriendsFrame\\PlusManz-Alliance",
+    Horde = "Interface\\FriendsFrame\\PlusManz-Horde",
+}
+local FACTION_ICON_SIZE = 14
+
+-- A faction's emblem as inline text for a tooltip line, or "" for no side.
+local function factionMark(side)
+    local file = FACTION_ICON[side]
+    if not file then return "" end
+    return ("|T%s:%d:%d|t "):format(file, FACTION_ICON_SIZE, FACTION_ICON_SIZE)
+end
+
 local function ensureProfessionPopup()
     if TFG.professionPopup and TFG.professionPopup.SetAnchor then
         return TFG.professionPopup
@@ -111,7 +126,7 @@ local function ensureProfessionPopup()
     popup.colDivider:Hide()
 
     -- Grow-on-demand pool of source cards (recipe-item name on top, vendor/location
-    -- below, with a small your-faction colour square). The card icon carries the
+    -- below, with the source's faction emblem). The card icon carries the
     -- recipe item's tooltip and shift-click link.
     popup.sourceCards = {}
     function popup:AcquireSourceCard(index)
@@ -126,6 +141,18 @@ local function ensureProfessionPopup()
         })
         card:SetBackdropColor(unpack(POPUP.cardBg))
         card:SetBackdropBorderColor(unpack(POPUP.cardBorder))
+
+        -- A card that stands for several vendors or quest givers lists them all on hover.
+        card:SetScript("OnEnter", function(self)
+            if not self.places then return end
+            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+            GameTooltip:AddLine(self.placesTitle or "Available from")
+            for _, place in ipairs(self.places) do
+                GameTooltip:AddLine(place, 1, 1, 1)
+            end
+            GameTooltip:Show()
+        end)
+        card:SetScript("OnLeave", GameTooltip_Hide)
 
         local icon = CreateFrame("Button", nil, card)
         icon:SetSize(32, 32)
@@ -151,9 +178,9 @@ local function ensureProfessionPopup()
         end)
         card.icon = icon
 
-        card.square = card:CreateTexture(nil, "OVERLAY")
-        card.square:SetSize(7, 7)
-        card.square:Hide()
+        card.factionIcon = card:CreateTexture(nil, "OVERLAY")
+        card.factionIcon:SetSize(FACTION_ICON_SIZE, FACTION_ICON_SIZE)
+        card.factionIcon:Hide()
 
         card.title = card:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
         card.title:SetJustifyH("LEFT")
@@ -249,6 +276,7 @@ local function ensureProfessionPopup()
             card:Hide()
             card:ClearAllPoints()
             card.icon.itemId = nil
+            card.places, card.placesTitle = nil, nil
         end
     end
 
@@ -561,17 +589,26 @@ local function ensureProfessionPopup()
             self.materialsLabel:Hide()
         end
 
-        -- RECIPE SOURCES (bordered cards, mine-or-neutral first).
+        -- RECIPE SOURCES (bordered cards): mine-or-neutral first, then the
+        -- player's race, then the order in the data. A source's side is its
+        -- `faction`, or the side its races are on.
         self:ClearSourceCards()
         local sources = TFG.GetSources(spellData)
         local playerFaction = UnitFactionGroup("player")
-        for i = 1, #sources do sources[i]._idx = i end
+        for i = 1, #sources do
+            sources[i]._idx = i
+            sources[i]._side = TFG.SourceFaction(sources[i])
+        end
         table.sort(sources, function(a, b)
-            local ra = (not a.faction or a.faction == playerFaction) and 0 or 1
-            local rb = (not b.faction or b.faction == playerFaction) and 0 or 1
+            local ra = (not a._side or a._side == playerFaction) and 0 or 1
+            local rb = (not b._side or b._side == playerFaction) and 0 or 1
             if ra ~= rb then return ra < rb end
             return a._idx < b._idx
         end)
+        -- One card per group of sources that differ only in place, led by the
+        -- player's race's quest or a place in this zone; the header still counts
+        -- every place.
+        local groups = TFG.GroupSources(sources, GetRealZoneText and GetRealZoneText() or nil, TFG.MatchesPlayerRace)
 
         if #sources > 0 then
             cursorY = cursorY - sectionGap
@@ -587,9 +624,26 @@ local function ensureProfessionPopup()
             cursorY = cursorY - 18
 
             local cardH = 44
-            for i, s in ipairs(sources) do
+            for i, s in ipairs(groups) do
                 local card = self:AcquireSourceCard(i)
                 card:Show()
+                local places = TFG.FormatSourcePlaces(s)
+                card.places, card.placesTitle = nil, nil
+                if s.count > 1 then
+                    -- Hover list: each place with its faction emblem and the races it is for.
+                    local lines = {}
+                    for _, m in ipairs(s.members) do
+                        if m.location and m.location ~= "" then
+                            local line = tostring(m.location)
+                            if m.races and #m.races > 0 then line = line .. " (" .. table.concat(m.races, ", ") .. ")" end
+                            lines[#lines + 1] = factionMark(m._side) .. line
+                        end
+                    end
+                    if #lines > 0 then
+                        card.places = lines
+                        card.placesTitle = (s.type == "Quest") and "Offered by" or "Sold by"
+                    end
+                end
                 card:ClearAllPoints()
                 card:SetPoint("TOPLEFT", self, "TOPLEFT", xPad, cursorY)
                 card:SetPoint("TOPRIGHT", self, "TOPRIGHT", -xPad, cursorY)
@@ -605,32 +659,35 @@ local function ensureProfessionPopup()
                     card.title:Hide()
                     card.icon:SetSize(32, 32)
 
-                    -- Row 1: quest marker, your-faction square, quest title, kind tag.
+                    -- The card's side when every quest on it shares one; nil for a
+                    -- card that spans both (Body and Heart) or neither.
+                    local cardSide = s._side
+                    for _, m in ipairs(s.members) do
+                        if m._side ~= cardSide then cardSide = nil break end
+                    end
+
+                    -- Row 1: quest marker, quest title, its side's emblem, kind tag.
                     card.questIcon:ClearAllPoints()
                     card.questIcon:SetPoint("LEFT", card, "TOPLEFT", 8, -15)
                     card.questIcon:Show()
                     local titleX = 8 + 16 + 4
-                    if s.faction ~= nil then
-                        card.square:ClearAllPoints()
-                        card.square:SetPoint("LEFT", card, "TOPLEFT", titleX, -15)
-                        if s.faction == "Horde" then
-                            card.square:SetColorTexture(unpack(POPUP.horde))
-                        else
-                            card.square:SetColorTexture(unpack(POPUP.alliance))
-                        end
-                        card.square:Show()
-                        titleX = titleX + 12
-                    else
-                        card.square:Hide()
-                    end
                     card.questTitle:ClearAllPoints()
                     card.questTitle:SetPoint("TOPLEFT", card, "TOPLEFT", titleX, -7)
                     card.questTitle:SetText(resolveQuestTitle(s) or "Quest")
                     card.questTitle:Show()
+                    local titleRight = titleX + card.questTitle:GetStringWidth()
+                    card.factionIcon:Hide()
+                    if FACTION_ICON[cardSide] then
+                        card.factionIcon:ClearAllPoints()
+                        card.factionIcon:SetPoint("LEFT", card.questTitle, "RIGHT", 6, 0)
+                        card.factionIcon:SetTexture(FACTION_ICON[cardSide])
+                        card.factionIcon:Show()
+                        titleRight = titleRight + 6 + FACTION_ICON_SIZE
+                    end
                     card.kindTag:ClearAllPoints()
                     card.kindTag:SetPoint("TOPRIGHT", card, "TOPRIGHT", -10, -9)
                     card.kindTag:Show()
-                    local rowRight = xPad + titleX + card.questTitle:GetStringWidth() + 16 + card.kindTag:GetStringWidth() + 10
+                    local rowRight = xPad + titleRight + 16 + card.kindTag:GetStringWidth() + 10
                     if s.phase and s.phase > 1 then
                         card.phaseTag:ClearAllPoints()
                         card.phaseTag:SetPoint("TOPRIGHT", card.kindTag, "TOPLEFT", -8, 0)
@@ -642,13 +699,22 @@ local function ensureProfessionPopup()
                     end
                     contentRight = math.max(contentRight, rowRight)
 
-                    -- Row 2: who gives it and where.
+                    -- Row 2: who gives it and where. On a card spanning both sides,
+                    -- the giver named here gets their side's emblem in front.
                     local y = -28
+                    local subX = 10
+                    if places and not cardSide and FACTION_ICON[s._side] then
+                        card.factionIcon:ClearAllPoints()
+                        card.factionIcon:SetPoint("LEFT", card, "TOPLEFT", subX, y - 6)
+                        card.factionIcon:SetTexture(FACTION_ICON[s._side])
+                        card.factionIcon:Show()
+                        subX = subX + FACTION_ICON_SIZE + 4
+                    end
                     card.sub:ClearAllPoints()
-                    card.sub:SetPoint("TOPLEFT", card, "TOPLEFT", 10, y)
-                    if s.location and s.location ~= "" then
-                        card.sub:SetText(tostring(s.location))
-                        contentRight = math.max(contentRight, xPad + 10 + card.sub:GetStringWidth() + 10)
+                    card.sub:SetPoint("TOPLEFT", card, "TOPLEFT", subX, y)
+                    if places then
+                        card.sub:SetText(places)
+                        contentRight = math.max(contentRight, xPad + subX + card.sub:GetStringWidth() + 10)
                         y = y - 16
                     else
                         card.sub:SetText("")
@@ -720,7 +786,7 @@ local function ensureProfessionPopup()
                             card.title:SetTextColor(unpack(POPUP.body))
                         end
                     else
-                        titleText = (s.location and s.location ~= "") and tostring(s.location) or sourceTypeLabel(s)
+                        titleText = places or sourceTypeLabel(s)
                         card.title:SetTextColor(unpack(POPUP.body))
                     end
                     -- "Trainer . Requires Tailoring (150)": this source asks for more skill
@@ -746,10 +812,10 @@ local function ensureProfessionPopup()
                     end
                     contentRight = math.max(contentRight, titleRight)
 
-                    -- Sub line: location . cost (+ quest title) and a faction square.
+                    -- Sub line: faction emblem, then location . cost (+ quest title).
                     local subSegs = {}
-                    if hasIcon and s.location and s.location ~= "" then
-                        subSegs[#subSegs + 1] = tostring(s.location)
+                    if hasIcon and places then
+                        subSegs[#subSegs + 1] = places
                     end
                     if skillText and hasIcon then subSegs[#subSegs + 1] = skillText end
                     local goldText = TFG.FormatCost(tonumber(s.cost))
@@ -759,19 +825,15 @@ local function ensureProfessionPopup()
                     local components = s.currencies or {}
                     if #components > 0 and subText ~= "" then subText = subText .. separator end
 
-                    local showSquare = (s.faction ~= nil)
-                    local subX = textX + (showSquare and 12 or 0)
-                    if showSquare then
-                        card.square:ClearAllPoints()
-                        card.square:SetPoint("LEFT", card, "TOPLEFT", textX, -27)
-                        if s.faction == "Horde" then
-                            card.square:SetColorTexture(unpack(POPUP.horde))
-                        else
-                            card.square:SetColorTexture(unpack(POPUP.alliance))
-                        end
-                        card.square:Show()
+                    local showFaction = FACTION_ICON[s._side] ~= nil
+                    local subX = textX + (showFaction and (FACTION_ICON_SIZE + 4) or 0)
+                    if showFaction then
+                        card.factionIcon:ClearAllPoints()
+                        card.factionIcon:SetPoint("LEFT", card, "TOPLEFT", textX, -28)
+                        card.factionIcon:SetTexture(FACTION_ICON[s._side])
+                        card.factionIcon:Show()
                     else
-                        card.square:Hide()
+                        card.factionIcon:Hide()
                     end
 
                     card.sub:ClearAllPoints()
@@ -818,7 +880,7 @@ local function ensureProfessionPopup()
 
                     -- Nothing to put on the second line (no location, cost or faction): the
                     -- name sits in the middle of the card instead of above an empty row.
-                    if subText == "" and not showSquare and #components == 0 and not card.rep:IsShown() then
+                    if subText == "" and not showFaction and #components == 0 and not card.rep:IsShown() then
                         card.title:ClearAllPoints()
                         card.title:SetPoint("LEFT", card, "LEFT", textX, 0)
                         if card.phaseTag:IsShown() then

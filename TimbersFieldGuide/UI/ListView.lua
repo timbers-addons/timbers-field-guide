@@ -62,6 +62,36 @@ local function matchesPlayerRace(spell)
     return false
 end
 
+-- Also takes a source with `races`: the popup leads with the player's race's quest.
+TFG.MatchesPlayerRace = matchesPlayerRace
+
+local RACE_FACTION = {
+    HUMAN = "Alliance", DWARF = "Alliance", NIGHTELF = "Alliance", GNOME = "Alliance", DRAENEI = "Alliance",
+    SKYBORNE_ALLIANCE = "Alliance",
+    ORC = "Horde", TROLL = "Horde", TAUREN = "Horde", SCOURGE = "Horde", BLOODELF = "Horde",
+    SKYBORNE_HORDE = "Horde",
+}
+
+-- A source's side: its own `faction`, else the one side all its races are on
+-- (a Night Elf quest is Alliance; Strength and Mercy, for both Skyborne, is neither).
+function TFG.SourceFaction(s)
+    if s.faction then return s.faction end
+    local races = getRestrictedRaces(s)
+    if not races then return nil end
+    local side
+    for _, race in ipairs(races) do
+        local f = RACE_FACTION[normalizeRaceKey(race)]
+        if not f or (side and f ~= side) then return nil end
+        side = f
+    end
+    return side
+end
+
+-- Sources as shown: one per group that differs only in place, see TFG.GroupSources.
+local function groupedSources(entry)
+    return TFG.GroupSources(TFG.GetSources(entry), GetRealZoneText and GetRealZoneText() or nil, matchesPlayerRace)
+end
+
 local function formatRestrictedRaces(spell)
     local races = getRestrictedRaces(spell)
     return races and table.concat(races, ", ") or nil
@@ -1777,7 +1807,7 @@ function frame:Relayout()
                                 for _, spells in pairs(TFG.activeDatabase) do
                                     for _, e in ipairs(type(spells) == "table" and spells or {}) do
                                         if not shown and getSpellId(e) == trainingSpellId then
-                                            for _, src in ipairs(TFG.GetSources(e)) do
+                                            for _, src in ipairs(groupedSources(e)) do
                                                 if not shown then GameTooltip:AddLine(" ") end
                                                 GameTooltip:AddLine(buildSourceLine(src), 1, 1, 1)
                                                 shown = true
@@ -1847,7 +1877,7 @@ function frame:Relayout()
 
                                 -- Show one line per source (type, location, cost,
                                 -- phase, faction).
-                                for _, s in ipairs(TFG.GetSources(data)) do
+                                for _, s in ipairs(groupedSources(data)) do
                                     GameTooltip:AddLine("Source: " .. buildSourceLine(s), 0.8, 0.8, 0.8)
                                     -- A price that is not gold, and the standing the vendor
                                     -- asks for, each on a line of their own under it.
