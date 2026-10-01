@@ -601,6 +601,25 @@ end
 -- Exposed for the recipe popup (which lives in UI/RecipePopup.lua).
 TFG.GetProfessionName = getProfessionNameForCurrentView
 
+-- The current page's name for the popup header on any page: the profession, a
+-- class subpage ("Pet Skills"), or the class itself ("Druid"). Nil if unknown.
+function TFG.GetViewName()
+    local professionName = getProfessionNameForCurrentView()
+    if professionName then return professionName end
+    local expansionObject = TFG.DATABASE_FILES[TFG.selectedExpansion]
+    local classes = expansionObject and expansionObject.files and expansionObject.files.classes
+    if not classes then return nil end
+    local selected = tostring(TFG.selectedFile or ""):lower()
+    local classKey, childToken = selected:match("^([^:]+)::(.+)$")
+    local class = classes[classKey or selected]
+    if not class then return nil end
+    if childToken then
+        local info = TFG.GetSelectionInfo(expansionObject, selected)
+        if info and info.child and info.child.name then return tostring(info.child.name) end
+    end
+    return class.name and tostring(class.name) or nil
+end
+
 -- Check whether the player has a named skill/profession in their skill list.
 local function playerHasSkill(skillName)
     if not skillName or tostring(skillName) == "" then return false end

@@ -448,14 +448,17 @@ local function ensureProfessionPopup()
         end
         self.nameText:SetText(itemName)
 
-        local profName = TFG.GetProfessionName() or "Profession"
+        -- Class pages have no profession: lead with the page's name ("DRUID") instead.
+        local profName = TFG.GetProfessionName()
+        local viewName = profName or TFG.GetViewName()
         local reqLevel = (spellData.levels and tonumber(spellData.levels[1])) or nil
-        local eyebrowParts = { profName:upper() }
+        local eyebrowParts = {}
+        if viewName then eyebrowParts[1] = viewName:upper() end
         if spellData.categories and spellData.categories[1] then
             eyebrowParts[#eyebrowParts + 1] = tostring(spellData.categories[1]):upper()
         end
         local eyebrow = table.concat(eyebrowParts, "  |cff6a5c44" .. MIDDOT .. "|r  ")
-        if reqLevel and reqLevel > 0 then
+        if reqLevel and reqLevel > 0 and profName then
             eyebrow = eyebrow .. "  |cff6a5c44" .. MIDDOT .. "|r  REQUIRES "
                 .. profName:upper() .. " (" .. tostring(reqLevel) .. ")"
         end
