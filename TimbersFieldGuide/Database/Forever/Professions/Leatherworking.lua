@@ -2687,6 +2687,12 @@ TFG.LEATHERWORKING_FOREVER = {
                     type = "Vendor",
                     item_id = 5788,
                     cost = 650,
+                    location = "Micha Yance, Hillsbrad Foothills",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 5788,
+                    cost = 650,
                     location = "Blixrez Goodstitch, Stranglethorn Vale",
                 },
             },

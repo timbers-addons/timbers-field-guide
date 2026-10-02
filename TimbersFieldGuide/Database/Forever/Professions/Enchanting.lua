@@ -1449,8 +1449,10 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 11163,
+                    cost = 3000,
+                    location = "Micha Yance, Hillsbrad Foothills",
                 },
             },
             materials = {

@@ -1227,8 +1227,10 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_16",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 6055,
+                    cost = 1500,
+                    location = "Nandar Branson, Hillsbrad Foothills",
                 },
             },
             product = { item_id = 6049, qty = 1 },

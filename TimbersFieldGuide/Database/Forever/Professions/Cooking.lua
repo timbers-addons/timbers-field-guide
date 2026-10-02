@@ -785,6 +785,12 @@ TFG.COOKING_FOREVER = {
                     type = "Vendor",
                     item_id = 21099,
                     cost = 500,
+                    location = "Micha Yance, Hillsbrad Foothills",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 21099,
+                    cost = 500,
                     location = "Zerril Softbreeze, Zephras Isle",
                 },
                 {
@@ -986,6 +992,12 @@ TFG.COOKING_FOREVER = {
             categories = { "Fisherman's Delights" },
             icon = "inv_misc_fish_30",
             source = {
+                {
+                    type = "Vendor",
+                    item_id = 6330,
+                    cost = 1200,
+                    location = "Lindea Rabonne, Hillsbrad Foothills",
+                },
                 {
                     type = "Vendor",
                     item_id = 6330,
@@ -1540,6 +1552,12 @@ TFG.COOKING_FOREVER = {
                     type = "Vendor",
                     item_id = 17062,
                     cost = 2200,
+                    location = "Lindea Rabonne, Hillsbrad Foothills",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 17062,
+                    cost = 2200,
                     location = "Kelsey Yance, Stranglethorn Vale",
                 },
                 {
@@ -1605,6 +1623,12 @@ TFG.COOKING_FOREVER = {
                     type = "Vendor",
                     item_id = 6369,
                     cost = 2200,
+                    location = "Lindea Rabonne, Hillsbrad Foothills",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 6369,
+                    cost = 2200,
                     location = "Kelsey Yance, Stranglethorn Vale",
                 },
                 {
@@ -1626,6 +1650,12 @@ TFG.COOKING_FOREVER = {
             categories = { "Spell Damage Food" },
             icon = "inv_misc_fish_21",
             source = {
+                {
+                    type = "Vendor",
+                    item_id = 21219,
+                    cost = 5000,
+                    location = "Micha Yance, Hillsbrad Foothills",
+                },
                 {
                     type = "Vendor",
                     item_id = 21219,
