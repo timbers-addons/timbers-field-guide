@@ -70,7 +70,7 @@ TFG.FIRST_AID_FOREVER = {
                 { item_id = 1251, qty = 3 },
                 { item_id = 159, qty = 1 },
             },
-            levels = { 20, 20, 22, 25 },
+            levels = { 20 },
         },
     },
     [40] = {
@@ -312,7 +312,7 @@ TFG.FIRST_AID_FOREVER = {
                 { item_id = 8544, qty = 2 },
                 { item_id = 4470, qty = 2 },
             },
-            levels = { 140, 140, 142, 145 },
+            levels = { 140 },
         },
     },
     [150] = {
@@ -632,7 +632,7 @@ TFG.FIRST_AID_FOREVER = {
                 { item_id = 6453, qty = 2 },
                 { item_id = 14530, qty = 5 },
             },
-            levels = { 300, 300, 300, 300 },
+            levels = { 300 },
         },
         {
             spell_id = 23787,

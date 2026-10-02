@@ -4400,7 +4400,7 @@ TFG.ENCHANTING_FOREVER = {
     [980] = {
         {
             spell_id = 1249114,
-            name = "Dormant  Heart of the Mountain",
+            name = "Dormant Heart of the Mountain",
             categories = { "Curios" },
             icon = "inv_misc_gem_diamond_01",
             product = { item_id = 249473, qty = 1 },

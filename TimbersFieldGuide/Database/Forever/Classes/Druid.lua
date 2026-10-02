@@ -670,7 +670,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3800,
+                    cost = 4300,
                 },
             },
         },
@@ -682,7 +682,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3800,
+                    cost = 4300,
                 },
             },
         },
@@ -694,18 +694,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3800,
-                },
-            },
-        },
-        {
-            spell_id = 5217,
-            name = "Tiger's Fury",
-            icon = "ability_mount_jungletiger",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 3800,
+                    cost = 4300,
                 },
             },
         },
@@ -717,7 +706,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3800,
+                    cost = 4300,
                 },
             },
         },
@@ -728,7 +717,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3800,
+                    cost = 4300,
                 },
             },
         },
@@ -740,7 +729,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3800,
+                    cost = 4300,
                 },
             },
         },
@@ -758,6 +747,12 @@ TFG.DRUID_FOREVER = {
             name = "Primal Bite",
             rank = 1,
             icon = "ability_racial_cannibalize",
+            type = "Talent",
+        },
+        {
+            spell_id = 1322605,
+            name = "Shifting Power",
+            icon = "spell_druid_displacement",
             type = "Talent",
         },
         {
@@ -1062,7 +1057,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 6000,
                 },
             },
         },
@@ -1074,7 +1069,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 6000,
                 },
             },
         },
@@ -1086,7 +1081,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 6000,
                 },
             },
         },
@@ -1097,7 +1092,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 6000,
                 },
             },
         },
@@ -1109,7 +1104,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 6000,
                 },
             },
         },
@@ -1225,6 +1220,19 @@ TFG.DRUID_FOREVER = {
             },
         },
         {
+            spell_id = 1238069,
+            name = "Primal Bite",
+            rank = 2,
+            icon = "ability_racial_cannibalize",
+            type = "Talent",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 8000,
+                },
+            },
+        },
+        {
             spell_id = 9493,
             name = "Rip",
             rank = 3,
@@ -1270,7 +1278,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
         },
@@ -1282,7 +1290,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
         },
@@ -1294,7 +1302,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
         },
@@ -1306,7 +1314,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
         },
@@ -1318,7 +1326,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
         },
@@ -1330,7 +1338,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
         },
@@ -1342,7 +1350,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
         },
@@ -1354,7 +1362,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
         },
@@ -1368,7 +1376,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 10000,
                 },
             },
         },
@@ -1381,7 +1389,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 10000,
                 },
             },
         },
@@ -1393,7 +1401,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 10000,
                 },
             },
         },
@@ -1417,7 +1425,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 10000,
                 },
             },
         },
@@ -1429,7 +1437,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 10000,
                 },
             },
         },
@@ -1440,7 +1448,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 10000,
                 },
             },
         },
@@ -1452,7 +1460,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 10000,
                 },
             },
         },
@@ -1464,7 +1472,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 10000,
                 },
             },
         },
@@ -1475,7 +1483,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 10000,
                 },
             },
         },
@@ -1487,7 +1495,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 10000,
                 },
             },
         },
@@ -1499,7 +1507,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 10000,
                 },
             },
         },
@@ -1511,7 +1519,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 10000,
                 },
             },
         },
@@ -1523,7 +1531,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 10000,
                 },
             },
         },
@@ -1544,7 +1552,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 13000,
                 },
             },
         },
@@ -1556,7 +1564,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 13000,
                 },
             },
         },
@@ -1568,7 +1576,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 13000,
                 },
             },
         },
@@ -1580,7 +1588,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 13000,
                 },
             },
         },
@@ -1592,7 +1600,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 13000,
                 },
             },
         },
@@ -1604,7 +1612,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 13000,
                 },
             },
         },
@@ -1616,7 +1624,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 13000,
                 },
             },
         },
@@ -1629,7 +1637,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 14000,
                 },
             },
         },
@@ -1641,7 +1649,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 14000,
                 },
             },
         },
@@ -1653,7 +1661,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 14000,
                 },
             },
         },
@@ -1665,7 +1673,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 14000,
                 },
             },
         },
@@ -1677,7 +1685,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 14000,
                 },
             },
         },
@@ -1689,7 +1697,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 14000,
                 },
             },
         },
@@ -1822,6 +1830,19 @@ TFG.DRUID_FOREVER = {
             name = "Ferocious Bite",
             rank = 3,
             icon = "ability_druid_ferociousbite",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 17000,
+                },
+            },
+        },
+        {
+            spell_id = 1238070,
+            name = "Primal Bite",
+            rank = 3,
+            icon = "ability_racial_cannibalize",
+            type = "Talent",
             source = {
                 {
                     type = "Trainer",
@@ -2011,7 +2032,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 19000,
+                    cost = 23000,
                 },
             },
         },
@@ -2023,7 +2044,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 19000,
+                    cost = 23000,
                 },
             },
         },
@@ -2035,7 +2056,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 19000,
+                    cost = 23000,
                 },
             },
         },
@@ -2047,7 +2068,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 19000,
+                    cost = 23000,
                 },
             },
         },
@@ -2059,7 +2080,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 19000,
+                    cost = 23000,
                 },
             },
         },
@@ -2073,7 +2094,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 24000,
                 },
             },
         },
@@ -2085,7 +2106,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 24000,
                 },
             },
         },
@@ -2097,7 +2118,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 24000,
                 },
             },
         },
@@ -2109,7 +2130,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 24000,
                 },
             },
         },
@@ -2121,7 +2142,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 24000,
                 },
             },
         },
@@ -2133,7 +2154,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 24000,
                 },
             },
         },
@@ -2145,7 +2166,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 24000,
                 },
             },
         },
@@ -2157,7 +2178,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 24000,
                 },
             },
         },
@@ -2171,7 +2192,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 21000,
+                    cost = 25000,
                 },
             },
         },
@@ -2183,7 +2204,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 21000,
+                    cost = 25000,
                 },
             },
         },
@@ -2195,7 +2216,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 21000,
+                    cost = 25000,
                 },
             },
         },
@@ -2209,7 +2230,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 26000,
                 },
             },
         },
@@ -2221,7 +2242,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 26000,
                 },
             },
         },
@@ -2233,7 +2254,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 26000,
                 },
             },
         },
@@ -2245,7 +2266,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 26000,
                 },
             },
         },
@@ -2257,7 +2278,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 26000,
                 },
             },
         },
@@ -2269,7 +2290,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 26000,
                 },
             },
         },
@@ -2281,7 +2302,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 26000,
                 },
             },
         },
@@ -2293,7 +2314,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 26000,
                 },
             },
         },
@@ -2305,7 +2326,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 26000,
                 },
             },
         },
@@ -2317,7 +2338,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 26000,
                 },
             },
         },
@@ -2331,7 +2352,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 28000,
                 },
             },
         },
@@ -2344,7 +2365,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 28000,
                 },
             },
         },
@@ -2373,6 +2394,19 @@ TFG.DRUID_FOREVER = {
             },
         },
         {
+            spell_id = 1238073,
+            name = "Primal Bite",
+            rank = 4,
+            icon = "ability_racial_cannibalize",
+            type = "Talent",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 28000,
+                },
+            },
+        },
+        {
             spell_id = 9913,
             name = "Prowl",
             rank = 3,
@@ -2380,7 +2414,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 28000,
                 },
             },
         },
@@ -2392,7 +2426,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 28000,
                 },
             },
         },
@@ -2428,7 +2462,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 28000,
                 },
             },
         },
@@ -2440,7 +2474,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 28000,
                 },
             },
         },
@@ -2452,7 +2486,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 28000,
                 },
             },
         },
@@ -2476,7 +2510,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 28000,
                 },
             },
         },
@@ -2488,7 +2522,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 28000,
                 },
             },
         },
@@ -2501,7 +2535,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 28000,
                 },
             },
         },

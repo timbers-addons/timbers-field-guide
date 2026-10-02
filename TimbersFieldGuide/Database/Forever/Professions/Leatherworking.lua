@@ -7092,7 +7092,7 @@ TFG.LEATHERWORKING_FOREVER = {
         {
             spell_id = 44953,
             name = "Winter Boots",
-            categories = { "Leather Gauntlets" },
+            categories = { "Leather Boots" },
             icon = "inv_boots_christmas01",
             source = {
                 {
@@ -7107,7 +7107,7 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 8170, qty = 4 },
                 { item_id = 14341, qty = 1 },
             },
-            levels = { 285, 285, 287, 290 },
+            levels = { 285 },
         },
     },
     [290] = {
@@ -8732,17 +8732,17 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 300, 320, 330, 340 },
         },
         {
-            spell_id = 1292972,
+            spell_id = 1299917,
             name = "Spiritcaller Boots",
             categories = { "Mail Boots" },
-            icon = "inv_boot_mail_raidshamanhyjalc60_d_01",
+            icon = "inv_misc_desecrated_mailboots",
             source = {
                 {
                     type = "Item",
-                    item_id = 274003,
+                    item_id = 276545,
                 },
             },
-            product = { item_id = 273935, qty = 1 },
+            product = { item_id = 276541, qty = 1 },
             materials = {
                 { item_id = 274030, qty = 3 },
                 { item_id = 15407, qty = 2 },
@@ -8952,17 +8952,17 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 300, 320, 325, 330 },
         },
         {
-            spell_id = 1299917,
+            spell_id = 1292972,
             name = "Spiritcaller Treads",
             categories = { "Mail Boots" },
-            icon = "inv_misc_desecrated_mailboots",
+            icon = "inv_boot_mail_raidshamanhyjalc60_d_01",
             source = {
                 {
                     type = "Item",
-                    item_id = 276545,
+                    item_id = 274003,
                 },
             },
-            product = { item_id = 276541, qty = 1 },
+            product = { item_id = 273935, qty = 1 },
             materials = {
                 { item_id = 274030, qty = 3 },
                 { item_id = 15407, qty = 2 },

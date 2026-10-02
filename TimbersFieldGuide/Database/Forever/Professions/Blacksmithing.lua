@@ -2852,7 +2852,7 @@ TFG.BLACKSMITHING_FOREVER = {
         {
             spell_id = 1252309,
             name = "Justicar's Belt",
-            categories = { "Plate Belts" },
+            categories = { "Mail Belts" },
             icon = "inv_belt_13",
             source = {
                 {
@@ -2875,7 +2875,7 @@ TFG.BLACKSMITHING_FOREVER = {
         {
             spell_id = 1252305,
             name = "Officer's Belt",
-            categories = { "Plate Belts" },
+            categories = { "Mail Belts" },
             icon = "inv_belt_20",
             source = {
                 {
@@ -2898,7 +2898,7 @@ TFG.BLACKSMITHING_FOREVER = {
         {
             spell_id = 1252308,
             name = "Prefect's Belt",
-            categories = { "Plate Belts" },
+            categories = { "Mail Belts" },
             icon = "inv_belt_08",
             source = {
                 {
@@ -2921,7 +2921,7 @@ TFG.BLACKSMITHING_FOREVER = {
         {
             spell_id = 1252306,
             name = "Sentinel's Belt",
-            categories = { "Plate Belts" },
+            categories = { "Mail Belts" },
             icon = "inv_belt_37a",
             source = {
                 {
@@ -2944,7 +2944,7 @@ TFG.BLACKSMITHING_FOREVER = {
         {
             spell_id = 1252307,
             name = "Warder's Belt",
-            categories = { "Plate Belts" },
+            categories = { "Mail Belts" },
             icon = "inv_belt_29",
             source = {
                 {
@@ -3500,7 +3500,7 @@ TFG.BLACKSMITHING_FOREVER = {
         {
             spell_id = 1252319,
             name = "Justicar's Gauntlet",
-            categories = { "Plate Gauntlets" },
+            categories = { "Mail Gauntlets" },
             icon = "inv_gauntlets_30",
             source = {
                 {
@@ -3526,7 +3526,7 @@ TFG.BLACKSMITHING_FOREVER = {
         {
             spell_id = 1252315,
             name = "Officer's Gauntlet",
-            categories = { "Plate Gauntlets" },
+            categories = { "Mail Gauntlets" },
             icon = "inv_gauntlets_51",
             source = {
                 {
@@ -3552,7 +3552,7 @@ TFG.BLACKSMITHING_FOREVER = {
         {
             spell_id = 1252318,
             name = "Prefect's Gauntlet",
-            categories = { "Plate Gauntlets" },
+            categories = { "Mail Gauntlets" },
             icon = "inv_gauntlets_26",
             source = {
                 {
@@ -3578,7 +3578,7 @@ TFG.BLACKSMITHING_FOREVER = {
         {
             spell_id = 1252316,
             name = "Sentinel's Gauntlet",
-            categories = { "Plate Gauntlets" },
+            categories = { "Mail Gauntlets" },
             icon = "inv_gauntlets_22",
             source = {
                 {
@@ -3731,7 +3731,7 @@ TFG.BLACKSMITHING_FOREVER = {
         {
             spell_id = 1252317,
             name = "Warder's Gauntlet",
-            categories = { "Plate Gauntlets" },
+            categories = { "Mail Gauntlets" },
             icon = "inv_gauntlets_50",
             source = {
                 {
