@@ -366,6 +366,22 @@ TFG.DRUID_FOREVER = {
             spell_id = 8946,
             name = "Cure Poison",
             icon = "spell_nature_nullifypoison",
+            source = {
+                {
+                    type = "Quest",
+                    location = "Dendrite Starblaze, Moonglade",
+                    races = { "Night Elf", "High Order Skyborne" },
+                    quest_id = 6125,
+                    quest_name = "Power over Poison",
+                },
+                {
+                    type = "Quest",
+                    location = "Dendrite Starblaze, Moonglade",
+                    races = { "Tauren", "Windshaper Skyborne" },
+                    quest_id = 6130,
+                    quest_name = "Power over Poison",
+                },
+            },
         },
         {
             spell_id = 5187,
@@ -525,6 +541,22 @@ TFG.DRUID_FOREVER = {
             spell_id = 768,
             name = "Cat Form",
             icon = "ability_druid_catform",
+            source = {
+                {
+                    type = "Quest",
+                    location = "Dendrite Starblaze, Moonglade",
+                    races = { "Night Elf", "High Order Skyborne" },
+                    quest_id = 98397,
+                    quest_name = "To Darnassus",
+                },
+                {
+                    type = "Quest",
+                    location = "Dendrite Starblaze, Moonglade",
+                    races = { "Tauren", "Windshaper Skyborne" },
+                    quest_id = 98362,
+                    quest_name = "To Thunder Bluff",
+                },
+            },
         },
         {
             spell_id = 1082,
