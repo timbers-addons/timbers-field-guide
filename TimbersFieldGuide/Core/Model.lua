@@ -310,13 +310,23 @@ function TFG.GroupSources(sources, zone, isOwnRace)
 end
 
 -- "Taleen Shimmerthread, Zephras Isle and 8 more" for a merged source; the plain
--- location otherwise. Nil when there is nothing to name.
+-- location otherwise. "More" counts other places, not other sources: both Power
+-- over Poison quests start with Dendrite Starblaze, so that card names just him.
+-- Nil when there is nothing to name.
 function TFG.FormatSourcePlaces(s)
     local count = s.count or 1
     local first = s.location and s.location ~= "" and tostring(s.location) or nil
     if count <= 1 then return first end
     if not first then return ("%d places"):format(count) end
-    return ("%s and %d more"):format(first, count - 1)
+    local places, others = { [first] = true }, 0
+    for _, m in ipairs(s.members or {}) do
+        if m.location and m.location ~= "" and not places[m.location] then
+            places[m.location] = true
+            others = others + 1
+        end
+    end
+    if others == 0 then return first end
+    return ("%s and %d more"):format(first, others)
 end
 
 local MIDDOT = "\194\183"  -- UTF-8 U+00B7, kept out of source as raw bytes
