@@ -1,5 +1,20 @@
 # Changelog
 
+## v2026.10.02c (2026-10-02)
+
+- Forever: Zephras Isle vendors sell the Sagefish recipes and the Linen and Woolen Reagent Bag patterns
+- Forever: Skywall Souffle is the reward for Restocking the Larders on Zephras Isle
+- Skyborne race matching: both Skyborne races report the token Skyborne, so the faction tells them apart
+- Sources that differ only in place share one card, led by the player's race and zone; faction emblems replace the squares, taken from a source's races when it names no faction
+- Forever: Dalaran trainers place 69 recipes at their learn skill; Dalaran, Moonglade and Zephras Isle vendors; Teleport: Moonglade, Bear Form, Growl and Maul from each race's quest; Frost Ward rank 5 shelved
+- Popup header names the class page (DRUID, PET SKILLS) instead of PROFESSION on class spells
+- Forever build 70170: Primal Bite ranks 2-4 trainable, Shifting Power replaces King of the Jungle, Tiger's Fury gone, druid training costs retuned; mail belts and gauntlets, camping recipes give no skill-ups
+- Forever: Cure Poison from each side's Power over Poison quest, Cat Form from To Darnassus or To Thunder Bluff
+- A merged source card counts other places, not other sources: one giver offering two quests is named once
+- Forever: Hillsbrad Foothills vendors sell Fire Protection Potion, Enchant Bracer - Lesser Deflection, Thick Murloc Armor and fish recipes
+- Bumped version to v2026.10.02c
+
+
 ## v2026.09.25 (2026-09-25)
 
 - Forever enchanting trainer costs up to journeyman, from the Stormwind enchanter
