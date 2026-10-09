@@ -50,7 +50,7 @@ local CHILD_ICONS = {
 -- Icons for general skill pages, keyed by the registry child `key`.
 local SKILL_ICONS = {
     ["riding"]        = "Interface\\Icons\\Ability_Mount_RidingHorse",
-    ["weapon-skills"] = "Interface\\Icons\\Ability_MeleeDamage",
+    ["weapon-skills"] = "Interface\\Icons\\INV_Mace_01",
 }
 
 -- Profession icons, keyed by the registry child display name.
@@ -642,6 +642,21 @@ local function ensureTestFrame()
     raceLabel:SetPoint("RIGHT", talentCheck, "LEFT", -FILTER_GAP, 0)
     raceCheck:SetPoint("RIGHT", raceLabel, "LEFT", -4, 0)
 
+    -- Weapon skills show the player's class unless this is on.
+    local classesCheck = CreateFrame("CheckButton", nil, detailFilters, "UICheckButtonTemplate")
+    classesCheck:SetSize(22, 22)
+    classesCheck:SetScript("OnClick", function(self)
+        TFG.showOtherClasses = self:GetChecked() and true or false
+        TFG.RequestRelayout()
+    end)
+    local classesLabel = createFilterLabelButton("Other Classes", function()
+        classesCheck:SetChecked(not classesCheck:GetChecked())
+        local handler = classesCheck:GetScript("OnClick")
+        if handler then handler(classesCheck) end
+    end)
+    classesLabel:SetPoint("RIGHT", raceCheck, "LEFT", -FILTER_GAP, 0)
+    classesCheck:SetPoint("RIGHT", classesLabel, "LEFT", -4, 0)
+
     -- Profession Category + Phase dropdowns. Shown only for profession views and
     -- positioned dynamically (see layoutFilterRow) between the "Show Known" label
     -- and the search box.
@@ -1113,6 +1128,7 @@ local function ensureTestFrame()
         placeCheckUnit(knownLabel, knownCheck)
         placeCheckUnit(talentLabel, talentCheck)
         placeCheckUnit(raceLabel, raceCheck)
+        placeCheckUnit(classesLabel, classesCheck)
     end
 
     -- Update which filter controls are visible + their state to match the engine.
@@ -1125,16 +1141,20 @@ local function ensureTestFrame()
         setPairShown(knownCheck, knownLabel, fa.known and true or false)
         setPairShown(talentCheck, talentLabel, fa.talent and true or false)
         setPairShown(raceCheck, raceLabel, fa.enemy and true or false)
+        setPairShown(classesCheck, classesLabel, fa.otherClasses and true or false)
 
         knownCheck:SetChecked(TFG.showKnown)
         talentCheck:SetChecked(TFG.showTalents)
         raceCheck:SetChecked(TFG.showEnemySpells)
+        classesCheck:SetChecked(TFG.showOtherClasses)
 
         -- "Other Spells" toggles opposite-faction / other-race entries. Label it
         -- the way the engine describes it for the current page.
         local playerRaceName = UnitRace("player") or "Other Race"
         local label
-        if (TFG.selectedFile or ""):upper() ~= "PRIEST" then
+        if fa.otherClasses then
+            label = (TFG.isAlliance() and "Horde" or "Alliance") .. " Trainers"
+        elseif (TFG.selectedFile or ""):upper() ~= "PRIEST" then
             label = (TFG.isAlliance() and "Horde" or "Alliance") .. " Spells"
         else
             label = "Non-" .. playerRaceName .. " Spells"
@@ -1195,6 +1215,7 @@ local function ensureTestFrame()
             TFG.showKnown = false
             TFG.showTalents = false
             TFG.showEnemySpells = false
+            TFG.showOtherClasses = false
             render()
             return
         end
@@ -1217,7 +1238,8 @@ local function ensureTestFrame()
                 and ((mode == "class"
                     and frame.state.classKey == value
                     and frame.state.childKey == (childKey or "abilities"))
-                    or (mode == "profession" and frame.state.profession == value))
+                    or (mode == "profession" and frame.state.profession == value)
+                    or (mode == "skill" and frame.state.skill == value))
             )
             tab:SetScript("OnClick", function()
                 selectPage(mode, value, childKey)
@@ -1239,6 +1261,11 @@ local function ensureTestFrame()
         -- The player's own professions that exist in this version.
         for _, profession in ipairs(getPlayerProfessions(TFG.selectedExpansion)) do
             add(PROFESSION_ICONS[profession.name] or DEFAULT_ICON, profession.name, "profession", profession.key)
+        end
+
+        -- Weapon Skills last: every class trains there.
+        if pageExistsInVersion(TFG.selectedExpansion, { mode = "skill", skill = "weapon-skills" }) then
+            add(SKILL_ICONS["weapon-skills"], skillName(TFG.selectedExpansion, "weapon-skills"), "skill", "weapon-skills")
         end
     end
 

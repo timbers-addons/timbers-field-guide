@@ -29,6 +29,9 @@ TFG.COLORS = {
     closeHover = { 82 / 255, 28 / 255, 18 / 255, 1 },
     chromeTab = { 27 / 255, 23 / 255, 19 / 255, 1 },
     chromeTabHover = { 45 / 255, 38 / 255, 30 / 255, 1 },
+    -- Weapon skills: the panel behind each city's group on the parchment.
+    groupPanel = { 30 / 255, 18 / 255, 6 / 255, 0.38 },
+    groupBorder = { 56 / 255, 38 / 255, 18 / 255, 0.9 },
 }
 
 -- Recipe popup palette (matched to the navigation chrome).

@@ -174,6 +174,7 @@ local function normalizeSource(s)
         currencies = s.currencies,
         skill = tonumber(s.skill),
         location = s.location,
+        position = s.position,
         reputation = s.reputation,
         faction = s.faction,
         races = s.races,

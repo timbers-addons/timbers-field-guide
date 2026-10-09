@@ -1,6 +1,6 @@
 local _, TFG = ...
 
-TFG.WEAPON_SKILLS_CLASSIC_ERA = {
+TFG.WEAPON_SKILLS_FOREVER = {
     druid = {
         {
             id = 199,
@@ -1782,4 +1782,4 @@ TFG.WEAPON_SKILLS_CLASSIC_ERA = {
     },
 }
 
-TFG.WEAPON_SKILLS_CLASSIC_ERA.__CONFIG = { mode = "class" }
+TFG.WEAPON_SKILLS_FOREVER.__CONFIG = { mode = "class" }

@@ -111,6 +111,7 @@ Fields, all optional except `type`:
 | `skill`      | number | Profession skill this source asks for, only when it is more than the entry's own bucket: the recipe can be learned earlier another way (a pattern at 140, the trainer at 150). Shown as "Requires Tailoring (150)". Omit otherwise. |
 | `currencies` | array  | What it costs besides gold, one row per component: `{ currency_id = 3402, qty = 240, name = "Merchant's Favor" }` for a currency, `{ item_id = 20558, qty = 3 }` for an item. Name and icon come from the client at runtime; `name` is the fallback when the client cannot resolve a `currency_id`. Shown after the gold price. Omit if the price is gold only. |
 | `location`   | string | Human-readable "where": vendor name and spot, dungeon, quest giver, rep level. Shown as the primary text of the source line in the popup, so name the vendor/drop here rather than repeating the type. Omit if there is nothing useful to say. |
+| `position`   | table  | Where the NPC stands, as the world map shows it: `{ map = 1453, x = 57.1, y = 57.7 }` (uiMapID, percent). Weapon Skills draws the city map with a pin from it. Comes from a scan (the scanner records the character's spot beside the NPC); don't guess it. |
 | `reputation` | table  | Standing the vendor asks for: `{ faction = "Azeroth Commerce Authority", standing = "Honored" }`. Shown on a row of its own in the popup and the list tooltip, green or red by the player's standing, so keep it out of `location`. An optional `faction_id` makes that lookup exact; without it the faction is found by name in the reputation list. The Reputation dropdown lists every faction named here. The hand-written TBC files still put the standing in `location` ("Honor Hold (Honored)"); new data uses this field. |
 | `faction`    | string | `Alliance` or `Horde`. Display label only, see Faction below. Only used on entries whose top-level faction is neutral. Omit otherwise. |
 | `races`      | array  | Races this source is for, same names as the entry's `races`: `{ "Night Elf" }`. For a way to get it that depends on race, like Teleport: Moonglade's four "Moonglade" quests, one per druid race. The popup folds such sources into one card that leads with the player's race. Omit when anyone can use the source. |
@@ -249,13 +250,28 @@ TFG.WEAPON_SKILLS_BURNING_CRUSADE = {
             id = 199,                -- weapon skill line / spell id
             name = "Two-Handed Maces",
             icon = "inv_mace_04",
-            source = { { type = "Trainer", cost = 1000 } },
+            source = {
+                { type = "Trainer", cost = 1000, location = "Buliwyf Stonehand, Ironforge", faction = "Alliance" },
+                { type = "Trainer", cost = 1000, location = "Ansekhwa, Thunder Bluff", faction = "Horde" },
+            },
         },
         ...
     },
     ...
 }
 ```
+
+One source per weapon master that teaches the weapon, with `location` written
+`"Trainer, City"`. The page groups each class's icons by the city after the
+comma, so a weapon taught in two cities shows under both and one taught by two
+masters in the same city (Orgrimmar) shows once; keep that form. `faction` puts
+the city on its side: the other side's cities show only with the faction box on.
+An entry with no source is a starting skill (Wands). An entry-level `level` is
+the character level the weapon masters ask for (Polearms: 20, at 1g); omit it
+when there is none. The page holds weapon
+proficiencies only; Parry, Block, Dual Wield and Throw are on the class pages.
+Forever's file is seeded from Classic Era by the generator until weapon masters
+are scanned.
 
 **Riding** uses numeric character-level buckets with
 `__CONFIG = { mode = "level" }` and normal class-style entries (`spell_id`,

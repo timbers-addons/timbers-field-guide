@@ -33,6 +33,7 @@ Database/Forever/Professions/Leatherworking.lua
 Database/Forever/Professions/Mining.lua
 Database/Forever/Professions/Skinning.lua
 Database/Forever/Professions/Tailoring.lua
+Database/Forever/Skills/WeaponSkills.lua
 TimbersFieldGuide.lua
 Libs/LibStub/LibStub.lua
 Libs/CallbackHandler-1.0/CallbackHandler-1.0.lua

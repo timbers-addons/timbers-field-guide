@@ -286,11 +286,26 @@ local renderPool = {
     icons = {},
     labelCount = 0,
     iconCount = 0,
+    -- Weapon skills: the panel behind a city's group, and the hover target on its label.
+    panels = {},
+    panelCount = 0,
+    hits = {},
+    hitCount = 0,
 }
 
 local function resetRenderPool()
     renderPool.labelCount = 0
     renderPool.iconCount = 0
+    renderPool.panelCount = 0
+    renderPool.hitCount = 0
+
+    for _, panel in ipairs(renderPool.panels) do
+        for _, t in pairs(panel) do t:Hide() end
+    end
+    for _, hit in ipairs(renderPool.hits) do
+        hit:Hide()
+        hit.group = nil
+    end
 
     for _, label in ipairs(renderPool.labels) do
         label:Hide()
@@ -305,6 +320,7 @@ local function resetRenderPool()
         icon:SetScript("OnEnter", nil)
         icon:SetScript("OnLeave", nil)
         icon.spellData = nil
+        icon.tfgGroup = nil
         if icon.tfgKnownOverlay then icon.tfgKnownOverlay:Hide() end
         if icon.tfgRedOverlay then icon.tfgRedOverlay:Hide() end
         if icon.tfgBlueBorder then icon.tfgBlueBorder:Hide() end
@@ -339,6 +355,49 @@ local function acquireEntryIcon()
     return icon
 end
 
+-- A panel in the style of the window chrome: a faint dark fill with a gold
+-- hairline, drawn under the icons.
+local function acquireGroupPanel(left, top, width, height)
+    renderPool.panelCount = renderPool.panelCount + 1
+    local panel = renderPool.panels[renderPool.panelCount]
+    if not panel then
+        local function tex(layer, sub, color)
+            local t = content:CreateTexture(nil, layer, nil, sub)
+            t:SetColorTexture(unpack(color))
+            return t
+        end
+        panel = { fill = tex("BACKGROUND", 0, TFG.COLORS.groupPanel) }
+        for _, edge in ipairs({ "top", "bottom", "left", "right" }) do
+            panel[edge] = tex("BACKGROUND", 1, TFG.COLORS.groupBorder)
+        end
+        renderPool.panels[renderPool.panelCount] = panel
+    end
+    local right, bottom = left + width, top - height
+    panel.fill:SetPoint("TOPLEFT", content, "TOPLEFT", left, top)
+    panel.fill:SetPoint("BOTTOMRIGHT", content, "TOPLEFT", right, bottom)
+    panel.top:SetPoint("TOPLEFT", content, "TOPLEFT", left, top)
+    panel.top:SetPoint("BOTTOMRIGHT", content, "TOPLEFT", right, top - 1)
+    panel.bottom:SetPoint("TOPLEFT", content, "TOPLEFT", left, bottom + 1)
+    panel.bottom:SetPoint("BOTTOMRIGHT", content, "TOPLEFT", right, bottom)
+    panel.left:SetPoint("TOPLEFT", content, "TOPLEFT", left, top)
+    panel.left:SetPoint("BOTTOMRIGHT", content, "TOPLEFT", left + 1, bottom)
+    panel.right:SetPoint("TOPLEFT", content, "TOPLEFT", right - 1, top)
+    panel.right:SetPoint("BOTTOMRIGHT", content, "TOPLEFT", right, bottom)
+    for _, t in pairs(panel) do t:Show() end
+end
+
+local function acquireGroupHit()
+    renderPool.hitCount = renderPool.hitCount + 1
+    local hit = renderPool.hits[renderPool.hitCount]
+    if not hit then
+        hit = CreateFrame("Frame", nil, content)
+        renderPool.hits[renderPool.hitCount] = hit
+    end
+    hit:ClearAllPoints()
+    hit:Show()
+    return hit
+end
+
 local function isIconInsideScrollViewport(icon)
     if not icon or not icon:IsShown() then return false end
 
@@ -351,6 +410,106 @@ local function isIconInsideScrollViewport(icon)
     end
 
     return iconBottom < viewportTop and iconTop > viewportBottom
+end
+
+-- Weapon skills: hovering a city's label shows its map under the tooltip, with a
+-- pin on each trainer whose spot the data has (`position` on the source, map
+-- percent as the world map shows it). The art is the client's own map tiles.
+local MAP_TIP_WIDTH, PIN = 320, 5
+local mapTip
+local function ensureMapTip()
+    if mapTip then return mapTip end
+    mapTip = CreateFrame("Frame", nil, UIParent, "BackdropTemplate")
+    mapTip:SetFrameStrata("TOOLTIP")
+    mapTip:SetBackdrop({ bgFile = "Interface\\Buttons\\WHITE8X8", edgeFile = "Interface\\Buttons\\WHITE8X8", edgeSize = 1 })
+    mapTip:SetBackdropColor(unpack(TFG.POPUP.bg))
+    mapTip:SetBackdropBorderColor(unpack(TFG.POPUP.border))
+    mapTip.art = CreateFrame("Frame", nil, mapTip)
+    mapTip.art:SetPoint("TOPLEFT", 4, -4)
+    if mapTip.art.SetClipsChildren then mapTip.art:SetClipsChildren(true) end
+    mapTip.tiles, mapTip.pins = {}, {}
+    mapTip:Hide()
+    return mapTip
+end
+
+local function groupMapID(group)
+    for _, trainer in ipairs(group.trainers) do
+        local pos = group.positions[trainer]
+        if pos then return pos.map end
+    end
+end
+
+-- Draws the group's city map under the shown GameTooltip, with a pin on each of
+-- its trainers that has a spot, or only those in `only` (a set of names) when
+-- given: a weapon's tooltip pins just the masters there who teach it.
+local function showMapUnderTooltip(group, only)
+    local mapID = groupMapID(group)
+    local art = TFG.GetMapArt(mapID)
+    if not art then return end
+
+    local tip = ensureMapTip()
+    local scale = MAP_TIP_WIDTH / art.width
+    local height = art.height * scale
+    tip:SetSize(MAP_TIP_WIDTH + 8, height + 8)
+    tip.art:SetSize(MAP_TIP_WIDTH, height)
+    local cols = math.ceil(art.width / art.tileWidth)
+    for _, t in ipairs(tip.tiles) do t:Hide() end
+    for i, fileID in ipairs(art.textures) do
+        local t = tip.tiles[i] or tip.art:CreateTexture(nil, "ARTWORK")
+        tip.tiles[i] = t
+        local col, row = (i - 1) % cols, math.floor((i - 1) / cols)
+        t:SetTexture(fileID)
+        t:SetSize(art.tileWidth * scale, art.tileHeight * scale)
+        t:ClearAllPoints()
+        t:SetPoint("TOPLEFT", col * art.tileWidth * scale, -row * art.tileHeight * scale)
+        t:Show()
+    end
+    for _, p in ipairs(tip.pins) do p.ring:Hide(); p.dot:Hide() end
+    local n = 0
+    for _, trainer in ipairs(group.trainers) do
+        local pos = group.positions[trainer]
+        if pos and pos.map == mapID and (not only or only[trainer]) then
+            n = n + 1
+            local p = tip.pins[n]
+            if not p then
+                p = { ring = tip.art:CreateTexture(nil, "OVERLAY", nil, 1), dot = tip.art:CreateTexture(nil, "OVERLAY", nil, 2) }
+                p.ring:SetColorTexture(0, 0, 0, 1)
+                p.dot:SetColorTexture(1, 0.82, 0, 1)
+                tip.pins[n] = p
+            end
+            local x, y = pos.x / 100 * MAP_TIP_WIDTH, -pos.y / 100 * height
+            p.ring:SetSize(PIN * 2 + 2, PIN * 2 + 2)
+            p.ring:SetPoint("CENTER", tip.art, "TOPLEFT", x, y)
+            p.dot:SetSize(PIN * 2 - 2, PIN * 2 - 2)
+            p.dot:SetPoint("CENTER", tip.art, "TOPLEFT", x, y)
+            p.ring:Show()
+            p.dot:Show()
+        end
+    end
+    tip:ClearAllPoints()
+    tip:SetPoint("TOPLEFT", GameTooltip, "BOTTOMLEFT", 0, -2)
+    tip:Show()
+end
+
+local function showGroupMap(owner, group)
+    local mapID = groupMapID(group)
+    GameTooltip:SetOwner(owner, "ANCHOR_BOTTOMRIGHT")
+    GameTooltip:SetText(group.place, 1, 0.82, 0)
+    for _, trainer in ipairs(group.trainers) do
+        local pos = group.positions[trainer]
+        if pos and pos.map == mapID then
+            GameTooltip:AddDoubleLine(trainer, ("%.1f, %.1f"):format(pos.x, pos.y), 1, 1, 1, 0.8, 0.8, 0.8)
+        else
+            GameTooltip:AddLine(trainer, 1, 1, 1)
+        end
+    end
+    GameTooltip:Show()
+    showMapUnderTooltip(group)
+end
+
+local function hideGroupMap()
+    GameTooltip:Hide()
+    if mapTip then mapTip:Hide() end
 end
 
 local function updateIconMouseState()
@@ -368,6 +527,10 @@ local function updateIconMouseState()
             end
             icon:EnableMouse(isInteractive)
         end
+    end
+    for index = 1, renderPool.hitCount do
+        local hit = renderPool.hits[index]
+        hit:EnableMouse(hit.group ~= nil and isIconInsideScrollViewport(hit))
     end
 end
 
@@ -640,7 +803,14 @@ end
 TFG.showEnemySpells = false
 TFG.showTalents     = false
 TFG.showKnown       = false
+TFG.showOtherClasses = false
 TFG.searchText      = "" -- name-only filter; stored lowercased by the UI
+
+-- Weapon skills: rows are classes and trainers are grouped by city.
+function TFG.IsClassGroupedView()
+    local db = TFG.activeDatabase
+    return type(db) == "table" and type(db.__CONFIG) == "table" and db.__CONFIG.mode == "class" or false
+end
 
 
 -- ========================================================================== 
@@ -1207,13 +1377,18 @@ function frame:Relayout()
             local out = {}
             local keys = {}
             local playerKey = (playerClass or ""):lower()
-            if db[playerKey] then table.insert(keys, playerKey) end
-            for k, v in pairs(db) do
-                if k ~= "__CONFIG" and k ~= playerKey and type(v) == "table" then
-                    table.insert(keys, k)
+            -- The player's class alone unless Other Classes is on; then every
+            -- class in alphabetical order, the player's among them.
+            if TFG.showOtherClasses or not db[playerKey] then
+                for k, v in pairs(db) do
+                    if k ~= "__CONFIG" and type(v) == "table" then
+                        table.insert(keys, k)
+                    end
                 end
+                table.sort(keys, function(a,b) return a < b end)
+            else
+                keys[1] = playerKey
             end
-            table.sort(keys, function(a,b) return a < b end)
             local expansionObject = TFG.DATABASE_FILES[TFG.selectedExpansion]
             for _, k in ipairs(keys) do
                 local spells = db[k] or {}
@@ -1314,6 +1489,8 @@ function frame:Relayout()
 
         if TFG.isSkill then
             if row and row._tfgIsClassGroup then
+                -- What the player knows says nothing about another class's row.
+                if tostring(row._tfgClassKey):lower() ~= (playerClass or ""):lower() then return false end
                 return spellId and spellId > 0 and IsPlayerSpell(spellId) or false
             end
 
@@ -1396,6 +1573,615 @@ function frame:Relayout()
         return false, nil
     end
 
+    -- One list icon with its overlays, tooltip and click handlers.
+    local function placeIcon(spell, row, levelRequired, x, y)
+        local icon = acquireEntryIcon()
+        icon.tfgUnknown = row.isUnknown
+        icon:SetSize(UI.ICON_SIZE, UI.ICON_SIZE)
+        icon:SetPoint("TOPLEFT", x, y)
+        -- Resolve texture: prefer explicit texture, then spell icon, then item icon if present.
+        local tex = getSpellTexture(spell)
+        if not tex then
+            local sid = getSpellId(spell)
+            if sid and sid > 0 then
+                tex = select(3, GetSpellInfo(sid))
+            else
+                -- Some entries represent items (product/source) rather than spells.
+                local itemId = getProductItemId(spell) or getRecipeSourceId(spell) or (spell and spell.itemId)
+                if itemId then
+                    tex = select(10, GetItemInfo(itemId))
+                end
+            end
+        end
+        icon:SetTexture(tex or "Interface/ICONS/INV_Misc_QuestionMark")
+        icon.spellData = spell
+        icon:EnableMouse(false)
+
+        -- Known-state overlay (semi-transparent green). Textures do not receive mouse
+        -- events, so this will not interfere with icon tooltip/click handlers.
+        if not icon.tfgKnownOverlay then
+            -- Textures don't have CreateTexture; create the overlay from the parent
+            -- frame and anchor it to the icon so it doesn't interfere with mouse events.
+            local ov = content:CreateTexture(nil, "OVERLAY")
+            ov:SetPoint("TOPLEFT", icon, "TOPLEFT", 0, 0)
+            ov:SetPoint("BOTTOMRIGHT", icon, "BOTTOMRIGHT", 0, 0)
+            ov:SetColorTexture(0, 1, 0, 0.35)
+            ov:Hide()
+            icon.tfgKnownOverlay = ov
+        end
+
+        -- Red-state overlay (semi-transparent red) for user-marked unlearned abilities.
+        if not icon.tfgRedOverlay then
+            local rov = content:CreateTexture(nil, "OVERLAY")
+            rov:SetPoint("TOPLEFT", icon, "TOPLEFT", 0, 0)
+            rov:SetPoint("BOTTOMRIGHT", icon, "BOTTOMRIGHT", 0, 0)
+            rov:SetColorTexture(1, 0, 0, 0.6)
+            rov:Hide()
+            icon.tfgRedOverlay = rov
+        end
+
+        -- Blue border highlight for icons with active popup.
+        if not icon.tfgBlueBorder then
+            local bov = content:CreateTexture(nil, "OVERLAY")
+            bov:SetTexture("Interface\\Buttons\\UI-ActionButton-Border")
+            bov:SetBlendMode("ADD")
+            bov:SetVertexColor(0.3, 0.5, 1, 1)
+            bov:SetPoint("CENTER", icon, "CENTER", 0, 0)
+            bov:SetSize(UI.ICON_SIZE * 1.4, UI.ICON_SIZE * 1.4)
+            bov:Hide()
+            icon.tfgBlueBorder = bov
+        end
+
+        -- Clickable indicator "+" in bottom-right corner for icons with popup content
+        if not icon.tfgClickableIndicator then
+            local indicator = content:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
+            indicator:SetPoint("BOTTOMRIGHT", icon, "BOTTOMRIGHT", -2, 2)
+            indicator:SetText("+")
+            indicator:SetTextColor(1, 1, 1)
+            indicator:SetShadowOffset(1, -1)
+            indicator:SetShadowColor(0, 0, 0, 1)
+            indicator:Hide()
+            icon.tfgClickableIndicator = indicator
+        end
+
+        -- Determine if this icon would show a popup. An unlock row opens the
+        -- popup of its rank spell, so it is judged by that entry.
+        local popupSubject = spell
+        if spell and spell._tfgType == "PROFESSION_RANK_UNLOCK" then
+            popupSubject = rankEntryFor(spell)
+        end
+        local recipeSourceId = getRecipeSourceId(popupSubject)
+        -- Show recipe item if recipe_item_ids exists, regardless of source type
+        local hasRecipeItem = (recipeSourceId and recipeSourceId > 0)
+        local productItemId = getProductItemId(popupSubject)
+        local hasProduct = (productItemId and productItemId > 0)
+        local hasMaterials = (popupSubject and popupSubject.materials
+            and type(popupSubject.materials) == "table" and #popupSubject.materials > 0)
+        local hasSourceInfo = (popupSubject ~= nil and #TFG.GetSources(popupSubject) > 0)
+        local wouldShowPopup = hasRecipeItem or hasProduct or hasMaterials or hasSourceInfo
+
+        -- Show the clickable indicator only if popup would appear
+        if wouldShowPopup and icon.tfgClickableIndicator then
+            icon.tfgClickableIndicator:Show()
+        elseif icon.tfgClickableIndicator then
+            icon.tfgClickableIndicator:Hide()
+        end
+
+        -- Phase indicator in the top-right corner for phased
+        -- profession entries. Phase 1 and unrestricted entries
+        -- intentionally have no badge.
+        if not icon.tfgPhaseIndicator then
+            local phaseInd = content:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+            phaseInd:SetPoint("TOPRIGHT", icon, "TOPRIGHT", -2, -2)
+            phaseInd:SetTextColor(1, 1, 1)
+            phaseInd:SetShadowOffset(1, -1)
+            phaseInd:SetShadowColor(0, 0, 0, 1)
+            phaseInd:Hide()
+            icon.tfgPhaseIndicator = phaseInd
+        end
+
+        local iconPhase = getEffectivePhase(spell)
+        if isProfession and iconPhase and iconPhase > 1 then
+            icon.tfgPhaseIndicator:SetText("P" .. tostring(iconPhase))
+            icon.tfgPhaseIndicator:Show()
+        else
+            icon.tfgPhaseIndicator:Hide()
+        end
+
+        -- Talent indicator "T" in top-right corner for talent spells in class views
+        if not icon.tfgTalentIndicator then
+            local talentInd = content:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+            talentInd:SetPoint("TOPRIGHT", icon, "TOPRIGHT", -2, -2)
+            talentInd:SetText("T")
+            talentInd:SetTextColor(1, 1, 1)
+            talentInd:SetShadowOffset(1, -1)
+            talentInd:SetShadowColor(0, 0, 0, 1)
+            talentInd:Hide()
+            icon.tfgTalentIndicator = talentInd
+        end
+
+        -- Show talent indicator for talents in class views
+        if isClassView and isTalentSpell(spell) and icon.tfgTalentIndicator then
+            icon.tfgTalentIndicator:Show()
+        elseif icon.tfgTalentIndicator then
+            icon.tfgTalentIndicator:Hide()
+        end
+
+        -- Persisted red marks table
+        TimbersFieldGuideDB = TimbersFieldGuideDB or {}
+        TimbersFieldGuideDB.redMarked = TimbersFieldGuideDB.redMarked or {}
+
+        if entryIsKnown(spell, row, levelRequired) then
+            icon.tfgKnownOverlay:Show()
+            -- If the spell became known, clear any previously set red mark
+            local spellIdForMark = getSpellId(spell)
+            if spellIdForMark then
+                TimbersFieldGuideDB.redMarked[tostring(spellIdForMark)] = nil
+                if icon.tfgRedOverlay then icon.tfgRedOverlay:Hide() end
+            end
+        else
+            icon.tfgKnownOverlay:Hide()
+            -- Show red overlay if user previously marked this unlearned ability
+            local spellIdForMark = getSpellId(spell)
+            if spellIdForMark and TimbersFieldGuideDB.redMarked[tostring(spellIdForMark)] then
+                icon.tfgRedOverlay:Show()
+            else
+                icon.tfgRedOverlay:Hide()
+            end
+        end
+
+        icon:SetScript("OnMouseDown", function(self, button)
+            if not isIconInsideScrollViewport(self) then return end
+            if button == "LeftButton" then
+                -- A rank unlock row opens the popup on the rank spell it stands in
+                -- for, under the row's own title. The copy is kept on the row so a
+                -- second click finds the same table and toggles the popup shut.
+                if self.spellData and self.spellData._tfgType == "PROFESSION_RANK_UNLOCK" then
+                    local unlock = self.spellData
+                    local rankEntry = rankEntryFor(unlock)
+                    if not unlock._tfgPopupData and rankEntry then
+                        local copy = {}
+                        for k, v in pairs(rankEntry) do copy[k] = v end
+                        local cap = tonumber(unlock.required) or 0
+                        copy.name = ("%s Skill Unlock: %s (%d-%d)"):format(
+                            tostring(profName or "Profession"), tostring(unlock.rankName or ""),
+                            cap > 75 and cap - 75 or 1, cap)
+                        unlock._tfgPopupData = copy
+                    end
+                    if unlock._tfgPopupData then
+                        TFG.EnsureProfessionPopup():ShowForSpell(self, unlock._tfgPopupData)
+                    end
+                    return
+                end
+
+                local data = self.spellData
+                local popup = TFG.EnsureProfessionPopup()
+                popup:ShowForSpell(self, data)
+                return
+            end
+
+            -- Right-click: allow marking unlearned class abilities with a red overlay.
+            if button == "RightButton" then
+                -- Allow marking in any view (class/skill/profession). Only require a valid spell id.
+                local sp = self.spellData
+                local sid = getSpellId(sp)
+                if not sid or sid <= 0 then return end
+
+                -- Only allow marking if the entry is currently not known
+                if entryIsKnown(sp, row, levelRequired) then
+                    -- If it is known, ensure red mark removed
+                    TimbersFieldGuideDB = TimbersFieldGuideDB or {}
+                    TimbersFieldGuideDB.redMarked = TimbersFieldGuideDB.redMarked or {}
+                    TimbersFieldGuideDB.redMarked[tostring(sid)] = nil
+                    if self.tfgRedOverlay then self.tfgRedOverlay:Hide() end
+                    return
+                end
+
+                TimbersFieldGuideDB = TimbersFieldGuideDB or {}
+                TimbersFieldGuideDB.redMarked = TimbersFieldGuideDB.redMarked or {}
+                local key = tostring(sid)
+                if TimbersFieldGuideDB.redMarked[key] then
+                    -- Toggle off
+                    TimbersFieldGuideDB.redMarked[key] = nil
+                    if self.tfgRedOverlay then self.tfgRedOverlay:Hide() end
+                else
+                    -- Toggle on
+                    TimbersFieldGuideDB.redMarked[key] = true
+                    if self.tfgRedOverlay then self.tfgRedOverlay:Show() end
+                end
+            end
+        end)
+
+        icon:SetScript("OnEnter", function(self)
+            if not isIconInsideScrollViewport(self) then
+                GameTooltip:Hide()
+                return
+            end
+            local data = self.spellData
+
+            if data and data._tfgType == "PROFESSION_RANK_UNLOCK" then
+                GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+                local req = tonumber(data.required) or 0
+                local trainAt = tonumber(data.effectiveTrainAt) or tonumber(data.trainAt) or levelRequired
+                local rankName = (data.rankName and tostring(data.rankName) ~= "") and tostring(data.rankName) or "Rank"
+
+                local profName = "Profession"
+                do
+                    local selectionInfo = TFG.GetSelectionInfo(TFG.selectedExpansion, TFG.selectedFile)
+                    local child = selectionInfo and selectionInfo.child
+                    if child and child.name then
+                        profName = tostring(child.name)
+                    end
+                end
+                local capText
+                local capR, capG, capB = 1, 1, 1
+                if professionMaxCap > 0 and req > 0 and professionMaxCap >= req then
+                    capText = "Already learned"
+                    capR, capG, capB = 0.5, 1, 0
+                elseif professionLevel >= trainAt then
+                    capText = "Trainable now"
+                else
+                    capText = "Trainable at " .. tostring(trainAt)
+                end
+
+                -- Show Blizzard's spell tooltip body for the matching Profession Training spell,
+                -- then override the title line with our synthetic title.
+                local trainingSpellId
+                local db = TFG.activeDatabase
+                if type(db) == "table" then
+                    local bucket = db[trainAt]
+                    if type(bucket) == "table" then
+                        for _, s in ipairs(bucket) do
+                            if s and hasSpellCategory(s, "Profession Training") and getSpellId(s) then
+                                trainingSpellId = getSpellId(s)
+                                break
+                            end
+                        end
+                    end
+
+                    -- Some professions store training unlock entries at their *cap* bracket
+                    -- instead of the synthetic "trainAt" threshold (e.g., First Aid Master at [300]
+                    -- while trainAt is 275). If we didn't find an exact match, choose the closest
+                    -- training entry by bracket key.
+                    if not trainingSpellId then
+                        local bestId
+                        local bestDiff
+                        for k, spells in pairs(db) do
+                            local lvl = tonumber(k)
+                            if lvl and type(spells) == "table" then
+                                for _, s in ipairs(spells or {}) do
+                                    if s and hasSpellCategory(s, "Profession Training") and getSpellId(s) then
+                                        local diff = math.abs(lvl - (tonumber(trainAt) or 0))
+                                        if not bestDiff or diff < bestDiff then
+                                            bestDiff = diff
+                                            bestId = getSpellId(s)
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                        trainingSpellId = bestId
+                    end
+
+                    if not trainingSpellId then
+                        for _, spells in pairs(db) do
+                            for _, s in ipairs(spells or {}) do
+                                if s and hasSpellCategory(s, "Profession Training") and getSpellId(s) and (getSpellId(s) == tonumber(data.trainingSpellId)) then
+                                    trainingSpellId = getSpellId(s)
+                                    break
+                                end
+                            end
+                            if trainingSpellId then break end
+                        end
+                    end
+                end
+
+                -- Show the skill range this rank covers: from the
+                -- previous tier's cap (tiers are 75 apart) up to this
+                -- rank's cap, e.g. Master = "300-375".
+                local rangeLow = (req > 75) and (req - 75) or 1
+                local titleText = profName .. " Skill Unlock: " .. rankName .. " (" .. tostring(rangeLow) .. "-" .. tostring(req) .. ")"
+                if trainingSpellId then
+                    -- Build a simple tooltip ourselves to guarantee the custom title
+                    -- is shown. We include the spell name (if resolvable) as a line.
+                    local sname = select(1, GetSpellInfo(trainingSpellId))
+                    GameTooltip:ClearLines()
+                    GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+                    GameTooltip:AddLine(titleText, 1, 1, 1)
+                    if sname and tostring(sname) ~= "" then
+                        GameTooltip:AddLine(sname, 0.9, 0.9, 0.9)
+                    end
+                    GameTooltip:Show()
+                else
+                    -- Fallback: no training spell found; show our synthetic tooltip only.
+                    GameTooltip:AddLine(titleText, 1, 1, 1)
+                end
+
+                -- Where the rank comes from and what it costs, as any other entry
+                -- shows it, from the rank spell this row stands in for.
+                if trainingSpellId and type(TFG.activeDatabase) == "table" then
+                    local shown = false
+                    for _, spells in pairs(TFG.activeDatabase) do
+                        for _, e in ipairs(type(spells) == "table" and spells or {}) do
+                            if not shown and getSpellId(e) == trainingSpellId then
+                                for _, src in ipairs(groupedSources(e)) do
+                                    if not shown then GameTooltip:AddLine(" ") end
+                                    GameTooltip:AddLine(buildSourceLine(src), 1, 1, 1)
+                                    shown = true
+                                end
+                            end
+                        end
+                    end
+                end
+
+                GameTooltip:AddLine(" ")
+                GameTooltip:AddLine(capText, capR, capG, capB)
+                GameTooltip:Show()
+                return
+            end
+            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+            -- Prefer showing a spell tooltip when we have a valid spell id.
+            local sid = getSpellId(data)
+            if sid and sid > 0 then
+                GameTooltip:SetSpellByID(sid)
+            else
+                -- Fallback: try to show item tooltip for product/source items.
+                local itemId = getProductItemId(data) or getRecipeSourceId(data) or (data and data.itemId)
+                local shown = false
+                if itemId and tonumber(itemId) then
+                    local _, itemLink = GetItemInfo(tonumber(itemId))
+                    if itemLink then
+                        GameTooltip:SetHyperlink(itemLink)
+                        shown = true
+                    else
+                        -- If item info isn't cached, SetItemByID is safer on modern clients; try it if available.
+                        if GameTooltip.SetItemByID then
+                            pcall(GameTooltip.SetItemByID, GameTooltip, tonumber(itemId))
+                            shown = true
+                        end
+                    end
+                end
+
+                if not shown then
+                    -- Last resort: show a simple tooltip with the entry name.
+                    GameTooltip:SetText(tostring(data and data.name or ""))
+                end
+            end
+
+            -- Crafting difficulty levels display (orange/yellow/green/gray)
+            if TFG.HasSkillUps(data) then
+                local colors = { "|cFFFF7F00", "|cFFFFFF00", "|cFF00FF00", "|cFF9D9D9D" }
+                local parts = {}
+                for i = 1, 4 do
+                    local v = tonumber(data.levels[i] or 0) or 0
+                    if v > 0 then
+                        table.insert(parts, colors[i] .. tostring(v) .. "|r")
+                    end
+                end
+                if #parts > 0 then
+                    -- Check if popup would be shown
+                    local tooltipRecipeId = getRecipeSourceId(data)
+                    -- Show recipe item if recipe_item_ids exists, regardless of source type
+                    local hasRecipeItem = (tooltipRecipeId and tooltipRecipeId > 0)
+                    local tooltipProductId = getProductItemId(data)
+                    local hasProduct = (tooltipProductId and tooltipProductId > 0)
+                    local hasMaterials = (data and data.materials
+                        and type(data.materials) == "table" and #data.materials > 0)
+                    local wouldShowPopup = hasRecipeItem or hasProduct or hasMaterials
+
+                    GameTooltip:AddLine(" ")
+                    GameTooltip:AddLine(table.concat(parts, "  "))
+
+                    -- Show one line per source (type, location, cost,
+                    -- phase, faction).
+                    for _, s in ipairs(groupedSources(data)) do
+                        GameTooltip:AddLine("Source: " .. buildSourceLine(s), 0.8, 0.8, 0.8)
+                        -- A price that is not gold, and the standing the vendor
+                        -- asks for, each on a line of their own under it.
+                        local currencyText = TFG.FormatCurrencies(s)
+                        if currencyText then
+                            GameTooltip:AddLine("Cost: " .. currencyText, 0.8, 0.8, 0.8)
+                        end
+                        local repText = TFG.FormatReputation(s)
+                        if repText then GameTooltip:AddLine(repText) end
+                    end
+                    if self.tfgUnknown then
+                        GameTooltip:AddLine("In the game files, but not yet seen in game.", 0.6, 0.6, 0.6, true)
+                    end
+
+                    if wouldShowPopup then
+                        GameTooltip:AddLine(" ")
+                        GameTooltip:AddLine("Left click for details", 1, 1, 0)
+                    end
+                end
+            end
+
+            -- NOTE: Source/location/cost info is intentionally not shown on the main list tooltip.
+            -- It is shown only on the popup's recipe-source icon tooltip.
+            -- Weapon skills are the exception: who teaches it is the point of the page.
+            if row._tfgIsClassGroup then
+                local sources = TFG.GetSources(data)
+                GameTooltip:AddLine(" ")
+                if #sources == 0 then
+                    GameTooltip:AddLine("Known from character creation", 0.8, 0.8, 0.8)
+                end
+                for pass = 1, 2 do
+                    for _, s in ipairs(sources) do
+                        local enemy = s.faction and s.faction ~= playerFaction or false
+                        if enemy == (pass == 2) then
+                            local shade = enemy and 0.55 or 1
+                            GameTooltip:AddLine(buildSourceLine(s) .. (enemy and ("  (" .. s.faction .. ")") or ""), shade, shade, shade)
+                        end
+                    end
+                end
+                -- The character level the weapon master asks for (Polearms: 20).
+                local required = tonumber(data.level)
+                if required and required > 1 then
+                    local short = playerLevel < required
+                    GameTooltip:AddLine("Requires level " .. required, 1, short and 0.13 or 1, short and 0.13 or 1)
+                end
+            end
+
+            local currentPhase = tonumber(TFG.GetCurrentPhase(TFG.selectedExpansion))
+            local entryPhase = getEffectivePhase(data)
+            if isProfession and currentPhase and entryPhase and entryPhase > currentPhase then
+                GameTooltip:AddLine(" ")
+                GameTooltip:AddLine("Introduced in Phase " .. tostring(entryPhase), 0.45, 0.75, 1)
+            end
+
+            local tooltipRank = getSpellRank(data)
+            if tooltipRank and tooltipRank > 0 then
+                GameTooltip:AddLine(" ")
+                GameTooltip:AddLine("Rank: |cFFFFFFFF" .. tooltipRank)
+            end
+
+            local tooltipCost = getTrainingCost(data)
+            if tooltipCost and tooltipCost > 0 then
+                local costText = TFG.FormatCost(tooltipCost)
+                if costText then
+                    local color = (GetMoney() < tooltipCost) and "|cFFFF0000" or "|cFFFFFFFF"
+                    GameTooltip:AddLine(" ")
+                    GameTooltip:AddLine("Cost: " .. color .. costText)
+                end
+            end
+
+            if isTalentSpell(data) then GameTooltip:AddLine(" ") GameTooltip:AddLine("Talent") end
+            local restrictedRaces = formatRestrictedRaces(data)
+            if restrictedRaces then
+                GameTooltip:AddLine(" ")
+                GameTooltip:AddLine("Races: |cFFFFFFFF" .. restrictedRaces)
+            end
+            if data.faction then GameTooltip:AddLine(" ") GameTooltip:AddLine("Faction: |cFFFFFFFF" .. data.faction) end
+
+            GameTooltip:Show()
+            -- A weapon in a city's group shows that city's map under its
+            -- tooltip, pinning the masters there who teach it.
+            local group = self.tfgGroup
+            if group and group.hasPosition then
+                local only = {}
+                for _, s in ipairs(TFG.GetSources(data)) do
+                    local trainer, place = tostring(s.location or ""):match("^(.-),%s*(.+)$")
+                    if place == group.place then only[trainer] = true end
+                end
+                showMapUnderTooltip(group, only)
+            end
+        end)
+
+        icon:SetScript("OnLeave", hideGroupMap)
+        return icon
+    end
+
+    -- Weapon skills: a class's icons grouped by the city that teaches them, so one
+    -- trip shows everything there is to learn there. A weapon taught in two cities
+    -- shows under both; one taught by both Orgrimmar masters shows once. Locations
+    -- read "Trainer, City". The other faction's cities only with Other Spells on.
+    local function trainerGroups(row, levelRequired)
+        local groups, byPlace = {}, {}
+        local function group(place, faction, rank)
+            local g = byPlace[place]
+            if not g then
+                g = { place = place, faction = faction, rank = rank, trainers = {}, positions = {}, spells = {}, seen = {} }
+                byPlace[place] = g
+                groups[#groups + 1] = g
+            end
+            return g
+        end
+        local function add(g, spell, trainer)
+            if trainer and not g.seen[trainer] then
+                g.seen[trainer] = true
+                g.trainers[#g.trainers + 1] = trainer
+            end
+            if not g.seen[spell] then
+                g.seen[spell] = true
+                g.spells[#g.spells + 1] = spell
+            end
+        end
+        for _, spell in ipairs(row.spells) do
+            if not shouldHideEntry(spell, row, levelRequired) then
+                local sources = TFG.GetSources(spell)
+                local placed = false
+                for _, s in ipairs(sources) do
+                    local trainer, place = tostring(s.location or ""):match("^(.-),%s*(.+)$")
+                    local enemy = s.faction and s.faction ~= playerFaction
+                    if place and (not enemy or TFG.showEnemySpells) then
+                        local g = group(place, s.faction, enemy and 1 or 0)
+                        add(g, spell, trainer)
+                        local pos = s.position
+                        if trainer and not g.positions[trainer] and type(pos) == "table"
+                            and tonumber(pos.map) and tonumber(pos.x) and tonumber(pos.y) then
+                            g.positions[trainer] = pos
+                            g.hasPosition = true
+                        end
+                        placed = true
+                    end
+                end
+                if not placed then
+                    add(group(#sources == 0 and "Starting skill" or "Other faction only", nil, 2), spell)
+                end
+            end
+        end
+        table.sort(groups, function(a, b)
+            if a.rank ~= b.rank then return a.rank < b.rank end
+            return a.place < b.place
+        end)
+        -- Same city, same label on every class's row.
+        for _, g in ipairs(groups) do table.sort(g.trainers) end
+        return groups
+    end
+
+    local GROUP_GAP, GROUP_LINE_GAP, GROUP_LABEL_GAP, GROUP_PAD = 16, 12, 4, 6
+    -- Lays the groups out left to right, each on its panel, wrapping like the
+    -- icons do. Returns the new yOffset below the row.
+    local function placeTrainerGroups(row, levelRequired, top, width)
+        local step = UI.ICON_SIZE + UI.ICON_SPACING
+        local perLine = math.max(1, math.floor((width - 2 * GROUP_PAD + UI.ICON_SPACING) / step))
+        local x, lineTop, lineHeight = 0, top, 0
+        for _, g in ipairs(trainerGroups(row, levelRequired)) do
+            local label = acquireRowLabel()
+            label:SetFont(label:GetFont(), 12, "OUTLINE")
+            label:SetTextColor(1, 0.82, 0)
+            local text = g.place
+            if #g.trainers > 0 then
+                text = text .. "  |cffe0d8c0(" .. table.concat(g.trainers, ", ") .. ")|r"
+            end
+            if g.rank == 1 then text = text .. "  |cffff6060" .. tostring(g.faction) .. "|r" end
+            label:SetText(text)
+            local labelHeight = label:GetStringHeight()
+            local count = #g.spells
+            local cols = math.min(count, perLine)
+            local lines = math.ceil(count / perLine)
+            local labelWidth = label:GetStringWidth()
+            local groupWidth = math.max(labelWidth, cols * step - UI.ICON_SPACING) + 2 * GROUP_PAD
+            local groupHeight = labelHeight + GROUP_LABEL_GAP + lines * step - UI.ICON_SPACING + 2 * GROUP_PAD
+            if x > 0 and x + groupWidth > width then
+                x, lineTop, lineHeight = 0, lineTop - lineHeight - GROUP_LINE_GAP, 0
+            end
+            acquireGroupPanel(x, lineTop, groupWidth, groupHeight)
+            local innerLeft, innerTop = x + GROUP_PAD, lineTop - GROUP_PAD
+            label:SetPoint("TOPLEFT", innerLeft, innerTop)
+            -- The label opens the city map once the data says where a trainer stands.
+            if g.hasPosition then
+                local hit = acquireGroupHit()
+                hit.group = g
+                hit:SetPoint("TOPLEFT", content, "TOPLEFT", innerLeft, innerTop)
+                hit:SetSize(labelWidth, labelHeight)
+                hit:SetScript("OnEnter", function(self)
+                    if isIconInsideScrollViewport(self) then showGroupMap(self, self.group) end
+                end)
+                hit:SetScript("OnLeave", hideGroupMap)
+            end
+            local iconTop = innerTop - labelHeight - GROUP_LABEL_GAP
+            for i, spell in ipairs(g.spells) do
+                local col, line = (i - 1) % perLine, math.floor((i - 1) / perLine)
+                local icon = placeIcon(spell, row, levelRequired, innerLeft + col * step, iconTop - line * step)
+                icon.tfgGroup = g
+            end
+            x = x + groupWidth + GROUP_GAP
+            lineHeight = math.max(lineHeight, groupHeight)
+        end
+        return lineTop - lineHeight - UI.ROW_PADDING_BOTTOM
+    end
+
     for _, row in ipairs(rowsToRender) do
         local visibleSpells = 0
         local levelRequired = tonumber(row.level) or tonumber(row.label:match("%d+")) or 0
@@ -1404,6 +2190,15 @@ function frame:Relayout()
             if (not isProfession) or isEntryAvailableInPhase(spell) then
                 if spell.faction or getRestrictedRaces(spell) then enemySpellsCount = enemySpellsCount + 1 end
                 if isTalentSpell(spell) then talentCount = talentCount + 1 end
+            end
+            -- Weapon skills hide the other faction's trainers, not entries.
+            if row._tfgIsClassGroup then
+                for _, s in ipairs(TFG.GetSources(spell)) do
+                    if s.faction and s.faction ~= playerFaction then
+                        enemySpellsCount = enemySpellsCount + 1
+                        break
+                    end
+                end
             end
 
             local hide, hideReason = shouldHideEntry(spell, row, levelRequired)
@@ -1485,6 +2280,9 @@ function frame:Relayout()
                 end
             yOffset = yOffset - label:GetHeight() - 8
 
+            if row._tfgIsClassGroup then
+                yOffset = placeTrainerGroups(row, levelRequired, yOffset, contentWidth)
+            else
             local xOffset = 0
             local rowMaxHeight = UI.ICON_SIZE
 
@@ -1497,471 +2295,14 @@ function frame:Relayout()
                         yOffset = yOffset - rowMaxHeight - UI.ICON_SPACING
                     end
 
-                    local icon = acquireEntryIcon()
-                    icon.tfgUnknown = row.isUnknown
-                    icon:SetSize(UI.ICON_SIZE, UI.ICON_SIZE)
-                    icon:SetPoint("TOPLEFT", xOffset, yOffset)
-                    -- Resolve texture: prefer explicit texture, then spell icon, then item icon if present.
-                    local tex = getSpellTexture(spell)
-                    if not tex then
-                        local sid = getSpellId(spell)
-                        if sid and sid > 0 then
-                            tex = select(3, GetSpellInfo(sid))
-                        else
-                            -- Some entries represent items (product/source) rather than spells.
-                            local itemId = getProductItemId(spell) or getRecipeSourceId(spell) or (spell and spell.itemId)
-                            if itemId then
-                                tex = select(10, GetItemInfo(itemId))
-                            end
-                        end
-                    end
-                    icon:SetTexture(tex or "Interface/ICONS/INV_Misc_QuestionMark")
-                    icon.spellData = spell
-                    icon:EnableMouse(false)
-
-                    -- Known-state overlay (semi-transparent green). Textures do not receive mouse
-                    -- events, so this will not interfere with icon tooltip/click handlers.
-                    if not icon.tfgKnownOverlay then
-                        -- Textures don't have CreateTexture; create the overlay from the parent
-                        -- frame and anchor it to the icon so it doesn't interfere with mouse events.
-                        local ov = content:CreateTexture(nil, "OVERLAY")
-                        ov:SetPoint("TOPLEFT", icon, "TOPLEFT", 0, 0)
-                        ov:SetPoint("BOTTOMRIGHT", icon, "BOTTOMRIGHT", 0, 0)
-                        ov:SetColorTexture(0, 1, 0, 0.35)
-                        ov:Hide()
-                        icon.tfgKnownOverlay = ov
-                    end
-
-                    -- Red-state overlay (semi-transparent red) for user-marked unlearned abilities.
-                    if not icon.tfgRedOverlay then
-                        local rov = content:CreateTexture(nil, "OVERLAY")
-                        rov:SetPoint("TOPLEFT", icon, "TOPLEFT", 0, 0)
-                        rov:SetPoint("BOTTOMRIGHT", icon, "BOTTOMRIGHT", 0, 0)
-                        rov:SetColorTexture(1, 0, 0, 0.6)
-                        rov:Hide()
-                        icon.tfgRedOverlay = rov
-                    end
-
-                    -- Blue border highlight for icons with active popup.
-                    if not icon.tfgBlueBorder then
-                        local bov = content:CreateTexture(nil, "OVERLAY")
-                        bov:SetTexture("Interface\\Buttons\\UI-ActionButton-Border")
-                        bov:SetBlendMode("ADD")
-                        bov:SetVertexColor(0.3, 0.5, 1, 1)
-                        bov:SetPoint("CENTER", icon, "CENTER", 0, 0)
-                        bov:SetSize(UI.ICON_SIZE * 1.4, UI.ICON_SIZE * 1.4)
-                        bov:Hide()
-                        icon.tfgBlueBorder = bov
-                    end
-
-                    -- Clickable indicator "+" in bottom-right corner for icons with popup content
-                    if not icon.tfgClickableIndicator then
-                        local indicator = content:CreateFontString(nil, "OVERLAY", "GameFontNormalLarge")
-                        indicator:SetPoint("BOTTOMRIGHT", icon, "BOTTOMRIGHT", -2, 2)
-                        indicator:SetText("+")
-                        indicator:SetTextColor(1, 1, 1)
-                        indicator:SetShadowOffset(1, -1)
-                        indicator:SetShadowColor(0, 0, 0, 1)
-                        indicator:Hide()
-                        icon.tfgClickableIndicator = indicator
-                    end
-
-                    -- Determine if this icon would show a popup. An unlock row opens the
-                    -- popup of its rank spell, so it is judged by that entry.
-                    local popupSubject = spell
-                    if spell and spell._tfgType == "PROFESSION_RANK_UNLOCK" then
-                        popupSubject = rankEntryFor(spell)
-                    end
-                    local recipeSourceId = getRecipeSourceId(popupSubject)
-                    -- Show recipe item if recipe_item_ids exists, regardless of source type
-                    local hasRecipeItem = (recipeSourceId and recipeSourceId > 0)
-                    local productItemId = getProductItemId(popupSubject)
-                    local hasProduct = (productItemId and productItemId > 0)
-                    local hasMaterials = (popupSubject and popupSubject.materials
-                        and type(popupSubject.materials) == "table" and #popupSubject.materials > 0)
-                    local hasSourceInfo = (popupSubject ~= nil and #TFG.GetSources(popupSubject) > 0)
-                    local wouldShowPopup = hasRecipeItem or hasProduct or hasMaterials or hasSourceInfo
-
-                    -- Show the clickable indicator only if popup would appear
-                    if wouldShowPopup and icon.tfgClickableIndicator then
-                        icon.tfgClickableIndicator:Show()
-                    elseif icon.tfgClickableIndicator then
-                        icon.tfgClickableIndicator:Hide()
-                    end
-
-                    -- Phase indicator in the top-right corner for phased
-                    -- profession entries. Phase 1 and unrestricted entries
-                    -- intentionally have no badge.
-                    if not icon.tfgPhaseIndicator then
-                        local phaseInd = content:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
-                        phaseInd:SetPoint("TOPRIGHT", icon, "TOPRIGHT", -2, -2)
-                        phaseInd:SetTextColor(1, 1, 1)
-                        phaseInd:SetShadowOffset(1, -1)
-                        phaseInd:SetShadowColor(0, 0, 0, 1)
-                        phaseInd:Hide()
-                        icon.tfgPhaseIndicator = phaseInd
-                    end
-
-                    local iconPhase = getEffectivePhase(spell)
-                    if isProfession and iconPhase and iconPhase > 1 then
-                        icon.tfgPhaseIndicator:SetText("P" .. tostring(iconPhase))
-                        icon.tfgPhaseIndicator:Show()
-                    else
-                        icon.tfgPhaseIndicator:Hide()
-                    end
-
-                    -- Talent indicator "T" in top-right corner for talent spells in class views
-                    if not icon.tfgTalentIndicator then
-                        local talentInd = content:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
-                        talentInd:SetPoint("TOPRIGHT", icon, "TOPRIGHT", -2, -2)
-                        talentInd:SetText("T")
-                        talentInd:SetTextColor(1, 1, 1)
-                        talentInd:SetShadowOffset(1, -1)
-                        talentInd:SetShadowColor(0, 0, 0, 1)
-                        talentInd:Hide()
-                        icon.tfgTalentIndicator = talentInd
-                    end
-
-                    -- Show talent indicator for talents in class views
-                    if isClassView and isTalentSpell(spell) and icon.tfgTalentIndicator then
-                        icon.tfgTalentIndicator:Show()
-                    elseif icon.tfgTalentIndicator then
-                        icon.tfgTalentIndicator:Hide()
-                    end
-
-                    -- Persisted red marks table
-                    TimbersFieldGuideDB = TimbersFieldGuideDB or {}
-                    TimbersFieldGuideDB.redMarked = TimbersFieldGuideDB.redMarked or {}
-
-                    if entryIsKnown(spell, row, levelRequired) then
-                        icon.tfgKnownOverlay:Show()
-                        -- If the spell became known, clear any previously set red mark
-                        local spellIdForMark = getSpellId(spell)
-                        if spellIdForMark then
-                            TimbersFieldGuideDB.redMarked[tostring(spellIdForMark)] = nil
-                            if icon.tfgRedOverlay then icon.tfgRedOverlay:Hide() end
-                        end
-                    else
-                        icon.tfgKnownOverlay:Hide()
-                        -- Show red overlay if user previously marked this unlearned ability
-                        local spellIdForMark = getSpellId(spell)
-                        if spellIdForMark and TimbersFieldGuideDB.redMarked[tostring(spellIdForMark)] then
-                            icon.tfgRedOverlay:Show()
-                        else
-                            icon.tfgRedOverlay:Hide()
-                        end
-                    end
-
-                    icon:SetScript("OnMouseDown", function(self, button)
-                        if not isIconInsideScrollViewport(self) then return end
-                        if button == "LeftButton" then
-                            -- A rank unlock row opens the popup on the rank spell it stands in
-                            -- for, under the row's own title. The copy is kept on the row so a
-                            -- second click finds the same table and toggles the popup shut.
-                            if self.spellData and self.spellData._tfgType == "PROFESSION_RANK_UNLOCK" then
-                                local unlock = self.spellData
-                                local rankEntry = rankEntryFor(unlock)
-                                if not unlock._tfgPopupData and rankEntry then
-                                    local copy = {}
-                                    for k, v in pairs(rankEntry) do copy[k] = v end
-                                    local cap = tonumber(unlock.required) or 0
-                                    copy.name = ("%s Skill Unlock: %s (%d-%d)"):format(
-                                        tostring(profName or "Profession"), tostring(unlock.rankName or ""),
-                                        cap > 75 and cap - 75 or 1, cap)
-                                    unlock._tfgPopupData = copy
-                                end
-                                if unlock._tfgPopupData then
-                                    TFG.EnsureProfessionPopup():ShowForSpell(self, unlock._tfgPopupData)
-                                end
-                                return
-                            end
-
-                            local data = self.spellData
-                            local popup = TFG.EnsureProfessionPopup()
-                            popup:ShowForSpell(self, data)
-                            return
-                        end
-
-                        -- Right-click: allow marking unlearned class abilities with a red overlay.
-                        if button == "RightButton" then
-                            -- Allow marking in any view (class/skill/profession). Only require a valid spell id.
-                            local sp = self.spellData
-                            local sid = getSpellId(sp)
-                            if not sid or sid <= 0 then return end
-
-                            -- Only allow marking if the entry is currently not known
-                            if entryIsKnown(sp, row, levelRequired) then
-                                -- If it is known, ensure red mark removed
-                                TimbersFieldGuideDB = TimbersFieldGuideDB or {}
-                                TimbersFieldGuideDB.redMarked = TimbersFieldGuideDB.redMarked or {}
-                                TimbersFieldGuideDB.redMarked[tostring(sid)] = nil
-                                if self.tfgRedOverlay then self.tfgRedOverlay:Hide() end
-                                return
-                            end
-
-                            TimbersFieldGuideDB = TimbersFieldGuideDB or {}
-                            TimbersFieldGuideDB.redMarked = TimbersFieldGuideDB.redMarked or {}
-                            local key = tostring(sid)
-                            if TimbersFieldGuideDB.redMarked[key] then
-                                -- Toggle off
-                                TimbersFieldGuideDB.redMarked[key] = nil
-                                if self.tfgRedOverlay then self.tfgRedOverlay:Hide() end
-                            else
-                                -- Toggle on
-                                TimbersFieldGuideDB.redMarked[key] = true
-                                if self.tfgRedOverlay then self.tfgRedOverlay:Show() end
-                            end
-                        end
-                    end)
-
-                    icon:SetScript("OnEnter", function(self)
-                        if not isIconInsideScrollViewport(self) then
-                            GameTooltip:Hide()
-                            return
-                        end
-                        local data = self.spellData
-
-                        if data and data._tfgType == "PROFESSION_RANK_UNLOCK" then
-                            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-                            local req = tonumber(data.required) or 0
-                            local trainAt = tonumber(data.effectiveTrainAt) or tonumber(data.trainAt) or levelRequired
-                            local rankName = (data.rankName and tostring(data.rankName) ~= "") and tostring(data.rankName) or "Rank"
-
-                            local profName = "Profession"
-                            do
-                                local selectionInfo = TFG.GetSelectionInfo(TFG.selectedExpansion, TFG.selectedFile)
-                                local child = selectionInfo and selectionInfo.child
-                                if child and child.name then
-                                    profName = tostring(child.name)
-                                end
-                            end
-                            local capText
-                            local capR, capG, capB = 1, 1, 1
-                            if professionMaxCap > 0 and req > 0 and professionMaxCap >= req then
-                                capText = "Already learned"
-                                capR, capG, capB = 0.5, 1, 0
-                            elseif professionLevel >= trainAt then
-                                capText = "Trainable now"
-                            else
-                                capText = "Trainable at " .. tostring(trainAt)
-                            end
-
-                            -- Show Blizzard's spell tooltip body for the matching Profession Training spell,
-                            -- then override the title line with our synthetic title.
-                            local trainingSpellId
-                            local db = TFG.activeDatabase
-                            if type(db) == "table" then
-                                local bucket = db[trainAt]
-                                if type(bucket) == "table" then
-                                    for _, s in ipairs(bucket) do
-                                        if s and hasSpellCategory(s, "Profession Training") and getSpellId(s) then
-                                            trainingSpellId = getSpellId(s)
-                                            break
-                                        end
-                                    end
-                                end
-
-                                -- Some professions store training unlock entries at their *cap* bracket
-                                -- instead of the synthetic "trainAt" threshold (e.g., First Aid Master at [300]
-                                -- while trainAt is 275). If we didn't find an exact match, choose the closest
-                                -- training entry by bracket key.
-                                if not trainingSpellId then
-                                    local bestId
-                                    local bestDiff
-                                    for k, spells in pairs(db) do
-                                        local lvl = tonumber(k)
-                                        if lvl and type(spells) == "table" then
-                                            for _, s in ipairs(spells or {}) do
-                                                if s and hasSpellCategory(s, "Profession Training") and getSpellId(s) then
-                                                    local diff = math.abs(lvl - (tonumber(trainAt) or 0))
-                                                    if not bestDiff or diff < bestDiff then
-                                                        bestDiff = diff
-                                                        bestId = getSpellId(s)
-                                                    end
-                                                end
-                                            end
-                                        end
-                                    end
-                                    trainingSpellId = bestId
-                                end
-
-                                if not trainingSpellId then
-                                    for _, spells in pairs(db) do
-                                        for _, s in ipairs(spells or {}) do
-                                            if s and hasSpellCategory(s, "Profession Training") and getSpellId(s) and (getSpellId(s) == tonumber(data.trainingSpellId)) then
-                                                trainingSpellId = getSpellId(s)
-                                                break
-                                            end
-                                        end
-                                        if trainingSpellId then break end
-                                    end
-                                end
-                            end
-
-                            -- Show the skill range this rank covers: from the
-                            -- previous tier's cap (tiers are 75 apart) up to this
-                            -- rank's cap, e.g. Master = "300-375".
-                            local rangeLow = (req > 75) and (req - 75) or 1
-                            local titleText = profName .. " Skill Unlock: " .. rankName .. " (" .. tostring(rangeLow) .. "-" .. tostring(req) .. ")"
-                            if trainingSpellId then
-                                -- Build a simple tooltip ourselves to guarantee the custom title
-                                -- is shown. We include the spell name (if resolvable) as a line.
-                                local sname = select(1, GetSpellInfo(trainingSpellId))
-                                GameTooltip:ClearLines()
-                                GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-                                GameTooltip:AddLine(titleText, 1, 1, 1)
-                                if sname and tostring(sname) ~= "" then
-                                    GameTooltip:AddLine(sname, 0.9, 0.9, 0.9)
-                                end
-                                GameTooltip:Show()
-                            else
-                                -- Fallback: no training spell found; show our synthetic tooltip only.
-                                GameTooltip:AddLine(titleText, 1, 1, 1)
-                            end
-
-                            -- Where the rank comes from and what it costs, as any other entry
-                            -- shows it, from the rank spell this row stands in for.
-                            if trainingSpellId and type(TFG.activeDatabase) == "table" then
-                                local shown = false
-                                for _, spells in pairs(TFG.activeDatabase) do
-                                    for _, e in ipairs(type(spells) == "table" and spells or {}) do
-                                        if not shown and getSpellId(e) == trainingSpellId then
-                                            for _, src in ipairs(groupedSources(e)) do
-                                                if not shown then GameTooltip:AddLine(" ") end
-                                                GameTooltip:AddLine(buildSourceLine(src), 1, 1, 1)
-                                                shown = true
-                                            end
-                                        end
-                                    end
-                                end
-                            end
-
-                            GameTooltip:AddLine(" ")
-                            GameTooltip:AddLine(capText, capR, capG, capB)
-                            GameTooltip:Show()
-                            return
-                        end
-                        GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-                        -- Prefer showing a spell tooltip when we have a valid spell id.
-                        local sid = getSpellId(data)
-                        if sid and sid > 0 then
-                            GameTooltip:SetSpellByID(sid)
-                        else
-                            -- Fallback: try to show item tooltip for product/source items.
-                            local itemId = getProductItemId(data) or getRecipeSourceId(data) or (data and data.itemId)
-                            local shown = false
-                            if itemId and tonumber(itemId) then
-                                local _, itemLink = GetItemInfo(tonumber(itemId))
-                                if itemLink then
-                                    GameTooltip:SetHyperlink(itemLink)
-                                    shown = true
-                                else
-                                    -- If item info isn't cached, SetItemByID is safer on modern clients; try it if available.
-                                    if GameTooltip.SetItemByID then
-                                        pcall(GameTooltip.SetItemByID, GameTooltip, tonumber(itemId))
-                                        shown = true
-                                    end
-                                end
-                            end
-
-                            if not shown then
-                                -- Last resort: show a simple tooltip with the entry name.
-                                GameTooltip:SetText(tostring(data and data.name or ""))
-                            end
-                        end
-
-                        -- Crafting difficulty levels display (orange/yellow/green/gray)
-                        if TFG.HasSkillUps(data) then
-                            local colors = { "|cFFFF7F00", "|cFFFFFF00", "|cFF00FF00", "|cFF9D9D9D" }
-                            local parts = {}
-                            for i = 1, 4 do
-                                local v = tonumber(data.levels[i] or 0) or 0
-                                if v > 0 then
-                                    table.insert(parts, colors[i] .. tostring(v) .. "|r")
-                                end
-                            end
-                            if #parts > 0 then
-                                -- Check if popup would be shown
-                                local tooltipRecipeId = getRecipeSourceId(data)
-                                -- Show recipe item if recipe_item_ids exists, regardless of source type
-                                local hasRecipeItem = (tooltipRecipeId and tooltipRecipeId > 0)
-                                local tooltipProductId = getProductItemId(data)
-                                local hasProduct = (tooltipProductId and tooltipProductId > 0)
-                                local hasMaterials = (data and data.materials
-                                    and type(data.materials) == "table" and #data.materials > 0)
-                                local wouldShowPopup = hasRecipeItem or hasProduct or hasMaterials
-
-                                GameTooltip:AddLine(" ")
-                                GameTooltip:AddLine(table.concat(parts, "  "))
-
-                                -- Show one line per source (type, location, cost,
-                                -- phase, faction).
-                                for _, s in ipairs(groupedSources(data)) do
-                                    GameTooltip:AddLine("Source: " .. buildSourceLine(s), 0.8, 0.8, 0.8)
-                                    -- A price that is not gold, and the standing the vendor
-                                    -- asks for, each on a line of their own under it.
-                                    local currencyText = TFG.FormatCurrencies(s)
-                                    if currencyText then
-                                        GameTooltip:AddLine("Cost: " .. currencyText, 0.8, 0.8, 0.8)
-                                    end
-                                    local repText = TFG.FormatReputation(s)
-                                    if repText then GameTooltip:AddLine(repText) end
-                                end
-                                if self.tfgUnknown then
-                                    GameTooltip:AddLine("In the game files, but not yet seen in game.", 0.6, 0.6, 0.6, true)
-                                end
-
-                                if wouldShowPopup then
-                                    GameTooltip:AddLine(" ")
-                                    GameTooltip:AddLine("Left click for details", 1, 1, 0)
-                                end
-                            end
-                        end
-
-                        -- NOTE: Source/location/cost info is intentionally not shown on the main list tooltip.
-                        -- It is shown only on the popup's recipe-source icon tooltip.
-
-                        local currentPhase = tonumber(TFG.GetCurrentPhase(TFG.selectedExpansion))
-                        local entryPhase = getEffectivePhase(data)
-                        if isProfession and currentPhase and entryPhase and entryPhase > currentPhase then
-                            GameTooltip:AddLine(" ")
-                            GameTooltip:AddLine("Introduced in Phase " .. tostring(entryPhase), 0.45, 0.75, 1)
-                        end
-
-                        local tooltipRank = getSpellRank(data)
-                        if tooltipRank and tooltipRank > 0 then
-                            GameTooltip:AddLine(" ")
-                            GameTooltip:AddLine("Rank: |cFFFFFFFF" .. tooltipRank)
-                        end
-
-                        local tooltipCost = getTrainingCost(data)
-                        if tooltipCost and tooltipCost > 0 then
-                            local costText = TFG.FormatCost(tooltipCost)
-                            if costText then
-                                local color = (GetMoney() < tooltipCost) and "|cFFFF0000" or "|cFFFFFFFF"
-                                GameTooltip:AddLine(" ")
-                                GameTooltip:AddLine("Cost: " .. color .. costText)
-                            end
-                        end
-
-                        if isTalentSpell(data) then GameTooltip:AddLine(" ") GameTooltip:AddLine("Talent") end
-                        local restrictedRaces = formatRestrictedRaces(data)
-                        if restrictedRaces then
-                            GameTooltip:AddLine(" ")
-                            GameTooltip:AddLine("Races: |cFFFFFFFF" .. restrictedRaces)
-                        end
-                        if data.faction then GameTooltip:AddLine(" ") GameTooltip:AddLine("Faction: |cFFFFFFFF" .. data.faction) end
-
-                        GameTooltip:Show()
-                    end)
-
-                    icon:SetScript("OnLeave", GameTooltip_Hide)
+                    placeIcon(spell, row, levelRequired, xOffset, yOffset)
                     xOffset = xOffset + UI.ICON_SIZE + UI.ICON_SPACING
                 end
             end
 
             yOffset = yOffset - rowMaxHeight - UI.ROW_PADDING_BOTTOM
-            
+            end
+
             totalSpellsShown = totalSpellsShown + visibleSpells
         end
     end
@@ -1979,6 +2320,7 @@ function frame:Relayout()
         known = isKnownShown and true or false,
         talent = isTalentShown,
         enemy = isEnemySpellsShown,
+        otherClasses = TFG.IsClassGroupedView(),
     }
     if type(TFG.OnAfterRelayout) == "function" then
         pcall(TFG.OnAfterRelayout)

@@ -115,5 +115,22 @@ function TFG.SetCostTooltip(tooltip, component)
     end
 end
 
+-- The world map's art for a map, to draw it outside the map window: the first
+-- layer's size and tile size, and its tile textures row by row. Nil when the
+-- client cannot give it.
+function TFG.GetMapArt(mapID)
+    if not (mapID and C_Map and C_Map.GetMapArtLayers and C_Map.GetMapArtLayerTextures) then return nil end
+    local ok, layers = pcall(C_Map.GetMapArtLayers, mapID)
+    local layer = ok and type(layers) == "table" and layers[1]
+    if not layer or not layer.layerWidth or not layer.tileWidth then return nil end
+    local okTextures, textures = pcall(C_Map.GetMapArtLayerTextures, mapID, 1)
+    if not okTextures or type(textures) ~= "table" or #textures == 0 then return nil end
+    return {
+        width = layer.layerWidth, height = layer.layerHeight,
+        tileWidth = layer.tileWidth, tileHeight = layer.tileHeight,
+        textures = textures,
+    }
+end
+
 TFG.GetItemInfo = GetItemInfo or (C_Item and C_Item.GetItemInfo)
 TFG.GetItemQualityColor = GetItemQualityColor or (C_Item and C_Item.GetItemQualityColor)

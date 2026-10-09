@@ -367,7 +367,14 @@ TFG.DATABASE_FILES = {
                         {key = "fishing", name = "Fishing", file = TFG.FISHING_FOREVER},
                     },
                 },
-                -- No Skills section: the Midnight engine has no weapon-skill or Riding skill lines.
+                skills = {
+                    name = "Skills",
+                    children = {
+                        -- Seeded from Classic Era until weapon masters are scanned.
+                        -- No Riding: the Midnight engine has no Riding skill line.
+                        {key = "weapon-skills", name = "Weapon Skills", file = TFG.WEAPON_SKILLS_FOREVER},
+                    },
+                },
             },
         }
     },
