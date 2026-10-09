@@ -1295,8 +1295,10 @@ TFG.ENGINEERING_FOREVER = {
             icon = "spell_fire_fireball02",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 18647,
+                    cost = 1800,
+                    location = "Sovik, Orgrimmar",
                 },
             },
             product = { item_id = 9318, qty = 3 },
@@ -3505,6 +3507,12 @@ TFG.ENGINEERING_FOREVER = {
                     type = "Vendor",
                     item_id = 16041,
                     cost = 12000,
+                    location = "Sovik, Orgrimmar",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 16041,
+                    cost = 12000,
                     location = "Gearcutter Cogspinner, Ironforge",
                 },
             },
@@ -3544,6 +3552,12 @@ TFG.ENGINEERING_FOREVER = {
             categories = { "Parts" },
             icon = "inv_gizmo_04",
             source = {
+                {
+                    type = "Vendor",
+                    item_id = 16042,
+                    cost = 12000,
+                    location = "Sovik, Orgrimmar",
+                },
                 {
                     type = "Vendor",
                     item_id = 16042,

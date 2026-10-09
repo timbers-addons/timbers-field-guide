@@ -575,6 +575,12 @@ TFG.COOKING_FOREVER = {
                     type = "Vendor",
                     item_id = 6368,
                     cost = 400,
+                    location = "Shankys, Orgrimmar",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 6368,
+                    cost = 400,
                     location = "Catherine Leland, Stormwind City",
                 },
             },
@@ -1566,6 +1572,12 @@ TFG.COOKING_FOREVER = {
                     cost = 2200,
                     location = "Stuart Fleming, Wetlands",
                 },
+                {
+                    type = "Vendor",
+                    item_id = 17062,
+                    cost = 2200,
+                    location = "Shankys, Orgrimmar",
+                },
             },
             product = { item_id = 8364, qty = 1 },
             materials = {
@@ -1636,6 +1648,12 @@ TFG.COOKING_FOREVER = {
                     item_id = 6369,
                     cost = 2200,
                     location = "Stuart Fleming, Wetlands",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 6369,
+                    cost = 2200,
+                    location = "Shankys, Orgrimmar",
                 },
             },
             product = { item_id = 4594, qty = 1 },

@@ -2616,6 +2616,12 @@ TFG.BLACKSMITHING_FOREVER = {
                     type = "Vendor",
                     item_id = 12162,
                     cost = 3000,
+                    location = "Sumi, Orgrimmar",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 12162,
+                    cost = 3000,
                     location = "Kaita Deepforge, Stormwind City",
                 },
             },
