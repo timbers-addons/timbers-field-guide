@@ -2752,7 +2752,7 @@ TFG.BLACKSMITHING_FOREVER = {
         {
             spell_id = 1252282,
             name = "Hard Gold Cuirass",
-            categories = { "Mail Helmets" },
+            categories = { "Mail Chestguards" },
             icon = "inv_chest_chain_06",
             source = {
                 {
@@ -7113,7 +7113,7 @@ TFG.BLACKSMITHING_FOREVER = {
         {
             spell_id = 1252345,
             name = "Enriched Thorium Leggings",
-            categories = { "Mail Legguards" },
+            categories = { "Plate Legguards" },
             icon = "inv_pants_plate_10",
             source = {
                 {

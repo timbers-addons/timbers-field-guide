@@ -5251,7 +5251,7 @@ TFG.LEATHERWORKING_FOREVER = {
         {
             spell_id = 1254990,
             name = "Charged Scorpid Shoulder",
-            categories = { "Leather Pauldrons" },
+            categories = { "Mail Pauldrons" },
             icon = "inv_shoulder_14",
             source = {
                 {

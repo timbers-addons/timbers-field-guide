@@ -276,7 +276,7 @@ TFG.COOKING_FOREVER = {
                 { item_id = 159, qty = 1 },
                 { item_id = 2447, qty = 2 },
             },
-            levels = { 25, 25, 45, 65 },
+            levels = { 25, 30, 37, 45 },
         },
         {
             spell_id = 1270633,
@@ -297,7 +297,7 @@ TFG.COOKING_FOREVER = {
                 { item_id = 6889, qty = 2 },
                 { item_id = 10284, qty = 1 },
             },
-            levels = { 25, 20, 32, 45 },
+            levels = { 25, 30, 37, 45 },
         },
         {
             spell_id = 1250156,
@@ -338,7 +338,7 @@ TFG.COOKING_FOREVER = {
                 { item_id = 2678, qty = 1 },
                 { item_id = 1475, qty = 1 },
             },
-            levels = { 25, 5, 10, 15 },
+            levels = { 25, 30, 37, 45 },
         },
     },
     [35] = {
@@ -381,7 +381,7 @@ TFG.COOKING_FOREVER = {
                 { item_id = 2675, qty = 1 },
                 { item_id = 10284, qty = 1 },
             },
-            levels = { 35, 30, 42, 55 },
+            levels = { 35, 40, 47, 55 },
         },
         {
             spell_id = 6414,
@@ -677,7 +677,7 @@ TFG.COOKING_FOREVER = {
                 { item_id = 6889, qty = 1 },
                 { item_id = 2678, qty = 4 },
             },
-            levels = { 75, 75, 92, 110 },
+            levels = { 75, 80, 87, 95 },
         },
         {
             spell_id = 2544,
@@ -964,7 +964,7 @@ TFG.COOKING_FOREVER = {
             materials = {
                 { item_id = 11291, qty = 1 },
             },
-            levels = { 90, 90, 115, 140 },
+            levels = { 90, 95, 100, 105 },
         },
         {
             spell_id = 3372,
@@ -1069,7 +1069,7 @@ TFG.COOKING_FOREVER = {
                 { item_id = 1179, qty = 1 },
                 { item_id = 785, qty = 2 },
             },
-            levels = { 100, 85, 105, 125 },
+            levels = { 100, 105, 115, 125 },
         },
         {
             spell_id = 2549,
@@ -1110,7 +1110,7 @@ TFG.COOKING_FOREVER = {
                 { item_id = 2678, qty = 2 },
                 { item_id = 3174, qty = 1 },
             },
-            levels = { 100, 85, 90, 95 },
+            levels = { 100, 105, 112, 120 },
         },
     },
     [110] = {
@@ -1354,7 +1354,7 @@ TFG.COOKING_FOREVER = {
                 { item_id = 12204, qty = 1 },
                 { item_id = 3713, qty = 1 },
             },
-            levels = { 140, 140, 142, 145 },
+            levels = { 140, 145, 147, 150 },
         },
     },
     [150] = {
@@ -1769,6 +1769,24 @@ TFG.COOKING_FOREVER = {
             levels = { 180, 185, 190, 195 },
         },
         {
+            spell_id = 1250150,
+            name = "Raging Raptor Ribs",
+            categories = { "Intellect Food" },
+            icon = "inv_misc_food_legion_spicedribroast",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 250181,
+                },
+            },
+            product = { item_id = 250073, qty = 1 },
+            materials = {
+                { item_id = 12184, qty = 2 },
+                { item_id = 2692, qty = 3 },
+            },
+            levels = { 180, 280, 295, 310 },
+        },
+        {
             spell_id = 1249960,
             name = "Triage Tea",
             categories = { "Soothing Drinks" },
@@ -1863,7 +1881,7 @@ TFG.COOKING_FOREVER = {
             materials = {
                 { item_id = 272941, qty = 1 },
             },
-            levels = { 200, 200, 212, 225 },
+            levels = { 200, 205, 212, 220 },
         },
         {
             spell_id = 15910,
@@ -2036,7 +2054,7 @@ TFG.COOKING_FOREVER = {
                 { item_id = 12184, qty = 2 },
                 { item_id = 2692, qty = 4 },
             },
-            levels = { 225, 225, 237, 250 },
+            levels = { 225, 230, 237, 245 },
         },
         {
             spell_id = 1250142,
@@ -2054,7 +2072,7 @@ TFG.COOKING_FOREVER = {
                 { item_id = 5471, qty = 2 },
                 { item_id = 2692, qty = 3 },
             },
-            levels = { 225, 225, 240, 255 },
+            levels = { 225, 230, 237, 245 },
         },
         {
             spell_id = 15915,
@@ -2277,7 +2295,7 @@ TFG.COOKING_FOREVER = {
                 { item_id = 3713, qty = 4 },
                 { item_id = 8146, qty = 1 },
             },
-            levels = { 250, 240, 245, 250 },
+            levels = { 250, 255, 262, 270 },
         },
     },
     [275] = {
@@ -2333,7 +2351,7 @@ TFG.COOKING_FOREVER = {
                 { item_id = 3730, qty = 3 },
                 { item_id = 3713, qty = 3 },
             },
-            levels = { 275, 275, 290, 305 },
+            levels = { 275, 280, 295, 310 },
         },
         {
             spell_id = 1250158,
@@ -2351,7 +2369,7 @@ TFG.COOKING_FOREVER = {
                 { item_id = 7974, qty = 3 },
                 { item_id = 3713, qty = 4 },
             },
-            levels = { 275, 200, 220, 240 },
+            levels = { 275, 280, 295, 310 },
         },
         {
             spell_id = 1250146,
@@ -2424,25 +2442,7 @@ TFG.COOKING_FOREVER = {
                 { item_id = 12184, qty = 3 },
                 { item_id = 3713, qty = 4 },
             },
-            levels = { 275, 260, 280, 300 },
-        },
-        {
-            spell_id = 1250150,
-            name = "Raging Raptor Ribs",
-            categories = { "Intellect Food" },
-            icon = "inv_misc_food_legion_spicedribroast",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 250181,
-                },
-            },
-            product = { item_id = 250073, qty = 1 },
-            materials = {
-                { item_id = 12184, qty = 2 },
-                { item_id = 2692, qty = 3 },
-            },
-            levels = { 275, 185, 200, 215 },
+            levels = { 275, 280, 295, 310 },
         },
         {
             spell_id = 22761,
@@ -2478,7 +2478,7 @@ TFG.COOKING_FOREVER = {
                 { item_id = 3712, qty = 3 },
                 { item_id = 3713, qty = 3 },
             },
-            levels = { 275, 260, 280, 300 },
+            levels = { 275, 280, 295, 310 },
         },
         {
             spell_id = 1250143,
@@ -2496,7 +2496,7 @@ TFG.COOKING_FOREVER = {
                 { item_id = 3404, qty = 3 },
                 { item_id = 3713, qty = 3 },
             },
-            levels = { 275, 275, 292, 310 },
+            levels = { 275, 280, 295, 310 },
         },
         {
             spell_id = 1250148,
@@ -2514,7 +2514,7 @@ TFG.COOKING_FOREVER = {
                 { item_id = 5471, qty = 3 },
                 { item_id = 3713, qty = 4 },
             },
-            levels = { 275, 260, 280, 300 },
+            levels = { 275, 280, 295, 310 },
         },
         {
             spell_id = 1294014,
@@ -2550,7 +2550,7 @@ TFG.COOKING_FOREVER = {
                 { item_id = 12202, qty = 3 },
                 { item_id = 3713, qty = 2 },
             },
-            levels = { 275, 175, 190, 205 },
+            levels = { 275, 280, 295, 310 },
         },
     },
     [285] = {

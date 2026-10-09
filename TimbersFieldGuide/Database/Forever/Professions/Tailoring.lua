@@ -1550,7 +1550,7 @@ TFG.TAILORING_FOREVER = {
         {
             spell_id = 1257382,
             name = "Pristine Gloves",
-            categories = { "Robes and Vests" },
+            categories = { "Gloves" },
             icon = "inv_gauntlets_16",
             source = {
                 {

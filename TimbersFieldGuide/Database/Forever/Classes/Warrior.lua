@@ -559,6 +559,17 @@ TFG.WARRIOR_FOREVER = {
             type = "Talent",
         },
         {
+            spell_id = 18499,
+            name = "Berserker Rage",
+            icon = "spell_nature_ancestralguardian",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 12000,
+                },
+            },
+        },
+        {
             spell_id = 2458,
             name = "Berserker Stance",
             icon = "ability_racial_avatar",
@@ -636,17 +647,6 @@ TFG.WARRIOR_FOREVER = {
             name = "Battle Shout",
             rank = 4,
             icon = "ability_warrior_battleshout",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 14000,
-                },
-            },
-        },
-        {
-            spell_id = 18499,
-            name = "Berserker Rage",
-            icon = "spell_nature_ancestralguardian",
             source = {
                 {
                     type = "Trainer",

@@ -3137,7 +3137,7 @@ TFG.ENCHANTING_FOREVER = {
                 { item_id = 16204, qty = 8 },
                 { item_id = 12363, qty = 4 },
             },
-            levels = { 290, 290, 295, 300 },
+            levels = { 290, 295, 297, 300 },
         },
         {
             spell_id = 23801,
@@ -3340,7 +3340,7 @@ TFG.ENCHANTING_FOREVER = {
                 { item_id = 16204, qty = 12 },
                 { item_id = 16202, qty = 4 },
             },
-            levels = { 295, 285, 287, 290 },
+            levels = { 295, 295, 297, 300 },
         },
         {
             spell_id = 20033,

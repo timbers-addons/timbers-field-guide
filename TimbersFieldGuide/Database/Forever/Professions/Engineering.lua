@@ -2492,7 +2492,7 @@ TFG.ENGINEERING_FOREVER = {
                 { item_id = 7191, qty = 1 },
                 { item_id = 3860, qty = 6 },
             },
-            levels = { 205, 205, 205, 205 },
+            levels = { 205, 205, 207, 210 },
         },
     },
     [210] = {
