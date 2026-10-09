@@ -1,5 +1,11 @@
 # Changelog
 
+## v2026.10.08 (2026-10-08)
+
+- Forever build 70291: Berserker Rage at level 30 for 1g 20s; cooking skill-up thresholds fixed; category fixes for Hard Gold Cuirass, Enriched Thorium Leggings, Charged Scorpid Shoulder and Pristine Gloves
+- Bumped version to v2026.10.08
+
+
 ## v2026.10.02c (2026-10-02)
 
 - Forever: Zephras Isle vendors sell the Sagefish recipes and the Linen and Woolen Reagent Bag patterns
