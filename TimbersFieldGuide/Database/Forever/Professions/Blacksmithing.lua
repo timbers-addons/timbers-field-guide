@@ -183,6 +183,12 @@ TFG.BLACKSMITHING_FOREVER = {
                     type = "Trainer",
                     cost = 100,
                 },
+                {
+                    type = "Quest",
+                    location = "Sam Sarsaparilla, Elwynn Forest",
+                    quest_id = 97916,
+                    quest_name = "Camping 101: Blacksmithing",
+                },
             },
             product = { item_id = 279944, qty = 1 },
             materials = {

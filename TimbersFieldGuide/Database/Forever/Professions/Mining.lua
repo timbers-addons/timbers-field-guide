@@ -77,6 +77,12 @@ TFG.MINING_FOREVER = {
                     type = "Trainer",
                     cost = 100,
                 },
+                {
+                    type = "Quest",
+                    location = "Sam Sarsaparilla, Elwynn Forest",
+                    quest_id = 97923,
+                    quest_name = "Camping 101: Mining",
+                },
             },
             product = { item_id = 279960, qty = 1 },
             materials = {
