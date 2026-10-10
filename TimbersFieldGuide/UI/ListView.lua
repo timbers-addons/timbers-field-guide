@@ -416,6 +416,12 @@ end
 -- pin on each trainer whose spot the data has (`position` on the source, map
 -- percent as the world map shows it). The art is the client's own map tiles.
 local MAP_TIP_WIDTH, PIN = 320, 5
+
+-- Cities in the order a mage learns their teleports; anything else after, by name.
+local CITY_ORDER = {
+    ["Stormwind City"] = 1, ["Ironforge"] = 2, ["Darnassus"] = 3, ["The Exodar"] = 4,
+    ["Orgrimmar"] = 1, ["Undercity"] = 2, ["Thunder Bluff"] = 3, ["Silvermoon City"] = 4,
+}
 local mapTip
 local function ensureMapTip()
     if mapTip then return mapTip end
@@ -2122,6 +2128,8 @@ function frame:Relayout()
         end
         table.sort(groups, function(a, b)
             if a.rank ~= b.rank then return a.rank < b.rank end
+            local oa, ob = CITY_ORDER[a.place] or 99, CITY_ORDER[b.place] or 99
+            if oa ~= ob then return oa < ob end
             return a.place < b.place
         end)
         -- Same city, same label on every class's row.
