@@ -12,6 +12,12 @@ TFG.COOKING_FOREVER = {
                     type = "Vendor",
                     item_id = 6325,
                     cost = 40,
+                    location = "Khara Deepwater, Loch Modan",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 6325,
+                    cost = 40,
                     location = "Nyalah Brightfire, Zephras Isle",
                 },
                 {
@@ -141,6 +147,12 @@ TFG.COOKING_FOREVER = {
                     item_id = 6326,
                     cost = 40,
                     location = "Nyalah Brightfire, Zephras Isle",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 6326,
+                    cost = 40,
+                    location = "Tansy Puddlefizz, Ironforge",
                 },
             },
             product = { item_id = 787, qty = 1 },
@@ -410,8 +422,10 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_food_13",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 6892,
+                    cost = 250,
+                    location = "Drac Roughcut, Loch Modan",
                 },
             },
             product = { item_id = 6890, qty = 1 },
@@ -505,8 +519,10 @@ TFG.COOKING_FOREVER = {
             icon = "inv_potion_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 6329,
+                    cost = 400,
+                    location = "Khara Deepwater, Loch Modan",
                 },
             },
             product = { item_id = 6316, qty = 1 },
@@ -526,6 +542,12 @@ TFG.COOKING_FOREVER = {
                     type = "Vendor",
                     item_id = 6328,
                     cost = 400,
+                    location = "Khara Deepwater, Loch Modan",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 6328,
+                    cost = 400,
                     location = "Nyalah Brightfire, Zephras Isle",
                 },
                 {
@@ -533,6 +555,12 @@ TFG.COOKING_FOREVER = {
                     item_id = 6328,
                     cost = 400,
                     location = "Nyoma, Teldrassil",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 6328,
+                    cost = 400,
+                    location = "Tansy Puddlefizz, Ironforge",
                 },
                 {
                     type = "Vendor",
@@ -631,8 +659,11 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_food_49",
             source = {
                 {
-                    type = "Item",
+                    type = "Quest",
                     item_id = 3679,
+                    location = "Vidra Hearthstove, Loch Modan",
+                    quest_id = 418,
+                    quest_name = "Thelsamar Blood Sausages",
                 },
             },
             product = { item_id = 3220, qty = 2 },
@@ -1578,6 +1609,12 @@ TFG.COOKING_FOREVER = {
                     cost = 2200,
                     location = "Shankys, Orgrimmar",
                 },
+                {
+                    type = "Vendor",
+                    item_id = 17062,
+                    cost = 2200,
+                    location = "Tansy Puddlefizz, Ironforge",
+                },
             },
             product = { item_id = 8364, qty = 1 },
             materials = {
@@ -1654,6 +1691,12 @@ TFG.COOKING_FOREVER = {
                     item_id = 6369,
                     cost = 2200,
                     location = "Shankys, Orgrimmar",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 6369,
+                    cost = 2200,
+                    location = "Tansy Puddlefizz, Ironforge",
                 },
             },
             product = { item_id = 4594, qty = 1 },

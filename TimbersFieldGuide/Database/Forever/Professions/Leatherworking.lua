@@ -1545,6 +1545,12 @@ TFG.LEATHERWORKING_FOREVER = {
                     cost = 500,
                     location = "Bombus Finespindle, Ironforge",
                 },
+                {
+                    type = "Vendor",
+                    item_id = 252784,
+                    cost = 500,
+                    location = "Jillian Tanner, Stormwind City",
+                },
             },
             product = { item_id = 252437, qty = 1 },
             materials = {
@@ -1571,6 +1577,12 @@ TFG.LEATHERWORKING_FOREVER = {
                     item_id = 252783,
                     cost = 500,
                     location = "Bombus Finespindle, Ironforge",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 252783,
+                    cost = 500,
+                    location = "Jillian Tanner, Stormwind City",
                 },
             },
             product = { item_id = 252436, qty = 1 },

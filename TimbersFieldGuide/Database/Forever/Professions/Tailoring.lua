@@ -144,6 +144,12 @@ TFG.TAILORING_FOREVER = {
                     type = "Vendor",
                     item_id = 253665,
                     cost = 150,
+                    location = "Rann Flamespinner, Loch Modan",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 253665,
+                    cost = 150,
                     location = "Dominique Stefano, City of Dalaran",
                 },
                 {
@@ -1277,6 +1283,12 @@ TFG.TAILORING_FOREVER = {
                     type = "Vendor",
                     item_id = 253668,
                     cost = 250,
+                    location = "Rann Flamespinner, Loch Modan",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 253668,
+                    cost = 250,
                     location = "Dominique Stefano, City of Dalaran",
                 },
                 {
@@ -1960,6 +1972,12 @@ TFG.TAILORING_FOREVER = {
                     type = "Vendor",
                     item_id = 6275,
                     cost = 800,
+                    location = "Rann Flamespinner, Loch Modan",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 6275,
+                    cost = 800,
                     location = "Ranik, The Barrens",
                 },
                 {
@@ -1988,6 +2006,12 @@ TFG.TAILORING_FOREVER = {
                     item_id = 5772,
                     cost = 500,
                     location = "Jennabink Powerseam, Wetlands",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 5772,
+                    cost = 500,
+                    location = "Rann Flamespinner, Loch Modan",
                 },
                 {
                     type = "Vendor",

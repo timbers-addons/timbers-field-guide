@@ -131,12 +131,28 @@ TFG.WARRIOR_FOREVER = {
             spell_id = 71,
             name = "Defensive Stance",
             icon = "ability_warrior_defensivestance",
+            source = {
+                {
+                    type = "Quest",
+                    location = "Bartleby, Stormwind City",
+                    quest_id = 1665,
+                    quest_name = "Bartleby's Mug",
+                },
+            },
         },
         {
             spell_id = 7386,
             name = "Sunder Armor",
             rank = 1,
             icon = "ability_warrior_sunder",
+            source = {
+                {
+                    type = "Quest",
+                    location = "Bartleby, Stormwind City",
+                    quest_id = 1665,
+                    quest_name = "Bartleby's Mug",
+                },
+            },
         },
         {
             spell_id = 355,
@@ -146,6 +162,12 @@ TFG.WARRIOR_FOREVER = {
                 {
                     type = "Item",
                     item_id = 6621,
+                },
+                {
+                    type = "Quest",
+                    location = "Bartleby, Stormwind City",
+                    quest_id = 1665,
+                    quest_name = "Bartleby's Mug",
                 },
             },
         },
