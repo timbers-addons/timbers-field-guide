@@ -611,7 +611,7 @@ local function ensureProfessionPopup()
         -- One card per group of sources that differ only in place, led by the
         -- player's race's quest or a place in this zone; the header still counts
         -- every place.
-        local groups = TFG.GroupSources(sources, GetRealZoneText and GetRealZoneText() or nil, TFG.MatchesPlayerRace)
+        local groups = TFG.GroupSources(sources, GetRealZoneText and GetRealZoneText() or nil, TFG.MatchesPlayerRace, playerFaction)
 
         if #sources > 0 then
             cursorY = cursorY - sectionGap

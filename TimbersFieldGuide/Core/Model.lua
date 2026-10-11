@@ -249,9 +249,12 @@ end
 -- `count` (how many were merged) and `locations` (every place named, with the
 -- races a place is limited to). The place shown leads with one only the
 -- player's race can use (`isOwnRace(source)`, true for a source with no race
--- limit), then one in `zone`, the player's current zone. Both are optional.
--- Takes the normalized copies from GetSources, so it may annotate them.
-function TFG.GroupSources(sources, zone, isOwnRace)
+-- limit), then one in `zone`, the player's current zone. The cards come in the
+-- same spirit: the player's side first (`playerFaction`; a source's side is its
+-- `_side` or `faction`), then the player's race, then the zone, then as listed.
+-- All three are optional. Takes the normalized copies from GetSources, so it
+-- may annotate them.
+function TFG.GroupSources(sources, zone, isOwnRace, playerFaction)
     local out, byKey = {}, {}
     for _, s in ipairs(sources) do
         local key = sourceGroupKey(s)
@@ -296,17 +299,28 @@ function TFG.GroupSources(sources, zone, isOwnRace)
             end
         end
     end
-    -- A card whose way in is for the player's race goes first (Bear Form: a
-    -- Skyborne sees Strength and Mercy before Body and Heart). Order otherwise kept.
-    if isOwnRace then
-        for i, g in ipairs(out) do g._order = i end
-        local function own(g) return (g.races and isOwnRace(g)) and 1 or 0 end
-        table.sort(out, function(a, b)
-            local oa, ob = own(a), own(b)
-            if oa ~= ob then return oa > ob end
-            return a._order < b._order
-        end)
+    -- Within the player's side, a card whose way in is for the player's race goes
+    -- first (Bear Form: a Skyborne sees Strength and Mercy before Body and Heart),
+    -- then one in the player's zone (Vejrek for a warrior standing in Dun Morogh).
+    -- Order otherwise kept, so the data file decides the rest.
+    for i, g in ipairs(out) do g._order = i end
+    local function tier(g)
+        local side = g._side or g.faction
+        return (playerFaction and side and side ~= playerFaction) and 1 or 0
     end
+    local function own(g) return (isOwnRace and g.races and isOwnRace(g)) and 1 or 0 end
+    local function here(g)
+        return (zone and zone ~= "" and g.location and inZone(tostring(g.location), zone)) and 1 or 0
+    end
+    table.sort(out, function(a, b)
+        local ta, tb = tier(a), tier(b)
+        if ta ~= tb then return ta < tb end
+        local oa, ob = own(a), own(b)
+        if oa ~= ob then return oa > ob end
+        local za, zb = here(a), here(b)
+        if za ~= zb then return za > zb end
+        return a._order < b._order
+    end)
     return out
 end
 

@@ -89,7 +89,7 @@ end
 
 -- Sources as shown: one per group that differs only in place, see TFG.GroupSources.
 local function groupedSources(entry)
-    return TFG.GroupSources(TFG.GetSources(entry), GetRealZoneText and GetRealZoneText() or nil, matchesPlayerRace)
+    return TFG.GroupSources(TFG.GetSources(entry), GetRealZoneText and GetRealZoneText() or nil, matchesPlayerRace, playerFaction)
 end
 
 local function formatRestrictedRaces(spell)
