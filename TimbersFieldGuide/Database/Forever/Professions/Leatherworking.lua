@@ -677,6 +677,24 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 50, 80, 95, 110 },
         },
         {
+            spell_id = 2159,
+            name = "Fine Leather Cloak",
+            categories = { "Cloaks" },
+            icon = "inv_misc_cape_10",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 250,
+                },
+            },
+            product = { item_id = 2308, qty = 1 },
+            materials = {
+                { item_id = 2318, qty = 10 },
+                { item_id = 2321, qty = 2 },
+            },
+            levels = { 50, 70, 85, 100 },
+        },
+        {
             spell_id = 2164,
             name = "Fine Leather Gloves",
             categories = { "Leather Gauntlets" },
@@ -703,6 +721,7 @@ TFG.LEATHERWORKING_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 500,
                 },
             },
             levels = { 50 },
@@ -853,6 +872,24 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 2320, qty = 4 },
             },
             levels = { 55, 60, 62, 65 },
+        },
+        {
+            spell_id = 3763,
+            name = "Fine Leather Belt",
+            categories = { "Leather Belts" },
+            icon = "inv_belt_04",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 300,
+                },
+            },
+            product = { item_id = 4246, qty = 1 },
+            materials = {
+                { item_id = 2318, qty = 6 },
+                { item_id = 2320, qty = 2 },
+            },
+            levels = { 55, 85, 100, 115 },
         },
     },
     [60] = {
@@ -1055,6 +1092,25 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 60, 90, 105, 120 },
         },
         {
+            spell_id = 3761,
+            name = "Fine Leather Tunic",
+            categories = { "Leather Chestguards" },
+            icon = "inv_chest_leather_09",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 350,
+                },
+            },
+            product = { item_id = 4243, qty = 1 },
+            materials = {
+                { item_id = 4231, qty = 3 },
+                { item_id = 2318, qty = 6 },
+                { item_id = 2320, qty = 4 },
+            },
+            levels = { 60, 90, 105, 120 },
+        },
+        {
             spell_id = 1255138,
             name = "Stormrider's Leather Belt",
             categories = { "Leather Belts" },
@@ -1237,6 +1293,25 @@ TFG.LEATHERWORKING_FOREVER = {
     },
     [70] = {
         {
+            spell_id = 9068,
+            name = "Light Leather Pants",
+            categories = { "Leather Legguards" },
+            icon = "inv_pants_02",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 400,
+                },
+            },
+            product = { item_id = 7282, qty = 1 },
+            materials = {
+                { item_id = 2318, qty = 10 },
+                { item_id = 4231, qty = 1 },
+                { item_id = 2321, qty = 1 },
+            },
+            levels = { 70, 100, 115, 130 },
+        },
+        {
             spell_id = 6703,
             name = "Murloc Scale Breastplate",
             categories = { "Leather Chestguards" },
@@ -1323,6 +1398,43 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 75, 100, 112, 125 },
         },
         {
+            spell_id = 3817,
+            name = "Cured Medium Hide",
+            categories = { "Reagents" },
+            icon = "inv_misc_pelt_bear_02",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 200,
+                },
+            },
+            product = { item_id = 4233, qty = 1 },
+            materials = {
+                { item_id = 4232, qty = 1 },
+                { item_id = 4289, qty = 1 },
+            },
+            levels = { 75, 90, 97, 105 },
+        },
+        {
+            spell_id = 2167,
+            name = "Dark Leather Boots",
+            categories = { "Leather Boots" },
+            icon = "inv_boots_05",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 350,
+                },
+            },
+            product = { item_id = 2315, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 4 },
+                { item_id = 2321, qty = 2 },
+                { item_id = 4340, qty = 1 },
+            },
+            levels = { 75, 100, 112, 125 },
+        },
+        {
             spell_id = 2169,
             name = "Dark Leather Tunic",
             categories = { "Leather Chestguards" },
@@ -1384,6 +1496,41 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 2320, qty = 2 },
             },
             levels = { 75, 100, 112, 125 },
+        },
+        {
+            spell_id = 2165,
+            name = "Medium Armor Kit",
+            categories = { "Armor Kits" },
+            icon = "inv_misc_armorkit_15",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 250,
+                },
+            },
+            product = { item_id = 2313, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 4 },
+                { item_id = 2320, qty = 1 },
+            },
+            levels = { 75, 90, 97, 105 },
+        },
+        {
+            spell_id = 20648,
+            name = "Medium Leather",
+            categories = { "Reagents" },
+            icon = "inv_misc_leatherscrap_05",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                },
+            },
+            product = { item_id = 2319, qty = 1 },
+            materials = {
+                { item_id = 2318, qty = 4 },
+            },
+            levels = { 75, 75, 80, 85 },
         },
         {
             spell_id = 1255126,
@@ -1621,6 +1768,25 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 85, 110, 122, 135 },
         },
         {
+            spell_id = 2168,
+            name = "Dark Leather Cloak",
+            categories = { "Cloaks" },
+            icon = "inv_misc_cape_10",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 350,
+                },
+            },
+            product = { item_id = 2316, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 8 },
+                { item_id = 2321, qty = 1 },
+                { item_id = 4340, qty = 1 },
+            },
+            levels = { 85, 110, 122, 135 },
+        },
+        {
             spell_id = 1255119,
             name = "Defender's Leather Boots",
             categories = { "Leather Boots" },
@@ -1748,6 +1914,25 @@ TFG.LEATHERWORKING_FOREVER = {
     },
     [90] = {
         {
+            spell_id = 7135,
+            name = "Dark Leather Pants",
+            categories = { "Leather Legguards" },
+            icon = "inv_pants_09",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 400,
+                },
+            },
+            product = { item_id = 5961, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 12 },
+                { item_id = 4340, qty = 1 },
+                { item_id = 2321, qty = 1 },
+            },
+            levels = { 90, 115, 127, 140 },
+        },
+        {
             spell_id = 7955,
             name = "Deviate Scale Belt",
             categories = { "Leather Belts" },
@@ -1811,6 +1996,25 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 95, 125, 137, 150 },
         },
         {
+            spell_id = 9074,
+            name = "Nimble Leather Gloves",
+            categories = { "Leather Gauntlets" },
+            icon = "inv_gauntlets_05",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                },
+            },
+            product = { item_id = 7285, qty = 1 },
+            materials = {
+                { item_id = 2457, qty = 1 },
+                { item_id = 2319, qty = 6 },
+                { item_id = 2321, qty = 1 },
+            },
+            levels = { 95, 120, 132, 145 },
+        },
+        {
             spell_id = 9072,
             name = "Red Whelp Gloves",
             categories = { "Leather Gauntlets" },
@@ -1826,6 +2030,25 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 7287, qty = 6 },
                 { item_id = 2319, qty = 4 },
                 { item_id = 2321, qty = 1 },
+            },
+            levels = { 95, 120, 132, 145 },
+        },
+        {
+            spell_id = 2166,
+            name = "Toughened Leather Armor",
+            categories = { "Leather Chestguards" },
+            icon = "inv_chest_leather_10",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 450,
+                },
+            },
+            product = { item_id = 2314, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 10 },
+                { item_id = 4231, qty = 2 },
+                { item_id = 2321, qty = 2 },
             },
             levels = { 95, 120, 132, 145 },
         },
@@ -1857,6 +2080,26 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 100, 125, 137, 150 },
         },
         {
+            spell_id = 3766,
+            name = "Dark Leather Belt",
+            categories = { "Leather Belts" },
+            icon = "inv_belt_03",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 400,
+                },
+            },
+            product = { item_id = 4249, qty = 1 },
+            materials = {
+                { item_id = 4246, qty = 1 },
+                { item_id = 4233, qty = 1 },
+                { item_id = 2321, qty = 2 },
+                { item_id = 4340, qty = 1 },
+            },
+            levels = { 100, 125, 137, 150 },
+        },
+        {
             spell_id = 1255107,
             name = "Defender's Leather Hood",
             categories = { "Leather Helmets" },
@@ -1878,6 +2121,25 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 249427, qty = 4 },
                 { item_id = 2321, qty = 2 },
                 { item_id = 2458, qty = 4 },
+            },
+            levels = { 100, 125, 137, 150 },
+        },
+        {
+            spell_id = 9145,
+            name = "Fletcher's Gloves",
+            categories = { "Leather Gauntlets" },
+            icon = "inv_gauntlets_05",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                },
+            },
+            product = { item_id = 7348, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 8 },
+                { item_id = 5116, qty = 4 },
+                { item_id = 2321, qty = 2 },
             },
             levels = { 100, 125, 137, 150 },
         },
@@ -1980,6 +2242,27 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 5498, qty = 4 },
             },
             levels = { 100, 125, 137, 150 },
+        },
+    },
+    [105] = {
+        {
+            spell_id = 3768,
+            name = "Hillman's Shoulders",
+            categories = { "Leather Pauldrons" },
+            icon = "inv_shoulder_08",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                },
+            },
+            product = { item_id = 4251, qty = 1 },
+            materials = {
+                { item_id = 4233, qty = 1 },
+                { item_id = 2319, qty = 4 },
+                { item_id = 2321, qty = 1 },
+            },
+            levels = { 105, 130, 142, 155 },
         },
     },
     [110] = {
@@ -2143,6 +2426,27 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 110, 135, 147, 160 },
         },
         {
+            spell_id = 3770,
+            name = "Toughened Leather Gloves",
+            categories = { "Leather Gauntlets" },
+            icon = "inv_gauntlets_24",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                },
+            },
+            product = { item_id = 4253, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 4 },
+                { item_id = 4233, qty = 2 },
+                { item_id = 3389, qty = 2 },
+                { item_id = 3182, qty = 2 },
+                { item_id = 2321, qty = 2 },
+            },
+            levels = { 110, 135, 147, 160 },
+        },
+        {
             spell_id = 1255101,
             name = "Trapper's Leather Tunic",
             categories = { "Leather Chestguards" },
@@ -2255,6 +2559,24 @@ TFG.LEATHERWORKING_FOREVER = {
             },
             levels = { 120, 145, 157, 170 },
         },
+        {
+            spell_id = 3764,
+            name = "Hillman's Leather Gloves",
+            categories = { "Leather Gauntlets" },
+            icon = "inv_gauntlets_05",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                },
+            },
+            product = { item_id = 4247, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 14 },
+                { item_id = 2321, qty = 4 },
+            },
+            levels = { 120, 145, 157, 170 },
+        },
     },
     [125] = {
         {
@@ -2300,6 +2622,24 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 1210, qty = 8 },
             },
             levels = { 125, 150, 160, 170 },
+        },
+        {
+            spell_id = 3818,
+            name = "Cured Heavy Hide",
+            categories = { "Reagents" },
+            icon = "inv_misc_pelt_wolf_02",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                },
+            },
+            product = { item_id = 4236, qty = 1 },
+            materials = {
+                { item_id = 4235, qty = 1 },
+                { item_id = 4289, qty = 3 },
+            },
+            levels = { 125, 135, 140, 145 },
         },
         {
             spell_id = 1255085,
@@ -2350,6 +2690,59 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 125, 180, 190, 200 },
         },
         {
+            spell_id = 3780,
+            name = "Heavy Armor Kit",
+            categories = { "Armor Kits" },
+            icon = "inv_misc_armorkit_16",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 750,
+                },
+            },
+            product = { item_id = 4265, qty = 1 },
+            materials = {
+                { item_id = 4234, qty = 5 },
+                { item_id = 2321, qty = 1 },
+            },
+            levels = { 125, 145, 155, 165 },
+        },
+        {
+            spell_id = 20649,
+            name = "Heavy Leather",
+            categories = { "Reagents" },
+            icon = "inv_misc_leatherscrap_07",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 1000,
+                },
+            },
+            product = { item_id = 4234, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 5 },
+            },
+            levels = { 125, 125, 130, 135 },
+        },
+        {
+            spell_id = 9194,
+            name = "Heavy Leather Ammo Pouch",
+            categories = { "Ammo Pouches" },
+            icon = "inv_misc_bag_09",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                },
+            },
+            product = { item_id = 7372, qty = 1 },
+            materials = {
+                { item_id = 4234, qty = 8 },
+                { item_id = 2321, qty = 2 },
+            },
+            levels = { 125, 145, 155, 165 },
+        },
+        {
             spell_id = 23190,
             name = "Heavy Leather Ball",
             categories = { "Miscellaneous" },
@@ -2368,6 +2761,42 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 2321, qty = 1 },
             },
             levels = { 125, 125, 130, 135 },
+        },
+        {
+            spell_id = 9193,
+            name = "Heavy Quiver",
+            categories = { "Quivers" },
+            icon = "inv_misc_quiver_02",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                },
+            },
+            product = { item_id = 7371, qty = 1 },
+            materials = {
+                { item_id = 4234, qty = 8 },
+                { item_id = 2321, qty = 2 },
+            },
+            levels = { 125, 145, 155, 165 },
+        },
+        {
+            spell_id = 3760,
+            name = "Hillman's Cloak",
+            categories = { "Cloaks" },
+            icon = "inv_misc_cape_07",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 600,
+                },
+            },
+            product = { item_id = 3719, qty = 1 },
+            materials = {
+                { item_id = 4234, qty = 5 },
+                { item_id = 2321, qty = 2 },
+            },
+            levels = { 125, 145, 155, 165 },
         },
         {
             spell_id = 1255083,
@@ -2770,6 +3199,10 @@ TFG.LEATHERWORKING_FOREVER = {
                     cost = 2000,
                     location = "Granny Finespindle, Ironforge",
                 },
+                {
+                    type = "Trainer",
+                    cost = 2000,
+                },
             },
             product = { item_id = 252523, qty = 1 },
             materials = {
@@ -2790,6 +3223,10 @@ TFG.LEATHERWORKING_FOREVER = {
                     item_id = 252826,
                     cost = 2000,
                     location = "Granny Finespindle, Ironforge",
+                },
+                {
+                    type = "Trainer",
+                    cost = 2000,
                 },
             },
             product = { item_id = 252459, qty = 1 },
@@ -2812,6 +3249,10 @@ TFG.LEATHERWORKING_FOREVER = {
                     cost = 2000,
                     location = "Granny Finespindle, Ironforge",
                 },
+                {
+                    type = "Trainer",
+                    cost = 2000,
+                },
             },
             product = { item_id = 252461, qty = 1 },
             materials = {
@@ -2832,6 +3273,10 @@ TFG.LEATHERWORKING_FOREVER = {
                     item_id = 252827,
                     cost = 2000,
                     location = "Granny Finespindle, Ironforge",
+                },
+                {
+                    type = "Trainer",
+                    cost = 2000,
                 },
             },
             product = { item_id = 252520, qty = 1 },
@@ -2854,6 +3299,10 @@ TFG.LEATHERWORKING_FOREVER = {
                     cost = 2000,
                     location = "Granny Finespindle, Ironforge",
                 },
+                {
+                    type = "Trainer",
+                    cost = 2000,
+                },
             },
             product = { item_id = 252522, qty = 1 },
             materials = {
@@ -2875,6 +3324,10 @@ TFG.LEATHERWORKING_FOREVER = {
                     cost = 2000,
                     location = "Granny Finespindle, Ironforge",
                 },
+                {
+                    type = "Trainer",
+                    cost = 2000,
+                },
             },
             product = { item_id = 252521, qty = 1 },
             materials = {
@@ -2895,6 +3348,10 @@ TFG.LEATHERWORKING_FOREVER = {
                     item_id = 252829,
                     cost = 2000,
                     location = "Granny Finespindle, Ironforge",
+                },
+                {
+                    type = "Trainer",
+                    cost = 2000,
                 },
             },
             product = { item_id = 252460, qty = 1 },
@@ -9233,30 +9690,6 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 0, 105, 105, 105 },
         },
         {
-            spell_id = 3818,
-            name = "Cured Heavy Hide",
-            categories = { "Reagents" },
-            icon = "inv_misc_pelt_wolf_02",
-            product = { item_id = 4236, qty = 1 },
-            materials = {
-                { item_id = 4235, qty = 1 },
-                { item_id = 4289, qty = 3 },
-            },
-            levels = { 0, 135, 140, 145 },
-        },
-        {
-            spell_id = 3817,
-            name = "Cured Medium Hide",
-            categories = { "Reagents" },
-            icon = "inv_misc_pelt_bear_02",
-            product = { item_id = 4233, qty = 1 },
-            materials = {
-                { item_id = 4232, qty = 1 },
-                { item_id = 4289, qty = 1 },
-            },
-            levels = { 0, 90, 97, 105 },
-        },
-        {
             spell_id = 19047,
             name = "Cured Rugged Hide",
             categories = { "Reagents" },
@@ -9279,59 +9712,6 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 8150, qty = 1 },
             },
             levels = { 0, 175, 175, 175 },
-        },
-        {
-            spell_id = 3766,
-            name = "Dark Leather Belt",
-            categories = { "Leather Belts" },
-            icon = "inv_belt_03",
-            product = { item_id = 4249, qty = 1 },
-            materials = {
-                { item_id = 4246, qty = 1 },
-                { item_id = 4233, qty = 1 },
-                { item_id = 2321, qty = 2 },
-                { item_id = 4340, qty = 1 },
-            },
-            levels = { 0, 125, 137, 150 },
-        },
-        {
-            spell_id = 2167,
-            name = "Dark Leather Boots",
-            categories = { "Leather Boots" },
-            icon = "inv_boots_05",
-            product = { item_id = 2315, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 4 },
-                { item_id = 2321, qty = 2 },
-                { item_id = 4340, qty = 1 },
-            },
-            levels = { 0, 100, 112, 125 },
-        },
-        {
-            spell_id = 2168,
-            name = "Dark Leather Cloak",
-            categories = { "Cloaks" },
-            icon = "inv_misc_cape_10",
-            product = { item_id = 2316, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 8 },
-                { item_id = 2321, qty = 1 },
-                { item_id = 4340, qty = 1 },
-            },
-            levels = { 0, 110, 122, 135 },
-        },
-        {
-            spell_id = 7135,
-            name = "Dark Leather Pants",
-            categories = { "Leather Legguards" },
-            icon = "inv_pants_09",
-            product = { item_id = 5961, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 12 },
-                { item_id = 4340, qty = 1 },
-                { item_id = 2321, qty = 1 },
-            },
-            levels = { 0, 115, 127, 140 },
         },
         {
             spell_id = 1255134,
@@ -9456,56 +9836,6 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 0, 245, 255, 265 },
         },
         {
-            spell_id = 3763,
-            name = "Fine Leather Belt",
-            categories = { "Leather Belts" },
-            icon = "inv_belt_04",
-            product = { item_id = 4246, qty = 1 },
-            materials = {
-                { item_id = 2318, qty = 6 },
-                { item_id = 2320, qty = 2 },
-            },
-            levels = { 0, 85, 100, 115 },
-        },
-        {
-            spell_id = 2159,
-            name = "Fine Leather Cloak",
-            categories = { "Cloaks" },
-            icon = "inv_misc_cape_10",
-            product = { item_id = 2308, qty = 1 },
-            materials = {
-                { item_id = 2318, qty = 10 },
-                { item_id = 2321, qty = 2 },
-            },
-            levels = { 0, 70, 85, 100 },
-        },
-        {
-            spell_id = 3761,
-            name = "Fine Leather Tunic",
-            categories = { "Leather Chestguards" },
-            icon = "inv_chest_leather_09",
-            product = { item_id = 4243, qty = 1 },
-            materials = {
-                { item_id = 4231, qty = 3 },
-                { item_id = 2318, qty = 6 },
-                { item_id = 2320, qty = 4 },
-            },
-            levels = { 0, 90, 105, 120 },
-        },
-        {
-            spell_id = 9145,
-            name = "Fletcher's Gloves",
-            categories = { "Leather Gauntlets" },
-            icon = "inv_gauntlets_05",
-            product = { item_id = 7348, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 8 },
-                { item_id = 5116, qty = 4 },
-                { item_id = 2321, qty = 2 },
-            },
-            levels = { 0, 125, 137, 150 },
-        },
-        {
             spell_id = 9198,
             name = "Frost Leather Cloak",
             categories = { "Cloaks" },
@@ -9604,53 +9934,6 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 0, 155, 165, 175 },
         },
         {
-            spell_id = 3780,
-            name = "Heavy Armor Kit",
-            categories = { "Armor Kits" },
-            icon = "inv_misc_armorkit_16",
-            product = { item_id = 4265, qty = 1 },
-            materials = {
-                { item_id = 4234, qty = 5 },
-                { item_id = 2321, qty = 1 },
-            },
-            levels = { 0, 145, 155, 165 },
-        },
-        {
-            spell_id = 20649,
-            name = "Heavy Leather",
-            categories = { "Reagents" },
-            icon = "inv_misc_leatherscrap_07",
-            product = { item_id = 4234, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 5 },
-            },
-            levels = { 0, 125, 130, 135 },
-        },
-        {
-            spell_id = 9194,
-            name = "Heavy Leather Ammo Pouch",
-            categories = { "Ammo Pouches" },
-            icon = "inv_misc_bag_09",
-            product = { item_id = 7372, qty = 1 },
-            materials = {
-                { item_id = 4234, qty = 8 },
-                { item_id = 2321, qty = 2 },
-            },
-            levels = { 0, 145, 155, 165 },
-        },
-        {
-            spell_id = 9193,
-            name = "Heavy Quiver",
-            categories = { "Quivers" },
-            icon = "inv_misc_quiver_02",
-            product = { item_id = 7371, qty = 1 },
-            materials = {
-                { item_id = 4234, qty = 8 },
-                { item_id = 2321, qty = 2 },
-            },
-            levels = { 0, 145, 155, 165 },
-        },
-        {
             spell_id = 10632,
             name = "Helm of Fire",
             categories = { "Leather Helmets" },
@@ -9664,79 +9947,6 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 8343, qty = 4 },
             },
             levels = { 0, 245, 255, 265 },
-        },
-        {
-            spell_id = 3760,
-            name = "Hillman's Cloak",
-            categories = { "Cloaks" },
-            icon = "inv_misc_cape_07",
-            product = { item_id = 3719, qty = 1 },
-            materials = {
-                { item_id = 4234, qty = 5 },
-                { item_id = 2321, qty = 2 },
-            },
-            levels = { 0, 145, 155, 165 },
-        },
-        {
-            spell_id = 3764,
-            name = "Hillman's Leather Gloves",
-            categories = { "Leather Gauntlets" },
-            icon = "inv_gauntlets_05",
-            product = { item_id = 4247, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 14 },
-                { item_id = 2321, qty = 4 },
-            },
-            levels = { 0, 145, 157, 170 },
-        },
-        {
-            spell_id = 3768,
-            name = "Hillman's Shoulders",
-            categories = { "Leather Pauldrons" },
-            icon = "inv_shoulder_08",
-            product = { item_id = 4251, qty = 1 },
-            materials = {
-                { item_id = 4233, qty = 1 },
-                { item_id = 2319, qty = 4 },
-                { item_id = 2321, qty = 1 },
-            },
-            levels = { 0, 130, 142, 155 },
-        },
-        {
-            spell_id = 9068,
-            name = "Light Leather Pants",
-            categories = { "Leather Legguards" },
-            icon = "inv_pants_02",
-            product = { item_id = 7282, qty = 1 },
-            materials = {
-                { item_id = 2318, qty = 10 },
-                { item_id = 4231, qty = 1 },
-                { item_id = 2321, qty = 1 },
-            },
-            levels = { 0, 100, 115, 130 },
-        },
-        {
-            spell_id = 2165,
-            name = "Medium Armor Kit",
-            categories = { "Armor Kits" },
-            icon = "inv_misc_armorkit_15",
-            product = { item_id = 2313, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 4 },
-                { item_id = 2320, qty = 1 },
-            },
-            levels = { 0, 90, 97, 105 },
-        },
-        {
-            spell_id = 20648,
-            name = "Medium Leather",
-            categories = { "Reagents" },
-            icon = "inv_misc_leatherscrap_05",
-            product = { item_id = 2319, qty = 1 },
-            materials = {
-                { item_id = 2318, qty = 4 },
-            },
-            levels = { 0, 75, 80, 85 },
         },
         {
             spell_id = 10558,
@@ -9785,19 +9995,6 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 4291, qty = 2 },
             },
             levels = { 0, 200, 210, 220 },
-        },
-        {
-            spell_id = 9074,
-            name = "Nimble Leather Gloves",
-            categories = { "Leather Gauntlets" },
-            icon = "inv_gauntlets_05",
-            product = { item_id = 7285, qty = 1 },
-            materials = {
-                { item_id = 2457, qty = 1 },
-                { item_id = 2319, qty = 6 },
-                { item_id = 2321, qty = 1 },
-            },
-            levels = { 0, 120, 132, 145 },
         },
         {
             spell_id = 19106,
@@ -10045,34 +10242,6 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 249410, qty = 2 },
             },
             levels = { 0, 105, 105, 105 },
-        },
-        {
-            spell_id = 2166,
-            name = "Toughened Leather Armor",
-            categories = { "Leather Chestguards" },
-            icon = "inv_chest_leather_10",
-            product = { item_id = 2314, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 10 },
-                { item_id = 4231, qty = 2 },
-                { item_id = 2321, qty = 2 },
-            },
-            levels = { 0, 120, 132, 145 },
-        },
-        {
-            spell_id = 3770,
-            name = "Toughened Leather Gloves",
-            categories = { "Leather Gauntlets" },
-            icon = "inv_gauntlets_24",
-            product = { item_id = 4253, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 4 },
-                { item_id = 4233, qty = 2 },
-                { item_id = 3389, qty = 2 },
-                { item_id = 3182, qty = 2 },
-                { item_id = 2321, qty = 2 },
-            },
-            levels = { 0, 135, 147, 160 },
         },
         {
             spell_id = 1255135,

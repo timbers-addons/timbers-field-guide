@@ -501,6 +501,7 @@ TFG.TAILORING_FOREVER = {
                 },
                 {
                     type = "Trainer",
+                    cost = 500,
                 },
             },
             product = { item_id = 253885, qty = 1 },
@@ -523,6 +524,7 @@ TFG.TAILORING_FOREVER = {
                 },
                 {
                     type = "Trainer",
+                    cost = 500,
                 },
             },
             product = { item_id = 253887, qty = 1 },
@@ -637,6 +639,12 @@ TFG.TAILORING_FOREVER = {
             categories = { "Robes and Vests" },
             icon = "inv_chest_cloth_23",
             source = {
+                {
+                    type = "Vendor",
+                    item_id = 6272,
+                    cost = 300,
+                    location = "Drake Lindgren, Elwynn Forest",
+                },
                 {
                     type = "Vendor",
                     item_id = 6272,
