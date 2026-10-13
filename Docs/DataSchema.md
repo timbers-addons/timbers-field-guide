@@ -266,10 +266,11 @@ One source per weapon master that teaches the weapon, with `location` written
 comma, so a weapon taught in two cities shows under both and one taught by two
 masters in the same city (Orgrimmar) shows once; keep that form. `faction` puts
 the city on its side: the other side's cities show only with the faction box on.
-An entry with no source is a starting skill (Wands). An entry-level `level` is
+Every entry has at least one source. An entry-level `level` is
 the character level the weapon masters ask for (Polearms: 20, at 1g); omit it
 when there is none. The page holds weapon
-proficiencies only; Parry, Block, Dual Wield and Throw are on the class pages.
+proficiencies a weapon master teaches: Parry, Block, Dual Wield and Throw are on the
+class pages, and Wands, which every caster starts with, is left out.
 Forever's file is seeded from Classic Era by the generator until weapon masters
 are scanned.
 

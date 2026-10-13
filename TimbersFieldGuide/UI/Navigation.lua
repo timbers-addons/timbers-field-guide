@@ -16,23 +16,12 @@ local CLASS_NAMES = {
     SHAMAN = "Shaman", WARLOCK = "Warlock", WARRIOR = "Warrior",
 }
 
-local CLASS_ICON_TEXTURE = "Interface\\GLUES\\CHARACTERCREATE\\UI-CHARACTERCREATE-CLASSES"
+local CLASS_ICON_TEXTURE = TFG.CLASS_ICON_TEXTURE
 local ABOUT_LOGO = "Interface\\AddOns\\TimbersFieldGuide\\Media\\logo-wide-new.blp"
 local ABOUT_URL = "https://github.com/timbers-addons/timbers-field-guide"
 local DEFAULT_ICON = "Interface\\Icons\\INV_Misc_QuestionMark"
 
--- Standard class-icon atlas coordinates (fallback if the client global is absent).
-local CLASS_ICON_TCOORDS = _G.CLASS_ICON_TCOORDS or {
-    WARRIOR = { 0, 0.25, 0, 0.25 },
-    MAGE    = { 0.25, 0.5, 0, 0.25 },
-    ROGUE   = { 0.5, 0.75, 0, 0.25 },
-    DRUID   = { 0.75, 1.0, 0, 0.25 },
-    HUNTER  = { 0, 0.25, 0.25, 0.5 },
-    SHAMAN  = { 0.25, 0.5, 0.25, 0.5 },
-    PRIEST  = { 0.5, 0.75, 0.25, 0.5 },
-    WARLOCK = { 0.75, 1.0, 0.25, 0.5 },
-    PALADIN = { 0, 0.25, 0.5, 0.75 },
-}
+local CLASS_ICON_TCOORDS = TFG.CLASS_ICON_TCOORDS
 
 local CLASS_ICONS = {
     DRUID = CLASS_ICON_TEXTURE, HUNTER = CLASS_ICON_TEXTURE, MAGE = CLASS_ICON_TEXTURE,

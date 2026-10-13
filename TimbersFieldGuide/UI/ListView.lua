@@ -291,6 +291,8 @@ local renderPool = {
     panelCount = 0,
     hits = {},
     hitCount = 0,
+    headerIcons = {},
+    headerIconCount = 0,
 }
 
 local function resetRenderPool()
@@ -298,6 +300,8 @@ local function resetRenderPool()
     renderPool.iconCount = 0
     renderPool.panelCount = 0
     renderPool.hitCount = 0
+    renderPool.headerIconCount = 0
+    for _, icon in ipairs(renderPool.headerIcons) do icon:Hide() end
 
     for _, panel in ipairs(renderPool.panels) do
         for _, t in pairs(panel) do t:Hide() end
@@ -355,22 +359,21 @@ local function acquireEntryIcon()
     return icon
 end
 
--- A panel in the style of the window chrome: a faint dark fill with a gold
--- hairline, drawn under the icons.
-local function acquireGroupPanel(left, top, width, height)
+-- A flat panel with a hairline border, drawn under the icons: a city's group
+-- (the default colors) or a class's header strip.
+local function acquireGroupPanel(left, top, width, height, fill, border)
     renderPool.panelCount = renderPool.panelCount + 1
     local panel = renderPool.panels[renderPool.panelCount]
     if not panel then
-        local function tex(layer, sub, color)
-            local t = content:CreateTexture(nil, layer, nil, sub)
-            t:SetColorTexture(unpack(color))
-            return t
-        end
-        panel = { fill = tex("BACKGROUND", 0, TFG.COLORS.groupPanel) }
+        panel = { fill = content:CreateTexture(nil, "BACKGROUND", nil, 0) }
         for _, edge in ipairs({ "top", "bottom", "left", "right" }) do
-            panel[edge] = tex("BACKGROUND", 1, TFG.COLORS.groupBorder)
+            panel[edge] = content:CreateTexture(nil, "BACKGROUND", nil, 1)
         end
         renderPool.panels[renderPool.panelCount] = panel
+    end
+    panel.fill:SetColorTexture(unpack(fill or TFG.COLORS.groupPanel))
+    for _, edge in ipairs({ "top", "bottom", "left", "right" }) do
+        panel[edge]:SetColorTexture(unpack(border or TFG.COLORS.groupBorder))
     end
     local right, bottom = left + width, top - height
     panel.fill:SetPoint("TOPLEFT", content, "TOPLEFT", left, top)
@@ -384,6 +387,19 @@ local function acquireGroupPanel(left, top, width, height)
     panel.right:SetPoint("TOPLEFT", content, "TOPLEFT", right - 1, top)
     panel.right:SetPoint("BOTTOMRIGHT", content, "TOPLEFT", right, bottom)
     for _, t in pairs(panel) do t:Show() end
+end
+
+-- The class icon on a weapon skills class header.
+local function acquireHeaderIcon()
+    renderPool.headerIconCount = renderPool.headerIconCount + 1
+    local icon = renderPool.headerIcons[renderPool.headerIconCount]
+    if not icon then
+        icon = content:CreateTexture(nil, "ARTWORK")
+        renderPool.headerIcons[renderPool.headerIconCount] = icon
+    end
+    icon:ClearAllPoints()
+    icon:Show()
+    return icon
 end
 
 local function acquireGroupHit()
@@ -2008,9 +2024,6 @@ function frame:Relayout()
             if row._tfgIsClassGroup then
                 local sources = TFG.GetSources(data)
                 GameTooltip:AddLine(" ")
-                if #sources == 0 then
-                    GameTooltip:AddLine("Known from character creation", 0.8, 0.8, 0.8)
-                end
                 for pass = 1, 2 do
                     for _, s in ipairs(sources) do
                         local enemy = s.faction and s.faction ~= playerFaction or false
@@ -2121,8 +2134,8 @@ function frame:Relayout()
                         placed = true
                     end
                 end
-                if not placed then
-                    add(group(#sources == 0 and "Starting skill" or "Other faction only", nil, 2), spell)
+                if not placed and #sources > 0 then
+                    add(group("Other faction only", nil, 2), spell)
                 end
             end
         end
@@ -2135,6 +2148,30 @@ function frame:Relayout()
         -- Same city, same label on every class's row.
         for _, g in ipairs(groups) do table.sort(g.trainers) end
         return groups
+    end
+
+    -- Weapon skills: each class starts on a strip with its icon and its name in
+    -- the class color, so the rows read apart under the city groups.
+    local HEADER_HEIGHT, HEADER_ICON = 28, 20
+    local function placeClassHeader(label, row, top, width)
+        acquireGroupPanel(0, top, width, HEADER_HEIGHT, TFG.COLORS.classHeader, TFG.COLORS.border)
+        local token = tostring(row._tfgClassKey or ""):upper()
+        local x = 8
+        local coords = TFG.CLASS_ICON_TCOORDS and TFG.CLASS_ICON_TCOORDS[token]
+        if coords then
+            local icon = acquireHeaderIcon()
+            icon:SetTexture(TFG.CLASS_ICON_TEXTURE)
+            icon:SetTexCoord(unpack(coords))
+            icon:SetSize(HEADER_ICON, HEADER_ICON)
+            icon:SetPoint("LEFT", content, "TOPLEFT", x, top - HEADER_HEIGHT / 2)
+            x = x + HEADER_ICON + 6
+        end
+        label:SetFont(label:GetFont(), 16, "OUTLINE")
+        label:ClearAllPoints()
+        label:SetPoint("LEFT", content, "TOPLEFT", x, top - HEADER_HEIGHT / 2)
+        label:SetTextColor(1, 1, 1)
+        label:SetText((TFG.CLASS_COLORS[token] or "") .. tostring(row._tfgDisplayLabel or token) .. "|r")
+        return top - HEADER_HEIGHT - 8
     end
 
     local GROUP_GAP, GROUP_LINE_GAP, GROUP_LABEL_GAP, GROUP_PAD = 16, 12, 4, 6
@@ -2286,7 +2323,11 @@ function frame:Relayout()
                         label:SetText("Level " .. levelRequired)
                     end
                 end
-            yOffset = yOffset - label:GetHeight() - 8
+            if row._tfgIsClassGroup then
+                yOffset = placeClassHeader(label, row, yOffset, contentWidth)
+            else
+                yOffset = yOffset - label:GetHeight() - 8
+            end
 
             if row._tfgIsClassGroup then
                 yOffset = placeTrainerGroups(row, levelRequired, yOffset, contentWidth)
