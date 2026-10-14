@@ -32,8 +32,9 @@ TFG.COLORS = {
     -- Weapon skills: the panel behind each city's group on the parchment.
     groupPanel = { 30 / 255, 18 / 255, 6 / 255, 0.18 },
     groupBorder = { 56 / 255, 38 / 255, 18 / 255, 0.5 },
-    -- ...and the strip that heads each class, in the inactive secondary tab's color.
-    classHeader = { 115 / 255, 92 / 255, 62 / 255, 1 },
+    -- ...and the band that heads each class, dark on the left and fading out to
+    -- the right like the Spellbook's section bars.
+    classHeader = { 38 / 255, 26 / 255, 14 / 255, 0.85 },
 }
 
 -- Recipe popup palette (matched to the navigation chrome).

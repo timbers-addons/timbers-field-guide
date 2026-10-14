@@ -138,5 +138,22 @@ function TFG.GetMapArt(mapID)
     }
 end
 
+-- Fill a texture with one color fading left to right from alpha `fromAlpha`
+-- to `toAlpha`. Newer engines take two color objects; older ones had
+-- SetGradientAlpha with plain numbers. A client with neither gets the color flat.
+function TFG.SetHorizontalFade(texture, r, g, b, fromAlpha, toAlpha)
+    texture:SetTexture("Interface\\Buttons\\WHITE8X8")
+    if CreateColor and texture.SetGradient then
+        local ok = pcall(texture.SetGradient, texture, "HORIZONTAL",
+            CreateColor(r, g, b, fromAlpha), CreateColor(r, g, b, toAlpha))
+        if ok then return end
+    end
+    if texture.SetGradientAlpha then
+        texture:SetGradientAlpha("HORIZONTAL", r, g, b, fromAlpha, r, g, b, toAlpha)
+        return
+    end
+    texture:SetVertexColor(r, g, b, fromAlpha)
+end
+
 TFG.GetItemInfo = GetItemInfo or (C_Item and C_Item.GetItemInfo)
 TFG.GetItemQualityColor = GetItemQualityColor or (C_Item and C_Item.GetItemQualityColor)

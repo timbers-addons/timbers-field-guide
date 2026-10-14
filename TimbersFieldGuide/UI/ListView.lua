@@ -293,6 +293,8 @@ local renderPool = {
     hitCount = 0,
     headerIcons = {},
     headerIconCount = 0,
+    headerBars = {},
+    headerBarCount = 0,
 }
 
 local function resetRenderPool()
@@ -302,6 +304,8 @@ local function resetRenderPool()
     renderPool.hitCount = 0
     renderPool.headerIconCount = 0
     for _, icon in ipairs(renderPool.headerIcons) do icon:Hide() end
+    renderPool.headerBarCount = 0
+    for _, bar in ipairs(renderPool.headerBars) do bar:Hide() end
 
     for _, panel in ipairs(renderPool.panels) do
         for _, t in pairs(panel) do t:Hide() end
@@ -400,6 +404,23 @@ local function acquireHeaderIcon()
     icon:ClearAllPoints()
     icon:Show()
     return icon
+end
+
+-- The band behind a weapon skills class header: the header color fading out to
+-- the right, like the Spellbook's section bars.
+local function acquireHeaderBar(left, top, width, height)
+    renderPool.headerBarCount = renderPool.headerBarCount + 1
+    local bar = renderPool.headerBars[renderPool.headerBarCount]
+    if not bar then
+        bar = content:CreateTexture(nil, "BACKGROUND")
+        local c = TFG.COLORS.classHeader
+        TFG.SetHorizontalFade(bar, c[1], c[2], c[3], c[4], 0)
+        renderPool.headerBars[renderPool.headerBarCount] = bar
+    end
+    bar:ClearAllPoints()
+    bar:SetPoint("TOPLEFT", content, "TOPLEFT", left, top)
+    bar:SetSize(width, height)
+    bar:Show()
 end
 
 local function acquireGroupHit()
@@ -2195,7 +2216,7 @@ function frame:Relayout()
     -- the class color, so the rows read apart under the city groups.
     local HEADER_HEIGHT, HEADER_ICON = 28, 20
     local function placeClassHeader(label, row, top, width)
-        acquireGroupPanel(0, top, width, HEADER_HEIGHT, TFG.COLORS.classHeader, TFG.COLORS.border)
+        acquireHeaderBar(0, top, width, HEADER_HEIGHT)
         local token = tostring(row._tfgClassKey or ""):upper()
         local x = 8
         local coords = TFG.CLASS_ICON_TCOORDS and TFG.CLASS_ICON_TCOORDS[token]
@@ -2216,6 +2237,7 @@ function frame:Relayout()
     end
 
     local GROUP_GAP, GROUP_LINE_GAP, GROUP_LABEL_GAP, GROUP_PAD = 16, 12, 4, 6
+    local CLASS_GAP = 16
     -- Lays the groups out left to right, each on its panel, wrapping like the
     -- icons do. Returns the new yOffset below the row.
     local function placeTrainerGroups(row, levelRequired, top, width)
@@ -2265,7 +2287,8 @@ function frame:Relayout()
             x = x + groupWidth + GROUP_GAP
             lineHeight = math.max(lineHeight, groupHeight)
         end
-        return lineTop - lineHeight - UI.ROW_PADDING_BOTTOM
+        -- Extra room before the next class's band, so each class reads as its own block.
+        return lineTop - lineHeight - UI.ROW_PADDING_BOTTOM - CLASS_GAP
     end
 
     for _, row in ipairs(rowsToRender) do
