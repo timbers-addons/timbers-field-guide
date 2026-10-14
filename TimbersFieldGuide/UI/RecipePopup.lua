@@ -42,6 +42,8 @@ local FACTION_ICON = {
     Horde = "Interface\\FriendsFrame\\PlusManz-Horde",
 }
 local FACTION_ICON_SIZE = 14
+-- Trainer cards a Profession Training popup shows before "+N more trainers".
+local MAX_TRAINER_CARDS = 4
 
 -- A faction's emblem as inline text for a tooltip line, or "" for no side.
 local function factionMark(side)
@@ -142,8 +144,13 @@ local function ensureProfessionPopup()
         card:SetBackdropColor(unpack(POPUP.cardBg))
         card:SetBackdropBorderColor(unpack(POPUP.cardBorder))
 
-        -- A card that stands for several vendors or quest givers lists them all on hover.
+        -- A card that stands for several vendors or quest givers lists them all on
+        -- hover; a Profession Training trainer's card shows the map with their spot.
         card:SetScript("OnEnter", function(self)
+            if self.mapGroup then
+                TFG.ShowTrainerMap(self, self.mapGroup)
+                return
+            end
             if not self.places then return end
             GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
             GameTooltip:AddLine(self.placesTitle or "Available from")
@@ -152,7 +159,7 @@ local function ensureProfessionPopup()
             end
             GameTooltip:Show()
         end)
-        card:SetScript("OnLeave", GameTooltip_Hide)
+        card:SetScript("OnLeave", function() TFG.HideTrainerMap() end)
 
         local icon = CreateFrame("Button", nil, card)
         icon:SetSize(32, 32)
@@ -277,6 +284,7 @@ local function ensureProfessionPopup()
             card:ClearAllPoints()
             card.icon.itemId = nil
             card.places, card.placesTitle = nil, nil
+            card.mapGroup = nil
         end
     end
 
@@ -598,6 +606,10 @@ local function ensureProfessionPopup()
         self:ClearSourceCards()
         local sources = TFG.GetSources(spellData)
         local playerFaction = UnitFactionGroup("player")
+        local isTraining = false
+        for _, c in ipairs(spellData.categories or {}) do
+            if c == "Profession Training" then isTraining = true end
+        end
         for i = 1, #sources do
             sources[i]._idx = i
             sources[i]._side = TFG.SourceFaction(sources[i])
@@ -626,6 +638,26 @@ local function ensureProfessionPopup()
                 xPad + self.sourcesLabel:GetStringWidth() + 24 + self.sourcesCountText:GetStringWidth())
             cursorY = cursorY - 18
 
+            -- A rank taught in every town would run off the screen: the first few
+            -- trainers get cards, the rest are listed on hover of one more card.
+            if isTraining and #groups > MAX_TRAINER_CARDS then
+                local lines = {}
+                for i = MAX_TRAINER_CARDS + 1, #groups do
+                    local m = groups[i]
+                    local line = factionMark(m._side) .. (TFG.FormatSourcePlaces(m) or "Trainer")
+                    local pos = m.position
+                    if type(pos) == "table" and tonumber(pos.x) and tonumber(pos.y) then
+                        line = line .. ("  |cff808080%.1f, %.1f|r"):format(pos.x, pos.y)
+                    end
+                    lines[#lines + 1] = line
+                    groups[i] = nil
+                end
+                groups[MAX_TRAINER_CARDS + 1] = {
+                    type = "Trainer", count = 1, members = {}, _more = lines,
+                    location = ("+%d more trainers"):format(#lines),
+                }
+            end
+
             local cardH = 44
             for i, s in ipairs(groups) do
                 local card = self:AcquireSourceCard(i)
@@ -647,6 +679,7 @@ local function ensureProfessionPopup()
                         card.placesTitle = (s.type == "Quest") and "Offered by" or "Sold by"
                     end
                 end
+                if s._more then card.places, card.placesTitle = s._more, "Also taught by" end
                 card:ClearAllPoints()
                 card:SetPoint("TOPLEFT", self, "TOPLEFT", xPad, cursorY)
                 card:SetPoint("TOPRIGHT", self, "TOPRIGHT", -xPad, cursorY)
@@ -802,6 +835,14 @@ local function ensureProfessionPopup()
                     card.title:SetPoint("TOPLEFT", card, "TOPLEFT", textX, -7)
                     card.title:SetText(titleText)
                     local titleRight = xPad + textX + card.title:GetStringWidth() + 8
+
+                    -- "Trainer, Zone" with a scanned spot: hovering the card shows the map.
+                    local pos = s.position
+                    if isTraining and places and type(pos) == "table" and tonumber(pos.map) and tonumber(pos.x) and tonumber(pos.y) then
+                        local trainer = tostring(s.location):match("^(.-),") or tostring(s.location)
+                        local place = tostring(s.location):match(",%s*(.+)$") or trainer
+                        card.mapGroup = { place = place, trainers = { trainer }, positions = { [trainer] = pos } }
+                    end
 
                     -- Phase tag: right-aligned on the title row when later than launch.
                     if s.phase and s.phase > 1 then

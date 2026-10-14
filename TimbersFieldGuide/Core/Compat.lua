@@ -116,8 +116,9 @@ function TFG.SetCostTooltip(tooltip, component)
 end
 
 -- The world map's art for a map, to draw it outside the map window: the first
--- layer's size and tile size, and its tile textures row by row. Nil when the
--- client cannot give it.
+-- layer's size and tile size, and its tile textures row by row. A zone's base
+-- art is bare parchment; `overlays` are the areas the character has explored,
+-- drawn over it as the world map does. Nil when the client cannot give it.
 function TFG.GetMapArt(mapID)
     if not (mapID and C_Map and C_Map.GetMapArtLayers and C_Map.GetMapArtLayerTextures) then return nil end
     local ok, layers = pcall(C_Map.GetMapArtLayers, mapID)
@@ -125,10 +126,15 @@ function TFG.GetMapArt(mapID)
     if not layer or not layer.layerWidth or not layer.tileWidth then return nil end
     local okTextures, textures = pcall(C_Map.GetMapArtLayerTextures, mapID, 1)
     if not okTextures or type(textures) ~= "table" or #textures == 0 then return nil end
+    local overlays
+    if C_MapExplorationInfo and C_MapExplorationInfo.GetExploredMapTextures then
+        local okOverlays, explored = pcall(C_MapExplorationInfo.GetExploredMapTextures, mapID)
+        if okOverlays and type(explored) == "table" then overlays = explored end
+    end
     return {
         width = layer.layerWidth, height = layer.layerHeight,
         tileWidth = layer.tileWidth, tileHeight = layer.tileHeight,
-        textures = textures,
+        textures = textures, overlays = overlays or {},
     }
 end
 

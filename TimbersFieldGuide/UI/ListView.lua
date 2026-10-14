@@ -449,7 +449,7 @@ local function ensureMapTip()
     mapTip.art = CreateFrame("Frame", nil, mapTip)
     mapTip.art:SetPoint("TOPLEFT", 4, -4)
     if mapTip.art.SetClipsChildren then mapTip.art:SetClipsChildren(true) end
-    mapTip.tiles, mapTip.pins = {}, {}
+    mapTip.tiles, mapTip.pins, mapTip.overlays = {}, {}, {}
     mapTip:Hide()
     return mapTip
 end
@@ -485,6 +485,44 @@ local function showMapUnderTooltip(group, only)
         t:ClearAllPoints()
         t:SetPoint("TOPLEFT", col * art.tileWidth * scale, -row * art.tileHeight * scale)
         t:Show()
+    end
+    -- Explored areas over the parchment, cut into tiles as the world map cuts
+    -- them (the last tile of a row or column sits in a power-of-two file).
+    for _, t in ipairs(tip.overlays) do t:Hide() end
+    local o = 0
+    for _, info in ipairs(art.overlays) do
+        if not info.isShownByMouseOver then
+            local wide = math.ceil(info.textureWidth / art.tileWidth)
+            local tall = math.ceil(info.textureHeight / art.tileHeight)
+            for j = 1, tall do
+                local h, fileH = art.tileHeight, art.tileHeight
+                if j == tall then
+                    h = info.textureHeight % art.tileHeight
+                    if h == 0 then h = art.tileHeight end
+                    fileH = 16
+                    while fileH < h do fileH = fileH * 2 end
+                end
+                for k = 1, wide do
+                    local w, fileW = art.tileWidth, art.tileWidth
+                    if k == wide then
+                        w = info.textureWidth % art.tileWidth
+                        if w == 0 then w = art.tileWidth end
+                        fileW = 16
+                        while fileW < w do fileW = fileW * 2 end
+                    end
+                    o = o + 1
+                    local t = tip.overlays[o] or tip.art:CreateTexture(nil, "ARTWORK", nil, 1)
+                    tip.overlays[o] = t
+                    t:SetTexture(info.fileDataIDs[(j - 1) * wide + k])
+                    t:SetTexCoord(0, w / fileW, 0, h / fileH)
+                    t:SetSize(w * scale, h * scale)
+                    t:ClearAllPoints()
+                    t:SetPoint("TOPLEFT", (info.offsetX + art.tileWidth * (k - 1)) * scale,
+                        -(info.offsetY + art.tileHeight * (j - 1)) * scale)
+                    t:Show()
+                end
+            end
+        end
     end
     for _, p in ipairs(tip.pins) do p.ring:Hide(); p.dot:Hide() end
     local n = 0
@@ -533,6 +571,9 @@ local function hideGroupMap()
     GameTooltip:Hide()
     if mapTip then mapTip:Hide() end
 end
+
+-- The popup's Profession Training cards show a trainer's spot the same way.
+TFG.ShowTrainerMap, TFG.HideTrainerMap = showGroupMap, hideGroupMap
 
 local function updateIconMouseState()
     for index = 1, renderPool.iconCount do
