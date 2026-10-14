@@ -97,6 +97,9 @@ TFG.TAILORING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 10,
+                    location = "Eldrin, Elwynn Forest",
+                    position = { map = 1429, x = 79.3, y = 68.9 },
+                    faction = "Alliance",
                 },
             },
             levels = { 1 },

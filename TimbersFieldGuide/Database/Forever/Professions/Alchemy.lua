@@ -63,6 +63,9 @@ TFG.ALCHEMY_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 10,
+                    location = "Ghak Healtouch, Loch Modan",
+                    position = { map = 1432, x = 37, y = 49.2 },
+                    faction = "Alliance",
                 },
             },
             levels = { 1 },

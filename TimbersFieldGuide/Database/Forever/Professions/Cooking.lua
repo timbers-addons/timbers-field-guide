@@ -170,6 +170,16 @@ TFG.COOKING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 100,
+                    location = "Tomas, Lion's Pride Inn",
+                    position = { map = 1429, x = 44.3, y = 66 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 100,
+                    location = "Stephen Ryback, Stormwind City",
+                    position = { map = 1453, x = 78.3, y = 53 },
+                    faction = "Alliance",
                 },
             },
             levels = { 1 },
@@ -645,6 +655,16 @@ TFG.COOKING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 500,
+                    location = "Tomas, Lion's Pride Inn",
+                    position = { map = 1429, x = 44.3, y = 66 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 500,
+                    location = "Stephen Ryback, Stormwind City",
+                    position = { map = 1453, x = 78.3, y = 53 },
+                    faction = "Alliance",
                 },
             },
             levels = { 50 },

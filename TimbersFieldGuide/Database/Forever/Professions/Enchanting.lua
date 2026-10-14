@@ -102,6 +102,16 @@ TFG.ENCHANTING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 10,
+                    location = "Kitta Firewind, Elwynn Forest",
+                    position = { map = 1429, x = 64.9, y = 70.7 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 10,
+                    location = "Lucan Cordell, Stormwind City",
+                    position = { map = 1453, x = 52.9, y = 74.1 },
+                    faction = "Alliance",
                 },
             },
             levels = { 1 },
@@ -307,6 +317,16 @@ TFG.ENCHANTING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 500,
+                    location = "Kitta Firewind, Elwynn Forest",
+                    position = { map = 1429, x = 64.9, y = 70.7 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 500,
+                    location = "Lucan Cordell, Stormwind City",
+                    position = { map = 1453, x = 52.9, y = 74.1 },
+                    faction = "Alliance",
                 },
             },
             levels = { 50 },
@@ -756,6 +776,9 @@ TFG.ENCHANTING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 5000,
+                    location = "Kitta Firewind, Elwynn Forest",
+                    position = { map = 1429, x = 64.9, y = 70.7 },
+                    faction = "Alliance",
                 },
             },
             levels = { 125 },

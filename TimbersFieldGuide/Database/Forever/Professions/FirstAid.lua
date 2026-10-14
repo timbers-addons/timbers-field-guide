@@ -46,6 +46,16 @@ TFG.FIRST_AID_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 100,
+                    location = "Shaina Fuller, Stormwind City",
+                    position = { map = 1453, x = 52.8, y = 44.9 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 100,
+                    location = "Michelle Belle, Lion's Pride Inn",
+                    position = { map = 1429, x = 43.4, y = 65.7 },
+                    faction = "Alliance",
                 },
             },
             levels = { 1 },
@@ -102,6 +112,16 @@ TFG.FIRST_AID_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 500,
+                    location = "Shaina Fuller, Stormwind City",
+                    position = { map = 1453, x = 52.8, y = 44.9 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 500,
+                    location = "Michelle Belle, Lion's Pride Inn",
+                    position = { map = 1429, x = 43.4, y = 65.7 },
+                    faction = "Alliance",
                 },
             },
             levels = { 50 },

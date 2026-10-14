@@ -28,6 +28,9 @@ TFG.ENGINEERING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 10,
+                    location = "Sprite Jumpsprocket, Stormwind City",
+                    position = { map = 1453, x = 62, y = 30.9 },
+                    faction = "Alliance",
                 },
             },
             levels = { 1 },

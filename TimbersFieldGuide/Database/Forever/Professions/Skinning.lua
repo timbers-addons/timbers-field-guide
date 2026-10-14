@@ -11,6 +11,9 @@ TFG.SKINNING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 10,
+                    location = "Helene Peltskinner, Elwynn Forest",
+                    position = { map = 1429, x = 46.3, y = 62.2 },
+                    faction = "Alliance",
                 },
             },
             levels = { 1 },
@@ -48,6 +51,9 @@ TFG.SKINNING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 500,
+                    location = "Helene Peltskinner, Elwynn Forest",
+                    position = { map = 1429, x = 46.3, y = 62.2 },
+                    faction = "Alliance",
                 },
             },
             levels = { 50 },
@@ -64,6 +70,9 @@ TFG.SKINNING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 5000,
+                    location = "Helene Peltskinner, Elwynn Forest",
+                    position = { map = 1429, x = 46.3, y = 62.2 },
+                    faction = "Alliance",
                 },
             },
             levels = { 125 },
@@ -101,6 +110,9 @@ TFG.SKINNING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 50000,
+                    location = "Helene Peltskinner, Elwynn Forest",
+                    position = { map = 1429, x = 46.3, y = 62.2 },
+                    faction = "Alliance",
                 },
             },
             levels = { 200 },

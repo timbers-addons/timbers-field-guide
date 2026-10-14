@@ -111,6 +111,23 @@ TFG.LEATHERWORKING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 10,
+                    location = "Randal Worth, Stormwind City",
+                    position = { map = 1453, x = 72, y = 62.7 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 10,
+                    location = "Adele Fielder, Elwynn Forest",
+                    position = { map = 1429, x = 46.4, y = 62.1 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 10,
+                    location = "Simon Tanner, Stormwind City",
+                    position = { map = 1453, x = 71.8, y = 62.8 },
+                    faction = "Alliance",
                 },
             },
             levels = { 1 },
@@ -722,6 +739,9 @@ TFG.LEATHERWORKING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 500,
+                    location = "Simon Tanner, Stormwind City",
+                    position = { map = 1453, x = 71.8, y = 62.8 },
+                    faction = "Alliance",
                 },
             },
             levels = { 50 },

@@ -22,6 +22,9 @@ TFG.HERBALISM_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 10,
+                    location = "Kali Healtouch, Loch Modan",
+                    position = { map = 1432, x = 36.5, y = 48.4 },
+                    faction = "Alliance",
                 },
             },
             levels = { 1 },
@@ -82,6 +85,9 @@ TFG.HERBALISM_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 500,
+                    location = "Kali Healtouch, Loch Modan",
+                    position = { map = 1432, x = 36.5, y = 48.4 },
+                    faction = "Alliance",
                 },
             },
             levels = { 50 },
@@ -150,6 +156,9 @@ TFG.HERBALISM_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 5000,
+                    location = "Kali Healtouch, Loch Modan",
+                    position = { map = 1432, x = 36.5, y = 48.4 },
+                    faction = "Alliance",
                 },
             },
             levels = { 125 },
@@ -239,6 +248,9 @@ TFG.HERBALISM_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 50000,
+                    location = "Kali Healtouch, Loch Modan",
+                    position = { map = 1432, x = 36.5, y = 48.4 },
+                    faction = "Alliance",
                 },
             },
             levels = { 200 },

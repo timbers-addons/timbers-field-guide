@@ -91,6 +91,23 @@ TFG.BLACKSMITHING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 10,
+                    location = "Ug'thok, Orgrimmar",
+                    position = { map = 1454, x = 80.6, y = 23.8 },
+                    faction = "Horde",
+                },
+                {
+                    type = "Trainer",
+                    cost = 10,
+                    location = "Smith Argus, Elwynn Forest",
+                    position = { map = 1429, x = 41.6, y = 65.6 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 10,
+                    location = "Therum Deepforge, Stormwind City",
+                    position = { map = 1453, x = 63.5, y = 37.3 },
+                    faction = "Alliance",
                 },
             },
             levels = { 1 },
@@ -790,6 +807,9 @@ TFG.BLACKSMITHING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 500,
+                    location = "Therum Deepforge, Stormwind City",
+                    position = { map = 1453, x = 63.5, y = 37.3 },
+                    faction = "Alliance",
                 },
             },
             levels = { 50 },
