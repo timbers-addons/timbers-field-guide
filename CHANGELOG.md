@@ -1,5 +1,14 @@
 # Changelog
 
+## v2026.10.16 (2026-10-16)
+
+- Weapon Skills: a top bar shortcut on every client, your class alone unless Other Classes is on, icons grouped by the city that teaches them with a map of the trainers on hover; weapon masters, positions and the Polearms level written in, Forever's seeded from Classic Era
+- A profession rank's Sources card shows a trainer's map on hover, ranks taught everywhere list four trainers and the rest under +N more, and maps show the areas the character has explored
+- Forever build 70425: Shred rank 1 at 20, Seal of Fury rank 3 at 26, Salvation and Mass Salvation replace the Blessings of Salvation, Revoke, Frost Blast and Arcane Wrath ranks with their costs, Mana Tide Totem ranks at 38/48/58, Lava Burst 10 levels earlier with rank 4 at 60, Totemic Recall at 22s, Gray Leather Boots and the Shoulders renames, Greater Mender's Potion from its recipe
+- A recipe's product name is shown in its item quality color
+- Bumped version to v2026.10.16
+
+
 ## v2026.10.08 (2026-10-08)
 
 - Forever build 70291: Berserker Rage at level 30 for 1g 20s; cooking skill-up thresholds fixed; category fixes for Hard Gold Cuirass, Enriched Thorium Leggings, Charged Scorpid Shoulder and Pristine Gloves
