@@ -44,11 +44,15 @@ TFG.GAME_VERSIONS = {
         --     { phase = 3, activatesAt = 1787868000 }, -- 2026-08-27 22:00 UTC
         -- },
     },
-    -- WoW: Forever runs the retail engine and reports itself as mainline with
-    -- expansion level 0 and no season (seen on 1.60.1, interface 16001), so the
-    -- interface range is the only thing that tells it from retail.
+    -- WoW: Forever runs the retail engine but carries its own project id, 18,
+    -- with expansion level 0 and no season (1.60.1 build 70425, interface
+    -- 16001, read in game 2026-10-16). It is NOT mainline: an earlier reading
+    -- on build 69893 recorded 1, and keying on that meant this entry never
+    -- matched, leaving the interface-range fallback in Database.lua to carry
+    -- it. No named constant for 18 is known, so prefer one if a client ever
+    -- defines it and fall back to the observed number.
     FOREVER = {
-        projectID = WOW_PROJECT_MAINLINE,
+        projectID = WOW_PROJECT_FOREVER or 18,
         expansionLevel = LE_EXPANSION_CLASSIC,
         seasonID = 0,
         databaseKey = "FOREVER",

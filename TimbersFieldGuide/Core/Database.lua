@@ -37,8 +37,9 @@ elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
     TFG.selectedExpansion = "BURNING_CRUSADE"
 elseif foreverVersion and clientInterface >= foreverVersion.interfaceMin
     and clientInterface <= foreverVersion.interfaceMax then
-    -- A Forever client the registry did not match (a season id, say). Retail
-    -- shares its project id, so the family is told by the interface range.
+    -- A Forever client the registry did not match (a season id, say, or a
+    -- project id that moved again). The interface range is the one thing about
+    -- the family that has held, so it decides here.
     TFG.selectedExpansion = "FOREVER"
 else
     TFG.selectedExpansion = "CLASSIC_ERA"
