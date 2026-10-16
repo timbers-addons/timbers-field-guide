@@ -2559,8 +2559,10 @@ TFG.BLACKSMITHING_FOREVER = {
             icon = "inv_hammer_07",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 10858,
+                    cost = 3000,
+                    location = "Jannos Ironwill, Arathi Highlands",
                 },
             },
             product = { item_id = 3851, qty = 1 },

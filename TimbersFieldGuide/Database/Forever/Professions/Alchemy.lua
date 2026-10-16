@@ -1460,8 +1460,10 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_13",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 6056,
+                    cost = 2000,
+                    location = "Drovnar Strongbrew, Arathi Highlands",
                 },
             },
             product = { item_id = 6050, qty = 1 },

@@ -1298,8 +1298,10 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_belt_02",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 5786,
+                    cost = 550,
+                    location = "Gina MacGregor, Westfall",
                 },
             },
             product = { item_id = 5780, qty = 1 },
@@ -1338,8 +1340,10 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_chest_chain_12",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 5787,
+                    cost = 600,
+                    location = "Gina MacGregor, Westfall",
                 },
             },
             product = { item_id = 5781, qty = 1 },
@@ -3103,6 +3107,12 @@ TFG.LEATHERWORKING_FOREVER = {
             categories = { "Leather Legguards" },
             icon = "inv_pants_12",
             source = {
+                {
+                    type = "Vendor",
+                    item_id = 5973,
+                    cost = 650,
+                    location = "Hammon Karwn, Arathi Highlands",
+                },
                 {
                     type = "Vendor",
                     item_id = 5973,
@@ -5466,8 +5476,10 @@ TFG.LEATHERWORKING_FOREVER = {
             icon = "inv_gauntlets_31",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 15725,
+                    cost = 12000,
+                    location = "Leonard Porter, Western Plaguelands",
                 },
             },
             product = { item_id = 15083, qty = 1 },

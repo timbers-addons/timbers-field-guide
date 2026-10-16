@@ -768,8 +768,10 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_misc_bag_02",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 5771,
+                    cost = 200,
+                    location = "Gina MacGregor, Westfall",
                 },
             },
             product = { item_id = 5762, qty = 1 },
@@ -1372,6 +1374,12 @@ TFG.TAILORING_FOREVER = {
                     item_id = 6274,
                     cost = 400,
                     location = "Alexandra Bolero, Stormwind City",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 6274,
+                    cost = 400,
+                    location = "Gina MacGregor, Westfall",
                 },
             },
             product = { item_id = 6263, qty = 1 },

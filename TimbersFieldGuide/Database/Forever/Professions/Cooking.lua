@@ -1460,8 +1460,10 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_food_18",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 4609,
+                    cost = 1000,
+                    location = "Narj Deepslice, Arathi Highlands",
                 },
             },
             product = { item_id = 4457, qty = 1 },
@@ -1668,6 +1670,12 @@ TFG.COOKING_FOREVER = {
             categories = { "Intellect Food" },
             icon = "inv_misc_food_50",
             source = {
+                {
+                    type = "Vendor",
+                    item_id = 12228,
+                    cost = 5000,
+                    location = "Hammon Karwn, Arathi Highlands",
+                },
                 {
                     type = "Vendor",
                     item_id = 12228,

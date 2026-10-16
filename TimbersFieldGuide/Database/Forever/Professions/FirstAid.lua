@@ -383,8 +383,10 @@ TFG.FIRST_AID_FOREVER = {
             icon = "inv_misc_bandage_02",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 16112,
+                    cost = 2200,
+                    location = "Deneb Walker, Arathi Highlands",
                 },
             },
             product = { item_id = 6451, qty = 1 },
@@ -422,8 +424,10 @@ TFG.FIRST_AID_FOREVER = {
             icon = "inv_misc_bandage_19",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 16113,
+                    cost = 5000,
+                    location = "Deneb Walker, Arathi Highlands",
                 },
             },
             product = { item_id = 8544, qty = 1 },

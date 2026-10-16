@@ -32,6 +32,13 @@ TFG.ENGINEERING_FOREVER = {
                     position = { map = 1453, x = 62, y = 30.9 },
                     faction = "Alliance",
                 },
+                {
+                    type = "Trainer",
+                    cost = 10,
+                    location = "Deek Fizzlebizz, Loch Modan",
+                    position = { map = 1432, x = 45.9, y = 13.6 },
+                    faction = "Alliance",
+                },
             },
             levels = { 1 },
             cap = 75,
