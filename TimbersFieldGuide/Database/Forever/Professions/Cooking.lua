@@ -178,7 +178,7 @@ TFG.COOKING_FOREVER = {
                     type = "Trainer",
                     cost = 100,
                     location = "Crystal Boughman, Redridge Mountains",
-                    position = { map = 1433, x = 17.7, y = 43.7 },
+                    position = { map = 1433, x = 17.6, y = 43.5 },
                     faction = "Alliance",
                 },
                 {
@@ -670,7 +670,7 @@ TFG.COOKING_FOREVER = {
                     type = "Trainer",
                     cost = 500,
                     location = "Crystal Boughman, Redridge Mountains",
-                    position = { map = 1433, x = 17.7, y = 43.7 },
+                    position = { map = 1433, x = 17.6, y = 43.5 },
                     faction = "Alliance",
                 },
                 {

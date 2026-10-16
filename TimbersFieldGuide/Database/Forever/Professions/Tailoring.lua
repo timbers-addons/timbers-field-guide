@@ -104,6 +104,13 @@ TFG.TAILORING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 10,
+                    location = "Georgio Bolero, Stormwind City",
+                    position = { map = 1453, x = 53.2, y = 81.4 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 10,
                     location = "Sellandus, Stormwind City",
                     position = { map = 1453, x = 52.3, y = 83.4 },
                     faction = "Alliance",
@@ -191,6 +198,12 @@ TFG.TAILORING_FOREVER = {
                     item_id = 253665,
                     cost = 150,
                     location = "Franklin Hamar, Lakeshire Inn",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 253665,
+                    cost = 150,
+                    location = "Captured Servant of Azora, Redridge Mountains",
                 },
                 {
                     type = "Vendor",
@@ -840,6 +853,13 @@ TFG.TAILORING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 500,
+                    location = "Georgio Bolero, Stormwind City",
+                    position = { map = 1453, x = 53.2, y = 81.4 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 500,
                     location = "Sellandus, Stormwind City",
                     position = { map = 1453, x = 52.3, y = 83.4 },
                     faction = "Alliance",
@@ -1349,6 +1369,12 @@ TFG.TAILORING_FOREVER = {
                     item_id = 253668,
                     cost = 250,
                     location = "Franklin Hamar, Lakeshire Inn",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 253668,
+                    cost = 250,
+                    location = "Captured Servant of Azora, Redridge Mountains",
                 },
                 {
                     type = "Vendor",
@@ -3260,6 +3286,9 @@ TFG.TAILORING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 5000,
+                    location = "Georgio Bolero, Stormwind City",
+                    position = { map = 1453, x = 53.2, y = 81.4 },
+                    faction = "Alliance",
                 },
             },
             levels = { 125 },
