@@ -177,6 +177,13 @@ TFG.COOKING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 100,
+                    location = "Crystal Boughman, Redridge Mountains",
+                    position = { map = 1433, x = 17.7, y = 43.7 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 100,
                     location = "Stephen Ryback, Stormwind City",
                     position = { map = 1453, x = 78.3, y = 53 },
                     faction = "Alliance",
@@ -662,6 +669,13 @@ TFG.COOKING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 500,
+                    location = "Crystal Boughman, Redridge Mountains",
+                    position = { map = 1433, x = 17.7, y = 43.7 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 500,
                     location = "Stephen Ryback, Stormwind City",
                     position = { map = 1453, x = 78.3, y = 53 },
                     faction = "Alliance",
@@ -884,6 +898,12 @@ TFG.COOKING_FOREVER = {
                     type = "Vendor",
                     item_id = 21099,
                     cost = 500,
+                    location = "Gloria Femmel, Lakeshire Inn",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 21099,
+                    cost = 500,
                     location = "Fyldan, Darnassus",
                 },
                 {
@@ -1030,8 +1050,11 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_bowl_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Quest",
                     item_id = 3680,
+                    location = "Dockmaster Baren, Redridge Mountains",
+                    quest_id = 127,
+                    quest_name = "Selling Fish",
                 },
             },
             product = { item_id = 3663, qty = 1 },
@@ -1099,8 +1122,11 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_bowl_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Quest",
                     item_id = 2699,
+                    location = "Chef Breanna, Redridge Mountains",
+                    quest_id = 92,
+                    quest_name = "Redridge Goulash",
                 },
             },
             product = { item_id = 1082, qty = 1 },
@@ -1780,6 +1806,12 @@ TFG.COOKING_FOREVER = {
                     item_id = 21219,
                     cost = 5000,
                     location = "Miranda Turner, Riverglades",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 21219,
+                    cost = 5000,
+                    location = "Gloria Femmel, Lakeshire Inn",
                 },
                 {
                     type = "Vendor",

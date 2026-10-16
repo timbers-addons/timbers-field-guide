@@ -101,6 +101,13 @@ TFG.TAILORING_FOREVER = {
                     position = { map = 1429, x = 79.3, y = 68.9 },
                     faction = "Alliance",
                 },
+                {
+                    type = "Trainer",
+                    cost = 10,
+                    location = "Sellandus, Stormwind City",
+                    position = { map = 1453, x = 52.3, y = 83.4 },
+                    faction = "Alliance",
+                },
             },
             levels = { 1 },
             cap = 75,
@@ -178,6 +185,12 @@ TFG.TAILORING_FOREVER = {
                     item_id = 253665,
                     cost = 150,
                     location = "Stitch Pinwizzle, Riverglades",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 253665,
+                    cost = 150,
+                    location = "Franklin Hamar, Lakeshire Inn",
                 },
                 {
                     type = "Vendor",
@@ -827,6 +840,9 @@ TFG.TAILORING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 500,
+                    location = "Sellandus, Stormwind City",
+                    position = { map = 1453, x = 52.3, y = 83.4 },
+                    faction = "Alliance",
                 },
             },
             levels = { 50 },
@@ -1327,6 +1343,12 @@ TFG.TAILORING_FOREVER = {
                     item_id = 253668,
                     cost = 250,
                     location = "Stitch Pinwizzle, Riverglades",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 253668,
+                    cost = 250,
+                    location = "Franklin Hamar, Lakeshire Inn",
                 },
                 {
                     type = "Vendor",
