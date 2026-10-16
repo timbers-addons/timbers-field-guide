@@ -526,7 +526,14 @@ local function ensureProfessionPopup()
                 self.productNameText:Show()
                 self.productNameText:ClearAllPoints()
                 self.productNameText:SetPoint("TOPLEFT", self, "TOPLEFT", xPad + iconSize + 8, rowY)
-                self.productNameText:SetText(GetItemInfo(itemId) or spellData.name or "Item")
+                local productName, _, quality = GetItemInfo(itemId)
+                self.productNameText:SetText(productName or spellData.name or "Item")
+                if quality then
+                    local qr, qg, qb = GetItemQualityColor(quality)
+                    self.productNameText:SetTextColor(qr, qg, qb)
+                else
+                    self.productNameText:SetTextColor(unpack(POPUP.body))
+                end
 
                 leftBottom = rowY - math.max(iconSize, self.productNameText:GetStringHeight() or iconSize)
                 contentRight = math.max(contentRight,
