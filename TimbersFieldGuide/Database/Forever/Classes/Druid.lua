@@ -595,6 +595,18 @@ TFG.DRUID_FOREVER = {
             icon = "ability_ghoulfrenzy",
         },
         {
+            spell_id = 5221,
+            name = "Shred",
+            rank = 1,
+            icon = "spell_shadow_vampiricaura",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 3300,
+                },
+            },
+        },
+        {
             spell_id = 5188,
             name = "Healing Touch",
             rank = 4,
@@ -661,18 +673,6 @@ TFG.DRUID_FOREVER = {
             name = "Wrath",
             rank = 4,
             icon = "spell_nature_abolishmagic",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 3300,
-                },
-            },
-        },
-        {
-            spell_id = 5221,
-            name = "Shred",
-            rank = 1,
-            icon = "spell_shadow_vampiricaura",
             source = {
                 {
                     type = "Trainer",

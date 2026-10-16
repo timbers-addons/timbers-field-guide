@@ -388,17 +388,6 @@ TFG.PALADIN_FOREVER = {
             },
         },
         {
-            spell_id = 5502,
-            name = "Sense Undead",
-            icon = "spell_holy_senseundead",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 5676,
-                },
-            },
-        },
-        {
             spell_id = 1310897,
             name = "Voice of Truth",
             icon = "inv_misc_horn_03",
@@ -445,6 +434,17 @@ TFG.PALADIN_FOREVER = {
             rank = 1,
             icon = "ability_warrior_innerrage",
             type = "Talent",
+        },
+        {
+            spell_id = 5502,
+            name = "Sense Undead",
+            icon = "spell_holy_senseundead",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 5676,
+                },
+            },
         },
     },
     [22] = {
@@ -577,18 +577,6 @@ TFG.PALADIN_FOREVER = {
             type = "Talent",
         },
         {
-            spell_id = 20163,
-            name = "Seal of Fury",
-            rank = 3,
-            icon = "spell_holy_retributionaura",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 6000,
-                },
-            },
-        },
-        {
             spell_id = 1310994,
             name = "Swift Judgement",
             icon = "ability_paladin_judgementred",
@@ -621,9 +609,26 @@ TFG.PALADIN_FOREVER = {
             },
         },
         {
+            spell_id = 1325499,
+            name = "Revoke",
+            icon = "spell_holy_prayerofmendingtga",
+        },
+        {
             spell_id = 1038,
-            name = "Blessing of Salvation",
+            name = "Salvation",
             icon = "spell_holy_sealofsalvation",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 6000,
+                },
+            },
+        },
+        {
+            spell_id = 20163,
+            name = "Seal of Fury",
+            rank = 3,
+            icon = "spell_holy_retributionaura",
             source = {
                 {
                     type = "Trainer",
@@ -1940,17 +1945,6 @@ TFG.PALADIN_FOREVER = {
             },
         },
         {
-            spell_id = 25895,
-            name = "Greater Blessing of Salvation",
-            icon = "spell_holy_greaterblessingofsalvation",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 46000,
-                },
-            },
-        },
-        {
             spell_id = 20928,
             name = "Holy Shield",
             rank = 3,
@@ -1960,6 +1954,17 @@ TFG.PALADIN_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 2300,
+                },
+            },
+        },
+        {
+            spell_id = 25895,
+            name = "Mass Salvation",
+            icon = "spell_holy_greaterblessingofsalvation",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 46000,
                 },
             },
         },

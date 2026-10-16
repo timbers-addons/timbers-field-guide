@@ -731,7 +731,6 @@ TFG.HUNTER_FOREVER = {
         {
             spell_id = 1317257,
             name = "Strider Kick",
-            rank = 1,
             icon = "ability_hunter_pet_tallstrider",
             type = "Talent",
         },

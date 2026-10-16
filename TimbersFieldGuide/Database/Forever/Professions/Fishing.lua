@@ -140,7 +140,7 @@ TFG.FISHING_FOREVER = {
                 { item_id = 6291, qty = 1 },
                 { item_id = 3371, qty = 1 },
             },
-            levels = { 20 },
+            levels = { 20, 20, 20, 20 },
         },
     },
     [50] = {
@@ -243,7 +243,7 @@ TFG.FISHING_FOREVER = {
                 { item_id = 8925, qty = 1 },
                 { item_id = 8365, qty = 2 },
             },
-            levels = { 140 },
+            levels = { 140, 140, 142, 145 },
         },
     },
     [225] = {
@@ -274,7 +274,7 @@ TFG.FISHING_FOREVER = {
                 { item_id = 14048, qty = 2 },
                 { item_id = 273295, qty = 1 },
             },
-            levels = { 300 },
+            levels = { 300, 300, 300, 300 },
         },
         {
             item_id = 19970,

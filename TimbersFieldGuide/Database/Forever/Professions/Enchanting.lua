@@ -3936,7 +3936,7 @@ TFG.ENCHANTING_FOREVER = {
         {
             spell_id = 25080,
             name = "Enchant Gloves - Superior Agility",
-            categories = { "Cloak Enchants" },
+            categories = { "Glove Enchants" },
             icon = "spell_holy_greaterheal",
             source = {
                 {

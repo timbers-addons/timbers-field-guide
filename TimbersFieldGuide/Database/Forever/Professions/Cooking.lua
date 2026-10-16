@@ -1194,7 +1194,7 @@ TFG.COOKING_FOREVER = {
         {
             spell_id = 3377,
             name = "Gooey Spider Cake",
-            categories = { "Everyday Meals" },
+            categories = { "Stamina Food" },
             icon = "inv_misc_food_10",
             source = {
                 {

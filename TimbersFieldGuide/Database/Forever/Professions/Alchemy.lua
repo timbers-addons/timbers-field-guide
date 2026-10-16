@@ -1355,25 +1355,20 @@ TFG.ALCHEMY_FOREVER = {
     },
     [180] = {
         {
-            spell_id = 1251750,
-            name = "Disorienting Smog Potion",
+            spell_id = 1251744,
+            name = "Greater Mender's Potion",
             categories = { "Potions" },
-            icon = "trade_alchemy_dpotion_c24",
+            icon = "inv_potionf_3",
             source = {
                 {
-                    type = "Vendor",
-                    item_id = 250996,
-                    currencies = {
-                        { currency_id = 3402, qty = 120, name = "Merchant's Favor" },
-                    },
-                    location = "Nina Surefire, Redridge Mountains",
-                    reputation = { faction = "Azeroth Commerce Authority", standing = "Friendly" },
+                    type = "Item",
+                    item_id = 250991,
                 },
             },
-            product = { item_id = 250952, qty = 1 },
+            product = { item_id = 250947, qty = 1 },
             materials = {
-                { item_id = 8845, qty = 3 },
-                { item_id = 3369, qty = 2 },
+                { item_id = 8836, qty = 2 },
+                { item_id = 8831, qty = 1 },
                 { item_id = 8925, qty = 1 },
             },
             levels = { 180, 185, 187, 190 },
@@ -1539,25 +1534,6 @@ TFG.ALCHEMY_FOREVER = {
             levels = { 195, 215, 235, 255 },
         },
         {
-            spell_id = 1250776,
-            name = "Draught of Predatory Senses",
-            categories = { "Draughts" },
-            icon = "trade_alchemy_dpotion_d12",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 250363,
-                },
-            },
-            product = { item_id = 250327, qty = 1 },
-            materials = {
-                { item_id = 3818, qty = 2 },
-                { item_id = 3821, qty = 2 },
-                { item_id = 3372, qty = 1 },
-            },
-            levels = { 195, 200, 202, 205 },
-        },
-        {
             spell_id = 11450,
             name = "Elixir of Defense",
             categories = { "Elixirs" },
@@ -1597,6 +1573,25 @@ TFG.ALCHEMY_FOREVER = {
                 { item_id = 8836, qty = 3 },
                 { item_id = 8831, qty = 1 },
                 { item_id = 8925, qty = 1 },
+            },
+            levels = { 195, 200, 202, 205 },
+        },
+        {
+            spell_id = 1250776,
+            name = "Potion of Predatory Senses",
+            categories = { "Draughts" },
+            icon = "trade_alchemy_dpotion_d12",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 250363,
+                },
+            },
+            product = { item_id = 250327, qty = 1 },
+            materials = {
+                { item_id = 3818, qty = 2 },
+                { item_id = 3821, qty = 2 },
+                { item_id = 3372, qty = 1 },
             },
             levels = { 195, 200, 202, 205 },
         },
@@ -3597,19 +3592,6 @@ TFG.ALCHEMY_FOREVER = {
                 { item_id = 730, qty = 1 },
             },
             levels = { 0, 175, 195, 215 },
-        },
-        {
-            spell_id = 1251744,
-            name = "Greater Mender's Potion",
-            categories = { "Potions" },
-            icon = "inv_potionf_3",
-            product = { item_id = 250947, qty = 1 },
-            materials = {
-                { item_id = 8836, qty = 2 },
-                { item_id = 8831, qty = 1 },
-                { item_id = 8925, qty = 1 },
-            },
-            levels = { 0, 185, 187, 190 },
         },
         {
             spell_id = 1244645,

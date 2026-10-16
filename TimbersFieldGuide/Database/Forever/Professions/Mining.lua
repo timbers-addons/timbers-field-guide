@@ -106,7 +106,7 @@ TFG.MINING_FOREVER = {
                 { item_id = 2835, qty = 1 },
                 { item_id = 2840, qty = 1 },
             },
-            levels = { 20 },
+            levels = { 20, 20, 22, 25 },
         },
     },
     [50] = {
@@ -282,7 +282,7 @@ TFG.MINING_FOREVER = {
                 { item_id = 2772, qty = 1 },
                 { item_id = 2842, qty = 1 },
             },
-            levels = { 140 },
+            levels = { 140, 140, 142, 145 },
         },
     },
     [155] = {
@@ -518,7 +518,7 @@ TFG.MINING_FOREVER = {
                 { item_id = 12365, qty = 2 },
                 { item_id = 6037, qty = 1 },
             },
-            levels = { 300 },
+            levels = { 300, 300, 300, 300 },
         },
         {
             spell_id = 1306126,

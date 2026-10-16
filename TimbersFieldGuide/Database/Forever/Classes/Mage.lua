@@ -652,8 +652,27 @@ TFG.MAGE_FOREVER = {
                 },
             },
         },
+        {
+            spell_id = 1326053,
+            name = "Frost Blast",
+            rank = 1,
+            icon = "spell_frost_frostbolt",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 4300,
+                },
+            },
+        },
     },
     [25] = {
+        {
+            spell_id = 1326079,
+            name = "Arcane Wrath",
+            rank = 1,
+            icon = "ability_mage_netherwindpresence",
+            type = "Talent",
+        },
         {
             spell_id = 11958,
             name = "Ice Block",
@@ -1043,6 +1062,19 @@ TFG.MAGE_FOREVER = {
     },
     [36] = {
         {
+            spell_id = 1326080,
+            name = "Arcane Wrath",
+            rank = 2,
+            icon = "ability_mage_netherwindpresence",
+            type = "Talent",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 11000,
+                },
+            },
+        },
+        {
             spell_id = 8451,
             name = "Dampen Magic",
             rank = 3,
@@ -1113,6 +1145,18 @@ TFG.MAGE_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 13000,
+                },
+            },
+        },
+        {
+            spell_id = 1326054,
+            name = "Frost Blast",
+            rank = 2,
+            icon = "spell_frost_frostbolt",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 11000,
                 },
             },
         },
@@ -1584,6 +1628,19 @@ TFG.MAGE_FOREVER = {
             },
         },
         {
+            spell_id = 1326081,
+            name = "Arcane Wrath",
+            rank = 3,
+            icon = "ability_mage_netherwindpresence",
+            type = "Talent",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 22000,
+                },
+            },
+        },
+        {
             spell_id = 10053,
             name = "Conjure Mana Citrine",
             icon = "inv_misc_gem_opal_01",
@@ -1640,6 +1697,18 @@ TFG.MAGE_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 1400,
+                },
+            },
+        },
+        {
+            spell_id = 1326055,
+            name = "Frost Blast",
+            rank = 3,
+            icon = "spell_frost_frostbolt",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 22000,
                 },
             },
         },
@@ -2096,6 +2165,19 @@ TFG.MAGE_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 42000,
+                },
+            },
+        },
+        {
+            spell_id = 1326082,
+            name = "Arcane Wrath",
+            rank = 4,
+            icon = "ability_mage_netherwindpresence",
+            type = "Talent",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 31000,
                 },
             },
         },

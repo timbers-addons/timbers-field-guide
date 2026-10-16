@@ -419,7 +419,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7000,
+                    cost = 2200,
                 },
             },
         },
@@ -799,6 +799,13 @@ TFG.SHAMAN_FOREVER = {
                     cost = 7000,
                 },
             },
+        },
+        {
+            spell_id = 408490,
+            name = "Lava Burst",
+            rank = 1,
+            icon = "spell_shaman_lavaburst",
+            type = "Talent",
         },
         {
             spell_id = 6364,
@@ -1193,6 +1200,19 @@ TFG.SHAMAN_FOREVER = {
                 },
             },
         },
+        {
+            spell_id = 17354,
+            name = "Mana Tide Totem",
+            rank = 2,
+            icon = "spell_frost_summonwaterelemental",
+            type = "Talent",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 800,
+                },
+            },
+        },
     },
     [40] = {
         {
@@ -1219,6 +1239,12 @@ TFG.SHAMAN_FOREVER = {
             },
         },
         {
+            spell_id = 16166,
+            name = "Elemental Mastery",
+            icon = "spell_nature_wispheal",
+            type = "Talent",
+        },
+        {
             spell_id = 10447,
             name = "Flame Shock",
             rank = 4,
@@ -1231,11 +1257,17 @@ TFG.SHAMAN_FOREVER = {
             },
         },
         {
-            spell_id = 408490,
+            spell_id = 1238299,
             name = "Lava Burst",
-            rank = 1,
+            rank = 2,
             icon = "spell_shaman_lavaburst",
             type = "Talent",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 24000,
+                },
+            },
         },
         {
             spell_id = 6365,
@@ -1618,30 +1650,29 @@ TFG.SHAMAN_FOREVER = {
             },
         },
         {
-            spell_id = 17354,
+            spell_id = 17359,
             name = "Mana Tide Totem",
-            rank = 2,
+            rank = 3,
             icon = "spell_frost_summonwaterelemental",
             type = "Talent",
             source = {
                 {
                     type = "Trainer",
-                    cost = 800,
+                    cost = 1600,
                 },
             },
         },
     },
     [50] = {
         {
-            spell_id = 1238299,
+            spell_id = 1238300,
             name = "Lava Burst",
-            rank = 2,
+            rank = 3,
             icon = "spell_shaman_lavaburst",
             type = "Talent",
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
                 },
             },
         },
@@ -1991,15 +2022,15 @@ TFG.SHAMAN_FOREVER = {
             },
         },
         {
-            spell_id = 17359,
+            spell_id = 1325256,
             name = "Mana Tide Totem",
-            rank = 3,
+            rank = 4,
             icon = "spell_frost_summonwaterelemental",
             type = "Talent",
             source = {
                 {
                     type = "Trainer",
-                    cost = 1600,
+                    cost = 2000,
                 },
             },
         },
@@ -2030,9 +2061,9 @@ TFG.SHAMAN_FOREVER = {
             },
         },
         {
-            spell_id = 1238300,
+            spell_id = 1326047,
             name = "Lava Burst",
-            rank = 3,
+            rank = 4,
             icon = "spell_shaman_lavaburst",
             type = "Talent",
             source = {

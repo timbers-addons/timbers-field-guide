@@ -1436,25 +1436,6 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 75, 90, 97, 105 },
         },
         {
-            spell_id = 2167,
-            name = "Dark Leather Boots",
-            categories = { "Leather Boots" },
-            icon = "inv_boots_05",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 350,
-                },
-            },
-            product = { item_id = 2315, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 4 },
-                { item_id = 2321, qty = 2 },
-                { item_id = 4340, qty = 1 },
-            },
-            levels = { 75, 100, 112, 125 },
-        },
-        {
             spell_id = 2169,
             name = "Dark Leather Tunic",
             categories = { "Leather Chestguards" },
@@ -1495,6 +1476,25 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 249427, qty = 2 },
                 { item_id = 2321, qty = 1 },
                 { item_id = 2458, qty = 2 },
+            },
+            levels = { 75, 100, 112, 125 },
+        },
+        {
+            spell_id = 2167,
+            name = "Gray Leather Boots",
+            categories = { "Leather Boots" },
+            icon = "inv_boots_05",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 350,
+                },
+            },
+            product = { item_id = 2315, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 4 },
+                { item_id = 2321, qty = 2 },
+                { item_id = 4340, qty = 1 },
             },
             levels = { 75, 100, 112, 125 },
         },
@@ -4409,7 +4409,7 @@ TFG.LEATHERWORKING_FOREVER = {
     [210] = {
         {
             spell_id = 1255055,
-            name = "Mender's Leather Shoulder",
+            name = "Mender's Leather Shoulders",
             categories = { "Leather Pauldrons" },
             icon = "inv_shoulder_17",
             source = {
@@ -4436,7 +4436,7 @@ TFG.LEATHERWORKING_FOREVER = {
         },
         {
             spell_id = 1255004,
-            name = "Mender's Mail Shoulder",
+            name = "Mender's Mail Shoulders",
             categories = { "Mail Pauldrons" },
             icon = "inv_shoulder_08",
             source = {
@@ -4463,7 +4463,7 @@ TFG.LEATHERWORKING_FOREVER = {
         },
         {
             spell_id = 1255059,
-            name = "Prowler's Leather Shoulder",
+            name = "Prowler's Leather Shoulders",
             categories = { "Leather Pauldrons" },
             icon = "inv_shoulder_17",
             source = {
@@ -4490,7 +4490,7 @@ TFG.LEATHERWORKING_FOREVER = {
         },
         {
             spell_id = 1255005,
-            name = "Skirmisher's Mail Shoulder",
+            name = "Skirmisher's Mail Shoulders",
             categories = { "Mail Pauldrons" },
             icon = "inv_shoulder_23",
             source = {
@@ -4517,7 +4517,7 @@ TFG.LEATHERWORKING_FOREVER = {
         },
         {
             spell_id = 1255058,
-            name = "Skulker's Leather Shoulder",
+            name = "Skulker's Leather Shoulders",
             categories = { "Leather Pauldrons" },
             icon = "inv_shoulders_mail_warfrontsforsaken_d_01",
             source = {
@@ -4544,7 +4544,7 @@ TFG.LEATHERWORKING_FOREVER = {
         },
         {
             spell_id = 1255056,
-            name = "Skycaller's Leather Shoulder",
+            name = "Skycaller's Leather Shoulders",
             categories = { "Leather Pauldrons" },
             icon = "inv_shoulder_25",
             source = {
@@ -4571,7 +4571,7 @@ TFG.LEATHERWORKING_FOREVER = {
         },
         {
             spell_id = 1255006,
-            name = "Skycaller's Mail Shoulder",
+            name = "Skycaller's Mail Shoulders",
             categories = { "Mail Pauldrons" },
             icon = "inv_shoulder_12",
             source = {
@@ -4598,7 +4598,7 @@ TFG.LEATHERWORKING_FOREVER = {
         },
         {
             spell_id = 1255007,
-            name = "Stalker's Mail Shoulder",
+            name = "Stalker's Mail Shoulders",
             categories = { "Mail Pauldrons" },
             icon = "inv_shoulder_18",
             source = {
@@ -4644,7 +4644,7 @@ TFG.LEATHERWORKING_FOREVER = {
         },
         {
             spell_id = 1255057,
-            name = "Warden's Leather Shoulder",
+            name = "Warden's Leather Shoulders",
             categories = { "Leather Pauldrons" },
             icon = "inv_shoulder_06",
             source = {
@@ -5739,7 +5739,7 @@ TFG.LEATHERWORKING_FOREVER = {
     [250] = {
         {
             spell_id = 1254990,
-            name = "Charged Scorpid Shoulder",
+            name = "Charged Scorpid Shoulders",
             categories = { "Mail Pauldrons" },
             icon = "inv_shoulder_14",
             source = {
@@ -6488,7 +6488,7 @@ TFG.LEATHERWORKING_FOREVER = {
         },
         {
             spell_id = 1254981,
-            name = "Supple Scorpid Shoulder",
+            name = "Supple Scorpid Shoulders",
             categories = { "Mail Pauldrons" },
             icon = "inv_shoulder_03",
             source = {
@@ -6569,7 +6569,7 @@ TFG.LEATHERWORKING_FOREVER = {
         },
         {
             spell_id = 1255026,
-            name = "Blue Suede Shoulder",
+            name = "Blue Suede Shoulders",
             categories = { "Leather Pauldrons" },
             icon = "inv_shoulder_25",
             source = {
@@ -7207,7 +7207,7 @@ TFG.LEATHERWORKING_FOREVER = {
         },
         {
             spell_id = 1255023,
-            name = "Wicked Leather Shoulder",
+            name = "Wicked Leather Shoulders",
             categories = { "Leather Pauldrons" },
             icon = "inv_shoulder_09",
             source = {
