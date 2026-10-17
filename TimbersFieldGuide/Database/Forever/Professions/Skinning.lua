@@ -11,6 +11,13 @@ TFG.SKINNING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 10,
+                    location = "Jayla, Ashenvale",
+                    position = { map = 1440, x = 50, y = 67.2 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 10,
                     location = "Helene Peltskinner, Elwynn Forest",
                     position = { map = 1429, x = 46.3, y = 62.2 },
                     faction = "Alliance",
@@ -51,6 +58,13 @@ TFG.SKINNING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 500,
+                    location = "Jayla, Ashenvale",
+                    position = { map = 1440, x = 50, y = 67.2 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 500,
                     location = "Helene Peltskinner, Elwynn Forest",
                     position = { map = 1429, x = 46.3, y = 62.2 },
                     faction = "Alliance",
@@ -67,6 +81,13 @@ TFG.SKINNING_FOREVER = {
             categories = { "Profession Training" },
             icon = "inv_misc_pelt_wolf_01",
             source = {
+                {
+                    type = "Trainer",
+                    cost = 5000,
+                    location = "Jayla, Ashenvale",
+                    position = { map = 1440, x = 50, y = 67.2 },
+                    faction = "Alliance",
+                },
                 {
                     type = "Trainer",
                     cost = 5000,
@@ -107,6 +128,13 @@ TFG.SKINNING_FOREVER = {
             categories = { "Profession Training" },
             icon = "inv_misc_pelt_wolf_01",
             source = {
+                {
+                    type = "Trainer",
+                    cost = 50000,
+                    location = "Jayla, Ashenvale",
+                    position = { map = 1440, x = 50, y = 67.2 },
+                    faction = "Alliance",
+                },
                 {
                     type = "Trainer",
                     cost = 50000,

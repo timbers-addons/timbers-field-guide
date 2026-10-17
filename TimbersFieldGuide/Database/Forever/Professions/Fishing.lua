@@ -25,6 +25,12 @@ TFG.FISHING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 100,
+                    location = "Myizz Luckycatch, Stranglethorn Vale",
+                    position = { map = 1434, x = 27.4, y = 77.2 },
+                },
+                {
+                    type = "Trainer",
+                    cost = 100,
                     location = "Arnold Leland, Stormwind City",
                     position = { map = 1453, x = 55.1, y = 69.6 },
                     faction = "Alliance",
@@ -167,6 +173,12 @@ TFG.FISHING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 500,
+                    location = "Myizz Luckycatch, Stranglethorn Vale",
+                    position = { map = 1434, x = 27.4, y = 77.2 },
+                },
+                {
+                    type = "Trainer",
+                    cost = 500,
                     location = "Arnold Leland, Stormwind City",
                     position = { map = 1453, x = 55.1, y = 69.6 },
                     faction = "Alliance",
@@ -221,6 +233,14 @@ TFG.FISHING_FOREVER = {
             name = "Fishing",
             categories = { "Profession Training" },
             icon = "trade_fishing",
+            source = {
+                {
+                    type = "Vendor",
+                    item_id = 16083,
+                    cost = 10000,
+                    location = "Old Man Heming, Stranglethorn Vale",
+                },
+            },
             levels = { 125 },
             cap = 225,
         },

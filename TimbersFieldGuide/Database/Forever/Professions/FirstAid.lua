@@ -272,6 +272,14 @@ TFG.FIRST_AID_FOREVER = {
             name = "First Aid",
             categories = { "Profession Training" },
             icon = "spell_holy_sealofsacrifice",
+            source = {
+                {
+                    type = "Vendor",
+                    item_id = 16084,
+                    cost = 10000,
+                    location = "Deneb Walker, Arathi Highlands",
+                },
+            },
             levels = { 125 },
             cap = 225,
         },

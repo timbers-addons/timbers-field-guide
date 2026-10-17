@@ -1395,6 +1395,14 @@ TFG.COOKING_FOREVER = {
             name = "Cooking",
             categories = { "Profession Training" },
             icon = "inv_misc_food_15",
+            source = {
+                {
+                    type = "Vendor",
+                    item_id = 16072,
+                    cost = 9000,
+                    location = "Shandrina, Ashenvale",
+                },
+            },
             levels = { 125 },
             cap = 225,
         },

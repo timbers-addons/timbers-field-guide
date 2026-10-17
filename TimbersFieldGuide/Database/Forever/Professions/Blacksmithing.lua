@@ -99,7 +99,7 @@ TFG.BLACKSMITHING_FOREVER = {
                     type = "Trainer",
                     cost = 10,
                     location = "Smith Argus, Elwynn Forest",
-                    position = { map = 1429, x = 41.6, y = 65.6 },
+                    position = { map = 1429, x = 41.8, y = 65.7 },
                     faction = "Alliance",
                 },
                 {
