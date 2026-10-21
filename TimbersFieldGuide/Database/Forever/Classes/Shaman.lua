@@ -372,7 +372,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7000,
+                    cost = 2200,
                 },
             },
         },
@@ -1222,7 +1222,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7000,
+                    cost = 12000,
                 },
             },
         },
@@ -1265,7 +1265,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 12000,
                 },
             },
         },
@@ -1673,6 +1673,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
+                    cost = 24000,
                 },
             },
         },
