@@ -656,7 +656,7 @@ TFG.MAGE_FOREVER = {
             spell_id = 1326053,
             name = "Frost Blast",
             rank = 1,
-            icon = "spell_frost_frostbolt",
+            icon = "spell_ice_magicdamage",
             source = {
                 {
                     type = "Trainer",
@@ -1152,7 +1152,7 @@ TFG.MAGE_FOREVER = {
             spell_id = 1326054,
             name = "Frost Blast",
             rank = 2,
-            icon = "spell_frost_frostbolt",
+            icon = "spell_ice_magicdamage",
             source = {
                 {
                     type = "Trainer",
@@ -1704,7 +1704,7 @@ TFG.MAGE_FOREVER = {
             spell_id = 1326055,
             name = "Frost Blast",
             rank = 3,
-            icon = "spell_frost_frostbolt",
+            icon = "spell_ice_magicdamage",
             source = {
                 {
                     type = "Trainer",
