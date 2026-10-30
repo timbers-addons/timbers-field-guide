@@ -652,18 +652,6 @@ TFG.MAGE_FOREVER = {
                 },
             },
         },
-        {
-            spell_id = 1326053,
-            name = "Frost Blast",
-            rank = 1,
-            icon = "spell_ice_magicdamage",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 4300,
-                },
-            },
-        },
     },
     [25] = {
         {
@@ -1145,18 +1133,6 @@ TFG.MAGE_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 13000,
-                },
-            },
-        },
-        {
-            spell_id = 1326054,
-            name = "Frost Blast",
-            rank = 2,
-            icon = "spell_ice_magicdamage",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 11000,
                 },
             },
         },
@@ -1697,18 +1673,6 @@ TFG.MAGE_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 1400,
-                },
-            },
-        },
-        {
-            spell_id = 1326055,
-            name = "Frost Blast",
-            rank = 3,
-            icon = "spell_ice_magicdamage",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 22000,
                 },
             },
         },

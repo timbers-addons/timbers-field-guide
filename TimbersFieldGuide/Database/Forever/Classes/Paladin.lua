@@ -188,6 +188,17 @@ TFG.PALADIN_FOREVER = {
             },
         },
         {
+            spell_id = 25780,
+            name = "Righteous Fury",
+            icon = "spell_holy_sealoffury",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 3000,
+                },
+            },
+        },
+        {
             spell_id = 1311649,
             name = "Seal of Fury",
             rank = 1,
@@ -277,17 +288,6 @@ TFG.PALADIN_FOREVER = {
         },
     },
     [16] = {
-        {
-            spell_id = 25780,
-            name = "Righteous Fury",
-            icon = "spell_holy_sealoffury",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 3000,
-                },
-            },
-        },
         {
             spell_id = 7294,
             name = "Retribution Aura",
