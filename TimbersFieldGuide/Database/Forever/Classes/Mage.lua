@@ -93,7 +93,7 @@ TFG.MAGE_FOREVER = {
         {
             spell_id = 1296017,
             name = "Comprehend Scroll",
-            icon = "comprehendscroll_8188276",
+            icon = 8188276,
             source = {
                 {
                     type = "Trainer",
