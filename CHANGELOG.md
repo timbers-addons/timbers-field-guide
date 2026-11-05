@@ -1,5 +1,14 @@
 # Changelog
 
+## v2026.11.05g (2026-11-05)
+
+- Forever: Starshards rank 1 comes from Returning Home (Laurna Morninglight, Teldrassil); Camping 101: Enchanting and Tailoring from Lyreena Duskblade; Alanna Raveneye teaches Enchanting and Radnaal Maneweaver Skinning in Teldrassil
+- Forever: rogues learn One-Handed Axes (Buliwyf Stonehand, Hanashi, Sayoc), allowed by the client since the beta and missing from the Classic Era list the weapon page is seeded from; Dalria in Ashenvale sells Enchant Cloak - Minor Agility and Enchant Bracer - Lesser Strength; fishing trainers placed in Hillsbrad, the Wetlands, Teldrassil and Darnassus
+- Forever: druids learn Polearms at 20 for 1g (Woo Ping, Stormwind; Archibald, Undercity), allowed by the client and confirmed at Woo Ping
+- Forever: NPC map positions keep their first recorded spot instead of moving with each rescan; Archibald, Ilyenia Moonfire and Lalina Summermoon placed where they stand
+- Bumped version to v2026.11.05g
+
+
 ## v2026.11.05a (2026-11-05)
 
 - Forever: Refuge Pointe's vendors sell Frost Protection Potion, Solid Iron Maul, Barbecued Buzzard Wing, Roast Raptor, Barbaric Leggings and the Heavy Silk and Mageweave bandages, Gina MacGregor sells the Murloc Scale recipes, Red Linen Bag and Blue Overalls, Leonard Porter sells Wicked Leather Gauntlets, Deek Fizzlebizz teaches Engineering in Loch Modan
