@@ -103,7 +103,7 @@ TFG.ENCHANTING_FOREVER = {
                     type = "Trainer",
                     cost = 10,
                     location = "Lalina Summermoon, Darnassus",
-                    position = { map = 1457, x = 58.9, y = 13.2 },
+                    position = { map = 1457, x = 58.8, y = 12.7 },
                     faction = "Alliance",
                 },
                 {

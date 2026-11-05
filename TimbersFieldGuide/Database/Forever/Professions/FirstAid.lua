@@ -47,7 +47,7 @@ TFG.FIRST_AID_FOREVER = {
                     type = "Trainer",
                     cost = 100,
                     location = "Shaina Fuller, Stormwind City",
-                    position = { map = 1453, x = 52.9, y = 44.8 },
+                    position = { map = 1453, x = 52.9, y = 44.9 },
                     faction = "Alliance",
                 },
                 {
@@ -120,7 +120,7 @@ TFG.FIRST_AID_FOREVER = {
                     type = "Trainer",
                     cost = 500,
                     location = "Shaina Fuller, Stormwind City",
-                    position = { map = 1453, x = 52.9, y = 44.8 },
+                    position = { map = 1453, x = 52.9, y = 44.9 },
                     faction = "Alliance",
                 },
                 {
