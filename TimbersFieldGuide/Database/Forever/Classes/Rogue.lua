@@ -161,7 +161,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 800,
+                    cost = 900,
                 },
             },
         },
@@ -173,7 +173,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 800,
+                    cost = 900,
                 },
             },
         },
@@ -184,7 +184,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 800,
+                    cost = 900,
                 },
             },
         },
@@ -198,7 +198,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1200,
+                    cost = 1100,
                 },
             },
         },
@@ -210,7 +210,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1200,
+                    cost = 1100,
                 },
             },
         },
@@ -222,7 +222,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1200,
+                    cost = 1100,
                 },
             },
         },
@@ -236,7 +236,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1800,
+                    cost = 1500,
                 },
             },
         },
@@ -248,7 +248,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1800,
+                    cost = 1500,
                 },
             },
         },
@@ -259,7 +259,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1800,
+                    cost = 1500,
                 },
             },
         },
@@ -273,7 +273,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2900,
+                    cost = 1600,
                 },
             },
         },
@@ -285,7 +285,18 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2900,
+                    cost = 1600,
+                },
+            },
+        },
+        {
+            spell_id = 1328825,
+            name = "Poised",
+            icon = "ability_rogue_fleetfooted",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 2200,
                 },
             },
         },
@@ -299,7 +310,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 4300,
                 },
             },
         },
@@ -311,7 +322,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 4300,
                 },
             },
         },
@@ -322,9 +333,9 @@ TFG.ROGUE_FOREVER = {
             type = "Talent",
         },
         {
-            spell_id = 14278,
-            name = "Ghostly Strike",
-            icon = "spell_shadow_curse",
+            spell_id = 14183,
+            name = "Premeditation",
+            icon = "spell_shadow_possession",
             type = "Talent",
         },
         {
@@ -335,7 +346,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 4300,
                 },
             },
         },
@@ -347,7 +358,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 4300,
                 },
             },
         },
@@ -373,7 +384,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 4500,
                 },
             },
         },
@@ -385,7 +396,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 4500,
                 },
             },
         },
@@ -396,7 +407,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 4500,
                 },
             },
         },
@@ -408,7 +419,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 4500,
                 },
             },
         },
@@ -422,7 +433,18 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 6000,
+                },
+            },
+        },
+        {
+            spell_id = 1329283,
+            name = "Shank",
+            icon = "ability_theblackarrow",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 6000,
                 },
             },
         },
@@ -433,7 +455,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 6000,
                 },
             },
         },
@@ -445,7 +467,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 6000,
                 },
             },
         },
@@ -458,9 +480,9 @@ TFG.ROGUE_FOREVER = {
             type = "Talent",
         },
         {
-            spell_id = 14183,
-            name = "Premeditation",
-            icon = "spell_shadow_possession",
+            spell_id = 14278,
+            name = "Ghostly Strike",
+            icon = "spell_shadow_curse",
             type = "Talent",
         },
     },
@@ -473,7 +495,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 7000,
                 },
             },
         },
@@ -484,7 +506,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 7000,
                 },
             },
         },
@@ -496,7 +518,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 7000,
                 },
             },
         },
@@ -508,7 +530,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 7000,
                 },
             },
         },
@@ -584,7 +606,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
         },
@@ -596,16 +618,9 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
-        },
-        {
-            spell_id = 1310707,
-            name = "Mutilate",
-            rank = 1,
-            icon = "ability_rogue_deadlybrew",
-            type = "Talent",
         },
         {
             spell_id = 13877,
@@ -621,7 +636,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
         },
@@ -632,7 +647,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
         },
@@ -656,7 +671,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
         },
@@ -670,7 +685,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 13000,
                 },
             },
         },
@@ -682,7 +697,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 13000,
                 },
             },
         },
@@ -694,7 +709,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 13000,
                 },
             },
         },
@@ -756,7 +771,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 16000,
+                    cost = 15000,
                 },
             },
         },
@@ -768,7 +783,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 16000,
+                    cost = 15000,
                 },
             },
         },
@@ -780,7 +795,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 16000,
+                    cost = 15000,
                 },
             },
         },
@@ -792,7 +807,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 16000,
+                    cost = 15000,
                 },
             },
         },
@@ -806,7 +821,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 16000,
                 },
             },
         },
@@ -818,7 +833,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 16000,
                 },
             },
         },
@@ -830,7 +845,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 16000,
                 },
             },
         },
@@ -842,7 +857,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 16000,
                 },
             },
         },
@@ -856,27 +871,15 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 19000,
                 },
             },
         },
         {
             spell_id = 399956,
             name = "Mutilate",
-            rank = 2,
+            rank = 1,
             icon = "ability_rogue_deadlybrew",
-            type = "Talent",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 10000,
-                },
-            },
-        },
-        {
-            spell_id = 1310703,
-            name = "Venom",
-            icon = "inv_sword_31",
             type = "Talent",
         },
         {
@@ -893,9 +896,16 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 19000,
                 },
             },
+        },
+        {
+            spell_id = 1316709,
+            name = "Death Mark",
+            rank = 1,
+            icon = "ability_creature_cursed_02",
+            type = "Talent",
         },
         {
             spell_id = 1860,
@@ -904,7 +914,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 19000,
                 },
             },
         },
@@ -916,7 +926,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 19000,
                 },
             },
         },
@@ -928,7 +938,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 19000,
                 },
             },
         },
@@ -942,7 +952,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 27000,
+                    cost = 22000,
                 },
             },
         },
@@ -954,7 +964,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 27000,
+                    cost = 22000,
                 },
             },
         },
@@ -966,7 +976,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 27000,
+                    cost = 22000,
                 },
             },
         },
@@ -978,7 +988,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 27000,
+                    cost = 22000,
                 },
             },
         },
@@ -992,7 +1002,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 29000,
+                    cost = 23000,
                 },
             },
         },
@@ -1004,7 +1014,18 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 29000,
+                    cost = 23000,
+                },
+            },
+        },
+        {
+            spell_id = 1329549,
+            name = "Shank",
+            icon = "ability_theblackarrow",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 23000,
                 },
             },
         },
@@ -1016,7 +1037,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 29000,
+                    cost = 23000,
                 },
             },
         },
@@ -1030,7 +1051,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 31000,
+                    cost = 25000,
                 },
             },
         },
@@ -1042,7 +1063,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 31000,
+                    cost = 25000,
                 },
             },
         },
@@ -1054,7 +1075,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 31000,
+                    cost = 25000,
                 },
             },
         },
@@ -1066,7 +1087,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 31000,
+                    cost = 25000,
                 },
             },
         },
@@ -1078,7 +1099,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 31000,
+                    cost = 25000,
                 },
             },
         },
@@ -1092,7 +1113,20 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 33000,
+                    cost = 43000,
+                },
+            },
+        },
+        {
+            spell_id = 1325756,
+            name = "Death Mark",
+            rank = 2,
+            icon = "ability_creature_cursed_02",
+            type = "Talent",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 43000,
                 },
             },
         },
@@ -1104,7 +1138,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 33000,
+                    cost = 43000,
                 },
             },
         },
@@ -1116,7 +1150,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 33000,
+                    cost = 43000,
                 },
             },
         },
@@ -1130,7 +1164,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 35000,
+                    cost = 44000,
                 },
             },
         },
@@ -1142,20 +1176,20 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 35000,
+                    cost = 44000,
                 },
             },
         },
         {
             spell_id = 1241582,
             name = "Mutilate",
-            rank = 3,
+            rank = 2,
             icon = "ability_rogue_deadlybrew",
             type = "Talent",
             source = {
                 {
                     type = "Trainer",
-                    cost = 35000,
+                    cost = 44000,
                 },
             },
         },
@@ -1167,7 +1201,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 35000,
+                    cost = 44000,
                 },
             },
         },
@@ -1181,7 +1215,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 45000,
                 },
             },
         },
@@ -1193,7 +1227,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 45000,
                 },
             },
         },
@@ -1205,7 +1239,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 45000,
                 },
             },
         },
@@ -1217,7 +1251,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 45000,
                 },
             },
         },
@@ -1229,7 +1263,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 45000,
                 },
             },
         },
@@ -1243,7 +1277,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 48000,
+                    cost = 46000,
                 },
             },
         },
@@ -1255,7 +1289,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 48000,
+                    cost = 46000,
                 },
             },
         },
@@ -1267,7 +1301,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 48000,
+                    cost = 46000,
                 },
             },
         },
@@ -1281,7 +1315,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 50000,
+                    cost = 48000,
                 },
             },
         },
@@ -1293,7 +1327,20 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 50000,
+                    cost = 48000,
+                },
+            },
+        },
+        {
+            spell_id = 1325757,
+            name = "Death Mark",
+            rank = 3,
+            icon = "ability_creature_cursed_02",
+            type = "Talent",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 48000,
                 },
             },
         },
@@ -1305,7 +1352,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 50000,
+                    cost = 48000,
                 },
             },
         },
@@ -1319,7 +1366,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 52000,
+                    cost = 50000,
                 },
             },
         },
@@ -1331,7 +1378,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 52000,
+                    cost = 50000,
                 },
             },
         },
@@ -1343,7 +1390,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 52000,
+                    cost = 50000,
                 },
             },
         },
@@ -1364,13 +1411,13 @@ TFG.ROGUE_FOREVER = {
         {
             spell_id = 1241584,
             name = "Mutilate",
-            rank = 4,
+            rank = 3,
             icon = "ability_rogue_deadlybrew",
             type = "Talent",
             source = {
                 {
                     type = "Trainer",
-                    cost = 54000,
+                    cost = 51000,
                 },
             },
         },
@@ -1382,7 +1429,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 54000,
+                    cost = 51000,
                 },
             },
         },
@@ -1394,7 +1441,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 54000,
+                    cost = 51000,
                 },
             },
         },
@@ -1430,7 +1477,20 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 54000,
+                    cost = 51000,
+                },
+            },
+        },
+        {
+            spell_id = 1325758,
+            name = "Death Mark",
+            rank = 4,
+            icon = "ability_creature_cursed_02",
+            type = "Talent",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 51000,
                 },
             },
         },
@@ -1442,7 +1502,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 54000,
+                    cost = 51000,
                 },
             },
         },
@@ -1454,7 +1514,7 @@ TFG.ROGUE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 54000,
+                    cost = 51000,
                 },
             },
         },

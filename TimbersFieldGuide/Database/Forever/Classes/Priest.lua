@@ -250,7 +250,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1200,
+                    cost = 900,
                 },
             },
         },
@@ -262,7 +262,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1200,
+                    cost = 900,
                 },
             },
         },
@@ -274,7 +274,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1200,
+                    cost = 900,
                 },
             },
         },
@@ -286,7 +286,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1200,
+                    cost = 900,
                 },
             },
         },
@@ -300,7 +300,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1600,
+                    cost = 1400,
                 },
             },
         },
@@ -312,7 +312,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1600,
+                    cost = 1400,
                 },
             },
         },
@@ -326,7 +326,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 1500,
                 },
             },
         },
@@ -338,7 +338,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 1500,
                 },
             },
         },
@@ -351,7 +351,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 100,
+                    cost = 3000,
                 },
             },
         },
@@ -389,7 +389,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 1500,
                 },
             },
         },
@@ -423,7 +423,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 2100,
                 },
             },
         },
@@ -441,7 +441,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 2100,
                 },
             },
         },
@@ -467,7 +467,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 300,
+                    cost = 2100,
                 },
             },
         },
@@ -479,7 +479,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 2100,
                 },
             },
         },
@@ -491,7 +491,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 2100,
                 },
             },
         },
@@ -510,7 +510,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 2100,
                 },
             },
         },
@@ -529,7 +529,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 300,
+                    cost = 2100,
                 },
             },
         },
@@ -541,7 +541,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 2100,
                 },
             },
         },
@@ -573,7 +573,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 2100,
                 },
             },
         },
@@ -607,7 +607,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3300,
                 },
             },
         },
@@ -619,7 +619,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3300,
                 },
             },
         },
@@ -631,7 +631,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3300,
                 },
             },
         },
@@ -643,7 +643,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3300,
                 },
             },
         },
@@ -655,7 +655,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3300,
                 },
             },
         },
@@ -712,13 +712,6 @@ TFG.PRIEST_FOREVER = {
     },
     [25] = {
         {
-            spell_id = 401937,
-            name = "Binding Heal",
-            rank = 1,
-            icon = "spell_holy_blindingheal",
-            type = "Talent",
-        },
-        {
             spell_id = 15286,
             name = "Vampiric Embrace",
             icon = "spell_shadow_unsummonbuilding",
@@ -735,7 +728,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 300,
+                    cost = 10000,
                 },
             },
         },
@@ -773,7 +766,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 5200,
                 },
             },
         },
@@ -785,7 +778,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 5200,
                 },
             },
         },
@@ -797,7 +790,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 5200,
                 },
             },
         },
@@ -811,7 +804,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 5300,
                 },
             },
         },
@@ -824,7 +817,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 400,
+                    cost = 5300,
                 },
             },
         },
@@ -836,7 +829,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 400,
+                    cost = 5300,
                 },
             },
         },
@@ -848,7 +841,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 5300,
                 },
             },
         },
@@ -861,7 +854,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 400,
+                    cost = 5300,
                 },
             },
         },
@@ -873,7 +866,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 5300,
                 },
             },
         },
@@ -913,7 +906,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 5600,
                 },
             },
         },
@@ -938,7 +931,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 5600,
                 },
             },
         },
@@ -957,7 +950,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 5600,
                 },
             },
         },
@@ -982,7 +975,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 5600,
                 },
             },
         },
@@ -994,7 +987,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 5600,
                 },
             },
         },
@@ -1006,7 +999,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 5600,
                 },
             },
         },
@@ -1031,7 +1024,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 5600,
                 },
             },
         },
@@ -1056,7 +1049,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 5600,
                 },
             },
         },
@@ -1068,7 +1061,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 5600,
                 },
             },
         },
@@ -1101,7 +1094,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 8000,
                 },
             },
         },
@@ -1112,20 +1105,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
-                },
-            },
-        },
-        {
-            spell_id = 1240770,
-            name = "Binding Heal",
-            rank = 2,
-            icon = "spell_holy_blindingheal",
-            type = "Talent",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 11000,
+                    cost = 8000,
                 },
             },
         },
@@ -1137,7 +1117,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 8000,
                 },
             },
         },
@@ -1149,7 +1129,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 8000,
                 },
             },
         },
@@ -1161,7 +1141,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 8000,
                 },
             },
         },
@@ -1174,7 +1154,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 9000,
                 },
             },
         },
@@ -1187,7 +1167,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 600,
+                    cost = 16000,
                 },
             },
         },
@@ -1225,7 +1205,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 9000,
                 },
             },
         },
@@ -1237,7 +1217,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 9000,
                 },
             },
         },
@@ -1249,7 +1229,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 9000,
                 },
             },
         },
@@ -1261,7 +1241,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 9000,
                 },
             },
         },
@@ -1275,7 +1255,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 10000,
                 },
             },
         },
@@ -1287,7 +1267,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 10000,
                 },
             },
         },
@@ -1299,7 +1279,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 10000,
                 },
             },
         },
@@ -1311,7 +1291,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 10000,
                 },
             },
         },
@@ -1324,7 +1304,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 700,
+                    cost = 10000,
                 },
             },
         },
@@ -1336,7 +1316,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 700,
+                    cost = 10000,
                 },
             },
         },
@@ -1349,7 +1329,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 700,
+                    cost = 10000,
                 },
             },
         },
@@ -1361,7 +1341,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 10000,
                 },
             },
         },
@@ -1381,19 +1361,6 @@ TFG.PRIEST_FOREVER = {
     },
     [38] = {
         {
-            spell_id = 1240771,
-            name = "Binding Heal",
-            rank = 3,
-            icon = "spell_holy_blindingheal",
-            type = "Talent",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 16000,
-                },
-            },
-        },
-        {
             spell_id = 9474,
             name = "Flash Heal",
             rank = 4,
@@ -1401,7 +1368,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 16000,
+                    cost = 12000,
                 },
             },
         },
@@ -1413,7 +1380,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 16000,
+                    cost = 12000,
                 },
             },
         },
@@ -1425,7 +1392,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 16000,
+                    cost = 12000,
                 },
             },
         },
@@ -1452,7 +1419,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 900,
+                    cost = 13000,
                 },
             },
         },
@@ -1477,7 +1444,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 13000,
                 },
             },
         },
@@ -1489,7 +1456,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 13000,
                 },
             },
         },
@@ -1502,7 +1469,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 16000,
+                    cost = 13000,
                 },
             },
         },
@@ -1520,7 +1487,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 13000,
                 },
             },
         },
@@ -1545,7 +1512,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 13000,
                 },
             },
         },
@@ -1557,7 +1524,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 13000,
                 },
             },
         },
@@ -1589,7 +1556,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 13000,
                 },
             },
         },
@@ -1614,7 +1581,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 13000,
                 },
             },
         },
@@ -1626,7 +1593,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 13000,
                 },
             },
         },
@@ -1659,7 +1626,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 14000,
                 },
             },
         },
@@ -1672,7 +1639,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1100,
+                    cost = 27000,
                 },
             },
         },
@@ -1710,7 +1677,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 14000,
                 },
             },
         },
@@ -1722,7 +1689,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 14000,
                 },
             },
         },
@@ -1734,7 +1701,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 14000,
                 },
             },
         },
@@ -1746,25 +1713,12 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 14000,
                 },
             },
         },
     },
     [44] = {
-        {
-            spell_id = 1240772,
-            name = "Binding Heal",
-            rank = 4,
-            icon = "spell_holy_blindingheal",
-            type = "Talent",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 24000,
-                },
-            },
-        },
         {
             spell_id = 10915,
             name = "Flash Heal",
@@ -1773,7 +1727,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 16000,
                 },
             },
         },
@@ -1786,7 +1740,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1200,
+                    cost = 16000,
                 },
             },
         },
@@ -1798,7 +1752,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 16000,
                 },
             },
         },
@@ -1810,7 +1764,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1200,
+                    cost = 16000,
                 },
             },
         },
@@ -1822,7 +1776,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 16000,
                 },
             },
         },
@@ -1835,7 +1789,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1200,
+                    cost = 16000,
                 },
             },
         },
@@ -1847,7 +1801,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 16000,
                 },
             },
         },
@@ -1874,7 +1828,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 17000,
                 },
             },
         },
@@ -1886,7 +1840,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 17000,
                 },
             },
         },
@@ -1898,7 +1852,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 17000,
                 },
             },
         },
@@ -1910,7 +1864,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 17000,
                 },
             },
         },
@@ -1924,7 +1878,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 28000,
+                    cost = 18000,
                 },
             },
         },
@@ -1936,7 +1890,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 28000,
+                    cost = 18000,
                 },
             },
         },
@@ -1948,7 +1902,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 28000,
+                    cost = 18000,
                 },
             },
         },
@@ -1972,7 +1926,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 28000,
+                    cost = 18000,
                 },
             },
         },
@@ -1984,7 +1938,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 28000,
+                    cost = 18000,
                 },
             },
         },
@@ -2011,7 +1965,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1500,
+                    cost = 20000,
                 },
             },
         },
@@ -2036,7 +1990,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 30000,
+                    cost = 20000,
                 },
             },
         },
@@ -2049,7 +2003,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 30000,
+                    cost = 20000,
                 },
             },
         },
@@ -2062,20 +2016,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1500,
-                },
-            },
-        },
-        {
-            spell_id = 1240773,
-            name = "Binding Heal",
-            rank = 5,
-            icon = "spell_holy_blindingheal",
-            type = "Talent",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 30000,
+                    cost = 36000,
                 },
             },
         },
@@ -2126,7 +2067,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 30000,
+                    cost = 20000,
                 },
             },
         },
@@ -2138,7 +2079,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 30000,
+                    cost = 20000,
                 },
             },
         },
@@ -2151,7 +2092,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 30000,
+                    cost = 20000,
                 },
             },
         },
@@ -2163,7 +2104,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 30000,
+                    cost = 20000,
                 },
             },
         },
@@ -2188,7 +2129,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 30000,
+                    cost = 20000,
                 },
             },
         },
@@ -2213,7 +2154,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 30000,
+                    cost = 20000,
                 },
             },
         },
@@ -2240,7 +2181,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 38000,
+                    cost = 24000,
                 },
             },
         },
@@ -2253,7 +2194,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1900,
+                    cost = 24000,
                 },
             },
         },
@@ -2265,7 +2206,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1900,
+                    cost = 24000,
                 },
             },
         },
@@ -2277,7 +2218,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 38000,
+                    cost = 24000,
                 },
             },
         },
@@ -2290,7 +2231,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1900,
+                    cost = 24000,
                 },
             },
         },
@@ -2302,7 +2243,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 38000,
+                    cost = 24000,
                 },
             },
         },
@@ -2329,7 +2270,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 40000,
+                    cost = 25000,
                 },
             },
         },
@@ -2341,7 +2282,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 40000,
+                    cost = 25000,
                 },
             },
         },
@@ -2353,7 +2294,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 40000,
+                    cost = 25000,
                 },
             },
         },
@@ -2367,20 +2308,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
-                },
-            },
-        },
-        {
-            spell_id = 1240774,
-            name = "Binding Heal",
-            rank = 6,
-            icon = "spell_holy_blindingheal",
-            type = "Talent",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 42000,
+                    cost = 26000,
                 },
             },
         },
@@ -2392,7 +2320,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
+                    cost = 26000,
                 },
             },
         },
@@ -2404,7 +2332,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
+                    cost = 26000,
                 },
             },
         },
@@ -2427,7 +2355,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
+                    cost = 26000,
                 },
             },
         },
@@ -2439,7 +2367,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
+                    cost = 26000,
                 },
             },
         },
@@ -2451,7 +2379,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
+                    cost = 26000,
                 },
             },
         },
@@ -2466,7 +2394,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2200,
+                    cost = 49000,
                 },
             },
         },
@@ -2504,7 +2432,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 44000,
+                    cost = 27000,
                 },
             },
         },
@@ -2516,7 +2444,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 44000,
+                    cost = 27000,
                 },
             },
         },
@@ -2528,7 +2456,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 44000,
+                    cost = 27000,
                 },
             },
         },
@@ -2540,7 +2468,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 44000,
+                    cost = 27000,
                 },
             },
         },
@@ -2552,7 +2480,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 44000,
+                    cost = 27000,
                 },
             },
         },
@@ -2579,7 +2507,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2300,
+                    cost = 28000,
                 },
             },
         },
@@ -2604,7 +2532,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 28000,
                 },
             },
         },
@@ -2617,7 +2545,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 28000,
                 },
             },
         },
@@ -2629,7 +2557,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 28000,
                 },
             },
         },
@@ -2641,7 +2569,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 28000,
                 },
             },
         },
@@ -2665,7 +2593,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2300,
+                    cost = 28000,
                 },
             },
         },
@@ -2677,7 +2605,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 28000,
                 },
             },
         },
@@ -2714,7 +2642,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 28000,
                 },
             },
         },
@@ -2727,7 +2655,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2300,
+                    cost = 28000,
                 },
             },
         },
@@ -2739,7 +2667,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 28000,
                 },
             },
         },
@@ -2764,7 +2692,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 28000,
                 },
             },
         },
@@ -2801,7 +2729,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2300,
+                    cost = 28000,
                 },
             },
         },
@@ -2813,7 +2741,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 28000,
                 },
             },
         },
@@ -2839,7 +2767,7 @@ TFG.PRIEST_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2300,
+                    cost = 28000,
                 },
             },
         },

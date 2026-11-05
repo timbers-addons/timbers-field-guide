@@ -104,6 +104,13 @@ TFG.TAILORING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 10,
+                    location = "Trianna, Darnassus",
+                    position = { map = 1457, x = 63.8, y = 21.4 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 10,
                     location = "Georgio Bolero, Stormwind City",
                     position = { map = 1453, x = 53.2, y = 81.4 },
                     faction = "Alliance",

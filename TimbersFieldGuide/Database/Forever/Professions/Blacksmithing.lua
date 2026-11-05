@@ -109,6 +109,13 @@ TFG.BLACKSMITHING_FOREVER = {
                     position = { map = 1453, x = 63.5, y = 37.3 },
                     faction = "Alliance",
                 },
+                {
+                    type = "Trainer",
+                    cost = 10,
+                    location = "Dane Lindgren, Stormwind City",
+                    position = { map = 1453, x = 64, y = 37 },
+                    faction = "Alliance",
+                },
             },
             levels = { 1 },
             cap = 75,
@@ -1079,6 +1086,25 @@ TFG.BLACKSMITHING_FOREVER = {
     },
     [80] = {
         {
+            spell_id = 1252240,
+            name = "Acolyte's Chain Shirt",
+            categories = { "Mail Chestguards" },
+            icon = "inv_chest_chain_08",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 251343,
+                },
+            },
+            product = { item_id = 250491, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 4 },
+                { item_id = 3470, qty = 2 },
+                { item_id = 10940, qty = 2 },
+            },
+            levels = { 80, 85, 85, 85 },
+        },
+        {
             spell_id = 1252260,
             name = "Acolyte's Gloves",
             categories = { "Mail Gauntlets" },
@@ -1143,6 +1169,25 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 2319, qty = 1 },
             },
             levels = { 80, 110, 125, 140 },
+        },
+        {
+            spell_id = 1252241,
+            name = "Crusader's Chain Shirt",
+            categories = { "Mail Chestguards" },
+            icon = "inv_chest_chain_09",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 251344,
+                },
+            },
+            product = { item_id = 250492, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 4 },
+                { item_id = 3470, qty = 2 },
+                { item_id = 10938, qty = 2 },
+            },
+            levels = { 80, 85, 85, 85 },
         },
         {
             spell_id = 1252261,
@@ -1212,6 +1257,25 @@ TFG.BLACKSMITHING_FOREVER = {
             levels = { 80, 110, 125, 140 },
         },
         {
+            spell_id = 1252239,
+            name = "Protector's Chain Shirt",
+            categories = { "Mail Chestguards" },
+            icon = "inv_chest_chain_07",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 251342,
+                },
+            },
+            product = { item_id = 250490, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 4 },
+                { item_id = 3470, qty = 2 },
+                { item_id = 818, qty = 2 },
+            },
+            levels = { 80, 85, 85, 85 },
+        },
+        {
             spell_id = 1252259,
             name = "Protector's Gloves",
             categories = { "Mail Gauntlets" },
@@ -1268,6 +1332,25 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 2841, qty = 6 },
             },
             levels = { 80, 120, 135, 150 },
+        },
+        {
+            spell_id = 1252237,
+            name = "Veteran's Chain Shirt",
+            categories = { "Mail Chestguards" },
+            icon = "inv_chest_chain_07",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 251340,
+                },
+            },
+            product = { item_id = 250488, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 4 },
+                { item_id = 3470, qty = 2 },
+                { item_id = 5498, qty = 2 },
+            },
+            levels = { 80, 85, 85, 85 },
         },
         {
             spell_id = 1252257,
@@ -1497,6 +1580,25 @@ TFG.BLACKSMITHING_FOREVER = {
     },
     [95] = {
         {
+            spell_id = 1252245,
+            name = "Acolyte's Chain Leggings",
+            categories = { "Mail Legguards" },
+            icon = "inv_pants_mail_17",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 251348,
+                },
+            },
+            product = { item_id = 250496, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 6 },
+                { item_id = 3478, qty = 2 },
+                { item_id = 10940, qty = 4 },
+            },
+            levels = { 95, 100, 100, 100 },
+        },
+        {
             spell_id = 1252280,
             name = "Acolyte's Silvered Chain Helm",
             categories = { "Mail Helmets" },
@@ -1560,6 +1662,25 @@ TFG.BLACKSMITHING_FOREVER = {
             levels = { 95, 125, 140, 155 },
         },
         {
+            spell_id = 1252246,
+            name = "Crusader's Chain Leggings",
+            categories = { "Mail Legguards" },
+            icon = "inv_pants_mail_13",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 251349,
+                },
+            },
+            product = { item_id = 250497, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 6 },
+                { item_id = 3478, qty = 2 },
+                { item_id = 10938, qty = 4 },
+            },
+            levels = { 95, 100, 100, 100 },
+        },
+        {
             spell_id = 1252281,
             name = "Crusader's Silvered Chain Helm",
             categories = { "Mail Helmets" },
@@ -1583,6 +1704,25 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 10938, qty = 6 },
             },
             levels = { 95, 125, 140, 155 },
+        },
+        {
+            spell_id = 1252243,
+            name = "Guard's Chain Leggings",
+            categories = { "Mail Legguards" },
+            icon = "inv_pants_mail_16",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 251346,
+                },
+            },
+            product = { item_id = 250494, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 6 },
+                { item_id = 3478, qty = 2 },
+                { item_id = 1210, qty = 4 },
+            },
+            levels = { 95, 100, 100, 100 },
         },
         {
             spell_id = 1252278,
@@ -1628,6 +1768,25 @@ TFG.BLACKSMITHING_FOREVER = {
             levels = { 95, 125, 140, 155 },
         },
         {
+            spell_id = 1252244,
+            name = "Protector's Chain Leggings",
+            categories = { "Mail Legguards" },
+            icon = "inv_pants_mail_05",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 251347,
+                },
+            },
+            product = { item_id = 250495, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 6 },
+                { item_id = 3478, qty = 2 },
+                { item_id = 818, qty = 4 },
+            },
+            levels = { 95, 100, 100, 100 },
+        },
+        {
             spell_id = 1252279,
             name = "Protector's Silvered Chain Helm",
             categories = { "Mail Helmets" },
@@ -1651,6 +1810,25 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 818, qty = 6 },
             },
             levels = { 95, 125, 140, 155 },
+        },
+        {
+            spell_id = 1252242,
+            name = "Veteran's Chain Leggings",
+            categories = { "Mail Legguards" },
+            icon = "inv_pants_mail_05",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 251345,
+                },
+            },
+            product = { item_id = 250493, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 6 },
+                { item_id = 3478, qty = 2 },
+                { item_id = 5498, qty = 4 },
+            },
+            levels = { 95, 100, 100, 100 },
         },
         {
             spell_id = 1252277,
@@ -2243,6 +2421,25 @@ TFG.BLACKSMITHING_FOREVER = {
     },
     [125] = {
         {
+            spell_id = 1252250,
+            name = "Acolyte's Chain Helm",
+            categories = { "Mail Helmets" },
+            icon = "inv_helmet_36",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 251353,
+                },
+            },
+            product = { item_id = 250501, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 8 },
+                { item_id = 3478, qty = 2 },
+                { item_id = 10940, qty = 6 },
+            },
+            levels = { 125, 130, 130, 130 },
+        },
+        {
             spell_id = 1252275,
             name = "Acolyte's Silvered Chain Leggings",
             categories = { "Mail Legguards" },
@@ -2266,6 +2463,25 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 10940, qty = 8 },
             },
             levels = { 125, 155, 170, 185 },
+        },
+        {
+            spell_id = 1252251,
+            name = "Crusader's Chain Helm",
+            categories = { "Mail Helmets" },
+            icon = "inv_helmet_37",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 251354,
+                },
+            },
+            product = { item_id = 250502, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 8 },
+                { item_id = 3478, qty = 2 },
+                { item_id = 10938, qty = 6 },
+            },
+            levels = { 125, 130, 130, 130 },
         },
         {
             spell_id = 1252276,
@@ -2349,6 +2565,25 @@ TFG.BLACKSMITHING_FOREVER = {
             levels = { 125, 155, 170, 185 },
         },
         {
+            spell_id = 1252248,
+            name = "Guard's Chain Helm",
+            categories = { "Mail Helmets" },
+            icon = "inv_helmet_38",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 251351,
+                },
+            },
+            product = { item_id = 250499, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 8 },
+                { item_id = 3478, qty = 2 },
+                { item_id = 1210, qty = 6 },
+            },
+            levels = { 125, 130, 130, 130 },
+        },
+        {
             spell_id = 1252273,
             name = "Guard's Silvered Chain Leggings",
             categories = { "Mail Legguards" },
@@ -2409,6 +2644,25 @@ TFG.BLACKSMITHING_FOREVER = {
             levels = { 125, 155, 170, 185 },
         },
         {
+            spell_id = 1252249,
+            name = "Protector's Chain Helm",
+            categories = { "Mail Helmets" },
+            icon = "inv_helmet_39",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 251352,
+                },
+            },
+            product = { item_id = 250500, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 8 },
+                { item_id = 3478, qty = 2 },
+                { item_id = 818, qty = 6 },
+            },
+            levels = { 125, 130, 130, 130 },
+        },
+        {
             spell_id = 1252274,
             name = "Protector's Silvered Chain Leggings",
             categories = { "Mail Legguards" },
@@ -2451,6 +2705,25 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 3478, qty = 3 },
             },
             levels = { 125, 155, 170, 185 },
+        },
+        {
+            spell_id = 1252247,
+            name = "Veteran's Chain Helm",
+            categories = { "Mail Helmets" },
+            icon = "inv_helmet_39",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 251350,
+                },
+            },
+            product = { item_id = 250498, qty = 1 },
+            materials = {
+                { item_id = 2841, qty = 8 },
+                { item_id = 3478, qty = 2 },
+                { item_id = 5498, qty = 6 },
+            },
+            levels = { 125, 130, 130, 130 },
         },
         {
             spell_id = 1252272,
@@ -4590,6 +4863,26 @@ TFG.BLACKSMITHING_FOREVER = {
             },
             levels = { 215, 240, 252, 265 },
         },
+        {
+            spell_id = 1252292,
+            name = "Shining Mithril Helm",
+            categories = { "Plate Helmets" },
+            icon = "inv_helmet_35",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 251395,
+                },
+            },
+            product = { item_id = 250543, qty = 1 },
+            materials = {
+                { item_id = 3860, qty = 8 },
+                { item_id = 6037, qty = 9 },
+                { item_id = 3486, qty = 2 },
+                { item_id = 7075, qty = 1 },
+            },
+            levels = { 215, 235, 245, 255 },
+        },
     },
     [220] = {
         {
@@ -5381,6 +5674,32 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 13926, qty = 4 },
             },
             levels = { 250, 255, 255, 255 },
+        },
+        {
+            spell_id = 1252323,
+            name = "Prefect's Waistguard",
+            categories = { "Plate Belts" },
+            icon = "inv_belt_08",
+            source = {
+                {
+                    type = "Vendor",
+                    item_id = 251426,
+                    currencies = {
+                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
+                    },
+                    location = "Stondry Darkhammer, Redridge Mountains",
+                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
+                },
+            },
+            product = { item_id = 250574, qty = 1 },
+            materials = {
+                { item_id = 12359, qty = 24 },
+                { item_id = 7966, qty = 4 },
+                { item_id = 249432, qty = 6 },
+                { item_id = 249410, qty = 6 },
+                { item_id = 13926, qty = 10 },
+            },
+            levels = { 250, 270, 280, 290 },
         },
         {
             spell_id = 1252301,
@@ -8235,45 +8554,6 @@ TFG.BLACKSMITHING_FOREVER = {
     },
     [980] = {
         {
-            spell_id = 1252250,
-            name = "Acolyte's Chain Helm",
-            categories = { "Mail Helmets" },
-            icon = "inv_helmet_36",
-            product = { item_id = 250501, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 8 },
-                { item_id = 3478, qty = 2 },
-                { item_id = 10940, qty = 6 },
-            },
-            levels = { 0, 130, 130, 130 },
-        },
-        {
-            spell_id = 1252245,
-            name = "Acolyte's Chain Leggings",
-            categories = { "Mail Legguards" },
-            icon = "inv_pants_mail_17",
-            product = { item_id = 250496, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 6 },
-                { item_id = 3478, qty = 2 },
-                { item_id = 10940, qty = 4 },
-            },
-            levels = { 0, 100, 100, 100 },
-        },
-        {
-            spell_id = 1252240,
-            name = "Acolyte's Chain Shirt",
-            categories = { "Mail Chestguards" },
-            icon = "inv_chest_chain_08",
-            product = { item_id = 250491, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 4 },
-                { item_id = 3470, qty = 2 },
-                { item_id = 10940, qty = 2 },
-            },
-            levels = { 0, 85, 85, 85 },
-        },
-        {
             spell_id = 20201,
             name = "Arcanite Rod",
             categories = { "Inert Enchanting Rods" },
@@ -8359,45 +8639,6 @@ TFG.BLACKSMITHING_FOREVER = {
             levels = { 0, 325, 337, 350 },
         },
         {
-            spell_id = 1252251,
-            name = "Crusader's Chain Helm",
-            categories = { "Mail Helmets" },
-            icon = "inv_helmet_37",
-            product = { item_id = 250502, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 8 },
-                { item_id = 3478, qty = 2 },
-                { item_id = 10938, qty = 6 },
-            },
-            levels = { 0, 130, 130, 130 },
-        },
-        {
-            spell_id = 1252246,
-            name = "Crusader's Chain Leggings",
-            categories = { "Mail Legguards" },
-            icon = "inv_pants_mail_13",
-            product = { item_id = 250497, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 6 },
-                { item_id = 3478, qty = 2 },
-                { item_id = 10938, qty = 4 },
-            },
-            levels = { 0, 100, 100, 100 },
-        },
-        {
-            spell_id = 1252241,
-            name = "Crusader's Chain Shirt",
-            categories = { "Mail Chestguards" },
-            icon = "inv_chest_chain_09",
-            product = { item_id = 250492, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 4 },
-                { item_id = 3470, qty = 2 },
-                { item_id = 10938, qty = 2 },
-            },
-            levels = { 0, 85, 85, 85 },
-        },
-        {
             spell_id = 16987,
             name = "Darkspear",
             categories = { "Polearms" },
@@ -8444,32 +8685,6 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 12365, qty = 1 },
             },
             levels = { 0, 230, 232, 235 },
-        },
-        {
-            spell_id = 1252248,
-            name = "Guard's Chain Helm",
-            categories = { "Mail Helmets" },
-            icon = "inv_helmet_38",
-            product = { item_id = 250499, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 8 },
-                { item_id = 3478, qty = 2 },
-                { item_id = 1210, qty = 6 },
-            },
-            levels = { 0, 130, 130, 130 },
-        },
-        {
-            spell_id = 1252243,
-            name = "Guard's Chain Leggings",
-            categories = { "Mail Legguards" },
-            icon = "inv_pants_mail_16",
-            product = { item_id = 250494, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 6 },
-                { item_id = 3478, qty = 2 },
-                { item_id = 1210, qty = 4 },
-            },
-            levels = { 0, 100, 100, 100 },
         },
         {
             spell_id = 9968,
@@ -8633,71 +8848,6 @@ TFG.BLACKSMITHING_FOREVER = {
             levels = { 0, 245, 257, 270 },
         },
         {
-            spell_id = 1252323,
-            name = "Prefect's Waistguard",
-            categories = { "Plate Belts" },
-            icon = "inv_belt_08",
-            source = {
-                {
-                    type = "Vendor",
-                    item_id = 251426,
-                    currencies = {
-                        { currency_id = 3402, qty = 90, name = "Merchant's Favor" },
-                    },
-                    location = "Stondry Darkhammer, Redridge Mountains",
-                    reputation = { faction = "Azeroth Commerce Authority", standing = "Honored" },
-                },
-            },
-            product = { item_id = 250574, qty = 1 },
-            materials = {
-                { item_id = 12359, qty = 24 },
-                { item_id = 7966, qty = 4 },
-                { item_id = 249432, qty = 6 },
-                { item_id = 249410, qty = 6 },
-                { item_id = 13926, qty = 10 },
-            },
-            levels = { 0, 270, 280, 290 },
-        },
-        {
-            spell_id = 1252249,
-            name = "Protector's Chain Helm",
-            categories = { "Mail Helmets" },
-            icon = "inv_helmet_39",
-            product = { item_id = 250500, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 8 },
-                { item_id = 3478, qty = 2 },
-                { item_id = 818, qty = 6 },
-            },
-            levels = { 0, 130, 130, 130 },
-        },
-        {
-            spell_id = 1252244,
-            name = "Protector's Chain Leggings",
-            categories = { "Mail Legguards" },
-            icon = "inv_pants_mail_05",
-            product = { item_id = 250495, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 6 },
-                { item_id = 3478, qty = 2 },
-                { item_id = 818, qty = 4 },
-            },
-            levels = { 0, 100, 100, 100 },
-        },
-        {
-            spell_id = 1252239,
-            name = "Protector's Chain Shirt",
-            categories = { "Mail Chestguards" },
-            icon = "inv_chest_chain_07",
-            product = { item_id = 250490, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 4 },
-                { item_id = 3470, qty = 2 },
-                { item_id = 818, qty = 2 },
-            },
-            levels = { 0, 85, 85, 85 },
-        },
-        {
             spell_id = 2671,
             name = "Rough Bronze Bracers",
             categories = { "Mail Bracers" },
@@ -8721,20 +8871,6 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 8170, qty = 4 },
             },
             levels = { 0, 285, 297, 310 },
-        },
-        {
-            spell_id = 1252292,
-            name = "Shining Mithril Helm",
-            categories = { "Plate Helmets" },
-            icon = "inv_helmet_35",
-            product = { item_id = 250543, qty = 1 },
-            materials = {
-                { item_id = 3860, qty = 8 },
-                { item_id = 6037, qty = 9 },
-                { item_id = 3486, qty = 2 },
-                { item_id = 7075, qty = 1 },
-            },
-            levels = { 0, 235, 245, 255 },
         },
         {
             spell_id = 10003,
@@ -8812,45 +8948,6 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 7966, qty = 2 },
             },
             levels = { 0, 220, 230, 240 },
-        },
-        {
-            spell_id = 1252247,
-            name = "Veteran's Chain Helm",
-            categories = { "Mail Helmets" },
-            icon = "inv_helmet_39",
-            product = { item_id = 250498, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 8 },
-                { item_id = 3478, qty = 2 },
-                { item_id = 5498, qty = 6 },
-            },
-            levels = { 0, 130, 130, 130 },
-        },
-        {
-            spell_id = 1252242,
-            name = "Veteran's Chain Leggings",
-            categories = { "Mail Legguards" },
-            icon = "inv_pants_mail_05",
-            product = { item_id = 250493, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 6 },
-                { item_id = 3478, qty = 2 },
-                { item_id = 5498, qty = 4 },
-            },
-            levels = { 0, 100, 100, 100 },
-        },
-        {
-            spell_id = 1252237,
-            name = "Veteran's Chain Shirt",
-            categories = { "Mail Chestguards" },
-            icon = "inv_chest_chain_07",
-            product = { item_id = 250488, qty = 1 },
-            materials = {
-                { item_id = 2841, qty = 4 },
-                { item_id = 3470, qty = 2 },
-                { item_id = 5498, qty = 2 },
-            },
-            levels = { 0, 85, 85, 85 },
         },
         {
             spell_id = 9788,

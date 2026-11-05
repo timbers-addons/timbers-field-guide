@@ -67,6 +67,13 @@ TFG.ALCHEMY_FOREVER = {
                     position = { map = 1432, x = 37, y = 49.2 },
                     faction = "Alliance",
                 },
+                {
+                    type = "Trainer",
+                    cost = 10,
+                    location = "Tel'Athir, Stormwind City",
+                    position = { map = 1453, x = 55.6, y = 85.6 },
+                    faction = "Alliance",
+                },
             },
             levels = { 1 },
             cap = 75,

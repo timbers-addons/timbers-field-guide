@@ -1076,7 +1076,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 22000,
                 },
             },
         },
@@ -1103,7 +1103,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 23000,
                 },
             },
         },
@@ -1127,7 +1127,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 23000,
                 },
             },
         },
@@ -1139,7 +1139,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 23000,
                 },
             },
         },
@@ -1151,7 +1151,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 23000,
                 },
             },
         },
@@ -1215,7 +1215,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 32000,
+                    cost = 29000,
                 },
             },
         },
@@ -1241,7 +1241,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 29000,
                 },
             },
         },
@@ -1253,7 +1253,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 32000,
+                    cost = 29000,
                 },
             },
         },
@@ -1265,7 +1265,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 32000,
+                    cost = 29000,
                 },
             },
         },
@@ -1279,7 +1279,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 36000,
+                    cost = 30000,
                 },
             },
         },
@@ -1291,7 +1291,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 36000,
+                    cost = 30000,
                 },
             },
         },
@@ -1303,7 +1303,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 36000,
+                    cost = 30000,
                 },
             },
         },
@@ -1328,7 +1328,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 36000,
+                    cost = 30000,
                 },
             },
         },
@@ -1339,7 +1339,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 36000,
+                    cost = 30000,
                 },
             },
         },
@@ -1353,7 +1353,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 40000,
+                    cost = 36000,
                 },
             },
         },
@@ -1365,7 +1365,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 36000,
                 },
             },
         },
@@ -1377,7 +1377,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 40000,
+                    cost = 36000,
                 },
             },
         },
@@ -1404,7 +1404,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
+                    cost = 37000,
                 },
             },
         },
@@ -1418,7 +1418,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 38000,
                 },
             },
         },
@@ -1430,7 +1430,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 38000,
                 },
             },
         },
@@ -1442,7 +1442,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 38000,
                 },
             },
         },
@@ -1454,7 +1454,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 38000,
                 },
             },
         },
@@ -1468,7 +1468,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 48000,
+                    cost = 39000,
                 },
             },
         },
@@ -1480,7 +1480,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 48000,
+                    cost = 39000,
                 },
             },
         },
@@ -1492,7 +1492,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 48000,
+                    cost = 39000,
                 },
             },
         },
@@ -1505,7 +1505,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 39000,
                 },
             },
         },
@@ -1517,7 +1517,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 48000,
+                    cost = 39000,
                 },
             },
         },
@@ -1529,7 +1529,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 48000,
+                    cost = 39000,
                 },
             },
         },
@@ -1543,7 +1543,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 48000,
+                    cost = 42000,
                 },
             },
         },
@@ -1567,7 +1567,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 50000,
+                    cost = 42000,
                 },
             },
         },
@@ -1603,7 +1603,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 25000,
+                    cost = 42000,
                 },
             },
         },
@@ -1615,7 +1615,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 50000,
+                    cost = 42000,
                 },
             },
         },
@@ -1627,7 +1627,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 50000,
+                    cost = 42000,
                 },
             },
         },
@@ -1664,7 +1664,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 50000,
+                    cost = 42000,
                 },
             },
         },
@@ -1676,7 +1676,7 @@ TFG.HUNTER_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 50000,
+                    cost = 42000,
                 },
             },
         },

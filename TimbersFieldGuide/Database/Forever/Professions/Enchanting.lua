@@ -102,6 +102,13 @@ TFG.ENCHANTING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 10,
+                    location = "Lalina Summermoon, Darnassus",
+                    position = { map = 1457, x = 58.6, y = 13.1 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 10,
                     location = "Kitta Firewind, Elwynn Forest",
                     position = { map = 1429, x = 64.9, y = 70.7 },
                     faction = "Alliance",
@@ -2857,6 +2864,25 @@ TFG.ENCHANTING_FOREVER = {
     },
     [265] = {
         {
+            spell_id = 1249114,
+            name = "Dormant Heart of the Mountain",
+            categories = { "Curios" },
+            icon = "inv_misc_gem_diamond_01",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 249521,
+                },
+            },
+            product = { item_id = 249473, qty = 1 },
+            materials = {
+                { item_id = 11382, qty = 1 },
+                { item_id = 7080, qty = 1 },
+                { item_id = 14343, qty = 3 },
+            },
+            levels = { 265, 285, 305, 325 },
+        },
+        {
             spell_id = 20014,
             name = "Enchant Cloak - Greater Resistance",
             categories = { "Cloak Enchants" },
@@ -2909,6 +2935,44 @@ TFG.ENCHANTING_FOREVER = {
             materials = {
                 { item_id = 11177, qty = 2 },
                 { item_id = 7078, qty = 1 },
+            },
+            levels = { 265, 285, 305, 325 },
+        },
+        {
+            spell_id = 1249107,
+            name = "Frozen Heart of the Mountain",
+            categories = { "Curios" },
+            icon = "inv_misc_gem_sapphire_01",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 249519,
+                },
+            },
+            product = { item_id = 249469, qty = 1 },
+            materials = {
+                { item_id = 11382, qty = 1 },
+                { item_id = 12808, qty = 1 },
+                { item_id = 14343, qty = 3 },
+            },
+            levels = { 265, 285, 305, 325 },
+        },
+        {
+            spell_id = 1249112,
+            name = "Molten Heart of the Mountain",
+            categories = { "Curios" },
+            icon = "inv_misc_gem_ruby_01",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 249520,
+                },
+            },
+            product = { item_id = 249470, qty = 1 },
+            materials = {
+                { item_id = 11382, qty = 1 },
+                { item_id = 7076, qty = 1 },
+                { item_id = 14343, qty = 3 },
             },
             levels = { 265, 285, 305, 325 },
         },
@@ -3068,6 +3132,25 @@ TFG.ENCHANTING_FOREVER = {
         },
     },
     [280] = {
+        {
+            spell_id = 1328948,
+            name = "Enchant Boots - Speed",
+            categories = { "Boots Enchants" },
+            icon = "spell_holy_greaterheal",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 289560,
+                },
+            },
+            materials = {
+                { item_id = 11178, qty = 2 },
+                { item_id = 11176, qty = 8 },
+                { item_id = 11175, qty = 2 },
+                { item_id = 12361, qty = 1 },
+            },
+            levels = { 280, 280, 290, 300 },
+        },
         {
             spell_id = 20016,
             name = "Enchant Shield - Superior Spirit",
@@ -4420,47 +4503,6 @@ TFG.ENCHANTING_FOREVER = {
                 { item_id = 16204, qty = 12 },
             },
             levels = { 300, 310, 317, 325 },
-        },
-    },
-    [980] = {
-        {
-            spell_id = 1249114,
-            name = "Dormant Heart of the Mountain",
-            categories = { "Curios" },
-            icon = "inv_misc_gem_diamond_01",
-            product = { item_id = 249473, qty = 1 },
-            materials = {
-                { item_id = 11382, qty = 1 },
-                { item_id = 7080, qty = 1 },
-                { item_id = 14343, qty = 3 },
-            },
-            levels = { 0, 285, 305, 325 },
-        },
-        {
-            spell_id = 1249107,
-            name = "Frozen Heart of the Mountain",
-            categories = { "Curios" },
-            icon = "inv_misc_gem_sapphire_01",
-            product = { item_id = 249469, qty = 1 },
-            materials = {
-                { item_id = 11382, qty = 1 },
-                { item_id = 12808, qty = 1 },
-                { item_id = 14343, qty = 3 },
-            },
-            levels = { 0, 285, 305, 325 },
-        },
-        {
-            spell_id = 1249112,
-            name = "Molten Heart of the Mountain",
-            categories = { "Curios" },
-            icon = "inv_misc_gem_ruby_01",
-            product = { item_id = 249470, qty = 1 },
-            materials = {
-                { item_id = 11382, qty = 1 },
-                { item_id = 7076, qty = 1 },
-                { item_id = 14343, qty = 3 },
-            },
-            levels = { 0, 285, 305, 325 },
         },
     },
 }

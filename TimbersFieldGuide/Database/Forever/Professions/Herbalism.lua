@@ -29,6 +29,13 @@ TFG.HERBALISM_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 10,
+                    location = "Malorne Bladeleaf, Teldrassil",
+                    position = { map = 1438, x = 57.7, y = 60.7 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 10,
                     location = "Alma Jainrose, Redridge Mountains",
                     position = { map = 1433, x = 16.5, y = 45.7 },
                     faction = "Alliance",
@@ -73,6 +80,12 @@ TFG.HERBALISM_FOREVER = {
                     type = "Trainer",
                     cost = 100,
                 },
+                {
+                    type = "Quest",
+                    location = "Malorne Bladeleaf, Teldrassil",
+                    quest_id = 97944,
+                    quest_name = "Camping 101: Herbalism",
+                },
             },
             product = { item_id = 279962, qty = 1 },
             materials = {
@@ -94,6 +107,13 @@ TFG.HERBALISM_FOREVER = {
                     cost = 500,
                     location = "Kali Healtouch, Loch Modan",
                     position = { map = 1432, x = 36.5, y = 48.4 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 500,
+                    location = "Malorne Bladeleaf, Teldrassil",
+                    position = { map = 1438, x = 57.7, y = 60.7 },
                     faction = "Alliance",
                 },
                 {
@@ -172,6 +192,13 @@ TFG.HERBALISM_FOREVER = {
                     cost = 5000,
                     location = "Kali Healtouch, Loch Modan",
                     position = { map = 1432, x = 36.5, y = 48.4 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 5000,
+                    location = "Malorne Bladeleaf, Teldrassil",
+                    position = { map = 1438, x = 57.7, y = 60.7 },
                     faction = "Alliance",
                 },
                 {
@@ -271,6 +298,13 @@ TFG.HERBALISM_FOREVER = {
                     cost = 50000,
                     location = "Kali Healtouch, Loch Modan",
                     position = { map = 1432, x = 36.5, y = 48.4 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 50000,
+                    location = "Malorne Bladeleaf, Teldrassil",
+                    position = { map = 1438, x = 57.7, y = 60.7 },
                     faction = "Alliance",
                 },
                 {

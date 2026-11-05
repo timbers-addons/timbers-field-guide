@@ -187,7 +187,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 800,
+                    cost = 700,
                 },
             },
         },
@@ -199,7 +199,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 800,
+                    cost = 700,
                 },
             },
         },
@@ -211,7 +211,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 800,
+                    cost = 700,
                 },
             },
         },
@@ -223,7 +223,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 800,
+                    cost = 700,
                 },
             },
         },
@@ -275,7 +275,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1800,
+                    cost = 1100,
                 },
             },
         },
@@ -287,7 +287,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1800,
+                    cost = 1100,
                 },
             },
         },
@@ -298,7 +298,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1800,
+                    cost = 1100,
                 },
             },
         },
@@ -312,7 +312,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 1200,
                 },
             },
         },
@@ -324,7 +324,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 1200,
                 },
             },
         },
@@ -336,7 +336,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 1200,
                 },
             },
         },
@@ -348,7 +348,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 1200,
                 },
             },
         },
@@ -359,7 +359,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 1200,
                 },
             },
         },
@@ -372,7 +372,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2200,
+                    cost = 2300,
                 },
             },
         },
@@ -384,7 +384,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2200,
+                    cost = 2300,
                 },
             },
         },
@@ -396,7 +396,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2200,
+                    cost = 2300,
                 },
             },
         },
@@ -408,7 +408,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2200,
+                    cost = 2300,
                 },
             },
         },
@@ -419,7 +419,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2200,
+                    cost = 2300,
                 },
             },
         },
@@ -431,7 +431,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2200,
+                    cost = 2300,
                 },
             },
         },
@@ -442,7 +442,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2200,
+                    cost = 2300,
                 },
             },
         },
@@ -460,7 +460,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2200,
+                    cost = 2300,
                 },
             },
         },
@@ -480,18 +480,18 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 3300,
                 },
             },
         },
         {
             spell_id = 437009,
-            name = "Totemic Projection",
+            name = "Totemic Call",
             icon = "ability_shaman_totemrelocation",
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 3300,
                 },
             },
         },
@@ -502,7 +502,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 3300,
                 },
             },
         },
@@ -513,7 +513,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 3300,
                 },
             },
         },
@@ -524,7 +524,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 3300,
                 },
             },
         },
@@ -538,7 +538,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3500,
+                    cost = 3400,
                 },
             },
         },
@@ -550,7 +550,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3500,
+                    cost = 3400,
                 },
             },
         },
@@ -562,7 +562,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3500,
+                    cost = 3400,
                 },
             },
         },
@@ -574,7 +574,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3500,
+                    cost = 3400,
                 },
             },
         },
@@ -586,7 +586,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3500,
+                    cost = 3400,
                 },
             },
         },
@@ -598,7 +598,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3500,
+                    cost = 3400,
                 },
             },
         },
@@ -610,7 +610,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3500,
+                    cost = 3400,
                 },
             },
         },
@@ -622,7 +622,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3500,
+                    cost = 3400,
                 },
             },
         },
@@ -651,7 +651,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 4300,
                 },
             },
         },
@@ -663,7 +663,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 4300,
                 },
             },
         },
@@ -674,7 +674,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 4300,
                 },
             },
         },
@@ -686,7 +686,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 4300,
                 },
             },
         },
@@ -698,7 +698,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 4300,
                 },
             },
         },
@@ -712,7 +712,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 5000,
                 },
             },
         },
@@ -724,7 +724,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 5000,
                 },
             },
         },
@@ -736,7 +736,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 5000,
                 },
             },
         },
@@ -748,7 +748,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 5000,
                 },
             },
         },
@@ -760,7 +760,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 5000,
                 },
             },
         },
@@ -771,7 +771,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 5000,
                 },
             },
         },
@@ -783,7 +783,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 5000,
                 },
             },
         },
@@ -796,16 +796,9 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7000,
+                    cost = 5700,
                 },
             },
-        },
-        {
-            spell_id = 408490,
-            name = "Lava Burst",
-            rank = 1,
-            icon = "spell_shaman_lavaburst",
-            type = "Talent",
         },
         {
             spell_id = 6364,
@@ -815,7 +808,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7000,
+                    cost = 5700,
                 },
             },
         },
@@ -826,7 +819,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7000,
+                    cost = 5700,
                 },
             },
         },
@@ -837,7 +830,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7000,
+                    cost = 5700,
                 },
             },
         },
@@ -849,7 +842,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7000,
+                    cost = 5700,
                 },
             },
         },
@@ -861,7 +854,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7000,
+                    cost = 5700,
                 },
             },
         },
@@ -873,7 +866,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7000,
+                    cost = 5700,
                 },
             },
         },
@@ -890,7 +883,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7000,
+                    cost = 5700,
                 },
             },
         },
@@ -904,7 +897,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 7000,
                 },
             },
         },
@@ -916,7 +909,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 7000,
                 },
             },
         },
@@ -928,7 +921,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 7000,
                 },
             },
         },
@@ -940,7 +933,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 7000,
                 },
             },
         },
@@ -952,7 +945,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 7000,
                 },
             },
         },
@@ -964,7 +957,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 7000,
                 },
             },
         },
@@ -976,7 +969,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 7000,
                 },
             },
         },
@@ -990,7 +983,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 9000,
+                    cost = 8000,
                 },
             },
         },
@@ -1002,7 +995,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 9000,
+                    cost = 8000,
                 },
             },
         },
@@ -1013,7 +1006,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 9000,
+                    cost = 8000,
                 },
             },
         },
@@ -1025,7 +1018,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 9000,
+                    cost = 8000,
                 },
             },
         },
@@ -1039,7 +1032,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
         },
@@ -1051,7 +1044,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
         },
@@ -1063,7 +1056,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
         },
@@ -1075,7 +1068,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
         },
@@ -1087,7 +1080,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
         },
@@ -1099,7 +1092,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
         },
@@ -1111,7 +1104,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
         },
@@ -1125,7 +1118,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 10000,
                 },
             },
         },
@@ -1137,7 +1130,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 10000,
                 },
             },
         },
@@ -1149,7 +1142,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 10000,
                 },
             },
         },
@@ -1161,7 +1154,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 10000,
                 },
             },
         },
@@ -1173,7 +1166,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 10000,
                 },
             },
         },
@@ -1185,7 +1178,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 10000,
                 },
             },
         },
@@ -1196,7 +1189,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 10000,
                 },
             },
         },
@@ -1209,7 +1202,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 800,
+                    cost = 10000,
                 },
             },
         },
@@ -1239,12 +1232,6 @@ TFG.SHAMAN_FOREVER = {
             },
         },
         {
-            spell_id = 16166,
-            name = "Elemental Mastery",
-            icon = "spell_nature_wispheal",
-            type = "Talent",
-        },
-        {
             spell_id = 10447,
             name = "Flame Shock",
             rank = 4,
@@ -1257,17 +1244,10 @@ TFG.SHAMAN_FOREVER = {
             },
         },
         {
-            spell_id = 1238299,
-            name = "Lava Burst",
-            rank = 2,
-            icon = "spell_shaman_lavaburst",
+            spell_id = 16166,
+            name = "Lightning Mastery",
+            icon = "spell_nature_unrelentingstorm",
             type = "Talent",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 12000,
-                },
-            },
         },
         {
             spell_id = 6365,
@@ -1375,7 +1355,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 16000,
+                    cost = 18000,
                 },
             },
         },
@@ -1387,7 +1367,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 16000,
+                    cost = 18000,
                 },
             },
         },
@@ -1399,7 +1379,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 16000,
+                    cost = 18000,
                 },
             },
         },
@@ -1411,7 +1391,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 16000,
+                    cost = 18000,
                 },
             },
         },
@@ -1425,7 +1405,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 19000,
                 },
             },
         },
@@ -1437,7 +1417,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 19000,
                 },
             },
         },
@@ -1449,7 +1429,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 19000,
                 },
             },
         },
@@ -1461,7 +1441,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 19000,
                 },
             },
         },
@@ -1473,7 +1453,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 19000,
                 },
             },
         },
@@ -1561,7 +1541,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 21000,
                 },
             },
         },
@@ -1573,7 +1553,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 21000,
                 },
             },
         },
@@ -1585,7 +1565,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 21000,
                 },
             },
         },
@@ -1597,7 +1577,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 21000,
                 },
             },
         },
@@ -1609,7 +1589,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 21000,
                 },
             },
         },
@@ -1621,7 +1601,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 21000,
                 },
             },
         },
@@ -1633,7 +1613,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 21000,
                 },
             },
         },
@@ -1645,7 +1625,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 21000,
                 },
             },
         },
@@ -1658,25 +1638,12 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1600,
+                    cost = 21000,
                 },
             },
         },
     },
     [50] = {
-        {
-            spell_id = 1238300,
-            name = "Lava Burst",
-            rank = 3,
-            icon = "spell_shaman_lavaburst",
-            type = "Talent",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 24000,
-                },
-            },
-        },
         {
             spell_id = 15207,
             name = "Lightning Bolt",
@@ -1685,7 +1652,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 25000,
                 },
             },
         },
@@ -1697,7 +1664,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 25000,
                 },
             },
         },
@@ -1709,7 +1676,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 25000,
                 },
             },
         },
@@ -1721,7 +1688,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 25000,
                 },
             },
         },
@@ -1734,7 +1701,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 800,
+                    cost = 25000,
                 },
             },
         },
@@ -1748,7 +1715,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 27000,
+                    cost = 26000,
                 },
             },
         },
@@ -1760,7 +1727,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 27000,
+                    cost = 26000,
                 },
             },
         },
@@ -1772,7 +1739,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 27000,
+                    cost = 26000,
                 },
             },
         },
@@ -1784,7 +1751,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 27000,
+                    cost = 26000,
                 },
             },
         },
@@ -1796,7 +1763,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 27000,
+                    cost = 26000,
                 },
             },
         },
@@ -1810,7 +1777,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 29000,
+                    cost = 27000,
                 },
             },
         },
@@ -1822,7 +1789,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 29000,
+                    cost = 27000,
                 },
             },
         },
@@ -1834,7 +1801,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 29000,
+                    cost = 27000,
                 },
             },
         },
@@ -1846,7 +1813,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 29000,
+                    cost = 27000,
                 },
             },
         },
@@ -1860,7 +1827,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 30000,
+                    cost = 28000,
                 },
             },
         },
@@ -1872,7 +1839,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 30000,
+                    cost = 28000,
                 },
             },
         },
@@ -1884,7 +1851,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 30000,
+                    cost = 28000,
                 },
             },
         },
@@ -1896,7 +1863,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 30000,
+                    cost = 28000,
                 },
             },
         },
@@ -1908,7 +1875,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 30000,
+                    cost = 28000,
                 },
             },
         },
@@ -1920,7 +1887,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 30000,
+                    cost = 28000,
                 },
             },
         },
@@ -1932,7 +1899,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 30000,
+                    cost = 28000,
                 },
             },
         },
@@ -1944,7 +1911,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 30000,
+                    cost = 28000,
                 },
             },
         },
@@ -1956,7 +1923,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 30000,
+                    cost = 28000,
                 },
             },
         },
@@ -2031,7 +1998,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 32000,
                 },
             },
         },
@@ -2045,7 +2012,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 34000,
+                    cost = 33000,
                 },
             },
         },
@@ -2062,19 +2029,6 @@ TFG.SHAMAN_FOREVER = {
             },
         },
         {
-            spell_id = 1326047,
-            name = "Lava Burst",
-            rank = 4,
-            icon = "spell_shaman_lavaburst",
-            type = "Talent",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 34000,
-                },
-            },
-        },
-        {
             spell_id = 10438,
             name = "Searing Totem",
             rank = 6,
@@ -2082,7 +2036,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 34000,
+                    cost = 33000,
                 },
             },
         },
@@ -2106,7 +2060,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 34000,
+                    cost = 33000,
                 },
             },
         },
@@ -2130,7 +2084,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 34000,
+                    cost = 33000,
                 },
             },
         },
@@ -2142,7 +2096,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 34000,
+                    cost = 33000,
                 },
             },
         },
@@ -2154,7 +2108,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 34000,
+                    cost = 33000,
                 },
             },
         },
@@ -2178,7 +2132,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 34000,
+                    cost = 33000,
                 },
             },
         },
@@ -2191,7 +2145,7 @@ TFG.SHAMAN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1600,
+                    cost = 33000,
                 },
             },
         },

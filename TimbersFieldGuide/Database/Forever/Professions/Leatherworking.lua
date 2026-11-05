@@ -1397,6 +1397,25 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 75, 100, 112, 125 },
         },
         {
+            spell_id = 1255136,
+            name = "Brawler's Leather Armor",
+            categories = { "Leather Chestguards" },
+            icon = "inv_chest_leather_07",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 252771,
+                },
+            },
+            product = { item_id = 252490, qty = 1 },
+            materials = {
+                { item_id = 2318, qty = 16 },
+                { item_id = 4231, qty = 2 },
+                { item_id = 1210, qty = 1 },
+            },
+            levels = { 75, 80, 80, 80 },
+        },
+        {
             spell_id = 1255130,
             name = "Brawler's Leather Gloves",
             categories = { "Leather Gauntlets" },
@@ -1457,6 +1476,25 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 4340, qty = 1 },
             },
             levels = { 75, 100, 112, 125 },
+        },
+        {
+            spell_id = 1255134,
+            name = "Defender's Leather Armor",
+            categories = { "Leather Chestguards" },
+            icon = "inv_chest_leather_10",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 252773,
+                },
+            },
+            product = { item_id = 252434, qty = 1 },
+            materials = {
+                { item_id = 2318, qty = 16 },
+                { item_id = 4231, qty = 2 },
+                { item_id = 2458, qty = 1 },
+            },
+            levels = { 75, 80, 80, 80 },
         },
         {
             spell_id = 1255128,
@@ -1557,6 +1595,25 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 75, 75, 80, 85 },
         },
         {
+            spell_id = 1255132,
+            name = "Stormrider's Leather Armor",
+            categories = { "Leather Chestguards" },
+            icon = "inv_chest_leather_03",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 252775,
+                },
+            },
+            product = { item_id = 252492, qty = 1 },
+            materials = {
+                { item_id = 2318, qty = 16 },
+                { item_id = 4231, qty = 2 },
+                { item_id = 249409, qty = 1 },
+            },
+            levels = { 75, 80, 80, 80 },
+        },
+        {
             spell_id = 1255126,
             name = "Stormrider's Leather Gloves",
             categories = { "Leather Gauntlets" },
@@ -1580,6 +1637,25 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 249409, qty = 2 },
             },
             levels = { 75, 100, 112, 125 },
+        },
+        {
+            spell_id = 1255133,
+            name = "Totemic Leather Armor",
+            categories = { "Leather Chestguards" },
+            icon = "inv_chest_leather_01",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 252774,
+                },
+            },
+            product = { item_id = 252435, qty = 1 },
+            materials = {
+                { item_id = 2318, qty = 16 },
+                { item_id = 4231, qty = 2 },
+                { item_id = 249410, qty = 1 },
+            },
+            levels = { 75, 80, 80, 80 },
         },
         {
             spell_id = 1255127,
@@ -1607,6 +1683,25 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 75, 100, 112, 125 },
         },
         {
+            spell_id = 1255135,
+            name = "Trapper's Leather Armor",
+            categories = { "Leather Chestguards" },
+            icon = "inv_chest_leather_08",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 252772,
+                },
+            },
+            product = { item_id = 252491, qty = 1 },
+            materials = {
+                { item_id = 2318, qty = 16 },
+                { item_id = 4231, qty = 2 },
+                { item_id = 6470, qty = 1 },
+            },
+            levels = { 75, 80, 80, 80 },
+        },
+        {
             spell_id = 1255129,
             name = "Trapper's Leather Gloves",
             categories = { "Leather Gauntlets" },
@@ -1630,6 +1725,25 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 6470, qty = 2 },
             },
             levels = { 75, 100, 112, 125 },
+        },
+        {
+            spell_id = 1255131,
+            name = "Wisdom's Leather Armor",
+            categories = { "Leather Chestguards" },
+            icon = "inv_chest_fur",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 252776,
+                },
+            },
+            product = { item_id = 252493, qty = 1 },
+            materials = {
+                { item_id = 2318, qty = 16 },
+                { item_id = 4231, qty = 2 },
+                { item_id = 5498, qty = 1 },
+            },
+            levels = { 75, 80, 80, 80 },
         },
         {
             spell_id = 1255125,
@@ -2104,6 +2218,25 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 100, 125, 137, 150 },
         },
         {
+            spell_id = 1255115,
+            name = "Brawler's Leather Pants",
+            categories = { "Leather Legguards" },
+            icon = "inv_pants_06",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 252792,
+                },
+            },
+            product = { item_id = 252500, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 8 },
+                { item_id = 4231, qty = 4 },
+                { item_id = 1210, qty = 2 },
+            },
+            levels = { 100, 105, 105, 105 },
+        },
+        {
             spell_id = 3766,
             name = "Dark Leather Belt",
             categories = { "Leather Belts" },
@@ -2147,6 +2280,25 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 2458, qty = 4 },
             },
             levels = { 100, 125, 137, 150 },
+        },
+        {
+            spell_id = 1255113,
+            name = "Defender's Leather Pants",
+            categories = { "Leather Legguards" },
+            icon = "inv_pants_leather_01",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 252794,
+                },
+            },
+            product = { item_id = 252445, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 8 },
+                { item_id = 4231, qty = 4 },
+                { item_id = 2458, qty = 2 },
+            },
+            levels = { 100, 105, 105, 105 },
         },
         {
             spell_id = 9145,
@@ -2193,6 +2345,25 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 100, 125, 137, 150 },
         },
         {
+            spell_id = 1255111,
+            name = "Stormrider's Leather Pants",
+            categories = { "Leather Legguards" },
+            icon = "inv_pants_10",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 252796,
+                },
+            },
+            product = { item_id = 252502, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 8 },
+                { item_id = 4231, qty = 4 },
+                { item_id = 249409, qty = 2 },
+            },
+            levels = { 100, 105, 105, 105 },
+        },
+        {
             spell_id = 1255106,
             name = "Totemic Leather Hood",
             categories = { "Leather Helmets" },
@@ -2216,6 +2387,25 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 249410, qty = 4 },
             },
             levels = { 100, 125, 137, 150 },
+        },
+        {
+            spell_id = 1255112,
+            name = "Totemic Leather Pants",
+            categories = { "Leather Legguards" },
+            icon = "inv_pants_01",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 252795,
+                },
+            },
+            product = { item_id = 252446, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 8 },
+                { item_id = 4231, qty = 4 },
+                { item_id = 249410, qty = 2 },
+            },
+            levels = { 100, 105, 105, 105 },
         },
         {
             spell_id = 1255108,
@@ -2243,6 +2433,25 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 100, 125, 137, 150 },
         },
         {
+            spell_id = 1255114,
+            name = "Trapper's Leather Pants",
+            categories = { "Leather Legguards" },
+            icon = "inv_pants_14",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 252793,
+                },
+            },
+            product = { item_id = 252501, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 8 },
+                { item_id = 4231, qty = 4 },
+                { item_id = 6470, qty = 2 },
+            },
+            levels = { 100, 105, 105, 105 },
+        },
+        {
             spell_id = 1255104,
             name = "Wisdom's Leather Hood",
             categories = { "Leather Helmets" },
@@ -2266,6 +2475,25 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 5498, qty = 4 },
             },
             levels = { 100, 125, 137, 150 },
+        },
+        {
+            spell_id = 1255110,
+            name = "Wisdom's Leather Pants",
+            categories = { "Leather Legguards" },
+            icon = "inv_pants_06",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 252797,
+                },
+            },
+            product = { item_id = 252503, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 8 },
+                { item_id = 4231, qty = 4 },
+                { item_id = 5498, qty = 2 },
+            },
+            levels = { 100, 105, 105, 105 },
         },
     },
     [105] = {
@@ -2623,6 +2851,25 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 125, 150, 160, 170 },
         },
         {
+            spell_id = 1255093,
+            name = "Brawler's Leather Helm",
+            categories = { "Leather Helmets" },
+            icon = "inv_helmet_15",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 252814,
+                },
+            },
+            product = { item_id = 252512, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 12 },
+                { item_id = 4233, qty = 2 },
+                { item_id = 1210, qty = 3 },
+            },
+            levels = { 125, 130, 130, 130 },
+        },
+        {
             spell_id = 1255087,
             name = "Brawler's Leather Legguards",
             categories = { "Leather Legguards" },
@@ -2664,6 +2911,25 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 4289, qty = 3 },
             },
             levels = { 125, 135, 140, 145 },
+        },
+        {
+            spell_id = 1255091,
+            name = "Defender's Leather Helm",
+            categories = { "Leather Helmets" },
+            icon = "inv_helmet_33",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 252816,
+                },
+            },
+            product = { item_id = 252455, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 12 },
+                { item_id = 4233, qty = 2 },
+                { item_id = 2458, qty = 3 },
+            },
+            levels = { 125, 130, 130, 130 },
         },
         {
             spell_id = 1255085,
@@ -2823,6 +3089,25 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 125, 145, 155, 165 },
         },
         {
+            spell_id = 1255089,
+            name = "Stormrider's Leather Helm",
+            categories = { "Leather Helmets" },
+            icon = "inv_helmet_30",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 252818,
+                },
+            },
+            product = { item_id = 252514, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 12 },
+                { item_id = 4233, qty = 2 },
+                { item_id = 249409, qty = 3 },
+            },
+            levels = { 125, 130, 130, 130 },
+        },
+        {
             spell_id = 1255083,
             name = "Stormrider's Leather Kilt",
             categories = { "Leather Legguards" },
@@ -2846,6 +3131,25 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 249409, qty = 8 },
             },
             levels = { 125, 150, 160, 170 },
+        },
+        {
+            spell_id = 1255090,
+            name = "Totemic Leather Helm",
+            categories = { "Leather Helmets" },
+            icon = "inv_helmet_24",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 252817,
+                },
+            },
+            product = { item_id = 252456, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 12 },
+                { item_id = 4233, qty = 2 },
+                { item_id = 249410, qty = 3 },
+            },
+            levels = { 125, 130, 130, 130 },
         },
         {
             spell_id = 1255084,
@@ -2873,6 +3177,25 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 125, 150, 160, 170 },
         },
         {
+            spell_id = 1255092,
+            name = "Trapper's Leather Helm",
+            categories = { "Leather Helmets" },
+            icon = "inv_helmet_32",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 252815,
+                },
+            },
+            product = { item_id = 252513, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 12 },
+                { item_id = 4233, qty = 2 },
+                { item_id = 6470, qty = 3 },
+            },
+            levels = { 125, 130, 130, 130 },
+        },
+        {
             spell_id = 1255086,
             name = "Trapper's Leather Legguards",
             categories = { "Leather Legguards" },
@@ -2896,6 +3219,25 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 6470, qty = 8 },
             },
             levels = { 125, 150, 160, 170 },
+        },
+        {
+            spell_id = 1255088,
+            name = "Wisdom's Leather Helm",
+            categories = { "Leather Helmets" },
+            icon = "inv_helmet_26",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 252819,
+                },
+            },
+            product = { item_id = 252515, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 12 },
+                { item_id = 4233, qty = 2 },
+                { item_id = 5498, qty = 3 },
+            },
+            levels = { 125, 130, 130, 130 },
         },
         {
             spell_id = 1255082,
@@ -9683,45 +10025,6 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 0, 310, 320, 330 },
         },
         {
-            spell_id = 1255136,
-            name = "Brawler's Leather Armor",
-            categories = { "Leather Chestguards" },
-            icon = "inv_chest_leather_07",
-            product = { item_id = 252490, qty = 1 },
-            materials = {
-                { item_id = 2318, qty = 16 },
-                { item_id = 4231, qty = 2 },
-                { item_id = 1210, qty = 1 },
-            },
-            levels = { 0, 80, 80, 80 },
-        },
-        {
-            spell_id = 1255093,
-            name = "Brawler's Leather Helm",
-            categories = { "Leather Helmets" },
-            icon = "inv_helmet_15",
-            product = { item_id = 252512, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 12 },
-                { item_id = 4233, qty = 2 },
-                { item_id = 1210, qty = 3 },
-            },
-            levels = { 0, 130, 130, 130 },
-        },
-        {
-            spell_id = 1255115,
-            name = "Brawler's Leather Pants",
-            categories = { "Leather Legguards" },
-            icon = "inv_pants_06",
-            product = { item_id = 252500, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 8 },
-                { item_id = 4231, qty = 4 },
-                { item_id = 1210, qty = 2 },
-            },
-            levels = { 0, 105, 105, 105 },
-        },
-        {
             spell_id = 19047,
             name = "Cured Rugged Hide",
             categories = { "Reagents" },
@@ -9744,45 +10047,6 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 8150, qty = 1 },
             },
             levels = { 0, 175, 175, 175 },
-        },
-        {
-            spell_id = 1255134,
-            name = "Defender's Leather Armor",
-            categories = { "Leather Chestguards" },
-            icon = "inv_chest_leather_10",
-            product = { item_id = 252434, qty = 1 },
-            materials = {
-                { item_id = 2318, qty = 16 },
-                { item_id = 4231, qty = 2 },
-                { item_id = 2458, qty = 1 },
-            },
-            levels = { 0, 80, 80, 80 },
-        },
-        {
-            spell_id = 1255091,
-            name = "Defender's Leather Helm",
-            categories = { "Leather Helmets" },
-            icon = "inv_helmet_33",
-            product = { item_id = 252455, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 12 },
-                { item_id = 4233, qty = 2 },
-                { item_id = 2458, qty = 3 },
-            },
-            levels = { 0, 130, 130, 130 },
-        },
-        {
-            spell_id = 1255113,
-            name = "Defender's Leather Pants",
-            categories = { "Leather Legguards" },
-            icon = "inv_pants_leather_01",
-            product = { item_id = 252445, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 8 },
-                { item_id = 4231, qty = 4 },
-                { item_id = 2458, qty = 2 },
-            },
-            levels = { 0, 105, 105, 105 },
         },
         {
             spell_id = 10650,
@@ -10161,45 +10425,6 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 0, 305, 315, 325 },
         },
         {
-            spell_id = 1255132,
-            name = "Stormrider's Leather Armor",
-            categories = { "Leather Chestguards" },
-            icon = "inv_chest_leather_03",
-            product = { item_id = 252492, qty = 1 },
-            materials = {
-                { item_id = 2318, qty = 16 },
-                { item_id = 4231, qty = 2 },
-                { item_id = 249409, qty = 1 },
-            },
-            levels = { 0, 80, 80, 80 },
-        },
-        {
-            spell_id = 1255089,
-            name = "Stormrider's Leather Helm",
-            categories = { "Leather Helmets" },
-            icon = "inv_helmet_30",
-            product = { item_id = 252514, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 12 },
-                { item_id = 4233, qty = 2 },
-                { item_id = 249409, qty = 3 },
-            },
-            levels = { 0, 130, 130, 130 },
-        },
-        {
-            spell_id = 1255111,
-            name = "Stormrider's Leather Pants",
-            categories = { "Leather Legguards" },
-            icon = "inv_pants_10",
-            product = { item_id = 252502, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 8 },
-                { item_id = 4231, qty = 4 },
-                { item_id = 249409, qty = 2 },
-            },
-            levels = { 0, 105, 105, 105 },
-        },
-        {
             spell_id = 10487,
             name = "Thick Armor Kit",
             categories = { "Armor Kits" },
@@ -10235,84 +10460,6 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 4291, qty = 6 },
             },
             levels = { 0, 220, 230, 240 },
-        },
-        {
-            spell_id = 1255133,
-            name = "Totemic Leather Armor",
-            categories = { "Leather Chestguards" },
-            icon = "inv_chest_leather_01",
-            product = { item_id = 252435, qty = 1 },
-            materials = {
-                { item_id = 2318, qty = 16 },
-                { item_id = 4231, qty = 2 },
-                { item_id = 249410, qty = 1 },
-            },
-            levels = { 0, 80, 80, 80 },
-        },
-        {
-            spell_id = 1255090,
-            name = "Totemic Leather Helm",
-            categories = { "Leather Helmets" },
-            icon = "inv_helmet_24",
-            product = { item_id = 252456, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 12 },
-                { item_id = 4233, qty = 2 },
-                { item_id = 249410, qty = 3 },
-            },
-            levels = { 0, 130, 130, 130 },
-        },
-        {
-            spell_id = 1255112,
-            name = "Totemic Leather Pants",
-            categories = { "Leather Legguards" },
-            icon = "inv_pants_01",
-            product = { item_id = 252446, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 8 },
-                { item_id = 4231, qty = 4 },
-                { item_id = 249410, qty = 2 },
-            },
-            levels = { 0, 105, 105, 105 },
-        },
-        {
-            spell_id = 1255135,
-            name = "Trapper's Leather Armor",
-            categories = { "Leather Chestguards" },
-            icon = "inv_chest_leather_08",
-            product = { item_id = 252491, qty = 1 },
-            materials = {
-                { item_id = 2318, qty = 16 },
-                { item_id = 4231, qty = 2 },
-                { item_id = 6470, qty = 1 },
-            },
-            levels = { 0, 80, 80, 80 },
-        },
-        {
-            spell_id = 1255092,
-            name = "Trapper's Leather Helm",
-            categories = { "Leather Helmets" },
-            icon = "inv_helmet_32",
-            product = { item_id = 252513, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 12 },
-                { item_id = 4233, qty = 2 },
-                { item_id = 6470, qty = 3 },
-            },
-            levels = { 0, 130, 130, 130 },
-        },
-        {
-            spell_id = 1255114,
-            name = "Trapper's Leather Pants",
-            categories = { "Leather Legguards" },
-            icon = "inv_pants_14",
-            product = { item_id = 252501, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 8 },
-                { item_id = 4231, qty = 4 },
-                { item_id = 6470, qty = 2 },
-            },
-            levels = { 0, 105, 105, 105 },
         },
         {
             spell_id = 10518,
@@ -10365,45 +10512,6 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 8343, qty = 1 },
             },
             levels = { 0, 230, 240, 250 },
-        },
-        {
-            spell_id = 1255131,
-            name = "Wisdom's Leather Armor",
-            categories = { "Leather Chestguards" },
-            icon = "inv_chest_fur",
-            product = { item_id = 252493, qty = 1 },
-            materials = {
-                { item_id = 2318, qty = 16 },
-                { item_id = 4231, qty = 2 },
-                { item_id = 5498, qty = 1 },
-            },
-            levels = { 0, 80, 80, 80 },
-        },
-        {
-            spell_id = 1255088,
-            name = "Wisdom's Leather Helm",
-            categories = { "Leather Helmets" },
-            icon = "inv_helmet_26",
-            product = { item_id = 252515, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 12 },
-                { item_id = 4233, qty = 2 },
-                { item_id = 5498, qty = 3 },
-            },
-            levels = { 0, 130, 130, 130 },
-        },
-        {
-            spell_id = 1255110,
-            name = "Wisdom's Leather Pants",
-            categories = { "Leather Legguards" },
-            icon = "inv_pants_06",
-            product = { item_id = 252503, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 8 },
-                { item_id = 4231, qty = 4 },
-                { item_id = 5498, qty = 2 },
-            },
-            levels = { 0, 105, 105, 105 },
         },
         {
             spell_id = 10621,

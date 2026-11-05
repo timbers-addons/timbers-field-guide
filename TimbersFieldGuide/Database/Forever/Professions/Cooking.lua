@@ -184,8 +184,22 @@ TFG.COOKING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 100,
+                    location = "Alegorn, Darnassus",
+                    position = { map = 1457, x = 48.8, y = 21.4 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 100,
                     location = "Stephen Ryback, Stormwind City",
                     position = { map = 1453, x = 78.3, y = 53 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 100,
+                    location = "Zarrin, Teldrassil",
+                    position = { map = 1438, x = 57.1, y = 61.3 },
                     faction = "Alliance",
                 },
             },
@@ -201,8 +215,11 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_food_68",
             source = {
                 {
-                    type = "Item",
+                    type = "Quest",
                     item_id = 5482,
+                    location = "Zarrin, Teldrassil",
+                    quest_id = 4161,
+                    quest_name = "Recipe of the Kaldorei",
                 },
             },
             product = { item_id = 5472, qty = 1 },
@@ -676,8 +693,22 @@ TFG.COOKING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 500,
+                    location = "Alegorn, Darnassus",
+                    position = { map = 1457, x = 48.8, y = 21.4 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 500,
                     location = "Stephen Ryback, Stormwind City",
                     position = { map = 1453, x = 78.3, y = 53 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 500,
+                    location = "Zarrin, Teldrassil",
+                    position = { map = 1438, x = 57.1, y = 61.3 },
                     faction = "Alliance",
                 },
             },

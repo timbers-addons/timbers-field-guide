@@ -149,7 +149,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 400,
+                    cost = 300,
                 },
             },
         },
@@ -161,7 +161,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 400,
+                    cost = 300,
                 },
             },
         },
@@ -173,7 +173,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 400,
+                    cost = 300,
                 },
             },
         },
@@ -286,7 +286,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1500,
+                    cost = 1700,
                 },
             },
         },
@@ -298,7 +298,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1500,
+                    cost = 1700,
                 },
             },
         },
@@ -355,7 +355,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 2100,
                 },
             },
         },
@@ -367,7 +367,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 2100,
                 },
             },
         },
@@ -378,7 +378,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 2100,
                 },
             },
         },
@@ -390,7 +390,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 2100,
                 },
             },
         },
@@ -402,7 +402,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 2100,
                 },
             },
         },
@@ -462,7 +462,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 2100,
                 },
             },
         },
@@ -481,7 +481,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 2100,
                 },
             },
         },
@@ -493,7 +493,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 2100,
                 },
             },
         },
@@ -505,7 +505,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 2100,
                 },
             },
         },
@@ -526,7 +526,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 3300,
                 },
             },
         },
@@ -538,7 +538,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 3300,
                 },
             },
         },
@@ -550,7 +550,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 3300,
                 },
             },
         },
@@ -562,7 +562,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 3300,
                 },
             },
         },
@@ -574,7 +574,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 3300,
                 },
             },
         },
@@ -588,7 +588,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 4300,
                 },
             },
         },
@@ -599,7 +599,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 4300,
                 },
             },
         },
@@ -611,7 +611,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 4300,
                 },
             },
         },
@@ -623,7 +623,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 4300,
                 },
             },
         },
@@ -635,7 +635,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 4300,
                 },
             },
         },
@@ -648,7 +648,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 200,
+                    cost = 4300,
                 },
             },
         },
@@ -677,7 +677,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 4800,
                 },
             },
         },
@@ -689,7 +689,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 4800,
                 },
             },
         },
@@ -701,7 +701,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 4800,
                 },
             },
         },
@@ -715,7 +715,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7000,
+                    cost = 5500,
                 },
             },
         },
@@ -726,7 +726,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7000,
+                    cost = 5500,
                 },
             },
         },
@@ -738,7 +738,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7000,
+                    cost = 5500,
                 },
             },
         },
@@ -750,7 +750,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7000,
+                    cost = 5500,
                 },
             },
         },
@@ -762,7 +762,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7000,
+                    cost = 5500,
                 },
             },
         },
@@ -775,7 +775,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 5500,
                 },
             },
         },
@@ -789,7 +789,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 6200,
                 },
             },
         },
@@ -802,7 +802,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 6200,
                 },
             },
         },
@@ -814,7 +814,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 6200,
                 },
             },
         },
@@ -826,7 +826,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 6200,
                 },
             },
         },
@@ -875,7 +875,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 6200,
                 },
             },
         },
@@ -887,7 +887,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 6200,
                 },
             },
         },
@@ -899,7 +899,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 6200,
                 },
             },
         },
@@ -912,7 +912,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 400,
+                    cost = 6200,
                 },
             },
         },
@@ -930,7 +930,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 6200,
                 },
             },
         },
@@ -944,7 +944,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 8000,
                 },
             },
         },
@@ -956,7 +956,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 8000,
                 },
             },
         },
@@ -968,7 +968,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 8000,
                 },
             },
         },
@@ -980,7 +980,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 8000,
                 },
             },
         },
@@ -992,7 +992,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 8000,
                 },
             },
         },
@@ -1006,7 +1006,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 9000,
                 },
             },
         },
@@ -1018,7 +1018,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 9000,
                 },
             },
         },
@@ -1030,7 +1030,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 9000,
                 },
             },
         },
@@ -1043,7 +1043,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14500,
+                    cost = 9000,
                 },
             },
         },
@@ -1070,7 +1070,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 11000,
                 },
             },
         },
@@ -1082,7 +1082,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 11000,
                 },
             },
         },
@@ -1095,7 +1095,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 650,
+                    cost = 11000,
                 },
             },
         },
@@ -1107,7 +1107,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 11000,
                 },
             },
         },
@@ -1120,7 +1120,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 650,
+                    cost = 11000,
                 },
             },
         },
@@ -1132,7 +1132,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 11000,
                 },
             },
         },
@@ -1146,7 +1146,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 12000,
                 },
             },
         },
@@ -1157,7 +1157,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 12000,
                 },
             },
         },
@@ -1169,7 +1169,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 12000,
                 },
             },
         },
@@ -1181,7 +1181,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 12000,
                 },
             },
         },
@@ -1196,7 +1196,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 15000,
+                    cost = 13000,
                 },
             },
         },
@@ -1208,7 +1208,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 15000,
+                    cost = 13000,
                 },
             },
         },
@@ -1226,7 +1226,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 15000,
+                    cost = 13000,
                 },
             },
         },
@@ -1238,7 +1238,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 15000,
+                    cost = 13000,
                 },
             },
         },
@@ -1304,7 +1304,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 15000,
+                    cost = 13000,
                 },
             },
         },
@@ -1316,7 +1316,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 15000,
+                    cost = 13000,
                 },
             },
         },
@@ -1328,7 +1328,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 15000,
+                    cost = 13000,
                 },
             },
         },
@@ -1340,7 +1340,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 15000,
+                    cost = 13000,
                 },
             },
         },
@@ -1352,7 +1352,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 15000,
+                    cost = 13000,
                 },
             },
         },
@@ -1364,7 +1364,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 15000,
+                    cost = 13000,
                 },
             },
         },
@@ -1385,7 +1385,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 14000,
                 },
             },
         },
@@ -1397,7 +1397,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 14000,
                 },
             },
         },
@@ -1409,7 +1409,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 14000,
                 },
             },
         },
@@ -1421,7 +1421,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 14000,
                 },
             },
         },
@@ -1434,7 +1434,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 900,
+                    cost = 14000,
                 },
             },
         },
@@ -1446,7 +1446,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 14000,
                 },
             },
         },
@@ -1458,7 +1458,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 14000,
                 },
             },
         },
@@ -1471,7 +1471,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 14000,
                 },
             },
         },
@@ -1485,7 +1485,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 23000,
+                    cost = 15000,
                 },
             },
         },
@@ -1498,7 +1498,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1150,
+                    cost = 15000,
                 },
             },
         },
@@ -1510,7 +1510,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 23000,
+                    cost = 15000,
                 },
             },
         },
@@ -1522,7 +1522,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 23000,
+                    cost = 15000,
                 },
             },
         },
@@ -1536,7 +1536,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 20000,
                 },
             },
         },
@@ -1548,7 +1548,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 28000,
+                    cost = 21000,
                 },
             },
         },
@@ -1560,7 +1560,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 20000,
                 },
             },
         },
@@ -1572,7 +1572,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 20000,
                 },
             },
         },
@@ -1585,7 +1585,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1300,
+                    cost = 20000,
                 },
             },
         },
@@ -1599,7 +1599,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 28000,
+                    cost = 21000,
                 },
             },
         },
@@ -1623,7 +1623,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 28000,
+                    cost = 21000,
                 },
             },
         },
@@ -1635,7 +1635,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 28000,
+                    cost = 21000,
                 },
             },
         },
@@ -1647,7 +1647,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 28000,
+                    cost = 21000,
                 },
             },
         },
@@ -1659,7 +1659,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 28000,
+                    cost = 21000,
                 },
             },
         },
@@ -1672,7 +1672,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1400,
+                    cost = 21000,
                 },
             },
         },
@@ -1685,7 +1685,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 32000,
+                    cost = 21000,
                 },
             },
         },
@@ -1700,7 +1700,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 32000,
+                    cost = 23000,
                 },
             },
         },
@@ -1712,7 +1712,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 32000,
+                    cost = 23000,
                 },
             },
         },
@@ -1754,7 +1754,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 32000,
+                    cost = 23000,
                 },
             },
         },
@@ -1766,7 +1766,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 32000,
+                    cost = 23000,
                 },
             },
         },
@@ -1778,7 +1778,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 32000,
+                    cost = 23000,
                 },
             },
         },
@@ -1790,7 +1790,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 32000,
+                    cost = 23000,
                 },
             },
         },
@@ -1802,7 +1802,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 32000,
+                    cost = 23000,
                 },
             },
         },
@@ -1816,7 +1816,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 35000,
+                    cost = 24000,
                 },
             },
         },
@@ -1828,7 +1828,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 35000,
+                    cost = 24000,
                 },
             },
         },
@@ -1841,7 +1841,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1750,
+                    cost = 24000,
                 },
             },
         },
@@ -1853,7 +1853,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 35000,
+                    cost = 24000,
                 },
             },
         },
@@ -1865,7 +1865,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 35000,
+                    cost = 24000,
                 },
             },
         },
@@ -1877,7 +1877,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 35000,
+                    cost = 24000,
                 },
             },
         },
@@ -1890,7 +1890,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1750,
+                    cost = 24000,
                 },
             },
         },
@@ -1904,7 +1904,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 36000,
+                    cost = 26000,
                 },
             },
         },
@@ -1916,7 +1916,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 36000,
+                    cost = 26000,
                 },
             },
         },
@@ -1928,7 +1928,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 36000,
+                    cost = 26000,
                 },
             },
         },
@@ -1940,7 +1940,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 36000,
+                    cost = 26000,
                 },
             },
         },
@@ -1953,7 +1953,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1800,
+                    cost = 26000,
                 },
             },
         },
@@ -1965,7 +1965,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 36000,
+                    cost = 26000,
                 },
             },
         },
@@ -1990,7 +1990,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 38000,
+                    cost = 28000,
                 },
             },
         },
@@ -2002,7 +2002,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 38000,
+                    cost = 28000,
                 },
             },
         },
@@ -2026,7 +2026,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 38000,
+                    cost = 28000,
                 },
             },
         },
@@ -2038,7 +2038,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 38000,
+                    cost = 28000,
                 },
             },
         },
@@ -2051,7 +2051,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 40000,
+                    cost = 28000,
                 },
             },
         },
@@ -2064,7 +2064,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 40000,
+                    cost = 29000,
                 },
             },
         },
@@ -2076,7 +2076,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 40000,
+                    cost = 29000,
                 },
             },
         },
@@ -2088,7 +2088,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 40000,
+                    cost = 29000,
                 },
             },
         },
@@ -2100,7 +2100,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 40000,
+                    cost = 29000,
                 },
             },
         },
@@ -2113,7 +2113,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 29000,
                 },
             },
         },
@@ -2128,7 +2128,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
+                    cost = 30000,
                 },
             },
         },
@@ -2141,7 +2141,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 31000,
+                    cost = 30000,
                 },
             },
         },
@@ -2171,7 +2171,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
+                    cost = 30000,
                 },
             },
         },
@@ -2183,7 +2183,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
+                    cost = 30000,
                 },
             },
         },
@@ -2195,7 +2195,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
+                    cost = 30000,
                 },
             },
         },
@@ -2241,7 +2241,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2100,
+                    cost = 30000,
                 },
             },
         },
@@ -2253,7 +2253,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
+                    cost = 30000,
                 },
             },
         },
@@ -2265,7 +2265,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
+                    cost = 30000,
                 },
             },
         },
@@ -2289,7 +2289,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
+                    cost = 30000,
                 },
             },
         },
@@ -2302,7 +2302,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2100,
+                    cost = 30000,
                 },
             },
         },
@@ -2314,7 +2314,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
+                    cost = 30000,
                 },
             },
         },
@@ -2338,7 +2338,7 @@ TFG.MAGE_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
+                    cost = 30000,
                 },
             },
         },

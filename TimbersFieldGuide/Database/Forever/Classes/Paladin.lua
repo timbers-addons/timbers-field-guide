@@ -194,7 +194,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 300,
                 },
             },
         },
@@ -232,7 +232,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1000,
+                    cost = 800,
                 },
             },
         },
@@ -244,7 +244,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1000,
+                    cost = 800,
                 },
             },
         },
@@ -256,7 +256,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1000,
+                    cost = 800,
                 },
             },
         },
@@ -270,7 +270,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 1400,
                 },
             },
         },
@@ -282,7 +282,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 1400,
                 },
             },
         },
@@ -296,7 +296,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 1500,
                 },
             },
         },
@@ -310,7 +310,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3500,
+                    cost = 1600,
                 },
             },
         },
@@ -321,7 +321,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3500,
+                    cost = 1600,
                 },
             },
         },
@@ -333,7 +333,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3500,
+                    cost = 1600,
                 },
             },
         },
@@ -345,7 +345,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3500,
+                    cost = 1600,
                 },
             },
         },
@@ -359,9 +359,15 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3100,
                 },
             },
+        },
+        {
+            spell_id = 20216,
+            name = "Divine Favor",
+            icon = "spell_holy_heal",
+            type = "Talent",
         },
         {
             spell_id = 879,
@@ -371,7 +377,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3100,
                 },
             },
         },
@@ -383,15 +389,9 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3100,
                 },
             },
-        },
-        {
-            spell_id = 1310897,
-            name = "Voice of Truth",
-            icon = "inv_misc_horn_03",
-            type = "Talent",
         },
         {
             spell_id = 20217,
@@ -400,7 +400,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3100,
                 },
             },
         },
@@ -412,9 +412,15 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3100,
                 },
             },
+        },
+        {
+            spell_id = 1311015,
+            name = "Templar's Bulwark",
+            icon = "ability_paladin_shieldofthetemplar",
+            type = "Talent",
         },
         {
             spell_id = 1866,
@@ -424,7 +430,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3100,
                 },
             },
         },
@@ -456,7 +462,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3400,
                 },
             },
         },
@@ -467,7 +473,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3400,
                 },
             },
         },
@@ -478,7 +484,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3400,
                 },
             },
         },
@@ -490,7 +496,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3400,
                 },
             },
         },
@@ -502,7 +508,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3400,
                 },
             },
         },
@@ -516,7 +522,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 4800,
                 },
             },
         },
@@ -528,7 +534,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 4800,
                 },
             },
         },
@@ -540,7 +546,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 4800,
                 },
             },
         },
@@ -552,7 +558,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 4800,
                 },
             },
         },
@@ -564,16 +570,16 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 4800,
                 },
             },
         },
     },
     [25] = {
         {
-            spell_id = 20216,
-            name = "Divine Favor",
-            icon = "spell_holy_heal",
+            spell_id = 1328548,
+            name = "Oath of Light",
+            icon = "spell_holy_greaterblessingoflight",
             type = "Talent",
         },
         {
@@ -592,7 +598,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 6100,
                 },
             },
         },
@@ -604,23 +610,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
-                },
-            },
-        },
-        {
-            spell_id = 1325499,
-            name = "Revoke",
-            icon = "spell_holy_prayerofmendingtga",
-        },
-        {
-            spell_id = 1038,
-            name = "Salvation",
-            icon = "spell_holy_sealofsalvation",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 6000,
+                    cost = 6100,
                 },
             },
         },
@@ -632,7 +622,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 6100,
                 },
             },
         },
@@ -644,7 +634,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 6100,
                 },
             },
         },
@@ -658,7 +648,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 9000,
+                    cost = 8000,
                 },
             },
         },
@@ -670,7 +660,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 9000,
+                    cost = 8000,
                 },
             },
         },
@@ -682,7 +672,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 9000,
+                    cost = 8000,
                 },
             },
         },
@@ -696,7 +686,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 9000,
                 },
             },
         },
@@ -708,7 +698,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 9000,
                 },
             },
         },
@@ -727,7 +717,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 9000,
                 },
             },
         },
@@ -739,7 +729,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 9000,
                 },
             },
         },
@@ -751,7 +741,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 9000,
                 },
             },
         },
@@ -762,14 +752,15 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 9000,
                 },
             },
         },
         {
-            spell_id = 1311015,
-            name = "Templar's Bulwark",
-            icon = "ability_paladin_shieldofthetemplar",
+            spell_id = 20925,
+            name = "Holy Shield",
+            rank = 1,
+            icon = "spell_holy_blessingofprotection",
             type = "Talent",
         },
         {
@@ -787,7 +778,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 550,
+                    cost = 9000,
                 },
             },
         },
@@ -801,7 +792,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 10000,
                 },
             },
         },
@@ -813,7 +804,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 10000,
                 },
             },
         },
@@ -825,7 +816,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 10000,
                 },
             },
         },
@@ -839,7 +830,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 11000,
                 },
             },
         },
@@ -851,7 +842,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 11000,
                 },
             },
         },
@@ -863,7 +854,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 11000,
                 },
             },
         },
@@ -875,7 +866,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 11000,
                 },
             },
         },
@@ -887,7 +878,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 11000,
                 },
             },
         },
@@ -901,7 +892,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 12000,
                 },
             },
         },
@@ -913,7 +904,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 12000,
                 },
             },
         },
@@ -925,7 +916,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 12000,
                 },
             },
         },
@@ -937,7 +928,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 12000,
                 },
             },
         },
@@ -949,7 +940,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 12000,
                 },
             },
         },
@@ -963,7 +954,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 16000,
+                    cost = 13000,
                 },
             },
         },
@@ -975,7 +966,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 16000,
+                    cost = 13000,
                 },
             },
         },
@@ -987,7 +978,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 16000,
+                    cost = 13000,
                 },
             },
         },
@@ -999,24 +990,12 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 16000,
+                    cost = 13000,
                 },
             },
         },
     },
     [40] = {
-        {
-            spell_id = 19977,
-            name = "Blessing of Light",
-            rank = 1,
-            icon = "spell_holy_prayerofhealing02",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 20000,
-                },
-            },
-        },
         {
             spell_id = 20922,
             name = "Consecration",
@@ -1025,7 +1004,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 15000,
                 },
             },
         },
@@ -1038,7 +1017,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1000,
+                    cost = 15000,
                 },
             },
         },
@@ -1057,7 +1036,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 15000,
                 },
             },
         },
@@ -1069,7 +1048,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 15000,
                 },
             },
         },
@@ -1081,16 +1060,22 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 15000,
                 },
             },
         },
         {
-            spell_id = 20925,
+            spell_id = 20927,
             name = "Holy Shield",
-            rank = 1,
+            rank = 2,
             icon = "spell_holy_blessingofprotection",
             type = "Talent",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 15000,
+                },
+            },
         },
         {
             spell_id = 19895,
@@ -1100,7 +1085,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 15000,
                 },
             },
         },
@@ -1113,7 +1098,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1000,
+                    cost = 15000,
                 },
             },
         },
@@ -1124,7 +1109,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 15000,
                 },
             },
         },
@@ -1137,7 +1122,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 21000,
+                    cost = 16000,
                 },
             },
         },
@@ -1149,7 +1134,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 21000,
+                    cost = 16000,
                 },
             },
         },
@@ -1161,7 +1146,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 21000,
+                    cost = 16000,
                 },
             },
         },
@@ -1173,7 +1158,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 21000,
+                    cost = 16000,
                 },
             },
         },
@@ -1185,7 +1170,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 21000,
+                    cost = 16000,
                 },
             },
         },
@@ -1197,7 +1182,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 21000,
+                    cost = 16000,
                 },
             },
         },
@@ -1211,7 +1196,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 17000,
                 },
             },
         },
@@ -1223,7 +1208,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 17000,
                 },
             },
         },
@@ -1235,7 +1220,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 17000,
                 },
             },
         },
@@ -1247,7 +1232,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 17000,
                 },
             },
         },
@@ -1259,7 +1244,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 17000,
                 },
             },
         },
@@ -1273,7 +1258,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 21000,
                 },
             },
         },
@@ -1285,7 +1270,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 21000,
                 },
             },
         },
@@ -1297,7 +1282,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 21000,
                 },
             },
         },
@@ -1312,7 +1297,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1300,
+                    cost = 22000,
                 },
             },
         },
@@ -1324,7 +1309,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 21000,
                 },
             },
         },
@@ -1336,7 +1321,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 22000,
                 },
             },
         },
@@ -1348,24 +1333,12 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 22000,
                 },
             },
         },
     },
     [50] = {
-        {
-            spell_id = 19978,
-            name = "Blessing of Light",
-            rank = 2,
-            icon = "spell_holy_prayerofhealing02",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 28000,
-                },
-            },
-        },
         {
             spell_id = 20923,
             name = "Consecration",
@@ -1374,7 +1347,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 28000,
+                    cost = 23000,
                 },
             },
         },
@@ -1386,7 +1359,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 28000,
+                    cost = 23000,
                 },
             },
         },
@@ -1398,7 +1371,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 28000,
+                    cost = 23000,
                 },
             },
         },
@@ -1410,7 +1383,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 28000,
+                    cost = 23000,
                 },
             },
         },
@@ -1423,7 +1396,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1400,
+                    cost = 23000,
                 },
             },
         },
@@ -1435,7 +1408,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 28000,
+                    cost = 23000,
                 },
             },
         },
@@ -1447,7 +1420,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 28000,
+                    cost = 23000,
                 },
             },
         },
@@ -1459,7 +1432,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 28000,
+                    cost = 23000,
                 },
             },
         },
@@ -1471,20 +1444,20 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 28000,
+                    cost = 23000,
                 },
             },
         },
         {
-            spell_id = 20927,
+            spell_id = 20928,
             name = "Holy Shield",
-            rank = 2,
+            rank = 3,
             icon = "spell_holy_blessingofprotection",
             type = "Talent",
             source = {
                 {
                     type = "Trainer",
-                    cost = 1400,
+                    cost = 23000,
                 },
             },
         },
@@ -1496,7 +1469,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 28000,
+                    cost = 23000,
                 },
             },
         },
@@ -1509,7 +1482,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1400,
+                    cost = 23000,
                 },
             },
         },
@@ -1523,7 +1496,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 34000,
+                    cost = 24000,
                 },
             },
         },
@@ -1535,7 +1508,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 34000,
+                    cost = 24000,
                 },
             },
         },
@@ -1547,7 +1520,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 34000,
+                    cost = 24000,
                 },
             },
         },
@@ -1559,7 +1532,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 34000,
+                    cost = 24000,
                 },
             },
         },
@@ -1571,7 +1544,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 34000,
+                    cost = 24000,
                 },
             },
         },
@@ -1583,7 +1556,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 24000,
                 },
             },
         },
@@ -1595,7 +1568,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 34000,
+                    cost = 24000,
                 },
             },
         },
@@ -1607,7 +1580,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 34000,
+                    cost = 24000,
                 },
             },
         },
@@ -1621,7 +1594,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 40000,
+                    cost = 25000,
                 },
             },
         },
@@ -1633,7 +1606,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 25000,
                 },
             },
         },
@@ -1645,7 +1618,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 40000,
+                    cost = 25000,
                 },
             },
         },
@@ -1657,7 +1630,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 40000,
+                    cost = 25000,
                 },
             },
         },
@@ -1669,7 +1642,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 40000,
+                    cost = 25000,
                 },
             },
         },
@@ -1684,7 +1657,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2100,
+                    cost = 26000,
                 },
             },
         },
@@ -1696,7 +1669,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
+                    cost = 26000,
                 },
             },
         },
@@ -1708,7 +1681,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
+                    cost = 26000,
                 },
             },
         },
@@ -1722,7 +1695,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 44000,
+                    cost = 27000,
                 },
             },
         },
@@ -1734,7 +1707,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 44000,
+                    cost = 27000,
                 },
             },
         },
@@ -1746,7 +1719,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 44000,
+                    cost = 27000,
                 },
             },
         },
@@ -1758,24 +1731,12 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 44000,
+                    cost = 27000,
                 },
             },
         },
     },
     [60] = {
-        {
-            spell_id = 19979,
-            name = "Blessing of Light",
-            rank = 3,
-            icon = "spell_holy_prayerofhealing02",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 46000,
-                },
-            },
-        },
         {
             spell_id = 25290,
             name = "Blessing of Wisdom",
@@ -1796,7 +1757,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 29000,
                 },
             },
         },
@@ -1808,19 +1769,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
-                },
-            },
-        },
-        {
-            spell_id = 25890,
-            name = "Greater Blessing of Light",
-            rank = 1,
-            icon = "spell_holy_greaterblessingoflight",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 46000,
+                    cost = 29000,
                 },
             },
         },
@@ -1832,7 +1781,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 29000,
                 },
             },
         },
@@ -1844,7 +1793,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 29000,
                 },
             },
         },
@@ -1868,7 +1817,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 29000,
                 },
             },
         },
@@ -1881,7 +1830,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2300,
+                    cost = 29000,
                 },
             },
         },
@@ -1893,7 +1842,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 29000,
                 },
             },
         },
@@ -1905,7 +1854,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 29000,
                 },
             },
         },
@@ -1917,7 +1866,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 29000,
                 },
             },
         },
@@ -1929,7 +1878,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 29000,
                 },
             },
         },
@@ -1940,31 +1889,20 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 29000,
                 },
             },
         },
         {
-            spell_id = 20928,
+            spell_id = 1239570,
             name = "Holy Shield",
-            rank = 3,
+            rank = 4,
             icon = "spell_holy_blessingofprotection",
             type = "Talent",
             source = {
                 {
                     type = "Trainer",
-                    cost = 2300,
-                },
-            },
-        },
-        {
-            spell_id = 25895,
-            name = "Mass Salvation",
-            icon = "spell_holy_greaterblessingofsalvation",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 46000,
+                    cost = 29000,
                 },
             },
         },
@@ -1988,7 +1926,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 29000,
                 },
             },
         },
@@ -2000,7 +1938,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 29000,
                 },
             },
         },
@@ -2013,7 +1951,7 @@ TFG.PALADIN_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2300,
+                    cost = 29000,
                 },
             },
         },

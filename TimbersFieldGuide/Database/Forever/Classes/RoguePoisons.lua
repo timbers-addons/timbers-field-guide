@@ -12,7 +12,7 @@ TFG.ROGUE_POISONS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 4300,
                 },
             },
         },
@@ -42,7 +42,7 @@ TFG.ROGUE_POISONS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 6000,
                 },
             },
         },
@@ -74,7 +74,7 @@ TFG.ROGUE_POISONS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 9000,
                 },
             },
         },
@@ -90,7 +90,7 @@ TFG.ROGUE_POISONS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 13000,
                 },
             },
         },
@@ -121,7 +121,7 @@ TFG.ROGUE_POISONS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 16000,
+                    cost = 15000,
                 },
             },
         },
@@ -137,7 +137,7 @@ TFG.ROGUE_POISONS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 16000,
                 },
             },
         },
@@ -151,7 +151,7 @@ TFG.ROGUE_POISONS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 16000,
                 },
             },
         },
@@ -167,7 +167,7 @@ TFG.ROGUE_POISONS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 19000,
                 },
             },
         },
@@ -183,7 +183,7 @@ TFG.ROGUE_POISONS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 29000,
+                    cost = 23000,
                 },
             },
         },
@@ -199,7 +199,7 @@ TFG.ROGUE_POISONS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 31000,
+                    cost = 25000,
                 },
             },
         },
@@ -215,7 +215,7 @@ TFG.ROGUE_POISONS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 33000,
+                    cost = 43000,
                 },
             },
         },
@@ -231,7 +231,7 @@ TFG.ROGUE_POISONS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 35000,
+                    cost = 44000,
                 },
             },
         },
@@ -247,7 +247,7 @@ TFG.ROGUE_POISONS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 45000,
                 },
             },
         },
@@ -261,7 +261,7 @@ TFG.ROGUE_POISONS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 46000,
+                    cost = 45000,
                 },
             },
         },
@@ -277,7 +277,7 @@ TFG.ROGUE_POISONS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 48000,
+                    cost = 46000,
                 },
             },
         },
@@ -293,7 +293,7 @@ TFG.ROGUE_POISONS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 50000,
+                    cost = 48000,
                 },
             },
         },
@@ -323,7 +323,7 @@ TFG.ROGUE_POISONS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 54000,
+                    cost = 51000,
                 },
             },
         },

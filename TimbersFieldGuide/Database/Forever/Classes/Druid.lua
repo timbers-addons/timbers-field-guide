@@ -602,7 +602,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3300,
+                    cost = 2400,
                 },
             },
         },
@@ -707,6 +707,18 @@ TFG.DRUID_FOREVER = {
             },
         },
         {
+            spell_id = 1328618,
+            name = "Ferocious Bite",
+            rank = 1,
+            icon = "ability_druid_ferociousbite",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 4300,
+                },
+            },
+        },
+        {
             spell_id = 1822,
             name = "Rake",
             rank = 1,
@@ -775,16 +787,10 @@ TFG.DRUID_FOREVER = {
             type = "Talent",
         },
         {
-            spell_id = 407995,
-            name = "Primal Bite",
+            spell_id = 1328617,
+            name = "Lacerate",
             rank = 1,
-            icon = "ability_racial_cannibalize",
-            type = "Talent",
-        },
-        {
-            spell_id = 1322605,
-            name = "Shifting Power",
-            icon = "spell_druid_displacement",
+            icon = "ability_druid_lacerate",
             type = "Talent",
         },
         {
@@ -1096,8 +1102,19 @@ TFG.DRUID_FOREVER = {
         {
             spell_id = 22568,
             name = "Ferocious Bite",
-            rank = 1,
+            rank = 2,
             icon = "ability_druid_ferociousbite",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 6000,
+                },
+            },
+        },
+        {
+            spell_id = 1328829,
+            name = "Poised",
+            icon = "ability_racial_darkflight",
             source = {
                 {
                     type = "Trainer",
@@ -1179,6 +1196,19 @@ TFG.DRUID_FOREVER = {
             },
         },
         {
+            spell_id = 1328616,
+            name = "Lacerate",
+            rank = 2,
+            icon = "ability_druid_lacerate",
+            type = "Talent",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 7000,
+                },
+            },
+        },
+        {
             spell_id = 8972,
             name = "Maul",
             rank = 4,
@@ -1244,19 +1274,6 @@ TFG.DRUID_FOREVER = {
             name = "Pounce",
             rank = 1,
             icon = "ability_druid_supriseattack",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 8000,
-                },
-            },
-        },
-        {
-            spell_id = 1238069,
-            name = "Primal Bite",
-            rank = 2,
-            icon = "ability_racial_cannibalize",
-            type = "Talent",
             source = {
                 {
                     type = "Trainer",
@@ -1444,12 +1461,6 @@ TFG.DRUID_FOREVER = {
             type = "Talent",
         },
         {
-            spell_id = 417141,
-            name = "Berserk",
-            icon = "ability_druid_berserk",
-            type = "Talent",
-        },
-        {
             spell_id = 9000,
             name = "Cower",
             rank = 2,
@@ -1487,7 +1498,7 @@ TFG.DRUID_FOREVER = {
         {
             spell_id = 22827,
             name = "Ferocious Bite",
-            rank = 2,
+            rank = 3,
             icon = "ability_druid_ferociousbite",
             source = {
                 {
@@ -1495,6 +1506,13 @@ TFG.DRUID_FOREVER = {
                     cost = 10000,
                 },
             },
+        },
+        {
+            spell_id = 407995,
+            name = "Primal Bite",
+            rank = 1,
+            icon = "ability_racial_cannibalize",
+            type = "Talent",
         },
         {
             spell_id = 6783,
@@ -1507,6 +1525,12 @@ TFG.DRUID_FOREVER = {
                     cost = 10000,
                 },
             },
+        },
+        {
+            spell_id = 1322605,
+            name = "Shifting Power",
+            icon = "spell_druid_displacement",
+            type = "Talent",
         },
         {
             spell_id = 29166,
@@ -1584,7 +1608,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 11000,
                 },
             },
         },
@@ -1596,7 +1620,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 11000,
                 },
             },
         },
@@ -1608,19 +1632,20 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 11000,
                 },
             },
         },
         {
             spell_id = 414644,
             name = "Lacerate",
-            rank = 1,
+            rank = 3,
             icon = "ability_druid_lacerate",
+            type = "Talent",
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 11000,
                 },
             },
         },
@@ -1632,7 +1657,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 11000,
                 },
             },
         },
@@ -1644,7 +1669,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 11000,
                 },
             },
         },
@@ -1656,7 +1681,7 @@ TFG.DRUID_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 11000,
                 },
             },
         },
@@ -1860,21 +1885,8 @@ TFG.DRUID_FOREVER = {
         {
             spell_id = 22828,
             name = "Ferocious Bite",
-            rank = 3,
+            rank = 4,
             icon = "ability_druid_ferociousbite",
-            source = {
-                {
-                    type = "Trainer",
-                    cost = 17000,
-                },
-            },
-        },
-        {
-            spell_id = 1238070,
-            name = "Primal Bite",
-            rank = 3,
-            icon = "ability_racial_cannibalize",
-            type = "Talent",
             source = {
                 {
                     type = "Trainer",
@@ -1948,8 +1960,9 @@ TFG.DRUID_FOREVER = {
         {
             spell_id = 1235826,
             name = "Lacerate",
-            rank = 2,
+            rank = 4,
             icon = "ability_druid_lacerate",
+            type = "Talent",
             source = {
                 {
                     type = "Trainer",
@@ -1962,6 +1975,19 @@ TFG.DRUID_FOREVER = {
             name = "Maul",
             rank = 6,
             icon = "ability_druid_maul",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 18000,
+                },
+            },
+        },
+        {
+            spell_id = 1238069,
+            name = "Primal Bite",
+            rank = 2,
+            icon = "ability_racial_cannibalize",
+            type = "Talent",
             source = {
                 {
                     type = "Trainer",
@@ -2219,7 +2245,7 @@ TFG.DRUID_FOREVER = {
         {
             spell_id = 22829,
             name = "Ferocious Bite",
-            rank = 4,
+            rank = 5,
             icon = "ability_druid_ferociousbite",
             source = {
                 {
@@ -2329,8 +2355,9 @@ TFG.DRUID_FOREVER = {
         {
             spell_id = 1235827,
             name = "Lacerate",
-            rank = 3,
+            rank = 5,
             icon = "ability_druid_lacerate",
+            type = "Talent",
             source = {
                 {
                     type = "Trainer",
@@ -2416,7 +2443,7 @@ TFG.DRUID_FOREVER = {
         {
             spell_id = 31018,
             name = "Ferocious Bite",
-            rank = 5,
+            rank = 6,
             icon = "ability_druid_ferociousbite",
             source = {
                 {
@@ -2426,9 +2453,9 @@ TFG.DRUID_FOREVER = {
             },
         },
         {
-            spell_id = 1238073,
+            spell_id = 1238070,
             name = "Primal Bite",
-            rank = 4,
+            rank = 3,
             icon = "ability_racial_cannibalize",
             type = "Talent",
             source = {

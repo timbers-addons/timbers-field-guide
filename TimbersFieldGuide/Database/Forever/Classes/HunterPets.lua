@@ -20,7 +20,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10,
+                    cost = 12,
                 },
             },
         },
@@ -40,7 +40,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10,
+                    cost = 12,
                 },
             },
         },
@@ -55,7 +55,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 120,
+                    cost = 150,
                 },
             },
         },
@@ -68,7 +68,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 120,
+                    cost = 150,
                 },
             },
         },
@@ -83,7 +83,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 400,
+                    cost = 500,
                 },
             },
         },
@@ -96,7 +96,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 400,
+                    cost = 500,
                 },
             },
         },
@@ -111,7 +111,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 440,
+                    cost = 550,
                 },
             },
         },
@@ -124,7 +124,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 440,
+                    cost = 550,
                 },
             },
         },
@@ -137,7 +137,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 440,
+                    cost = 550,
                 },
             },
         },
@@ -150,7 +150,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 440,
+                    cost = 550,
                 },
             },
         },
@@ -163,7 +163,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 440,
+                    cost = 550,
                 },
             },
         },
@@ -176,7 +176,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 440,
+                    cost = 550,
                 },
             },
         },
@@ -191,7 +191,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1400,
+                    cost = 1750,
                 },
             },
         },
@@ -204,7 +204,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1400,
+                    cost = 1750,
                 },
             },
         },
@@ -219,7 +219,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1600,
+                    cost = 2000,
                 },
             },
         },
@@ -232,7 +232,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1600,
+                    cost = 2000,
                 },
             },
         },
@@ -245,7 +245,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1600,
+                    cost = 2000,
                 },
             },
         },
@@ -258,7 +258,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1600,
+                    cost = 2000,
                 },
             },
         },
@@ -271,7 +271,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1600,
+                    cost = 2000,
                 },
             },
         },
@@ -284,7 +284,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1600,
+                    cost = 2000,
                 },
             },
         },
@@ -297,7 +297,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1600,
+                    cost = 2000,
                 },
             },
         },
@@ -310,7 +310,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1600,
+                    cost = 2000,
                 },
             },
         },
@@ -325,7 +325,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2800,
+                    cost = 3500,
                 },
             },
         },
@@ -338,7 +338,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2800,
+                    cost = 3500,
                 },
             },
         },
@@ -353,7 +353,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3600,
+                    cost = 4500,
                 },
             },
         },
@@ -366,7 +366,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3600,
+                    cost = 4500,
                 },
             },
         },
@@ -379,7 +379,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3600,
+                    cost = 4500,
                 },
             },
         },
@@ -392,7 +392,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3600,
+                    cost = 4500,
                 },
             },
         },
@@ -405,7 +405,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3600,
+                    cost = 4500,
                 },
             },
         },
@@ -418,7 +418,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3600,
+                    cost = 4500,
                 },
             },
         },
@@ -433,7 +433,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4800,
+                    cost = 6000,
                 },
             },
         },
@@ -446,7 +446,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4800,
+                    cost = 6000,
                 },
             },
         },
@@ -461,7 +461,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6400,
+                    cost = 8000,
                 },
             },
         },
@@ -474,7 +474,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6400,
+                    cost = 8000,
                 },
             },
         },
@@ -489,7 +489,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7200,
+                    cost = 9000,
                 },
             },
         },
@@ -502,7 +502,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7200,
+                    cost = 9000,
                 },
             },
         },
@@ -515,7 +515,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7200,
+                    cost = 9000,
                 },
             },
         },
@@ -528,7 +528,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7200,
+                    cost = 9000,
                 },
             },
         },
@@ -541,7 +541,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7200,
+                    cost = 9000,
                 },
             },
         },
@@ -554,7 +554,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7200,
+                    cost = 9000,
                 },
             },
         },
@@ -569,7 +569,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8400,
+                    cost = 10500,
                 },
             },
         },
@@ -582,7 +582,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8400,
+                    cost = 10500,
                 },
             },
         },
@@ -597,7 +597,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 12500,
                 },
             },
         },
@@ -610,7 +610,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 12500,
                 },
             },
         },
@@ -623,7 +623,7 @@ TFG.HUNTER_PETS_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 12500,
                 },
             },
         },

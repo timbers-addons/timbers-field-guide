@@ -174,7 +174,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 600,
+                    cost = 800,
                 },
             },
         },
@@ -186,7 +186,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 600,
+                    cost = 800,
                 },
             },
         },
@@ -198,7 +198,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 600,
+                    cost = 800,
                 },
             },
         },
@@ -212,7 +212,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 900,
+                    cost = 1000,
                 },
             },
         },
@@ -224,7 +224,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 900,
+                    cost = 1000,
                 },
             },
         },
@@ -236,7 +236,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 900,
+                    cost = 1000,
                 },
             },
         },
@@ -250,7 +250,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1200,
+                    cost = 1600,
                 },
             },
         },
@@ -261,7 +261,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1200,
+                    cost = 1600,
                 },
             },
         },
@@ -275,7 +275,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1500,
+                    cost = 1700,
                 },
             },
         },
@@ -287,7 +287,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1500,
+                    cost = 1700,
                 },
             },
         },
@@ -299,7 +299,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1500,
+                    cost = 1700,
                 },
             },
         },
@@ -313,7 +313,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 2500,
                 },
             },
         },
@@ -325,7 +325,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 2500,
                 },
             },
         },
@@ -337,7 +337,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 2500,
                 },
             },
         },
@@ -348,7 +348,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 2500,
                 },
             },
         },
@@ -370,7 +370,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 2500,
                 },
             },
         },
@@ -382,7 +382,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 2500,
                 },
             },
         },
@@ -394,7 +394,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 2500,
                 },
             },
         },
@@ -408,7 +408,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2500,
+                    cost = 3800,
                 },
             },
         },
@@ -420,7 +420,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2500,
+                    cost = 3800,
                 },
             },
         },
@@ -432,7 +432,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2500,
+                    cost = 3800,
                 },
             },
         },
@@ -443,7 +443,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2500,
+                    cost = 3800,
                 },
             },
         },
@@ -457,7 +457,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 4800,
                 },
             },
         },
@@ -469,7 +469,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 4800,
                 },
             },
         },
@@ -481,7 +481,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 4800,
                 },
             },
         },
@@ -492,7 +492,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 4800,
                 },
             },
         },
@@ -505,7 +505,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 150,
+                    cost = 4800,
                 },
             },
         },
@@ -527,7 +527,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 5000,
                 },
             },
         },
@@ -539,7 +539,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 5000,
                 },
             },
         },
@@ -551,7 +551,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 5000,
                 },
             },
         },
@@ -563,7 +563,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 5000,
                 },
             },
         },
@@ -577,7 +577,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 6000,
                 },
             },
         },
@@ -589,7 +589,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 6000,
                 },
             },
         },
@@ -601,7 +601,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 6000,
                 },
             },
         },
@@ -613,7 +613,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 6000,
                 },
             },
         },
@@ -625,7 +625,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 6000,
                 },
             },
         },
@@ -637,7 +637,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 5000,
+                    cost = 6000,
                 },
             },
         },
@@ -651,7 +651,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 7000,
                 },
             },
         },
@@ -663,7 +663,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 7000,
                 },
             },
         },
@@ -675,7 +675,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 7000,
                 },
             },
         },
@@ -687,7 +687,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 7000,
                 },
             },
         },
@@ -705,7 +705,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 7000,
                 },
             },
         },
@@ -722,7 +722,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 7000,
                 },
             },
         },
@@ -734,7 +734,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 7000,
                 },
             },
         },
@@ -755,7 +755,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7000,
+                    cost = 8000,
                 },
             },
         },
@@ -767,7 +767,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7000,
+                    cost = 8000,
                 },
             },
         },
@@ -779,7 +779,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 7000,
+                    cost = 8000,
                 },
             },
         },
@@ -792,7 +792,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 300,
+                    cost = 8000,
                 },
             },
         },
@@ -805,7 +805,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 350,
+                    cost = 8000,
                 },
             },
         },
@@ -819,7 +819,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 9000,
                 },
             },
         },
@@ -831,7 +831,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 9000,
                 },
             },
         },
@@ -843,7 +843,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 9000,
                 },
             },
         },
@@ -855,7 +855,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 9000,
                 },
             },
         },
@@ -867,7 +867,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 9000,
                 },
             },
         },
@@ -902,7 +902,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 9000,
+                    cost = 10000,
                 },
             },
         },
@@ -914,7 +914,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 9000,
+                    cost = 10000,
                 },
             },
         },
@@ -926,7 +926,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 9000,
+                    cost = 10000,
                 },
             },
         },
@@ -938,7 +938,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 9000,
+                    cost = 10000,
                 },
             },
         },
@@ -950,7 +950,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 9000,
+                    cost = 10000,
                 },
             },
         },
@@ -964,7 +964,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 11000,
                 },
             },
         },
@@ -976,7 +976,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 11000,
                 },
             },
         },
@@ -988,7 +988,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 11000,
                 },
             },
         },
@@ -1001,7 +1001,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1000,
+                    cost = 11000,
                 },
             },
         },
@@ -1013,7 +1013,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 11000,
                 },
             },
         },
@@ -1027,7 +1027,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 14000,
                 },
             },
         },
@@ -1039,7 +1039,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 14000,
                 },
             },
         },
@@ -1058,7 +1058,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 14000,
                 },
             },
         },
@@ -1070,7 +1070,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 14000,
                 },
             },
         },
@@ -1095,7 +1095,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 500,
+                    cost = 14000,
                 },
             },
         },
@@ -1107,7 +1107,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 14000,
                 },
             },
         },
@@ -1120,7 +1120,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 550,
+                    cost = 14000,
                 },
             },
         },
@@ -1134,7 +1134,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 15000,
                 },
             },
         },
@@ -1146,7 +1146,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 15000,
                 },
             },
         },
@@ -1158,7 +1158,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 15000,
                 },
             },
         },
@@ -1170,7 +1170,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 15000,
                 },
             },
         },
@@ -1182,7 +1182,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 15000,
                 },
             },
         },
@@ -1194,7 +1194,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 11000,
+                    cost = 15000,
                 },
             },
         },
@@ -1208,7 +1208,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 16000,
                 },
             },
         },
@@ -1220,7 +1220,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 16000,
                 },
             },
         },
@@ -1232,7 +1232,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 16000,
                 },
             },
         },
@@ -1244,7 +1244,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 16000,
                 },
             },
         },
@@ -1256,7 +1256,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 12000,
+                    cost = 16000,
                 },
             },
         },
@@ -1270,7 +1270,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 20000,
                 },
             },
         },
@@ -1282,7 +1282,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 20000,
                 },
             },
         },
@@ -1294,7 +1294,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 20000,
                 },
             },
         },
@@ -1306,7 +1306,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 20000,
                 },
             },
         },
@@ -1318,7 +1318,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 13000,
+                    cost = 20000,
                 },
             },
         },
@@ -1332,7 +1332,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 21000,
                 },
             },
         },
@@ -1345,7 +1345,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1400,
+                    cost = 21000,
                 },
             },
         },
@@ -1357,7 +1357,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 21000,
                 },
             },
         },
@@ -1369,7 +1369,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 21000,
                 },
             },
         },
@@ -1382,7 +1382,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 700,
+                    cost = 21000,
                 },
             },
         },
@@ -1395,7 +1395,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 700,
+                    cost = 21000,
                 },
             },
         },
@@ -1407,7 +1407,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 21000,
                 },
             },
         },
@@ -1421,7 +1421,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 15000,
+                    cost = 22000,
                 },
             },
         },
@@ -1433,7 +1433,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 15000,
+                    cost = 22000,
                 },
             },
         },
@@ -1445,7 +1445,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 15000,
+                    cost = 22000,
                 },
             },
         },
@@ -1464,7 +1464,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 15000,
+                    cost = 22000,
                 },
             },
         },
@@ -1476,7 +1476,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 15000,
+                    cost = 22000,
                 },
             },
         },
@@ -1488,7 +1488,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 15000,
+                    cost = 22000,
                 },
             },
         },
@@ -1511,7 +1511,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 15000,
+                    cost = 22000,
                 },
             },
         },
@@ -1531,7 +1531,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 900,
+                    cost = 22000,
                 },
             },
         },
@@ -1543,7 +1543,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 15000,
+                    cost = 22000,
                 },
             },
         },
@@ -1557,7 +1557,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 23000,
                 },
             },
         },
@@ -1569,7 +1569,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 23000,
                 },
             },
         },
@@ -1581,7 +1581,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 23000,
                 },
             },
         },
@@ -1593,7 +1593,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 23000,
                 },
             },
         },
@@ -1605,7 +1605,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 18000,
+                    cost = 23000,
                 },
             },
         },
@@ -1619,7 +1619,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 24000,
                 },
             },
         },
@@ -1631,7 +1631,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 24000,
                 },
             },
         },
@@ -1643,7 +1643,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 24000,
                 },
             },
         },
@@ -1655,7 +1655,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 24000,
                 },
             },
         },
@@ -1668,7 +1668,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1000,
+                    cost = 24000,
                 },
             },
         },
@@ -1680,7 +1680,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 24000,
                 },
             },
         },
@@ -1694,7 +1694,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 25000,
                 },
             },
         },
@@ -1706,7 +1706,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 25000,
                 },
             },
         },
@@ -1718,7 +1718,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 25000,
                 },
             },
         },
@@ -1730,7 +1730,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 25000,
                 },
             },
         },
@@ -1743,7 +1743,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1100,
+                    cost = 25000,
                 },
             },
         },
@@ -1755,7 +1755,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 25000,
                 },
             },
         },
@@ -1769,7 +1769,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 26000,
                 },
             },
         },
@@ -1781,7 +1781,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 26000,
                 },
             },
         },
@@ -1794,7 +1794,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2400,
+                    cost = 26000,
                 },
             },
         },
@@ -1806,7 +1806,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 26000,
                 },
             },
         },
@@ -1818,7 +1818,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 26000,
                 },
             },
         },
@@ -1830,7 +1830,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 26000,
                 },
             },
         },
@@ -1842,7 +1842,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 24000,
+                    cost = 26000,
                 },
             },
         },
@@ -1855,7 +1855,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 27000,
                 },
             },
         },
@@ -1879,7 +1879,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 27000,
                 },
             },
         },
@@ -1891,7 +1891,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 27000,
                 },
             },
         },
@@ -1903,7 +1903,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 27000,
                 },
             },
         },
@@ -1915,7 +1915,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 27000,
                 },
             },
         },
@@ -1962,7 +1962,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1300,
+                    cost = 27000,
                 },
             },
         },
@@ -1974,7 +1974,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 27000,
                 },
             },
         },
@@ -1999,7 +1999,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1100,
+                    cost = 27000,
                 },
             },
         },
@@ -2011,7 +2011,7 @@ TFG.WARLOCK_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 26000,
+                    cost = 27000,
                 },
             },
         },

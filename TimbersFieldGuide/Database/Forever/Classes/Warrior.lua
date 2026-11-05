@@ -112,7 +112,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 600,
+                    cost = 700,
                 },
             },
         },
@@ -123,7 +123,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 600,
+                    cost = 700,
                 },
             },
         },
@@ -181,7 +181,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1000,
+                    cost = 900,
                 },
             },
         },
@@ -193,7 +193,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1000,
+                    cost = 900,
                 },
             },
         },
@@ -205,7 +205,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1000,
+                    cost = 900,
                 },
             },
         },
@@ -218,7 +218,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1500,
+                    cost = 1100,
                 },
             },
         },
@@ -230,7 +230,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1500,
+                    cost = 1100,
                 },
             },
         },
@@ -242,7 +242,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 1500,
+                    cost = 1100,
                 },
             },
         },
@@ -256,7 +256,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 1500,
                 },
             },
         },
@@ -268,7 +268,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 1500,
                 },
             },
         },
@@ -279,7 +279,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 1500,
                 },
             },
         },
@@ -293,7 +293,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 3200,
                 },
             },
         },
@@ -304,7 +304,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3000,
+                    cost = 3200,
                 },
             },
         },
@@ -318,7 +318,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3400,
                 },
             },
         },
@@ -329,7 +329,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3400,
                 },
             },
         },
@@ -340,7 +340,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3400,
                 },
             },
         },
@@ -352,7 +352,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3400,
                 },
             },
         },
@@ -370,7 +370,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3400,
                 },
             },
         },
@@ -387,7 +387,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 4000,
+                    cost = 3400,
                 },
             },
         },
@@ -401,7 +401,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 5500,
                 },
             },
         },
@@ -412,7 +412,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 5500,
                 },
             },
         },
@@ -424,7 +424,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 6000,
+                    cost = 5500,
                 },
             },
         },
@@ -438,7 +438,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 6400,
                 },
             },
         },
@@ -450,7 +450,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 6400,
                 },
             },
         },
@@ -462,7 +462,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 6400,
                 },
             },
         },
@@ -474,7 +474,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 8000,
+                    cost = 6400,
                 },
             },
         },
@@ -484,6 +484,12 @@ TFG.WARRIOR_FOREVER = {
             spell_id = 1310222,
             name = "Spearing Strike",
             icon = "inv_spear_01",
+            type = "Talent",
+        },
+        {
+            spell_id = 1329555,
+            name = "Reckless Swings",
+            icon = "ability_warrior_bloodfrenzy",
             type = "Talent",
         },
     },
@@ -496,7 +502,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 7600,
                 },
             },
         },
@@ -508,7 +514,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 7600,
                 },
             },
         },
@@ -519,7 +525,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 10000,
+                    cost = 7600,
                 },
             },
         },
@@ -648,7 +654,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 13000,
                 },
             },
         },
@@ -660,7 +666,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 13000,
                 },
             },
         },
@@ -672,7 +678,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 13000,
                 },
             },
         },
@@ -684,7 +690,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 13000,
                 },
             },
         },
@@ -696,7 +702,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 14000,
+                    cost = 13000,
                 },
             },
         },
@@ -710,7 +716,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 16000,
+                    cost = 14000,
                 },
             },
         },
@@ -722,7 +728,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 16000,
+                    cost = 14000,
                 },
             },
         },
@@ -734,7 +740,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 16000,
+                    cost = 14000,
                 },
             },
         },
@@ -773,7 +779,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 19000,
                 },
             },
         },
@@ -785,7 +791,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 19000,
                 },
             },
         },
@@ -797,7 +803,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 20000,
+                    cost = 19000,
                 },
             },
         },
@@ -811,7 +817,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 23000,
                 },
             },
         },
@@ -830,7 +836,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 23000,
                 },
             },
         },
@@ -849,7 +855,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 23000,
                 },
             },
         },
@@ -861,7 +867,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 23000,
                 },
             },
         },
@@ -879,7 +885,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 22000,
+                    cost = 23000,
                 },
             },
         },
@@ -893,7 +899,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 32000,
+                    cost = 30000,
                 },
             },
         },
@@ -905,7 +911,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 32000,
+                    cost = 30000,
                 },
             },
         },
@@ -919,7 +925,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 34000,
+                    cost = 31000,
                 },
             },
         },
@@ -931,7 +937,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 34000,
+                    cost = 31000,
                 },
             },
         },
@@ -943,7 +949,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 34000,
+                    cost = 31000,
                 },
             },
         },
@@ -957,7 +963,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 36000,
+                    cost = 32000,
                 },
             },
         },
@@ -969,7 +975,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 36000,
+                    cost = 32000,
                 },
             },
         },
@@ -981,7 +987,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 36000,
+                    cost = 32000,
                 },
             },
         },
@@ -993,7 +999,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 36000,
+                    cost = 32000,
                 },
             },
         },
@@ -1007,7 +1013,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 40000,
+                    cost = 33000,
                 },
             },
         },
@@ -1020,7 +1026,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 33000,
                 },
             },
         },
@@ -1032,7 +1038,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 40000,
+                    cost = 33000,
                 },
             },
         },
@@ -1045,7 +1051,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 33000,
                 },
             },
         },
@@ -1057,7 +1063,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 40000,
+                    cost = 33000,
                 },
             },
         },
@@ -1070,7 +1076,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2000,
+                    cost = 33000,
                 },
             },
         },
@@ -1084,7 +1090,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
+                    cost = 36000,
                 },
             },
         },
@@ -1096,7 +1102,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
+                    cost = 36000,
                 },
             },
         },
@@ -1107,7 +1113,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 42000,
+                    cost = 36000,
                 },
             },
         },
@@ -1121,7 +1127,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 54000,
+                    cost = 39000,
                 },
             },
         },
@@ -1133,7 +1139,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 54000,
+                    cost = 39000,
                 },
             },
         },
@@ -1145,7 +1151,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 54000,
+                    cost = 39000,
                 },
             },
         },
@@ -1159,7 +1165,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 56000,
+                    cost = 40000,
                 },
             },
         },
@@ -1172,7 +1178,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2800,
+                    cost = 40000,
                 },
             },
         },
@@ -1185,7 +1191,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2800,
+                    cost = 40000,
                 },
             },
         },
@@ -1197,7 +1203,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 56000,
+                    cost = 40000,
                 },
             },
         },
@@ -1209,7 +1215,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 56000,
+                    cost = 40000,
                 },
             },
         },
@@ -1221,7 +1227,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 56000,
+                    cost = 40000,
                 },
             },
         },
@@ -1234,7 +1240,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 2800,
+                    cost = 40000,
                 },
             },
         },
@@ -1248,7 +1254,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 58000,
+                    cost = 42000,
                 },
             },
         },
@@ -1260,7 +1266,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 58000,
+                    cost = 42000,
                 },
             },
         },
@@ -1272,7 +1278,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 58000,
+                    cost = 42000,
                 },
             },
         },
@@ -1286,7 +1292,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 60000,
+                    cost = 48000,
                 },
             },
         },
@@ -1298,7 +1304,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 60000,
+                    cost = 48000,
                 },
             },
         },
@@ -1310,7 +1316,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 60000,
+                    cost = 48000,
                 },
             },
         },
@@ -1337,7 +1343,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3100,
+                    cost = 49000,
                 },
             },
         },
@@ -1349,7 +1355,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 62000,
+                    cost = 49000,
                 },
             },
         },
@@ -1361,7 +1367,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 62000,
+                    cost = 49000,
                 },
             },
         },
@@ -1386,7 +1392,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3100,
+                    cost = 49000,
                 },
             },
         },
@@ -1398,7 +1404,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 62000,
+                    cost = 49000,
                 },
             },
         },
@@ -1423,7 +1429,7 @@ TFG.WARRIOR_FOREVER = {
             source = {
                 {
                     type = "Trainer",
-                    cost = 3100,
+                    cost = 49000,
                 },
             },
         },
