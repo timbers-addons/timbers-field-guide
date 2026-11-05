@@ -1,5 +1,18 @@
 # Changelog
 
+## v2026.11.05a (2026-11-05)
+
+- Forever: Refuge Pointe's vendors sell Frost Protection Potion, Solid Iron Maul, Barbecued Buzzard Wing, Roast Raptor, Barbaric Leggings and the Heavy Silk and Mageweave bandages, Gina MacGregor sells the Murloc Scale recipes, Red Linen Bag and Blue Overalls, Leonard Porter sells Wicked Leather Gauntlets, Deek Fizzlebizz teaches Engineering in Loch Modan
+- Forever: Lakeshire's Gloria Femmel sells the Sagefish recipes and Franklin Hamar the Linen and Woolen Reagent Bags, Crystal Boughman teaches Cooking and Alma Jainrose Herbalism in Redridge, Sellandus teaches Tailoring, Redridge Goulash and Murloc Fin Soup come from Chef Breanna's and Dockmaster Baren's quests
+- Forever: matched the game version on project id 18, not mainline
+- Forever: Georgio Bolero teaches Apprentice, Journeyman and Expert Tailoring, Expert at 125, and the Captured Servant of Azora in Redridge sells the Linen and Woolen Reagent Bag patterns; Crystal Boughman's spot corrected
+- Forever: Expert Cooking, First Aid and Fishing come from their books at Shandrina, Deneb Walker and Old Man Heming; Jayla in Ashenvale teaches Skinning and Myizz Luckycatch in Booty Bay Fishing; Smith Argus's spot corrected
+- Forever: Shaman trainer prices from 70450, Call of the Elements 22s, Call of the Spirits 1g 20s, Lava Burst rank 2 1g 20s and rank 3 back at 50 for 2g 40s
+- Forever build 70707: Righteous Fury at 10, Frost Blast dropped until a trainer shows it still teaches it
+- Forever launch build 70790 from live trainer scans of every class: Shank, Death Mark and Poised for rogues, Lacerate as a talent with new Ferocious Bite and Lacerate ranks for druids, Holy Shield rank 4; Frost Blast, Lava Burst, Binding Heal, Venom, Berserk and the Paladin blessings of Light and Salvation are gone; training costs as charged on 70790; recipe learn levels and items from the 70755 client data
+- Bumped version to v2026.11.05a
+
+
 ## v2026.10.16 (2026-10-16)
 
 - Weapon Skills: a top bar shortcut on every client, your class alone unless Other Classes is on, icons grouped by the city that teaches them with a map of the trainers on hover; weapon masters, positions and the Polearms level written in, Forever's seeded from Classic Era
