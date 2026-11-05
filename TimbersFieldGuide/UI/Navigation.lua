@@ -1404,7 +1404,7 @@ local function ensureTestFrame()
                 "|cffffd100ADDON VERSION|r  |cffffffff%s|r   |cffffd100GAME VERSION|r  |cffffffff%s|r",
                 (TFG.VERSION or ""):gsub("^v", ""), gameVersion)
             frame.aboutBody:SetText("An in-game field reference for class abilities, profession recipes, and general skills. Every page reads from a database bundled with the addon, so lookups happen right in the game, with no alt-tabbing to a website to look things up.")
-            frame.aboutAuthor:SetText(author:gsub("%-", " - "))
+            frame.aboutAuthor:SetText((author:gsub("(%S)%-(%S)", "%1 - %2")))
             frame.aboutUrlBox:SetText(ABOUT_URL)
             frame.aboutUrlBox:SetCursorPosition(0)
             frame.aboutUrlBox:ClearFocus()
