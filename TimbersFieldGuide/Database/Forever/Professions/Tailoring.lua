@@ -105,7 +105,7 @@ TFG.TAILORING_FOREVER = {
                     type = "Trainer",
                     cost = 10,
                     location = "Trianna, Darnassus",
-                    position = { map = 1457, x = 63.6, y = 21.7 },
+                    position = { map = 1457, x = 63.6, y = 21.3 },
                     faction = "Alliance",
                 },
                 {

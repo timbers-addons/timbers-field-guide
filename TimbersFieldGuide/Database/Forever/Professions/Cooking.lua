@@ -1430,7 +1430,7 @@ TFG.COOKING_FOREVER = {
                 {
                     type = "Vendor",
                     item_id = 16072,
-                    cost = 9000,
+                    cost = 10000,
                     location = "Shandrina, Ashenvale",
                 },
             },

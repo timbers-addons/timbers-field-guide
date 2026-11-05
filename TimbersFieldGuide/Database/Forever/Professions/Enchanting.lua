@@ -649,8 +649,10 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 11039,
+                    cost = 800,
+                    location = "Dalria, Ashenvale",
                 },
             },
             materials = {
@@ -973,8 +975,10 @@ TFG.ENCHANTING_FOREVER = {
             icon = "spell_holy_greaterheal",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 11101,
+                    cost = 2500,
+                    location = "Dalria, Ashenvale",
                 },
             },
             materials = {

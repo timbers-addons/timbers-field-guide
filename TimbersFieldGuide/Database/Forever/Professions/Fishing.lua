@@ -25,8 +25,36 @@ TFG.FISHING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 100,
+                    location = "Donald Rabonne, Hillsbrad Foothills",
+                    position = { map = 1424, x = 50.4, y = 64.3 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 100,
                     location = "Myizz Luckycatch, Stranglethorn Vale",
                     position = { map = 1434, x = 27.4, y = 77.2 },
+                },
+                {
+                    type = "Trainer",
+                    cost = 100,
+                    location = "Harold Riggs, Wetlands",
+                    position = { map = 1437, x = 8.1, y = 58.6 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 100,
+                    location = "Androl Oakhand, Teldrassil",
+                    position = { map = 1438, x = 55.9, y = 93.5 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 100,
+                    location = "Astaia, Darnassus",
+                    position = { map = 1457, x = 47.5, y = 56.8 },
+                    faction = "Alliance",
                 },
                 {
                     type = "Trainer",
@@ -173,8 +201,36 @@ TFG.FISHING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 500,
+                    location = "Donald Rabonne, Hillsbrad Foothills",
+                    position = { map = 1424, x = 50.4, y = 64.3 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 500,
                     location = "Myizz Luckycatch, Stranglethorn Vale",
                     position = { map = 1434, x = 27.4, y = 77.2 },
+                },
+                {
+                    type = "Trainer",
+                    cost = 500,
+                    location = "Harold Riggs, Wetlands",
+                    position = { map = 1437, x = 8.1, y = 58.6 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 500,
+                    location = "Androl Oakhand, Teldrassil",
+                    position = { map = 1438, x = 55.9, y = 93.5 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 500,
+                    location = "Astaia, Darnassus",
+                    position = { map = 1457, x = 47.5, y = 56.8 },
+                    faction = "Alliance",
                 },
                 {
                     type = "Trainer",

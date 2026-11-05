@@ -61,7 +61,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -82,14 +82,14 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -117,7 +117,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -131,7 +131,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -162,7 +162,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 10000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -218,7 +218,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -239,7 +239,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -288,7 +288,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -323,7 +323,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -351,14 +351,14 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -386,7 +386,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -428,7 +428,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -456,7 +456,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -470,7 +470,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -500,14 +500,14 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -535,7 +535,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -556,7 +556,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -570,7 +570,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -601,7 +601,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 10000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -692,7 +692,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -741,7 +741,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -785,14 +785,14 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -820,7 +820,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -834,7 +834,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -892,7 +892,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -913,7 +913,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -948,7 +948,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -976,7 +976,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -1018,7 +1018,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -1046,7 +1046,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -1060,7 +1060,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -1075,6 +1075,34 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     location = "Archibald, Undercity",
                     faction = "Horde",
                     position = { map = 1458, x = 57, y = 32.4 },
+                },
+            },
+        },
+        {
+            id = 196,
+            name = "One-Handed Axes",
+            icon = "inv_axe_01",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 1000,
+                    location = "Buliwyf Stonehand, Ironforge",
+                    faction = "Alliance",
+                    position = { map = 1455, x = 61.3, y = 89.4 },
+                },
+                {
+                    type = "Trainer",
+                    cost = 1000,
+                    location = "Hanashi, Orgrimmar",
+                    faction = "Horde",
+                    position = { map = 1454, x = 81.5, y = 19.5 },
+                },
+                {
+                    type = "Trainer",
+                    cost = 1000,
+                    location = "Sayoc, Orgrimmar",
+                    faction = "Horde",
+                    position = { map = 1454, x = 81.5, y = 19.6 },
                 },
             },
         },
@@ -1167,7 +1195,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -1216,14 +1244,14 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -1251,7 +1279,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -1265,7 +1293,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -1295,14 +1323,14 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -1330,7 +1358,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -1351,7 +1379,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -1365,7 +1393,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -1396,7 +1424,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 10000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -1494,7 +1522,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -1515,7 +1543,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -1564,7 +1592,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -1599,7 +1627,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -1627,14 +1655,14 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
@@ -1662,7 +1690,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -1704,7 +1732,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -1732,7 +1760,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Woo Ping, Stormwind City",
                     faction = "Alliance",
-                    position = { map = 1453, x = 63.9, y = 69 },
+                    position = { map = 1453, x = 63.8, y = 69 },
                 },
                 {
                     type = "Trainer",
@@ -1746,7 +1774,7 @@ TFG.WEAPON_SKILLS_FOREVER = {
                     cost = 1000,
                     location = "Ilyenia Moonfire, Darnassus",
                     faction = "Alliance",
-                    position = { map = 1457, x = 57.4, y = 46.5 },
+                    position = { map = 1457, x = 57.6, y = 46.5 },
                 },
                 {
                     type = "Trainer",
