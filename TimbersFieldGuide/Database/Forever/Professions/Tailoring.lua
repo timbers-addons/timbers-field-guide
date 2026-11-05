@@ -105,7 +105,7 @@ TFG.TAILORING_FOREVER = {
                     type = "Trainer",
                     cost = 10,
                     location = "Trianna, Darnassus",
-                    position = { map = 1457, x = 63.8, y = 21.4 },
+                    position = { map = 1457, x = 63.6, y = 21.7 },
                     faction = "Alliance",
                 },
                 {
@@ -302,6 +302,12 @@ TFG.TAILORING_FOREVER = {
                     type = "Quest",
                     location = "Sam Sarsaparilla, Elwynn Forest",
                     quest_id = 97925,
+                    quest_name = "Camping 101: Tailoring",
+                },
+                {
+                    type = "Quest",
+                    location = "Lyreena Duskblade, Teldrassil",
+                    quest_id = 97950,
                     quest_name = "Camping 101: Tailoring",
                 },
             },

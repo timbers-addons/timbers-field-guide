@@ -118,6 +118,14 @@ TFG.PRIEST_FOREVER = {
             rank = 1,
             icon = "spell_arcane_starfire",
             races = { "Night Elf" },
+            source = {
+                {
+                    type = "Quest",
+                    location = "Laurna Morninglight, Teldrassil",
+                    quest_id = 5629,
+                    quest_name = "Returning Home",
+                },
+            },
         },
         {
             spell_id = 13908,

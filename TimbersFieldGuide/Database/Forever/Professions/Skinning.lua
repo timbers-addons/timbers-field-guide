@@ -18,6 +18,13 @@ TFG.SKINNING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 10,
+                    location = "Radnaal Maneweaver, Teldrassil",
+                    position = { map = 1438, x = 42.2, y = 49.9 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 10,
                     location = "Jayla, Ashenvale",
                     position = { map = 1440, x = 50, y = 67.2 },
                     faction = "Alliance",
@@ -72,6 +79,13 @@ TFG.SKINNING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 500,
+                    location = "Radnaal Maneweaver, Teldrassil",
+                    position = { map = 1438, x = 42.2, y = 49.9 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 500,
                     location = "Jayla, Ashenvale",
                     position = { map = 1440, x = 50, y = 67.2 },
                     faction = "Alliance",
@@ -100,6 +114,13 @@ TFG.SKINNING_FOREVER = {
                     cost = 5000,
                     location = "Maris Granger, Stormwind City",
                     position = { map = 1453, x = 72, y = 62.4 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 5000,
+                    location = "Radnaal Maneweaver, Teldrassil",
+                    position = { map = 1438, x = 42.2, y = 49.9 },
                     faction = "Alliance",
                 },
                 {
@@ -154,6 +175,13 @@ TFG.SKINNING_FOREVER = {
                     cost = 50000,
                     location = "Maris Granger, Stormwind City",
                     position = { map = 1453, x = 72, y = 62.4 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 50000,
+                    location = "Radnaal Maneweaver, Teldrassil",
+                    position = { map = 1438, x = 42.2, y = 49.9 },
                     faction = "Alliance",
                 },
                 {
