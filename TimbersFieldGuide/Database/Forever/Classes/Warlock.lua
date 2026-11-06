@@ -290,6 +290,7 @@ TFG.WARLOCK_FOREVER = {
                     cost = 1700,
                 },
             },
+            product = { item_id = 5232, qty = 1 },
         },
         {
             spell_id = 5676,
@@ -616,6 +617,7 @@ TFG.WARLOCK_FOREVER = {
                     cost = 6000,
                 },
             },
+            product = { item_id = 1254, qty = 1 },
         },
         {
             spell_id = 3699,
@@ -678,6 +680,7 @@ TFG.WARLOCK_FOREVER = {
                     cost = 7000,
                 },
             },
+            product = { item_id = 16892, qty = 1 },
         },
         {
             spell_id = 1086,
@@ -917,6 +920,7 @@ TFG.WARLOCK_FOREVER = {
                     cost = 10000,
                 },
             },
+            product = { item_id = 13699, qty = 1 },
         },
         {
             spell_id = 2362,
@@ -929,6 +933,7 @@ TFG.WARLOCK_FOREVER = {
                     cost = 10000,
                 },
             },
+            product = { item_id = 5522, qty = 1 },
         },
         {
             spell_id = 3700,
@@ -1061,6 +1066,7 @@ TFG.WARLOCK_FOREVER = {
                     cost = 14000,
                 },
             },
+            product = { item_id = 16893, qty = 1 },
         },
         {
             spell_id = 11733,
@@ -1297,6 +1303,7 @@ TFG.WARLOCK_FOREVER = {
                     cost = 20000,
                 },
             },
+            product = { item_id = 13700, qty = 1 },
         },
         {
             spell_id = 11729,
@@ -1372,6 +1379,7 @@ TFG.WARLOCK_FOREVER = {
                     cost = 21000,
                 },
             },
+            product = { item_id = 13602, qty = 1 },
         },
         {
             spell_id = 18930,
@@ -1467,6 +1475,7 @@ TFG.WARLOCK_FOREVER = {
                     cost = 22000,
                 },
             },
+            product = { item_id = 16895, qty = 1 },
         },
         {
             spell_id = 11734,
@@ -1733,6 +1742,7 @@ TFG.WARLOCK_FOREVER = {
                     cost = 25000,
                 },
             },
+            product = { item_id = 13701, qty = 1 },
         },
         {
             spell_id = 18871,
@@ -1882,6 +1892,7 @@ TFG.WARLOCK_FOREVER = {
                     cost = 27000,
                 },
             },
+            product = { item_id = 16896, qty = 1 },
         },
         {
             spell_id = 17728,
@@ -1894,6 +1905,7 @@ TFG.WARLOCK_FOREVER = {
                     cost = 27000,
                 },
             },
+            product = { item_id = 13603, qty = 1 },
         },
         {
             spell_id = 11735,

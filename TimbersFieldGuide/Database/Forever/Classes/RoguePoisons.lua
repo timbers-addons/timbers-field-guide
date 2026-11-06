@@ -15,6 +15,7 @@ TFG.ROGUE_POISONS_FOREVER = {
                     cost = 4300,
                 },
             },
+            product = { item_id = 3775, qty = 1 },
         },
         {
             spell_id = 8681,
@@ -23,6 +24,7 @@ TFG.ROGUE_POISONS_FOREVER = {
             icon = "ability_poisons",
             categories = { "Poisons", "Instant Poison" },
             group = "instant_poison",
+            product = { item_id = 6947, qty = 1 },
         },
         {
             spell_id = 2842,
@@ -45,6 +47,7 @@ TFG.ROGUE_POISONS_FOREVER = {
                     cost = 6000,
                 },
             },
+            product = { item_id = 5237, qty = 1 },
         },
     },
     [28] = {
@@ -61,6 +64,7 @@ TFG.ROGUE_POISONS_FOREVER = {
                     cost = 8000,
                 },
             },
+            product = { item_id = 6949, qty = 1 },
         },
     },
     [30] = {
@@ -77,6 +81,7 @@ TFG.ROGUE_POISONS_FOREVER = {
                     cost = 9000,
                 },
             },
+            product = { item_id = 2892, qty = 1 },
         },
     },
     [32] = {
@@ -93,6 +98,7 @@ TFG.ROGUE_POISONS_FOREVER = {
                     cost = 13000,
                 },
             },
+            product = { item_id = 10918, qty = 1 },
         },
     },
     [34] = {
@@ -108,6 +114,7 @@ TFG.ROGUE_POISONS_FOREVER = {
                     cost = 14000,
                 },
             },
+            product = { item_id = 5530, qty = 3 },
         },
     },
     [36] = {
@@ -124,6 +131,7 @@ TFG.ROGUE_POISONS_FOREVER = {
                     cost = 15000,
                 },
             },
+            product = { item_id = 6950, qty = 1 },
         },
     },
     [38] = {
@@ -140,6 +148,7 @@ TFG.ROGUE_POISONS_FOREVER = {
                     cost = 16000,
                 },
             },
+            product = { item_id = 2893, qty = 1 },
         },
         {
             spell_id = 8694,
@@ -154,6 +163,7 @@ TFG.ROGUE_POISONS_FOREVER = {
                     cost = 16000,
                 },
             },
+            product = { item_id = 6951, qty = 1 },
         },
     },
     [40] = {
@@ -170,6 +180,7 @@ TFG.ROGUE_POISONS_FOREVER = {
                     cost = 19000,
                 },
             },
+            product = { item_id = 10920, qty = 1 },
         },
     },
     [44] = {
@@ -186,6 +197,7 @@ TFG.ROGUE_POISONS_FOREVER = {
                     cost = 23000,
                 },
             },
+            product = { item_id = 8926, qty = 1 },
         },
     },
     [46] = {
@@ -202,6 +214,7 @@ TFG.ROGUE_POISONS_FOREVER = {
                     cost = 25000,
                 },
             },
+            product = { item_id = 8984, qty = 1 },
         },
     },
     [48] = {
@@ -218,6 +231,7 @@ TFG.ROGUE_POISONS_FOREVER = {
                     cost = 43000,
                 },
             },
+            product = { item_id = 10921, qty = 1 },
         },
     },
     [50] = {
@@ -234,6 +248,7 @@ TFG.ROGUE_POISONS_FOREVER = {
                     cost = 44000,
                 },
             },
+            product = { item_id = 3776, qty = 1 },
         },
     },
     [52] = {
@@ -250,6 +265,7 @@ TFG.ROGUE_POISONS_FOREVER = {
                     cost = 45000,
                 },
             },
+            product = { item_id = 8927, qty = 1 },
         },
         {
             spell_id = 11400,
@@ -264,6 +280,7 @@ TFG.ROGUE_POISONS_FOREVER = {
                     cost = 45000,
                 },
             },
+            product = { item_id = 9186, qty = 1 },
         },
     },
     [54] = {
@@ -280,6 +297,7 @@ TFG.ROGUE_POISONS_FOREVER = {
                     cost = 46000,
                 },
             },
+            product = { item_id = 8985, qty = 1 },
         },
     },
     [56] = {
@@ -296,6 +314,7 @@ TFG.ROGUE_POISONS_FOREVER = {
                     cost = 48000,
                 },
             },
+            product = { item_id = 10922, qty = 1 },
         },
     },
     [60] = {
@@ -312,6 +331,7 @@ TFG.ROGUE_POISONS_FOREVER = {
                     item_id = 21302,
                 },
             },
+            product = { item_id = 20844, qty = 1 },
         },
         {
             spell_id = 11343,
@@ -326,6 +346,7 @@ TFG.ROGUE_POISONS_FOREVER = {
                     cost = 51000,
                 },
             },
+            product = { item_id = 8928, qty = 1 },
         },
     },
 }

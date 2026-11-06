@@ -39,6 +39,7 @@ TFG.MAGE_FOREVER = {
                     cost = 100,
                 },
             },
+            product = { item_id = 5350, qty = 2 },
         },
         {
             spell_id = 116,
@@ -65,6 +66,7 @@ TFG.MAGE_FOREVER = {
                     cost = 100,
                 },
             },
+            product = { item_id = 5349, qty = 2 },
         },
         {
             spell_id = 2136,
@@ -152,6 +154,7 @@ TFG.MAGE_FOREVER = {
                     cost = 300,
                 },
             },
+            product = { item_id = 2288, qty = 2 },
         },
         {
             spell_id = 7300,
@@ -190,6 +193,7 @@ TFG.MAGE_FOREVER = {
                     cost = 600,
                 },
             },
+            product = { item_id = 1113, qty = 2 },
         },
         {
             spell_id = 604,
@@ -370,6 +374,7 @@ TFG.MAGE_FOREVER = {
                     cost = 2100,
                 },
             },
+            product = { item_id = 2136, qty = 2 },
         },
         {
             spell_id = 12051,
@@ -541,6 +546,7 @@ TFG.MAGE_FOREVER = {
                     cost = 3300,
                 },
             },
+            product = { item_id = 1114, qty = 2 },
         },
         {
             spell_id = 2138,
@@ -729,6 +735,7 @@ TFG.MAGE_FOREVER = {
                     cost = 5500,
                 },
             },
+            product = { item_id = 5514, qty = 1 },
         },
         {
             spell_id = 8494,
@@ -829,6 +836,7 @@ TFG.MAGE_FOREVER = {
                     cost = 6200,
                 },
             },
+            product = { item_id = 3772, qty = 2 },
         },
         {
             spell_id = 12043,
@@ -959,6 +967,7 @@ TFG.MAGE_FOREVER = {
                     cost = 8000,
                 },
             },
+            product = { item_id = 1487, qty = 2 },
         },
         {
             spell_id = 8422,
@@ -1160,6 +1169,7 @@ TFG.MAGE_FOREVER = {
                     cost = 12000,
                 },
             },
+            product = { item_id = 5513, qty = 1 },
         },
         {
             spell_id = 8413,
@@ -1229,6 +1239,7 @@ TFG.MAGE_FOREVER = {
                     cost = 13000,
                 },
             },
+            product = { item_id = 8077, qty = 2 },
         },
         {
             spell_id = 12825,
@@ -1412,6 +1423,7 @@ TFG.MAGE_FOREVER = {
                     cost = 14000,
                 },
             },
+            product = { item_id = 8075, qty = 2 },
         },
         {
             spell_id = 10148,
@@ -1626,6 +1638,7 @@ TFG.MAGE_FOREVER = {
                     cost = 21000,
                 },
             },
+            product = { item_id = 8007, qty = 1 },
         },
         {
             spell_id = 10173,
@@ -1715,6 +1728,7 @@ TFG.MAGE_FOREVER = {
                     cost = 23000,
                 },
             },
+            product = { item_id = 8078, qty = 2 },
         },
         {
             spell_id = 11419,
@@ -1819,6 +1833,7 @@ TFG.MAGE_FOREVER = {
                     cost = 24000,
                 },
             },
+            product = { item_id = 8076, qty = 2 },
         },
         {
             spell_id = 10192,
@@ -2067,6 +2082,7 @@ TFG.MAGE_FOREVER = {
                     cost = 29000,
                 },
             },
+            product = { item_id = 8008, qty = 1 },
         },
         {
             spell_id = 22783,
@@ -2156,12 +2172,14 @@ TFG.MAGE_FOREVER = {
                     item_id = 22897,
                 },
             },
+            product = { item_id = 22895, qty = 10 },
         },
         {
             spell_id = 10140,
             name = "Conjure Water",
             rank = 7,
             icon = "inv_drink_18",
+            product = { item_id = 8079, qty = 10 },
         },
         {
             spell_id = 10174,

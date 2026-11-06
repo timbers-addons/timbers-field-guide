@@ -134,6 +134,7 @@ local MIDDOT = TFG.MIDDOT
 -- sites below read unchanged.
 local GetSpellInfo = TFG.GetSpellInfo
 local GetItemInfo = TFG.GetItemInfo
+local GetItemQualityColor = TFG.GetItemQualityColor
 
 -- Store both current and inferred max cap for skills/professions.
 -- Classic Era PTR appears to return 0 for the "max" fields from GetSkillLineInfo,
@@ -2029,6 +2030,21 @@ function frame:Relayout()
                 if not shown then
                     -- Last resort: show a simple tooltip with the entry name.
                     GameTooltip:SetText(tostring(data and data.name or ""))
+                end
+            end
+
+            -- A class spell that makes an item (Conjure Water) names it. Craft
+            -- spell tooltips already show theirs.
+            local createdId = not isProfession and sid and sid > 0 and getProductItemId(data)
+            if createdId then
+                local name, _, quality = GetItemInfo(createdId)
+                if name then
+                    local r, g, b = GetItemQualityColor(quality or 1)
+                    GameTooltip:AddLine(" ")
+                    GameTooltip:AddLine(("Creates: |cff%02x%02x%02x%s|r"):format(math.floor(r * 255), math.floor(g * 255), math.floor(b * 255), name))
+                elseif C_Item and C_Item.RequestLoadItemDataByID then
+                    -- Not cached yet; the name shows on the next hover.
+                    C_Item.RequestLoadItemDataByID(createdId)
                 end
             end
 
