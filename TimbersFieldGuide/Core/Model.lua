@@ -137,6 +137,10 @@ local function getTrainingCost(spell)
     if spell.source and spell.source.cost and tonumber(spell.source.cost) then
         return tonumber(spell.source.cost)
     end
+    -- Sources as a list: the first trainer that names a price.
+    for _, s in ipairs(TFG.GetSources(spell)) do
+        if s.type == "Trainer" and tonumber(s.cost) then return tonumber(s.cost) end
+    end
     return nil
 end
 

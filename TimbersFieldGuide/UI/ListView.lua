@@ -2048,6 +2048,10 @@ function frame:Relayout()
                 end
             end
 
+            -- Set when source lines (which carry their prices) are shown, so
+            -- the plain Cost line below does not repeat them.
+            local sourcesShown = false
+
             -- Crafting difficulty levels display (orange/yellow/green/gray)
             if TFG.HasSkillUps(data) then
                 local colors = { "|cFFFF7F00", "|cFFFFFF00", "|cFF00FF00", "|cFF9D9D9D" }
@@ -2076,6 +2080,7 @@ function frame:Relayout()
                     -- phase, faction).
                     for _, s in ipairs(groupedSources(data)) do
                         GameTooltip:AddLine("Source: " .. buildSourceLine(s), 0.8, 0.8, 0.8)
+                        sourcesShown = true
                         -- A price that is not gold, and the standing the vendor
                         -- asks for, each on a line of their own under it.
                         local currencyText = TFG.FormatCurrencies(s)
@@ -2108,6 +2113,7 @@ function frame:Relayout()
                         if enemy == (pass == 2) then
                             local shade = enemy and 0.55 or 1
                             GameTooltip:AddLine(buildSourceLine(s) .. (enemy and ("  (" .. s.faction .. ")") or ""), shade, shade, shade)
+                            sourcesShown = true
                         end
                     end
                 end
@@ -2133,7 +2139,7 @@ function frame:Relayout()
             end
 
             local tooltipCost = getTrainingCost(data)
-            if tooltipCost and tooltipCost > 0 then
+            if tooltipCost and tooltipCost > 0 and not sourcesShown then
                 local costText = TFG.FormatCost(tooltipCost)
                 if costText then
                     local color = (GetMoney() < tooltipCost) and "|cFFFF0000" or "|cFFFFFFFF"
