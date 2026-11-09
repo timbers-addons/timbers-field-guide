@@ -1721,6 +1721,12 @@ TFG.COOKING_FOREVER = {
                     cost = 3000,
                     location = "Helenia Olden, Dustwallow Marsh",
                 },
+                {
+                    type = "Vendor",
+                    item_id = 12233,
+                    cost = 3000,
+                    location = "Janet Hommers, Desolace",
+                },
             },
             product = { item_id = 12214, qty = 1 },
             materials = {
@@ -2050,8 +2056,10 @@ TFG.COOKING_FOREVER = {
             icon = "inv_drink_19",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 12240,
+                    cost = 7000,
+                    location = "Janet Hommers, Desolace",
                 },
             },
             product = { item_id = 12215, qty = 2 },

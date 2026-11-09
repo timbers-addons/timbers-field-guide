@@ -415,6 +415,14 @@ TFG.PRIEST_FOREVER = {
             name = "Elune's Grace",
             icon = "spell_holy_elunesgrace",
             races = { "Night Elf" },
+            source = {
+                {
+                    type = "Quest",
+                    location = "High Priestess Laurena, Stormwind City",
+                    quest_id = 5673,
+                    quest_name = "Elune's Grace",
+                },
+            },
         },
         {
             spell_id = 13896,

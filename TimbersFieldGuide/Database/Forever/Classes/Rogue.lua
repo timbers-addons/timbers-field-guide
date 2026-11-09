@@ -442,6 +442,7 @@ TFG.ROGUE_FOREVER = {
         {
             spell_id = 1329283,
             name = "Shank",
+            rank = 1,
             icon = "ability_theblackarrow",
             source = {
                 {
@@ -1032,6 +1033,7 @@ TFG.ROGUE_FOREVER = {
         {
             spell_id = 1329549,
             name = "Shank",
+            rank = 2,
             icon = "ability_theblackarrow",
             source = {
                 {

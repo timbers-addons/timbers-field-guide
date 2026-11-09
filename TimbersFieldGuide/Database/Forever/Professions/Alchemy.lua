@@ -1277,8 +1277,10 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_23",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 6068,
+                    cost = 1500,
+                    location = "Bliztik, Duskwood",
                 },
             },
             product = { item_id = 3824, qty = 2 },

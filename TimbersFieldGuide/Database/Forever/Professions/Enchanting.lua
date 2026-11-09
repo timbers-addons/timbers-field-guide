@@ -102,6 +102,13 @@ TFG.ENCHANTING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 10,
+                    location = "Betty Quin, Stormwind City",
+                    position = { map = 1453, x = 53, y = 74.1 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 10,
                     location = "Lalina Summermoon, Darnassus",
                     position = { map = 1457, x = 58.8, y = 12.7 },
                     faction = "Alliance",

@@ -111,8 +111,29 @@ TFG.TAILORING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 10,
+                    location = "Lawrence Schneider, Stormwind City",
+                    position = { map = 1453, x = 53.4, y = 81.6 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 10,
                     location = "Georgio Bolero, Stormwind City",
                     position = { map = 1453, x = 53.2, y = 81.4 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 10,
+                    location = "Uthrar Threx, Ironforge",
+                    position = { map = 1455, x = 43.6, y = 28.3 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 10,
+                    location = "Jormund Stonebrow, Ironforge",
+                    position = { map = 1455, x = 43.4, y = 28.7 },
                     faction = "Alliance",
                 },
                 {
@@ -229,6 +250,12 @@ TFG.TAILORING_FOREVER = {
                     item_id = 253665,
                     cost = 150,
                     location = "Vizzklick, Tanaris",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 253665,
+                    cost = 150,
+                    location = "Brienna Starglow, Feralas",
                 },
                 {
                     type = "Vendor",
@@ -873,6 +900,13 @@ TFG.TAILORING_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 500,
+                    location = "Jormund Stonebrow, Ironforge",
+                    position = { map = 1455, x = 43.4, y = 28.7 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 500,
                     location = "Sellandus, Stormwind City",
                     position = { map = 1453, x = 52.3, y = 83.4 },
                     faction = "Alliance",
@@ -1406,6 +1440,12 @@ TFG.TAILORING_FOREVER = {
                     item_id = 253668,
                     cost = 250,
                     location = "Vizzklick, Tanaris",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 253668,
+                    cost = 250,
+                    location = "Brienna Starglow, Feralas",
                 },
                 {
                     type = "Vendor",
@@ -3440,6 +3480,12 @@ TFG.TAILORING_FOREVER = {
                     item_id = 7089,
                     cost = 1500,
                     location = "Norvin Alderman, City of Dalaran",
+                },
+                {
+                    type = "Vendor",
+                    item_id = 7089,
+                    cost = 1500,
+                    location = "Brienna Starglow, Feralas",
                 },
             },
             product = { item_id = 7053, qty = 1 },

@@ -711,6 +711,25 @@ TFG.ENGINEERING_FOREVER = {
     },
     [125] = {
         {
+            spell_id = 1293088,
+            name = "9-60 Battery Pack",
+            categories = { "Consumable Devices" },
+            icon = "inv_battery_02",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 274049,
+                },
+            },
+            product = { item_id = 274048, qty = 1 },
+            materials = {
+                { item_id = 249409, qty = 1 },
+                { item_id = 249391, qty = 1 },
+                { item_id = 3575, qty = 1 },
+            },
+            levels = { 125, 125, 135, 145 },
+        },
+        {
             spell_id = 3947,
             name = "Crafted Solid Shot",
             categories = { "Ammunition" },
@@ -4871,19 +4890,6 @@ TFG.ENGINEERING_FOREVER = {
         },
     },
     [980] = {
-        {
-            spell_id = 1293088,
-            name = "9-60 Battery Pack",
-            categories = { "Consumable Devices" },
-            icon = "inv_battery_02",
-            product = { item_id = 274048, qty = 1 },
-            materials = {
-                { item_id = 249409, qty = 1 },
-                { item_id = 249391, qty = 1 },
-                { item_id = 3575, qty = 1 },
-            },
-            levels = { 0, 125, 135, 145 },
-        },
         {
             spell_id = 12719,
             name = "Explosive Arrow",
