@@ -129,6 +129,13 @@ TFG.LEATHERWORKING_FOREVER = {
                     position = { map = 1453, x = 71.8, y = 62.8 },
                     faction = "Alliance",
                 },
+                {
+                    type = "Trainer",
+                    cost = 10,
+                    location = "Waldor, The Wailing Caverns",
+                    position = { map = 1414, x = 51.9, y = 55.5 },
+                    faction = "Alliance",
+                },
             },
             levels = { 1 },
             cap = 75,
@@ -9584,7 +9591,7 @@ TFG.LEATHERWORKING_FOREVER = {
             spell_id = 1299917,
             name = "Spiritcaller Boots",
             categories = { "Mail Boots" },
-            icon = "inv_misc_desecrated_mailboots",
+            icon = "inv_boot_mail_raidshamanhyjalc60_d_01",
             source = {
                 {
                     type = "Item",
@@ -9644,7 +9651,7 @@ TFG.LEATHERWORKING_FOREVER = {
             spell_id = 1299915,
             name = "Spiritcaller Gloves",
             categories = { "Mail Gauntlets" },
-            icon = "inv_misc_desecrated_mailglove",
+            icon = "inv_glove_mail_raidshamanhyjalc60_d_01",
             source = {
                 {
                     type = "Item",
@@ -9704,7 +9711,7 @@ TFG.LEATHERWORKING_FOREVER = {
             spell_id = 1299914,
             name = "Spiritcaller Kilt",
             categories = { "Mail Legguards" },
-            icon = "inv_misc_desecrated_mailpants",
+            icon = "inv_pant_mail_raidshamanhyjalc60_d_01",
             source = {
                 {
                     type = "Item",
@@ -9744,7 +9751,7 @@ TFG.LEATHERWORKING_FOREVER = {
             spell_id = 1299916,
             name = "Spiritcaller Mantle",
             categories = { "Mail Pauldrons" },
-            icon = "inv_misc_desecrated_mailshoulder",
+            icon = "inv_shoulder_mail_raidshamanhyjalc60_d_01",
             source = {
                 {
                     type = "Item",
