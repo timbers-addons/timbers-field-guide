@@ -2,7 +2,7 @@
 ## Title: Timber's Field Guide
 ## Notes: Every spell, talent and recipe you can learn, with the trainer, vendor, quest or drop it comes from and what it costs.
 ## Author: Timber Wind - Normal Ruleset (US)
-## Version: v2026.11.11a
+## Version: v2026.11.11b
 ## SavedVariables: TimbersFieldGuideDB
 ## X-License: gpl-3.0-only
 ## X-Curse-Project-ID: 1413887
