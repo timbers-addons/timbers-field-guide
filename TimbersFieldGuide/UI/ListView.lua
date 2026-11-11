@@ -1,5 +1,4 @@
 local _, TFG = ...
-local frame = TFG.frame
 local UI    = TFG.UI
 
 -- Player state is refreshed from game events later in this file.
@@ -135,6 +134,40 @@ local MIDDOT = TFG.MIDDOT
 local GetSpellInfo = TFG.GetSpellInfo
 local GetItemInfo = TFG.GetItemInfo
 local GetItemQualityColor = TFG.GetItemQualityColor
+local IsPlayerSpell = TFG.IsSpellKnown
+
+-- Red marks are kept per character, so a recipe marked on one is not marked on
+-- an alt. Marks made before that (redMarked, account-wide) cannot be given to a
+-- character after the fact, so they keep showing on every character until
+-- removed; a mark set again from then on belongs to the character setting it.
+-- Keyed by GUID, not name: Forever characters share a first name (Timber-Wind,
+-- Timber-Bank) and UnitName gives only that.
+local function isRedMarked(id)
+    local db = TimbersFieldGuideDB
+    if not db then return false end
+    local guid = UnitGUID("player")
+    local own = guid and db.redMarkedByCharacter and db.redMarkedByCharacter[guid]
+    return (own and own[id]) or (db.redMarked and db.redMarked[id]) or false
+end
+
+local function setRedMarked(id, marked)
+    TimbersFieldGuideDB = TimbersFieldGuideDB or {}
+    local db = TimbersFieldGuideDB
+    local guid = UnitGUID("player")
+    local own = guid and db.redMarkedByCharacter and db.redMarkedByCharacter[guid]
+    if marked then
+        if not guid then return end
+        if not own then
+            db.redMarkedByCharacter = db.redMarkedByCharacter or {}
+            own = {}
+            db.redMarkedByCharacter[guid] = own
+        end
+        own[id] = true
+    else
+        if own then own[id] = nil end
+        if db.redMarked then db.redMarked[id] = nil end
+    end
+end
 
 -- Store both current and inferred max cap for skills/professions.
 -- Classic Era PTR appears to return 0 for the "max" fields from GetSkillLineInfo,
@@ -234,7 +267,10 @@ function TFG.RefreshPlayerState()
     clearTable(skillCaps)
 
     for _, skill in ipairs(TFG.GetPlayerSkillLines()) do
-        local key = normalizeSkillKey(skill.name)
+        -- A profession goes under the registry's name for it, which is what the
+        -- pages look it up by; the client's own name is in the client's language.
+        local profession = TFG.FindProfession(skill)
+        local key = normalizeSkillKey(profession and profession.name or skill.name)
         local rank = tonumber(skill.rank or 0) or 0
         skillLevels[key] = rank
 
@@ -256,30 +292,26 @@ TFG.RefreshPlayerState()
 -- ========================================================================== 
 -- Scroll frame (no background)
 -- ==========================================================================
-local scrollBG = CreateFrame("Frame", nil, frame, "BackdropTemplate")
-frame.scrollBG = scrollBG
+-- The list is built before the window exists and kept on this hidden frame
+-- until the window mounts it (TFG.MountEngineInto).
+local holder = CreateFrame("Frame", nil, UIParent)
+holder:Hide()
 
-scrollBG:SetPoint("TOPLEFT", 16, -UI.TITLEBAR_HEIGHT - 40)
-scrollBG:SetPoint("BOTTOMRIGHT", -39, 16)
-
-local scrollFrame = CreateFrame("ScrollFrame", nil, scrollBG, "UIPanelScrollFrameTemplate")
-scrollFrame:SetAllPoints()
+local scrollFrame = CreateFrame("ScrollFrame", nil, holder, "UIPanelScrollFrameTemplate")
 
 local content = CreateFrame("Frame", nil, scrollFrame)
 content:SetSize(1,1)
 scrollFrame:SetScrollChild(content)
 
--- Render width is the wrapping width for ability/recipe icons. It must track
--- whichever container the scroll view currently lives in: the legacy frame, or
--- the new navigation shell's content pane once TFG.MountEngineInto() re-hosts it.
+-- Render width is the wrapping width for ability/recipe icons: the scroll
+-- view's, in the window's content pane. The fallback is the default window's,
+-- for a layout pass that runs before the pane has a size.
 local function getRenderWidth()
-    if TFG._engineMounted and scrollFrame then
-        local w = scrollFrame:GetWidth()
-        if w and w > 1 then
-            return w - UI.ICON_SPACING
-        end
+    local w = scrollFrame:GetWidth()
+    if w and w > 1 then
+        return w - UI.ICON_SPACING
     end
-    return frame:GetWidth() - UI.FRAME_PADDING_X
+    return 952
 end
 
 local renderPool = {
@@ -603,8 +635,8 @@ local function updateIconMouseState()
         if icon then
             local isInteractive = isIconInsideScrollViewport(icon)
             if not isInteractive then
-                if GetMouseFocus and GetMouseFocus() == icon then
-                    GameTooltip:Hide()
+                if GameTooltip:IsOwned(icon) then
+                    hideGroupMap()
                 end
                 if TFG.professionPopup and TFG.professionPopup._anchor == icon then
                     TFG.professionPopup:Hide()
@@ -636,14 +668,12 @@ scrollFrame:HookScript("OnUpdate", function(self)
     end
 end)
 
-local message1 = frame:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+local message1 = holder:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
 message1:SetFont(message1:GetFont(), 24, "OUTLINE")
-message1:SetPoint("CENTER", scrollBG, "CENTER", 0, 20)
 --message1:SetText("We don't have this view for this expansion")
 message1:SetShown(false)
-local message2 = frame:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+local message2 = holder:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
 message2:SetFont(message2:GetFont(), 24, "OUTLINE")
-message2:SetPoint("CENTER", scrollBG, "CENTER", 0, -20)
 --message2:SetText("Please select a different view")
 message2:SetShown(false)
 
@@ -729,8 +759,7 @@ end
 
 
 
--- Exposed so an external navigation shell can build its own Category/Phase
--- controls instead of the legacy in-frame dropdowns.
+-- Exposed so the window can build its Category/Phase controls.
 TFG.IsProfessionView = isProfessionView
 function TFG.GetCategoryOptions()
     return extractCategoriesFromDatabase(TFG.activeDatabase)
@@ -871,13 +900,7 @@ end
 -- Check whether the player has a named skill/profession in their skill list.
 local function playerHasSkill(skillName)
     if not skillName or tostring(skillName) == "" then return false end
-    local target = tostring(skillName):lower()
-    for _, skill in ipairs(TFG.GetPlayerSkillLines()) do
-        if tostring(skill.name):lower() == target then
-            return true
-        end
-    end
-    return false
+    return skillLevels[normalizeSkillKey(skillName)] ~= nil
 end
 
 
@@ -899,40 +922,11 @@ end
 
 
 -- ========================================================================== 
--- Resize handle
--- ==========================================================================
-local resizeButton = CreateFrame("Button", nil, frame)
-resizeButton:SetSize(16,16)
-resizeButton:SetPoint("BOTTOMRIGHT", -4, 4)
-resizeButton:SetNormalTexture("Interface/ChatFrame/UI-ChatIM-SizeGrabber-Up")
-resizeButton:SetHighlightTexture("Interface/ChatFrame/UI-ChatIM-SizeGrabber-Highlight")
-resizeButton:SetPushedTexture("Interface/ChatFrame/UI-ChatIM-SizeGrabber-Down")
-
-resizeButton:SetScript("OnMouseDown", function(_, button)
-    if button == "LeftButton" then frame:StartSizing("BOTTOMRIGHT") end
-end)
-
-resizeButton:SetScript("OnMouseUp", function(_, button)
-    if button == "LeftButton" then
-        frame:StopMovingOrSizing()
-        local w,h = frame:GetSize()
-        if w<700 then w=700 end
-        if h<500 then h=500 end
-        frame:SetSize(w,h)
-        if frame.ClampToScreen then
-            frame:ClampToScreen()
-        end
-        if frame.SavePosition then
-            frame:SavePosition()
-        end
-        frame:Relayout()
-    end
-end)
-
--- ========================================================================== 
 -- Layout / Filtering
 -- ==========================================================================
-function frame:Relayout()
+function TFG.Relayout()
+    -- Nothing to lay out into until the window has mounted the list.
+    if not TFG._hostPane then return end
     TFG._stateDirty = false
     safeCloseProfessionPopup()
     resetRenderPool()
@@ -943,6 +937,7 @@ function frame:Relayout()
     local contentWidth = getRenderWidth()
 
     local enemySpellsCount = 0
+    local raceLimitedCount = 0
     local talentCount = 0
     local totalSpellsShown = 0
 
@@ -1792,23 +1787,19 @@ function frame:Relayout()
             icon.tfgTalentIndicator:Hide()
         end
 
-        -- Persisted red marks table
-        TimbersFieldGuideDB = TimbersFieldGuideDB or {}
-        TimbersFieldGuideDB.redMarked = TimbersFieldGuideDB.redMarked or {}
-
         if entryIsKnown(spell, row, levelRequired) then
             icon.tfgKnownOverlay:Show()
             -- If the spell became known, clear any previously set red mark
             local spellIdForMark = getSpellId(spell)
             if spellIdForMark then
-                TimbersFieldGuideDB.redMarked[tostring(spellIdForMark)] = nil
+                if isRedMarked(tostring(spellIdForMark)) then setRedMarked(tostring(spellIdForMark), false) end
                 if icon.tfgRedOverlay then icon.tfgRedOverlay:Hide() end
             end
         else
             icon.tfgKnownOverlay:Hide()
             -- Show red overlay if user previously marked this unlearned ability
             local spellIdForMark = getSpellId(spell)
-            if spellIdForMark and TimbersFieldGuideDB.redMarked[tostring(spellIdForMark)] then
+            if spellIdForMark and isRedMarked(tostring(spellIdForMark)) then
                 icon.tfgRedOverlay:Show()
             else
                 icon.tfgRedOverlay:Hide()
@@ -1855,23 +1846,19 @@ function frame:Relayout()
                 -- Only allow marking if the entry is currently not known
                 if entryIsKnown(sp, row, levelRequired) then
                     -- If it is known, ensure red mark removed
-                    TimbersFieldGuideDB = TimbersFieldGuideDB or {}
-                    TimbersFieldGuideDB.redMarked = TimbersFieldGuideDB.redMarked or {}
-                    TimbersFieldGuideDB.redMarked[tostring(sid)] = nil
+                    setRedMarked(tostring(sid), false)
                     if self.tfgRedOverlay then self.tfgRedOverlay:Hide() end
                     return
                 end
 
-                TimbersFieldGuideDB = TimbersFieldGuideDB or {}
-                TimbersFieldGuideDB.redMarked = TimbersFieldGuideDB.redMarked or {}
                 local key = tostring(sid)
-                if TimbersFieldGuideDB.redMarked[key] then
+                if isRedMarked(key) then
                     -- Toggle off
-                    TimbersFieldGuideDB.redMarked[key] = nil
+                    setRedMarked(key, false)
                     if self.tfgRedOverlay then self.tfgRedOverlay:Hide() end
                 else
                     -- Toggle on
-                    TimbersFieldGuideDB.redMarked[key] = true
+                    setRedMarked(key, true)
                     if self.tfgRedOverlay then self.tfgRedOverlay:Show() end
                 end
             end
@@ -2320,6 +2307,7 @@ function frame:Relayout()
         for _, spell in ipairs(row.spells) do
             if (not isProfession) or isEntryAvailableInPhase(spell) then
                 if spell.faction or getRestrictedRaces(spell) then enemySpellsCount = enemySpellsCount + 1 end
+                if getRestrictedRaces(spell) then raceLimitedCount = raceLimitedCount + 1 end
                 if isTalentSpell(spell) then talentCount = talentCount + 1 end
             end
             -- Weapon skills hide the other faction's trainers, not entries.
@@ -2446,15 +2434,14 @@ function frame:Relayout()
     local isEnemySpellsShown = enemySpellsCount > 0
     local isTalentShown = talentCount > 0
 
-    -- Publish which filters are applicable to the current view so an external
-    -- navigation shell can show/hide its own filter controls, then notify it
-    -- that a relayout finished. (isKnownShown reflects the engine's own
-    -- show/hide rules even though the legacy checkbox is parented to a hidden
-    -- frame, because IsShown() tracks the object's flag, not effective view.)
+    -- Publish which filters apply to the current view so the window can show
+    -- or hide its filter controls, then tell it a relayout finished.
     TFG._filterAvailability = {
         known = isKnownShown and true or false,
         talent = isTalentShown,
         enemy = isEnemySpellsShown,
+        -- Some of those are limited by race, not just by side (priest racials).
+        raceLimited = raceLimitedCount > 0,
         otherClasses = TFG.IsClassGroupedView(),
     }
     if type(TFG.OnAfterRelayout) == "function" then
@@ -2488,26 +2475,22 @@ end
 
 local relayoutQueued = false
 
--- "Is the guide currently on screen?" Once the engine is mounted into the new
--- shell, visibility follows the host pane rather than the hidden legacy frame.
+-- "Is the guide currently on screen?" Follows the pane the list is mounted in.
 local function isGuideVisible()
-    if TFG._engineMounted then
-        return TFG._hostPane and TFG._hostPane:IsVisible() or false
-    end
-    return frame:IsShown()
+    return TFG._hostPane and TFG._hostPane:IsVisible() or false
 end
 TFG.IsGuideVisible = isGuideVisible
 
 function TFG.RequestRelayout()
     TFG._stateDirty = true
-    if not frame or not isGuideVisible() or relayoutQueued then return end
+    if not isGuideVisible() or relayoutQueued then return end
 
     relayoutQueued = true
     local function run()
         relayoutQueued = false
         if not isGuideVisible() then return end
         TFG._stateDirty = false
-        frame:Relayout()
+        TFG.Relayout()
     end
 
     if C_Timer and C_Timer.After then
@@ -2532,25 +2515,14 @@ stateEvents:SetScript("OnEvent", function()
     TFG.RequestRelayout()
 end)
 
-frame:HookScript("OnShow", function()
-    if TFG._stateDirty then
-        TFG.RefreshPlayerState()
-        TFG.RequestRelayout()
-    end
-end)
-
 -- ==========================================================================
--- External host mount (new navigation shell)
+-- Mounting into the window
 -- ==========================================================================
--- Re-host the live render output -- the scroll view, the empty-state messages,
--- and the profession popup -- inside a content pane owned by the new UI shell.
--- The legacy frame stays hidden, so its dropdowns and checkboxes (children of
--- that hidden frame) never render; the shell supplies its own navigation and
--- filter controls and drives the same TFG.* state. Width tracking switches to
--- the mounted pane automatically via getRenderWidth().
+-- Put the list -- the scroll view, the empty-state messages and the profession
+-- popup -- inside a content pane the window (UI/Navigation.lua) owns. The window
+-- supplies the navigation and filter controls and drives the TFG.* state.
 function TFG.MountEngineInto(pane)
     if not pane then return end
-    TFG._engineMounted = true
     TFG._hostPane = pane
 
     scrollFrame:SetParent(pane)
@@ -2570,10 +2542,5 @@ function TFG.MountEngineInto(pane)
         TFG.professionPopup:SetParent(pane)
     end
 
-    if frame:IsShown() then
-        frame:Hide()
-    end
     TFG.RequestRelayout()
 end
-
-frame:Relayout()

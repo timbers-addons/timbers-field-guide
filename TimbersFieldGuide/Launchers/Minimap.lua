@@ -15,21 +15,7 @@ local function ensureDB()
 end
 
 local function toggleMainWindow()
-    if TFG.ToggleMainUI then
-        TFG.ToggleMainUI()
-        return
-    end
-
-    if not TFG.frame then return end
-
-    if TFG.frame:IsShown() then
-        TFG.frame:SetShown(false)
-    else
-        if TFG.frame.Relayout then
-            TFG.frame:Relayout()
-        end
-        TFG.frame:SetShown(true)
-    end
+    TFG.ToggleMainUI()
 end
 
 local function showMinimapButton()

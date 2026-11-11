@@ -69,12 +69,27 @@ foreach ($file in $databaseFiles) {
 
 $databaseCore = Get-Content -LiteralPath (Join-Path $Root "Core/Database.lua") -Raw
 $databaseCoreWithoutComments = $databaseCore -replace "(?m)--.*$", ""
-$references = [regex]::Matches($databaseCoreWithoutComments, "file\s*=\s*TFG\.([A-Z][A-Z0-9_]*)") |
+# The registry is one template: a page's table is TFG.<PAGE>_<game key>. A data
+# table that is not a page of a game is loaded and never shown, and a page with
+# no table in any game is a typo in the template.
+$registryPages = [regex]::Matches($databaseCoreWithoutComments, 'file\s*=\s*data\("([A-Z][A-Z0-9_]*)"\)') |
     ForEach-Object { $_.Groups[1].Value } |
     Sort-Object -Unique
-
-foreach ($reference in $references) {
-    Assert-True $definitions.ContainsKey($reference) "Database registry reference has no definition: TFG.$reference"
+$registryGames = [regex]::Matches($databaseCoreWithoutComments, 'gameRegistry\("([A-Z][A-Z0-9_]*)"') |
+    ForEach-Object { $_.Groups[1].Value } |
+    Sort-Object -Unique
+Assert-True ($registryPages.Count -gt 0 -and $registryGames.Count -gt 0) "Core/Database.lua no longer builds its registry from gameRegistry()/data(); update this check."
+$registryTables = @{}
+foreach ($page in $registryPages) {
+    $defined = $false
+    foreach ($game in $registryGames) {
+        $registryTables["${page}_${game}"] = $true
+        if ($definitions.ContainsKey("${page}_${game}")) { $defined = $true }
+    }
+    Assert-True $defined "Database registry page has no data table in any game: $page"
+}
+foreach ($definition in $definitions.Keys) {
+    Assert-True $registryTables.ContainsKey($definition) "Data table is not a registry page, so it would never be shown: TFG.$definition ($($definitions[$definition]))"
 }
 
 $gameVersions = Get-Content -LiteralPath (Join-Path $Root "Core/GameVersions.lua") -Raw
@@ -84,7 +99,9 @@ Assert-True ($databaseCoreWithoutComments -notmatch 'WOW_PROJECT_ID\s*==\s*WOW_P
 Assert-True ($databaseCoreWithoutComments -match 'key\s*~=\s*TFG\.selectedExpansion\s+then\s+TFG\.DATABASE_FILES\[key\]\s*=\s*nil') "A client must only offer its own game: tooltips come from the running client, so another game's page would show wrong numbers."
 Assert-True ($databaseCore -match "UNKNOWN_BUCKET\s*=\s*980") "Unknown bucket constant must stay 980: the generated Forever files use it, and it sorts after Discoveries."
 Assert-True ($databaseCore -match "DISCOVERY_BUCKET\s*=\s*930") "Discovery bucket constant must stay 930: the TBC Alchemy file uses it."
-Assert-True ($databaseCore -match 'shaman\s*=\s*\{[\s\S]*?color\s*=\s*TFG\.CLASS_COLORS\["PALADIN"\]') "Vanilla Shaman must retain the intentional Paladin color."
+Assert-True ($databaseCore -match 'VANILLA_SHAMAN\s*,\s*TBC_SHAMAN\s*=\s*TFG\.CLASS_COLORS\["PALADIN"\]') "Vanilla Shaman must retain the intentional Paladin color."
+Assert-True ($databaseCore -match 'gameRegistry\("CLASSIC_ERA",\s*"[^"]+",\s*VANILLA_SHAMAN\)') "Classic Era must use the vanilla Shaman color."
+Assert-True ($databaseCore -match 'shaman\s*=\s*\{[^}]*color\s*=\s*shamanColor') "The registry's Shaman must take the game's Shaman color."
 Assert-True ($databaseCoreWithoutComments -notmatch '\{\s*name\s*=\s*"[^"]+"\s*,\s*file\s*=\s*TFG\.') "Selectable child views must define a stable key before name/file."
 
 $vanillaFirstAid = Get-Content -LiteralPath (Join-Path $Root "Database/ClassicEra/Professions/FirstAid.lua") -Raw
@@ -114,9 +131,10 @@ foreach ($eventName in "PLAYER_LEVEL_UP", "SKILL_LINES_CHANGED", "SPELLS_CHANGED
 }
 Assert-True ($layout -notmatch 'TimbersFieldGuideDB[\s\S]{0,40}phase') "Phase selection must not be persisted."
 
-$frame = Get-Content -LiteralPath (Join-Path $Root "UI/Window.lua") -Raw
-Assert-True ($frame -match "frame:Hide\(\)") "Main frame must explicitly start hidden."
-Assert-True ($frame -notmatch "DebugWindow|tryRegisterDebugTab") "External debug-window integration must remain removed."
+# The old standalone window is gone: the navigation window is the only one, and
+# the list has no frame of its own to show.
+Assert-True (-not (Test-Path -LiteralPath (Join-Path $Root "UI/Window.lua"))) "UI/Window.lua (the retired legacy window) must stay removed."
+Assert-True ($layout -notmatch 'TFG\.frame\b') "The list must not bring back the legacy TFG.frame; it mounts into the window's pane."
 
 $minimap = Get-Content -LiteralPath (Join-Path $Root "Launchers/Minimap.lua") -Raw
 Assert-True ($minimap -notmatch 'HookScript\("OnClick"') "Minimap right-click must not be hooked twice."
@@ -154,7 +172,7 @@ Assert-True ($weaponSkills -notmatch 'name\s*=\s*"One-Handed Swords"[\s\S]{0,160
 
 $testUI = Get-Content -LiteralPath (Join-Path $Root "UI/Navigation.lua") -Raw
 $slash = Get-Content -LiteralPath (Join-Path $Root "Launchers/Slash.lua") -Raw
-Assert-True ($testUI -match "function TFG\.ToggleTestUI") "Navigation mockup toggle is missing."
+Assert-True ($testUI -match "function TFG\.ToggleMainUI") "The window's toggle is missing."
 Assert-True ($testUI -match '"Classes"[\s\S]*"Professions"[\s\S]*"Skills"') "Navigation mockup bottom tabs are missing."
 Assert-True ($testUI -match 'closeTab') "Navigation mockup close control is missing."
 Assert-True ($testUI -notmatch 'expansionTab|selectPage\("expansions"\)') "There is no game version control: a client shows its own game only."

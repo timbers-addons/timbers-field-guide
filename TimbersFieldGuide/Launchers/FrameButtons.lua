@@ -96,13 +96,12 @@ local function hideButtonTooltip()
     GameTooltip:Hide()
 end
 
--- Light a button while the guide is open, like Blizzard's selected tab.
+-- Light a button while the guide is open, like Blizzard's selected tab. The
+-- window says when it shows and hides (TFG.FrameButtons:GuideShown).
+local followers = {}
 local function followGuideWindow(setChecked)
-    setChecked(TFG.frame and TFG.frame:IsShown() or false)
-    if TFG.frame then
-        TFG.frame:HookScript("OnShow", function() setChecked(true) end)
-        TFG.frame:HookScript("OnHide", function() setChecked(false) end)
-    end
+    followers[#followers + 1] = setChecked
+    setChecked(TFG.window and TFG.window:IsShown() or false)
 end
 
 -- Character window (WoW: Forever side tabs) --------------------------------
@@ -215,6 +214,12 @@ end
 
 -- Public API
 TFG.FrameButtons = TFG.FrameButtons or {}
+
+function TFG.FrameButtons:GuideShown(shown)
+    for _, setChecked in ipairs(followers) do
+        setChecked(shown)
+    end
+end
 
 function TFG.FrameButtons:HandleSlash(args)
     args = (args or "")

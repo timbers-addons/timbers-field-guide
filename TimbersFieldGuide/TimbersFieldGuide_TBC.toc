@@ -1,6 +1,6 @@
 ## Interface: 20506
 ## Title: Timber's Field Guide
-## Notes: A scrollable list of spells for each and every class. See what abilities and talents you can learn at any given level.
+## Notes: Every spell, talent and recipe you can learn, with the trainer, vendor, quest or drop it comes from and what it costs.
 ## Author: Timber Wind - Normal Ruleset (US)
 ## Version: v2026.11.09
 ## SavedVariables: TimbersFieldGuideDB
@@ -48,7 +48,6 @@ Core/Util.lua
 Core/Database.lua
 Core/Model.lua
 UI/Theme.lua
-UI/Window.lua
 UI/ListView.lua
 UI/RecipePopup.lua
 UI/Navigation.lua

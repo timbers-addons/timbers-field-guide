@@ -1,16 +1,10 @@
 local _, TFG = ...
 
 TFG.UI = {
-    FRAME_WIDTH        = 1000,
-    FRAME_HEIGHT       = 600,
-    TITLEBAR_HEIGHT    = 44,
-
     ICON_SIZE          = 40,   -- updated from 48
     ICON_SPACING       = 8,
     ROW_PADDING_BOTTOM = 24,
     TEXT_ICON_SPACING  = 6,
-
-    FRAME_PADDING_X    = 48,
 }
 
 -- The character-creation class icon atlas, and each class's corner of it

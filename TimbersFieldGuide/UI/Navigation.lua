@@ -151,15 +151,12 @@ local function skillName(vkey, key)
 end
 
 -- Professions the player actually has, that also exist in the current version.
-local function getPlayerProfessions(vkey)
-    local available = getProfessions(vkey)
-    local byName = {}
-    for _, p in ipairs(available) do byName[p.name] = p end
-
+local function getPlayerProfessions()
     local out = {}
     for _, skill in ipairs(TFG.GetPlayerSkillLines()) do
-        if byName[skill.name] then
-            out[#out + 1] = byName[skill.name]
+        local profession = TFG.FindProfession(skill)
+        if profession and type(profession.file) == "table" then
+            out[#out + 1] = { key = profession.key, name = profession.name }
         end
     end
     return out
@@ -308,48 +305,76 @@ local function updateTabBorders(tab, selected)
     end
 end
 
+-- A frame is never freed, and the tabs and cards are laid out again on every
+-- page change, so the ones cleared away are kept here and handed out again.
+local framePools = {}
+
+local function acquirePooled(kind, parent)
+    local pool = framePools[kind]
+    local pooled = pool and table.remove(pool)
+    if pooled then
+        pooled:SetParent(parent)
+        pooled:ClearAllPoints()
+        pooled:Show()
+    end
+    return pooled
+end
+
 local function clearControls(controls)
     for _, control in ipairs(controls) do
         control:Hide()
         control:SetScript("OnClick", nil)
+        if control._tfgPool then
+            framePools[control._tfgPool] = framePools[control._tfgPool] or {}
+            table.insert(framePools[control._tfgPool], control)
+        end
     end
     wipe(controls)
 end
 
 local function createFlatTextTab(parent, text, width, height)
-    local tab = CreateFrame("Button", nil, parent, "BackdropTemplate")
-    tab:SetHeight(height or TAB_HEIGHT)
-    applyTabBackdrop(tab, COLORS.tab)
-    tab.inactiveColor = nil
+    local tab = acquirePooled("textTab", parent)
+    if not tab then
+        tab = CreateFrame("Button", nil, parent, "BackdropTemplate")
+        tab._tfgPool = "textTab"
+        applyTabBackdrop(tab, COLORS.tab)
 
-    tab.label = tab:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+        tab.label = tab:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+        ensureTabBorders(tab)
+
+        function tab:SetSelected(selected)
+            self.selected = selected
+            self.label:ClearAllPoints()
+            self.label:SetPoint("CENTER", 0, selected and 0 or (self.inactiveLabelYOffset or 0))
+            if selected then
+                self:SetBackdropColor(unpack(self.activeColor or COLORS.tabSelected))
+                self.label:SetTextColor(unpack(self.activeTextColor or COLORS.textLight))
+            else
+                self:SetBackdropColor(unpack(self.inactiveColor or COLORS.tab))
+                self.label:SetTextColor(unpack(self.inactiveTextColor or COLORS.textLight))
+            end
+            updateTabBorders(self, selected)
+        end
+
+        tab:SetScript("OnEnter", function(self)
+            if not self.selected then
+                self:SetBackdropColor(unpack(self.hoverColor or COLORS.tabHover))
+            end
+        end)
+        tab:SetScript("OnLeave", function(self)
+            self:SetSelected(self.selected)
+        end)
+    end
+
+    -- What the last user of a pooled tab set on it.
+    tab.attachedEdge, tab.inactiveLabelYOffset = nil, nil
+    tab.activeColor, tab.inactiveColor, tab.hoverColor = nil, nil, nil
+    tab.activeTextColor, tab.inactiveTextColor = nil, nil
+
+    tab:SetHeight(height or TAB_HEIGHT)
     tab.label:SetText(text)
     tab.label:SetTextColor(unpack(COLORS.textLight))
     tab:SetWidth(math.floor(math.max(width or 0, tab.label:GetStringWidth() + (TAB_TEXT_PADDING * 2)) + 0.5))
-    ensureTabBorders(tab)
-
-    function tab:SetSelected(selected)
-        self.selected = selected
-        self.label:ClearAllPoints()
-        self.label:SetPoint("CENTER", 0, selected and 0 or (self.inactiveLabelYOffset or 0))
-        if selected then
-            self:SetBackdropColor(unpack(self.activeColor or COLORS.tabSelected))
-            self.label:SetTextColor(unpack(self.activeTextColor or COLORS.textLight))
-        else
-            self:SetBackdropColor(unpack(self.inactiveColor or COLORS.tab))
-            self.label:SetTextColor(unpack(self.inactiveTextColor or COLORS.textLight))
-        end
-        updateTabBorders(self, selected)
-    end
-
-    tab:SetScript("OnEnter", function(self)
-        if not self.selected then
-            self:SetBackdropColor(unpack(self.hoverColor or COLORS.tabHover))
-        end
-    end)
-    tab:SetScript("OnLeave", function(self)
-        self:SetSelected(self.selected)
-    end)
     tab:SetSelected(false)
     return tab
 end
@@ -366,54 +391,63 @@ local function applyDisplayIcon(texture, iconPath, classKey)
 end
 
 local function createFlatIconTab(parent, texture, tooltip, classKey)
-    local tab = CreateFrame("Button", nil, parent, "BackdropTemplate")
-    tab:SetSize(TAB_HEIGHT + 20, TAB_HEIGHT)
-    applyTabBackdrop(tab, COLORS.chromeTab)
-    ensureTabBorders(tab)
+    local tab = acquirePooled("iconTab", parent)
+    if not tab then
+        tab = CreateFrame("Button", nil, parent, "BackdropTemplate")
+        tab._tfgPool = "iconTab"
+        tab:SetSize(TAB_HEIGHT + 20, TAB_HEIGHT)
+        applyTabBackdrop(tab, COLORS.chromeTab)
+        ensureTabBorders(tab)
 
-    tab.icon = tab:CreateTexture(nil, "ARTWORK")
-    tab.icon:SetSize(TAB_HEIGHT - (TAB_ICON_INSET * 2), TAB_HEIGHT - (TAB_ICON_INSET * 2))
-    tab.icon:SetPoint("CENTER")
-    applyDisplayIcon(tab.icon, texture, classKey)
+        tab.icon = tab:CreateTexture(nil, "ARTWORK")
+        tab.icon:SetSize(TAB_HEIGHT - (TAB_ICON_INSET * 2), TAB_HEIGHT - (TAB_ICON_INSET * 2))
+        tab.icon:SetPoint("CENTER")
 
-    tab.tooltip = tooltip
-    function tab:SetSelected(selected)
-        self.selected = selected
-        if selected then
-            self:SetBackdropColor(unpack(COLORS.tabSelected))
-            self.icon:SetDesaturated(false)
-            self.icon:SetVertexColor(1, 1, 1)
-        else
-            self:SetBackdropColor(unpack(COLORS.chromeTab))
-            self.icon:SetDesaturated(false)
-            self.icon:SetVertexColor(0.92, 0.90, 0.84)
+        function tab:SetSelected(selected)
+            self.selected = selected
+            if selected then
+                self:SetBackdropColor(unpack(COLORS.tabSelected))
+                self.icon:SetDesaturated(false)
+                self.icon:SetVertexColor(1, 1, 1)
+            else
+                self:SetBackdropColor(unpack(COLORS.chromeTab))
+                self.icon:SetDesaturated(false)
+                self.icon:SetVertexColor(0.92, 0.90, 0.84)
+            end
+            updateTabBorders(self, selected)
         end
-        updateTabBorders(self, selected)
+
+        tab:SetScript("OnEnter", function(self)
+            if not self.selected then self:SetBackdropColor(unpack(COLORS.chromeTabHover)) end
+            self.icon:SetVertexColor(1, 1, 1)
+            GameTooltip:SetOwner(self, "ANCHOR_TOP")
+            GameTooltip:AddLine(self.tooltip, 1, 0.82, 0)
+            GameTooltip:Show()
+        end)
+        tab:SetScript("OnLeave", function(self)
+            self:SetSelected(self.selected)
+            GameTooltip:Hide()
+        end)
     end
 
-    tab:SetScript("OnEnter", function(self)
-        if not self.selected then self:SetBackdropColor(unpack(COLORS.chromeTabHover)) end
-        self.icon:SetVertexColor(1, 1, 1)
-        GameTooltip:SetOwner(self, "ANCHOR_TOP")
-        GameTooltip:AddLine(self.tooltip, 1, 0.82, 0)
-        GameTooltip:Show()
-    end)
-    tab:SetScript("OnLeave", function(self)
-        self:SetSelected(self.selected)
-        GameTooltip:Hide()
-    end)
+    tab.attachedEdge = nil
+    applyDisplayIcon(tab.icon, texture, classKey)
+    tab.tooltip = tooltip
     tab:SetSelected(false)
     return tab
 end
 
-local function ensureTestFrame()
-    if TFG.testFrame then return TFG.testFrame end
+-- The guide's window, built the first time it is opened.
+local function ensureWindow()
+    if TFG.window then return TFG.window end
 
-    local frame = CreateFrame("Frame", "TFG_TestNavigationFrame", UIParent)
-    TFG.testFrame = frame
+    local frame = CreateFrame("Frame", "TFG_Window", UIParent)
+    TFG.window = frame
     frame:SetSize(1100, 780)
     frame:SetPoint("CENTER")
-    frame:SetFrameStrata("FULLSCREEN_DIALOG")
+    -- Above the game's own windows, under its dialogs and the full-screen map.
+    frame:SetFrameStrata("HIGH")
+    frame:SetToplevel(true)
     frame:SetClampedToScreen(true)
     frame:SetMovable(true)
     frame:SetResizable(true)
@@ -424,7 +458,7 @@ local function ensureTestFrame()
         if frame.SetMaxResize then frame:SetMaxResize(1500, 1100) end
     end
 
-    -- Window position/size persistence (stored separately from the legacy frame).
+    -- Window position/size persistence.
     local function ensureNavDB()
         TimbersFieldGuideDB = TimbersFieldGuideDB or {}
         TimbersFieldGuideDB.navWindow = TimbersFieldGuideDB.navWindow or {}
@@ -467,7 +501,7 @@ local function ensureTestFrame()
         self:SaveWindow()
     end)
     frame:Hide()
-    tinsert(UISpecialFrames, "TFG_TestNavigationFrame")
+    tinsert(UISpecialFrames, "TFG_Window")
 
     local body = CreateFrame("Frame", nil, frame, "BackdropTemplate")
     body:SetPoint("TOPLEFT", 0, -(TAB_HEIGHT - 1))
@@ -865,8 +899,8 @@ local function ensureTestFrame()
         searchText = "",
     }
 
-    -- Mount the live engine into our content pane (reparents its scroll view,
-    -- empty-state messages, and profession popup; hides the legacy frame).
+    -- Mount the list into our content pane (reparents its scroll view,
+    -- empty-state messages, and profession popup).
     TFG.MountEngineInto(engineHost)
 
     local render
@@ -1143,10 +1177,10 @@ local function ensureTestFrame()
         local label
         if fa.otherClasses then
             label = (TFG.isAlliance() and "Horde" or "Alliance") .. " Trainers"
-        elseif (TFG.selectedFile or ""):upper() ~= "PRIEST" then
-            label = (TFG.isAlliance() and "Horde" or "Alliance") .. " Spells"
-        else
+        elseif fa.raceLimited then
             label = "Non-" .. playerRaceName .. " Spells"
+        else
+            label = (TFG.isAlliance() and "Horde" or "Alliance") .. " Spells"
         end
         raceLabel.label:SetText(label)
         raceLabel:SetSize(raceLabel.label:GetStringWidth(), 20)
@@ -1248,7 +1282,7 @@ local function ensureTestFrame()
         end
 
         -- The player's own professions that exist in this version.
-        for _, profession in ipairs(getPlayerProfessions(TFG.selectedExpansion)) do
+        for _, profession in ipairs(getPlayerProfessions()) do
             add(PROFESSION_ICONS[profession.name] or DEFAULT_ICON, profession.name, "profession", profession.key)
         end
 
@@ -1313,43 +1347,52 @@ local function ensureTestFrame()
         local hoverColor = selected and COLORS.contentTabHover or COLORS.cardHover
         local hoverBorder = COLORS.borderBright
 
-        local card = CreateFrame("Button", nil, scrollContent, "BackdropTemplate")
-        card:SetSize(292, 82)
-        applyFlatBackdrop(card, baseColor, baseBorder)
+        local card = acquirePooled("card", scrollContent)
+        if not card then
+            card = CreateFrame("Button", nil, scrollContent, "BackdropTemplate")
+            card._tfgPool = "card"
+            card:SetSize(292, 82)
 
-        local icon = card:CreateTexture(nil, "ARTWORK")
-        icon:SetSize(52, 52)
-        icon:SetPoint("LEFT", 14, 0)
-        applyDisplayIcon(icon, texture, classKey)
+            card.icon = card:CreateTexture(nil, "ARTWORK")
+            card.icon:SetSize(52, 52)
+            card.icon:SetPoint("LEFT", 14, 0)
 
-        local cardTitle = card:CreateFontString(nil, "OVERLAY", "GameFontNormal")
-        cardTitle:SetPoint("TOPLEFT", icon, "TOPRIGHT", 13, -7)
-        cardTitle:SetText(titleText)
-        cardTitle:SetTextColor(unpack(selected and COLORS.textLight or COLORS.textGold))
+            card.title = card:CreateFontString(nil, "OVERLAY", "GameFontNormal")
+            card.title:SetPoint("TOPLEFT", card.icon, "TOPRIGHT", 13, -7)
 
-        local subtitle = card:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
-        subtitle:SetPoint("TOPLEFT", cardTitle, "BOTTOMLEFT", 0, -6)
-        subtitle:SetWidth(198)
-        subtitle:SetJustifyH("LEFT")
-        subtitle:SetText(subtitleText or "Open page")
-        subtitle:SetTextColor(unpack(COLORS.textLight))
+            card.subtitle = card:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+            card.subtitle:SetPoint("TOPLEFT", card.title, "BOTTOMLEFT", 0, -6)
+            card.subtitle:SetWidth(198)
+            card.subtitle:SetJustifyH("LEFT")
+            card.subtitle:SetTextColor(unpack(COLORS.textLight))
 
-        if selected then
-            local selectedMark = card:CreateTexture(nil, "OVERLAY")
-            selectedMark:SetSize(20, 20)
-            selectedMark:SetPoint("TOPRIGHT", -10, -8)
-            selectedMark:SetTexture("Interface\\Buttons\\UI-CheckBox-Check")
-            selectedMark:SetVertexColor(unpack(COLORS.borderBright))
+            card:SetScript("OnEnter", function(self)
+                self:SetBackdropColor(unpack(self.hoverColor))
+                self:SetBackdropBorderColor(unpack(self.hoverBorder))
+            end)
+            card:SetScript("OnLeave", function(self)
+                self:SetBackdropColor(unpack(self.baseColor))
+                self:SetBackdropBorderColor(unpack(self.baseBorder))
+            end)
         end
 
-        card:SetScript("OnEnter", function(self)
-            self:SetBackdropColor(unpack(hoverColor))
-            self:SetBackdropBorderColor(unpack(hoverBorder))
-        end)
-        card:SetScript("OnLeave", function(self)
-            self:SetBackdropColor(unpack(baseColor))
-            self:SetBackdropBorderColor(unpack(baseBorder))
-        end)
+        card.baseColor, card.baseBorder = baseColor, baseBorder
+        card.hoverColor, card.hoverBorder = hoverColor, hoverBorder
+        applyFlatBackdrop(card, baseColor, baseBorder)
+        applyDisplayIcon(card.icon, texture, classKey)
+        card.title:SetText(titleText)
+        card.title:SetTextColor(unpack(selected and COLORS.textLight or COLORS.textGold))
+        card.subtitle:SetText(subtitleText or "Open page")
+
+        if selected and not card.selectedMark then
+            card.selectedMark = card:CreateTexture(nil, "OVERLAY")
+            card.selectedMark:SetSize(20, 20)
+            card.selectedMark:SetPoint("TOPRIGHT", -10, -8)
+            card.selectedMark:SetTexture("Interface\\Buttons\\UI-CheckBox-Check")
+            card.selectedMark:SetVertexColor(unpack(COLORS.borderBright))
+        end
+        if card.selectedMark then card.selectedMark:SetShown(selected and true or false) end
+
         card:SetScript("OnClick", onClick)
         frame.directoryControls[#frame.directoryControls + 1] = card
         return card
@@ -1575,26 +1618,32 @@ local function ensureTestFrame()
         selectPage("about")
     end)
 
-    frame:SetScript("OnShow", render)
+    -- The launcher buttons on Blizzard's windows light up while the guide is open.
+    local function tellLaunchers(shown)
+        if TFG.FrameButtons and TFG.FrameButtons.GuideShown then
+            TFG.FrameButtons:GuideShown(shown)
+        end
+    end
+
+    frame:SetScript("OnShow", function()
+        render()
+        tellLaunchers(true)
+    end)
+    frame:SetScript("OnHide", function()
+        if TFG.closeProfessionPopup then TFG.closeProfessionPopup() end
+        tellLaunchers(false)
+    end)
     frame:ApplyWindow()
     return frame
 end
 
-function TFG.ToggleTestUI()
-    local frame = ensureTestFrame()
-    if frame:IsShown() then
-        frame:Hide()
-    else
-        if TFG.frame and TFG.frame:IsShown() then TFG.frame:Hide() end
-        frame:Show()
-    end
+-- Public entry point used by the slash command, key binding, minimap launcher
+-- and the buttons on Blizzard's windows.
+function TFG.ToggleMainUI()
+    local frame = ensureWindow()
+    frame:SetShown(not frame:IsShown())
 end
 
--- Canonical public entry point used by the slash command, key binding, and
--- minimap launcher.
-TFG.ToggleMainUI = TFG.ToggleTestUI
-
 function TFG.ResetMainUIPosition()
-    local frame = ensureTestFrame()
-    frame:ResetWindow()
+    ensureWindow():ResetWindow()
 end

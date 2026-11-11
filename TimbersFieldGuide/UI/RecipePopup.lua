@@ -1,6 +1,4 @@
 local _, TFG = ...
-local frame = TFG.frame
-local UI = TFG.UI
 
 -- Data-model accessors (see Core/Model.lua).
 local getProductItemId = TFG.GetProductItemId
@@ -57,10 +55,10 @@ local function ensureProfessionPopup()
         return TFG.professionPopup
     end
 
-    local popup = CreateFrame("Frame", "TFG_ProfessionPopup", TFG._hostPane or frame.scrollBG, "BackdropTemplate")
-    popup:SetFrameStrata("FULLSCREEN_DIALOG")
+    -- An icon has to be clicked to get here, so the list is mounted by now.
+    local popup = CreateFrame("Frame", "TFG_ProfessionPopup", TFG._hostPane, "BackdropTemplate")
     -- Ensure the popup appears above the scroll content (icons/labels).
-    popup:SetFrameLevel((frame:GetFrameLevel() or 1) + 200)
+    popup:SetFrameLevel(TFG._hostPane:GetFrameLevel() + 200)
     popup:SetBackdrop({
         bgFile = "Interface\\Buttons\\WHITE8X8",
         edgeFile = "Interface\\Buttons\\WHITE8X8",
@@ -1015,7 +1013,7 @@ local function closeProfessionPopup()
     end
 end
 
--- Store the close function globally so it can be called from Frame.lua OnHide
+-- Exposed so the window can close the popup when it hides
 TFG.closeProfessionPopup = closeProfessionPopup
 
 TFG.EnsureProfessionPopup = ensureProfessionPopup

@@ -2,6 +2,14 @@ local _, TFG = ...
 
 SLASH_TFG1 = "/tfg"
 SLASH_TFG2 = "/timbersfieldguide"
+local function printHelp()
+    print("Timber's Field Guide:")
+    print("  /tfg - show or hide the window")
+    print("  /tfg reset - reset the window's position and size")
+    print("  /tfg minimap [show|hide] - the minimap button")
+    print("  /tfg button <character|spellbook> [show|hide] - the buttons on the character window and spellbook")
+end
+
 SlashCmdList["TFG"] = function(msg)
     local input = (strtrim and strtrim(msg or "")) or (msg or "")
 
@@ -31,12 +39,11 @@ SlashCmdList["TFG"] = function(msg)
         end
     end
 
-    if not TFG.frame then
-        print("TFG: frame not created yet")
+    local cmd = input:lower()
+    if cmd == "help" or cmd == "?" then
+        printHelp()
         return
     end
-
-    local cmd = input:lower()
     if cmd == "reset" or cmd == "resetpos" or cmd == "resetposition" then
         local ok, err = pcall(function()
             if TFG.ResetMainUIPosition then
@@ -66,30 +73,7 @@ if TIMBER_BROADCAST and TIMBER_BROADCAST.Register then
     TIMBER_BROADCAST.Register("TimbersFieldGuide", function(msg)
         msg = (msg or ""):match("^%s*(.-)%s*$") -- trim
         if msg == "" or msg == "help" then
-            print("TimbersFieldGuide: Usage: /tfg  - show/hide window")
-            print("TimbersFieldGuide:        /tfg reset  - reset window position")
-            return
+            printHelp()
         end
     end)
-end
-
--- Unregister when unloading or disabling (deferred to unload event)
-do
-    local ev = CreateFrame("Frame")
-    -- Some clients (older/classic builds) do not expose ADDON_UNLOADED.
-    -- Guard RegisterEvent with pcall to avoid runtime errors.
-    local registered = pcall(function() ev:RegisterEvent("ADDON_UNLOADED") end)
-    if registered then
-        ev:SetScript("OnEvent", function(_, event, addonName)
-            if event == "ADDON_UNLOADED" and addonName == "TimbersFieldGuide" then
-                if TIMBER_BROADCAST and TIMBER_BROADCAST.Unregister then
-                    TIMBER_BROADCAST.Unregister("TimbersFieldGuide")
-                end
-                ev:UnregisterAllEvents()
-            end
-        end)
-    else
-        -- Fallback: skip unregister on unload for clients without the event.
-        -- The broadcast registration will remain for the session; this is safe.
-    end
 end

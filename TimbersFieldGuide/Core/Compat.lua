@@ -11,7 +11,8 @@ local _, TFG = ...
 -- Pre-Cataclysm clients expose the skill window via GetNumSkillLines /
 -- GetSkillLineInfo. Later engines drop those and only expose professions via
 -- GetProfessions / GetProfessionInfo. Returns a list of { name, rank, maxRank }
--- for every non-header skill the player has.
+-- for every non-header skill the player has, with `skillLine` (the skill line
+-- id, the same in every language) where the client gives one.
 function TFG.GetPlayerSkillLines()
     local out = {}
     if GetNumSkillLines and GetSkillLineInfo then
@@ -27,9 +28,9 @@ function TFG.GetPlayerSkillLines()
         for i = 1, count do
             local index = select(i, GetProfessions())
             if index then
-                local name, _, rank, maxRank = GetProfessionInfo(index)
+                local name, _, rank, maxRank, _, _, skillLine = GetProfessionInfo(index)
                 if name then
-                    out[#out + 1] = { name = name, rank = rank, maxRank = maxRank }
+                    out[#out + 1] = { name = name, rank = rank, maxRank = maxRank, skillLine = skillLine }
                 end
             end
         end
@@ -66,6 +67,17 @@ function TFG.GetSpellInfo(spell)
     local info = C_Spell and C_Spell.GetSpellInfo and C_Spell.GetSpellInfo(spell)
     if not info then return nil end
     return info.name, nil, info.iconID, info.castTime, info.minRange, info.maxRange, info.spellID, info.originalIconID
+end
+
+-- Whether the player has learned a spell. On the retail engine IsPlayerSpell is
+-- only a deprecation fallback (absent with the loadDeprecationFallbacks cvar
+-- off, and due to be removed); C_SpellBook is what it calls.
+function TFG.IsSpellKnown(spellID)
+    if IsPlayerSpell then return IsPlayerSpell(spellID) end
+    if C_SpellBook and C_SpellBook.IsSpellKnown and Enum and Enum.SpellBookSpellBank then
+        return C_SpellBook.IsSpellKnown(spellID, Enum.SpellBookSpellBank.Player)
+    end
+    return false
 end
 
 -- Name and icon of a currency (Merchant's Favor on WoW: Forever), or nil on a
