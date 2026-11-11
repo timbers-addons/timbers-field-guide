@@ -1,6 +1,6 @@
 name: Timber's Field Guide
-summary: A scrollable list of spells for each and every class. See what abilities and talents you can learn at any given level.
-logo: Docs/cover.png
+summary: Every spell, talent and recipe you can learn, with the trainer, vendor, quest or drop it comes from and what it costs.
+logo: Docs/CurseForge/cover.png
 license: gpl-3.0-only
 curseforge:
     project_id: "1413887"
@@ -14,8 +14,8 @@ curseforge:
         ![](https://media.forgecdn.net/attachments/description/1413887/description_1186558f-8f63-46b0-8bdc-c108ea763f43.png)
     project_name: Timber's Field Guide
     slug: timbers-field-guide
-    logo: Docs/cover.png
-    summary: A scrollable list of spells for each and every class. See what abilities and talents you can learn at any given level.
+    logo: Docs/CurseForge/cover.png
+    summary: Every spell, talent and recipe you can learn, with the trainer, vendor, quest or drop it comes from and what it costs.
     main_category: Quests & Leveling
     additional_categories:
         - Miscellaneous

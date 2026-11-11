@@ -3,6 +3,9 @@ package-as: TimbersFieldGuide
 ignore:
     - Docs
     - Tests
+    - TimbersFieldGuide/Media/logo.png
+    - TimbersFieldGuide/Media/logo-wide-new.png
+    - TimbersFieldGuide/Media/logo-wide.blp
 
 move-folders:
     TimbersFieldGuide/TimbersFieldGuide: TimbersFieldGuide
