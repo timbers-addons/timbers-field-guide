@@ -559,17 +559,4 @@ TFG.MINING_FOREVER = {
             levels = { 310, 310, 315, 320 },
         },
     },
-    [980] = {
-        {
-            spell_id = 1213638,
-            name = "Smelt Obsidian-Infused Thorium Bar",
-            icon = "inv_ingot_titansteel_dark",
-            product = { item_id = 234003, qty = 1 },
-            materials = {
-                { item_id = 12655, qty = 2 },
-                { item_id = 22203, qty = 2 },
-            },
-            levels = { 0, 315, 322, 330 },
-        },
-    },
 }

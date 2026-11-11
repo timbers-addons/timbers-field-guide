@@ -122,6 +122,7 @@ TFG.PRIEST_FOREVER = {
                 {
                     type = "Quest",
                     location = "Laurna Morninglight, Teldrassil",
+                    faction = "Alliance",
                     quest_id = 5629,
                     quest_name = "Returning Home",
                 },
@@ -137,6 +138,7 @@ TFG.PRIEST_FOREVER = {
                 {
                     type = "Quest",
                     location = "High Priest Rohan, Ironforge",
+                    faction = "Alliance",
                     quest_id = 5639,
                     quest_name = "Desperate Prayer",
                 },
@@ -419,6 +421,7 @@ TFG.PRIEST_FOREVER = {
                 {
                     type = "Quest",
                     location = "High Priestess Laurena, Stormwind City",
+                    faction = "Alliance",
                     quest_id = 5673,
                     quest_name = "Elune's Grace",
                 },
@@ -471,6 +474,7 @@ TFG.PRIEST_FOREVER = {
                 {
                     type = "Quest",
                     location = "High Priestess Laurena, Stormwind City",
+                    faction = "Alliance",
                     quest_id = 5645,
                     quest_name = "Chastise",
                 },

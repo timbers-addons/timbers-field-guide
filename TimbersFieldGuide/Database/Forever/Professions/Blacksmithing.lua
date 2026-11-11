@@ -786,7 +786,7 @@ TFG.BLACKSMITHING_FOREVER = {
             materials = {
                 { item_id = 2836, qty = 2 },
             },
-            levels = { 50, 50, 62, 75 },
+            levels = { 50, 50, 70, 90 },
         },
         {
             spell_id = 1302598,
@@ -8857,20 +8857,6 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 2841, qty = 4 },
             },
             levels = { 0, 115, 130, 145 },
-        },
-        {
-            spell_id = 16980,
-            name = "Rune Edge",
-            categories = { "One-Handed Axes" },
-            icon = "inv_axe_17",
-            product = { item_id = 12779, qty = 1 },
-            materials = {
-                { item_id = 12359, qty = 30 },
-                { item_id = 12799, qty = 2 },
-                { item_id = 12644, qty = 2 },
-                { item_id = 8170, qty = 4 },
-            },
-            levels = { 0, 285, 297, 310 },
         },
         {
             spell_id = 10003,

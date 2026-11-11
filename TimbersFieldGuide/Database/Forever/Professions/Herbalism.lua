@@ -83,6 +83,7 @@ TFG.HERBALISM_FOREVER = {
                 {
                     type = "Quest",
                     location = "Malorne Bladeleaf, Teldrassil",
+                    faction = "Alliance",
                     quest_id = 97944,
                     quest_name = "Camping 101: Herbalism",
                 },

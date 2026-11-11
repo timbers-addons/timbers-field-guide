@@ -55,6 +55,37 @@ TFG.ALCHEMY_FOREVER = {
             levels = { 1, 10, 12, 15 },
         },
         {
+            spell_id = 4508,
+            name = "Minor Discolored Healing Potion",
+            categories = { "Recovery Potions" },
+            icon = "inv_potion_35",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 10,
+                    location = "Odd Child, Westfall",
+                    position = { map = 1436, x = 42.4, y = 72.7 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Quest",
+                    item_id = 4597,
+                    location = "Odd Child, Westfall",
+                    position = { map = 1436, x = 42.4, y = 72.7 },
+                    faction = "Alliance",
+                    quest_id = 92110,
+                    quest_name = "My First Real Potion",
+                },
+            },
+            product = { item_id = 4596, qty = 1 },
+            materials = {
+                { item_id = 3371, qty = 1 },
+                { item_id = 2447, qty = 1 },
+                { item_id = 730, qty = 1 },
+            },
+            levels = { 1, 55, 75, 95 },
+        },
+        {
             spell_id = 2259,
             name = "Alchemy",
             categories = { "Profession Training" },
@@ -65,6 +96,20 @@ TFG.ALCHEMY_FOREVER = {
                     cost = 10,
                     location = "Ghak Healtouch, Loch Modan",
                     position = { map = 1432, x = 37, y = 49.2 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 10,
+                    location = "Ainethil, Darnassus",
+                    position = { map = 1457, x = 55, y = 23.7 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 10,
+                    location = "Lilyssia Nightbreeze, Stormwind City",
+                    position = { map = 1453, x = 55.6, y = 85.8 },
                     faction = "Alliance",
                 },
                 {
@@ -381,25 +426,6 @@ TFG.ALCHEMY_FOREVER = {
             levels = { 50, 80, 100, 120 },
         },
         {
-            spell_id = 4508,
-            name = "Minor Discolored Healing Potion",
-            categories = { "Recovery Potions" },
-            icon = "inv_potion_35",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 4597,
-                },
-            },
-            product = { item_id = 4596, qty = 1 },
-            materials = {
-                { item_id = 3371, qty = 1 },
-                { item_id = 2447, qty = 1 },
-                { item_id = 730, qty = 1 },
-            },
-            levels = { 50, 55, 75, 95 },
-        },
-        {
             spell_id = 3101,
             name = "Alchemy",
             categories = { "Profession Training" },
@@ -408,10 +434,44 @@ TFG.ALCHEMY_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 500,
+                    location = "Ainethil, Darnassus",
+                    position = { map = 1457, x = 55, y = 23.7 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 500,
+                    location = "Lilyssia Nightbreeze, Stormwind City",
+                    position = { map = 1453, x = 55.6, y = 85.8 },
+                    faction = "Alliance",
                 },
             },
             levels = { 50 },
             cap = 150,
+        },
+    },
+    [55] = {
+        {
+            spell_id = 1244645,
+            name = "Lesser Discolored Healing Potion",
+            categories = { "Recovery Potions" },
+            icon = "inv_potion_36",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 100,
+                    location = "Odd Child, Westfall",
+                    position = { map = 1436, x = 42.4, y = 72.7 },
+                    faction = "Alliance",
+                },
+            },
+            product = { item_id = 247239, qty = 1 },
+            materials = {
+                { item_id = 3371, qty = 1 },
+                { item_id = 2450, qty = 1 },
+                { item_id = 730, qty = 1 },
+            },
+            levels = { 55, 85, 105, 125 },
         },
     },
     [60] = {
@@ -734,6 +794,28 @@ TFG.ALCHEMY_FOREVER = {
     },
     [110] = {
         {
+            spell_id = 1244646,
+            name = "Discolored Healing Potion",
+            categories = { "Recovery Potions" },
+            icon = "inv_potion_37",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 500,
+                    location = "Odd Child, Westfall",
+                    position = { map = 1436, x = 42.4, y = 72.7 },
+                    faction = "Alliance",
+                },
+            },
+            product = { item_id = 247240, qty = 1 },
+            materials = {
+                { item_id = 3372, qty = 1 },
+                { item_id = 2453, qty = 1 },
+                { item_id = 730, qty = 1 },
+            },
+            levels = { 110, 135, 155, 175 },
+        },
+        {
             spell_id = 3172,
             name = "Minor Magic Resistance Potion",
             categories = { "Potions" },
@@ -864,6 +946,9 @@ TFG.ALCHEMY_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 5000,
+                    location = "Ainethil, Darnassus",
+                    position = { map = 1457, x = 55, y = 23.7 },
+                    faction = "Alliance",
                 },
             },
             levels = { 125 },
@@ -1182,6 +1267,30 @@ TFG.ALCHEMY_FOREVER = {
                 { item_id = 3372, qty = 1 },
             },
             levels = { 150, 175, 195, 215 },
+        },
+    },
+    [155] = {
+        {
+            spell_id = 1244647,
+            name = "Greater Discolored Healing Potion",
+            categories = { "Recovery Potions" },
+            icon = "inv_potion_38",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 1500,
+                    location = "Odd Child, Westfall",
+                    position = { map = 1436, x = 42.4, y = 72.7 },
+                    faction = "Alliance",
+                },
+            },
+            product = { item_id = 247241, qty = 1 },
+            materials = {
+                { item_id = 3372, qty = 1 },
+                { item_id = 3356, qty = 1 },
+                { item_id = 730, qty = 1 },
+            },
+            levels = { 155, 175, 195, 215 },
         },
     },
     [160] = {
@@ -1816,6 +1925,28 @@ TFG.ALCHEMY_FOREVER = {
             levels = { 215, 225, 245, 265 },
         },
         {
+            spell_id = 1244648,
+            name = "Superior Discolored Healing Potion",
+            categories = { "Recovery Potions" },
+            icon = "inv_potion_39",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 5000,
+                    location = "Odd Child, Westfall",
+                    position = { map = 1436, x = 42.4, y = 72.7 },
+                    faction = "Alliance",
+                },
+            },
+            product = { item_id = 247242, qty = 1 },
+            materials = {
+                { item_id = 8925, qty = 1 },
+                { item_id = 8838, qty = 1 },
+                { item_id = 730, qty = 1 },
+            },
+            levels = { 215, 230, 250, 270 },
+        },
+        {
             spell_id = 1249632,
             name = "Viridian Dye",
             categories = { "Reagents" },
@@ -2249,8 +2380,10 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_48",
             source = {
                 {
-                    type = "Item",
+                    type = "Vendor",
                     item_id = 9301,
+                    cost = 10000,
+                    location = "Maria Lumere, Stormwind City",
                 },
             },
             product = { item_id = 9264, qty = 1 },
@@ -2302,25 +2435,6 @@ TFG.ALCHEMY_FOREVER = {
                 { item_id = 8925, qty = 1 },
             },
             levels = { 250, 275, 295, 315 },
-        },
-        {
-            spell_id = 1231583,
-            name = "Major Discolored Healing Potion",
-            categories = { "Recovery Potions" },
-            icon = "inv_potion_40",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 241651,
-                },
-            },
-            product = { item_id = 241650, qty = 1 },
-            materials = {
-                { item_id = 8925, qty = 1 },
-                { item_id = 13466, qty = 1 },
-                { item_id = 730, qty = 1 },
-            },
-            levels = { 250, 290, 310, 330 },
         },
         {
             spell_id = 11477,
@@ -2468,6 +2582,32 @@ TFG.ALCHEMY_FOREVER = {
                 { item_id = 8925, qty = 1 },
             },
             levels = { 270, 285, 305, 325 },
+        },
+        {
+            spell_id = 1231583,
+            name = "Major Discolored Healing Potion",
+            categories = { "Recovery Potions" },
+            icon = "inv_potion_40",
+            source = {
+                {
+                    type = "Trainer",
+                    cost = 10000,
+                    location = "Odd Child, Westfall",
+                    position = { map = 1436, x = 42.4, y = 72.7 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Item",
+                    item_id = 241651,
+                },
+            },
+            product = { item_id = 241650, qty = 1 },
+            materials = {
+                { item_id = 8925, qty = 1 },
+                { item_id = 13466, qty = 1 },
+                { item_id = 730, qty = 1 },
+            },
+            levels = { 270, 290, 310, 330 },
         },
     },
     [275] = {
@@ -3553,32 +3693,6 @@ TFG.ALCHEMY_FOREVER = {
     },
     [980] = {
         {
-            spell_id = 1244646,
-            name = "Discolored Healing Potion",
-            categories = { "Recovery Potions" },
-            icon = "inv_potion_37",
-            product = { item_id = 247240, qty = 1 },
-            materials = {
-                { item_id = 3372, qty = 1 },
-                { item_id = 2453, qty = 1 },
-                { item_id = 730, qty = 1 },
-            },
-            levels = { 0, 135, 155, 175 },
-        },
-        {
-            spell_id = 2365,
-            name = "Draught of Tongues",
-            categories = { "Draughts" },
-            icon = "inv_potion_12",
-            product = { item_id = 2460, qty = 1 },
-            materials = {
-                { item_id = 2449, qty = 2 },
-                { item_id = 785, qty = 2 },
-                { item_id = 3371, qty = 1 },
-            },
-            levels = { 0, 100, 120, 140 },
-        },
-        {
             spell_id = 11447,
             name = "Draught of Water Walking",
             categories = { "Draughts" },
@@ -3592,32 +3706,6 @@ TFG.ALCHEMY_FOREVER = {
             levels = { 0, 190, 210, 230 },
         },
         {
-            spell_id = 1244647,
-            name = "Greater Discolored Healing Potion",
-            categories = { "Recovery Potions" },
-            icon = "inv_potion_38",
-            product = { item_id = 247241, qty = 1 },
-            materials = {
-                { item_id = 3372, qty = 1 },
-                { item_id = 3356, qty = 1 },
-                { item_id = 730, qty = 1 },
-            },
-            levels = { 0, 175, 195, 215 },
-        },
-        {
-            spell_id = 1244645,
-            name = "Lesser Discolored Healing Potion",
-            categories = { "Recovery Potions" },
-            icon = "inv_potion_36",
-            product = { item_id = 247239, qty = 1 },
-            materials = {
-                { item_id = 3371, qty = 1 },
-                { item_id = 2450, qty = 1 },
-                { item_id = 730, qty = 1 },
-            },
-            levels = { 0, 85, 105, 125 },
-        },
-        {
             spell_id = 22430,
             name = "Refined Scale of Onyxia",
             categories = { "Reagents" },
@@ -3627,32 +3715,6 @@ TFG.ALCHEMY_FOREVER = {
                 { item_id = 15410, qty = 1 },
             },
             levels = { 0, 315, 322, 330 },
-        },
-        {
-            spell_id = 1250775,
-            name = "Revealing Draught",
-            categories = { "Draughts" },
-            icon = "trade_alchemy_dpotion_e2",
-            product = { item_id = 250326, qty = 1 },
-            materials = {
-                { item_id = 3818, qty = 3 },
-                { item_id = 3358, qty = 1 },
-                { item_id = 3372, qty = 1 },
-            },
-            levels = { 0, 205, 207, 210 },
-        },
-        {
-            spell_id = 1244648,
-            name = "Superior Discolored Healing Potion",
-            categories = { "Recovery Potions" },
-            icon = "inv_potion_39",
-            product = { item_id = 247242, qty = 1 },
-            materials = {
-                { item_id = 8925, qty = 1 },
-                { item_id = 8838, qty = 1 },
-                { item_id = 730, qty = 1 },
-            },
-            levels = { 0, 230, 250, 270 },
         },
     },
 }

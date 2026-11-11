@@ -218,6 +218,7 @@ TFG.COOKING_FOREVER = {
                     type = "Quest",
                     item_id = 5482,
                     location = "Zarrin, Teldrassil",
+                    faction = "Alliance",
                     quest_id = 4161,
                     quest_name = "Recipe of the Kaldorei",
                 },
@@ -334,6 +335,7 @@ TFG.COOKING_FOREVER = {
                     type = "Quest",
                     item_id = 263511,
                     location = "Zerril Softbreeze, Zephras Isle",
+                    faction = "Alliance",
                     quest_id = 92553,
                     quest_name = "Restocking the Larders",
                 },
@@ -352,8 +354,10 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_food_68",
             source = {
                 {
-                    type = "Item",
+                    type = "Drop",
                     item_id = 250187,
+                    location = "Ishamuhale, The Barrens",
+                    position = { map = 1413, x = 59.7, y = 30.3 },
                 },
             },
             product = { item_id = 250079, qty = 1 },
@@ -418,6 +422,7 @@ TFG.COOKING_FOREVER = {
                     type = "Quest",
                     item_id = 263513,
                     location = "Nyalah Brightfire, Zephras Isle",
+                    faction = "Alliance",
                     quest_id = 93317,
                     quest_name = "Crab Season",
                 },
@@ -2777,29 +2782,6 @@ TFG.COOKING_FOREVER = {
         },
     },
     [980] = {
-        {
-            spell_id = 1255241,
-            name = "Cleansing Stew",
-            categories = { "Everyday Meals" },
-            icon = "inv_misc_frostystew",
-            product = { item_id = 252683, qty = 1 },
-            materials = {
-                { item_id = 252948, qty = 1 },
-                { item_id = 5471, qty = 1 },
-                { item_id = 12207, qty = 1 },
-            },
-        },
-        {
-            spell_id = 1270632,
-            name = "Critter Cookie",
-            categories = { "Miscellaneous Cuisines" },
-            icon = "inv_misc_food_150_cookie",
-            product = { item_id = 263507, qty = 1 },
-            materials = {
-                { item_id = 10284, qty = 5 },
-            },
-            levels = { 0, 80, 82, 85 },
-        },
         {
             spell_id = 1247741,
             name = "Spinefin Halibut",
