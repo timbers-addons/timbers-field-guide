@@ -93,7 +93,7 @@ TFG.HERBALISM_FOREVER = {
                 { item_id = 2447, qty = 1 },
                 { item_id = 765, qty = 1 },
             },
-            levels = { 20, 20, 22, 25 },
+            levels = { 20, 20, 20, 20 },
         },
     },
     [50] = {
@@ -239,7 +239,7 @@ TFG.HERBALISM_FOREVER = {
                 { item_id = 8836, qty = 1 },
                 { item_id = 8831, qty = 1 },
             },
-            levels = { 140, 140, 142, 145 },
+            levels = { 140, 140, 140, 140 },
         },
     },
     [150] = {

@@ -201,7 +201,7 @@ TFG.ALCHEMY_FOREVER = {
                 { item_id = 2447, qty = 1 },
                 { item_id = 3371, qty = 1 },
             },
-            levels = { 20, 20, 22, 25 },
+            levels = { 20, 20, 20, 20 },
         },
     },
     [25] = {
@@ -1137,7 +1137,7 @@ TFG.ALCHEMY_FOREVER = {
                 { item_id = 3356, qty = 1 },
                 { item_id = 2452, qty = 1 },
             },
-            levels = { 140, 140, 142, 145 },
+            levels = { 140, 140, 140, 140 },
         },
         {
             spell_id = 1251737,

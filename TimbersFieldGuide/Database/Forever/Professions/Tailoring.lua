@@ -343,7 +343,7 @@ TFG.TAILORING_FOREVER = {
                 { item_id = 2996, qty = 1 },
                 { item_id = 2320, qty = 1 },
             },
-            levels = { 20, 20, 22, 25 },
+            levels = { 20, 20, 20, 20 },
         },
         {
             spell_id = 12045,
@@ -3783,7 +3783,7 @@ TFG.TAILORING_FOREVER = {
                 { item_id = 4305, qty = 5 },
                 { item_id = 2321, qty = 3 },
             },
-            levels = { 140, 140, 142, 145 },
+            levels = { 140, 140, 140, 140 },
         },
         {
             spell_id = 12093,
@@ -8846,7 +8846,7 @@ TFG.TAILORING_FOREVER = {
                 { item_id = 2996, qty = 1 },
                 { item_id = 2320, qty = 1 },
             },
-            levels = { 0, 20, 22, 25 },
+            levels = { 0, 20, 20, 20 },
         },
         {
             spell_id = 26086,

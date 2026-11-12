@@ -134,7 +134,6 @@ TFG.LEATHERWORKING_FOREVER = {
                     cost = 10,
                     location = "Waldor, The Wailing Caverns",
                     position = { map = 1414, x = 51.9, y = 55.5 },
-                    faction = "Alliance",
                 },
             },
             levels = { 1 },
@@ -184,7 +183,7 @@ TFG.LEATHERWORKING_FOREVER = {
             materials = {
                 { item_id = 2318, qty = 5 },
             },
-            levels = { 20, 20, 22, 25 },
+            levels = { 20, 20, 20, 20 },
         },
     },
     [25] = {
@@ -3140,6 +3139,25 @@ TFG.LEATHERWORKING_FOREVER = {
             levels = { 125, 150, 160, 170 },
         },
         {
+            spell_id = 1263031,
+            name = "Tanning Rack",
+            categories = { "Camping" },
+            icon = "inv_10_skinning_leather_rarehide_color1",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 273096,
+                },
+            },
+            product = { item_id = 279941, qty = 1 },
+            materials = {
+                { item_id = 2319, qty = 5 },
+                { item_id = 2321, qty = 3 },
+                { item_id = 4470, qty = 2 },
+            },
+            levels = { 125, 125, 125, 125 },
+        },
+        {
             spell_id = 1255090,
             name = "Totemic Leather Helm",
             categories = { "Leather Helmets" },
@@ -3428,25 +3446,6 @@ TFG.LEATHERWORKING_FOREVER = {
                 { item_id = 2321, qty = 2 },
             },
             levels = { 140, 160, 170, 180 },
-        },
-        {
-            spell_id = 1263031,
-            name = "Tanning Rack",
-            categories = { "Camping" },
-            icon = "inv_10_skinning_leather_rarehide_color1",
-            source = {
-                {
-                    type = "Item",
-                    item_id = 273096,
-                },
-            },
-            product = { item_id = 279941, qty = 1 },
-            materials = {
-                { item_id = 2319, qty = 5 },
-                { item_id = 2321, qty = 3 },
-                { item_id = 4470, qty = 2 },
-            },
-            levels = { 140, 140, 142, 145 },
         },
     },
     [145] = {

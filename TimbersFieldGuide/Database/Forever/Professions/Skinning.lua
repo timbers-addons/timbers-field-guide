@@ -59,7 +59,7 @@ TFG.SKINNING_FOREVER = {
                 { item_id = 2318, qty = 3 },
                 { item_id = 4470, qty = 2 },
             },
-            levels = { 20, 20, 22, 25 },
+            levels = { 20, 20, 20, 20 },
         },
     },
     [50] = {
@@ -160,7 +160,7 @@ TFG.SKINNING_FOREVER = {
                 { item_id = 5784, qty = 2 },
                 { item_id = 2321, qty = 1 },
             },
-            levels = { 140, 140, 142, 145 },
+            levels = { 140, 140, 140, 140 },
         },
     },
     [200] = {

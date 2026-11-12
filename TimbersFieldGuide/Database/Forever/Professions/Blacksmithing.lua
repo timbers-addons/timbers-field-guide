@@ -219,7 +219,7 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 2835, qty = 1 },
                 { item_id = 2840, qty = 1 },
             },
-            levels = { 20, 20, 22, 25 },
+            levels = { 20, 20, 20, 20 },
         },
     },
     [25] = {
@@ -2955,7 +2955,7 @@ TFG.BLACKSMITHING_FOREVER = {
                 { item_id = 3478, qty = 2 },
                 { item_id = 2319, qty = 2 },
             },
-            levels = { 140, 140, 142, 145 },
+            levels = { 140, 140, 140, 140 },
         },
         {
             spell_id = 3501,

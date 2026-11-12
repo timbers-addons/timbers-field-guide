@@ -1077,7 +1077,7 @@ TFG.COOKING_FOREVER = {
             materials = {
                 { item_id = 11291, qty = 1 },
             },
-            levels = { 90, 95, 100, 105 },
+            levels = { 90, 95, 95, 95 },
         },
         {
             spell_id = 3372,
@@ -1481,7 +1481,7 @@ TFG.COOKING_FOREVER = {
                 { item_id = 12204, qty = 1 },
                 { item_id = 3713, qty = 1 },
             },
-            levels = { 140, 145, 147, 150 },
+            levels = { 140, 145, 145, 145 },
         },
     },
     [150] = {
@@ -2052,7 +2052,7 @@ TFG.COOKING_FOREVER = {
             materials = {
                 { item_id = 272941, qty = 1 },
             },
-            levels = { 200, 205, 212, 220 },
+            levels = { 200, 205, 205, 205 },
         },
         {
             spell_id = 15910,

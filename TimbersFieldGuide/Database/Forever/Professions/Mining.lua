@@ -106,7 +106,7 @@ TFG.MINING_FOREVER = {
                 { item_id = 2835, qty = 1 },
                 { item_id = 2840, qty = 1 },
             },
-            levels = { 20, 20, 22, 25 },
+            levels = { 20, 20, 20, 20 },
         },
     },
     [50] = {
@@ -282,7 +282,7 @@ TFG.MINING_FOREVER = {
                 { item_id = 2772, qty = 1 },
                 { item_id = 2842, qty = 1 },
             },
-            levels = { 140, 140, 142, 145 },
+            levels = { 140, 140, 140, 140 },
         },
     },
     [155] = {
