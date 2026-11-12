@@ -1,5 +1,18 @@
 # Changelog
 
+## v2026.11.12 (2026-11-12)
+
+- Conjure spells and other class spells that make an item show it in the tooltip and popup
+- Forever: 70862 data and new scans (Elune's Grace quest, more Enchanting and Tailoring trainers, recipe vendors in Duskwood, Desolace and Feralas)
+- Class spell tooltips show the training cost again
+- Forever: Alliance side on quest and trainer sources, Alchemy trainers Odd Child, Ainethil and Lilyssia Nightbreeze, recipes not in the game dropped (Rune Edge, Goblin Radio, Gnomish Ham Radio, Critter Cookie, Cleansing Stew, Smelt Obsidian-Infused Thorium Bar)
+- Known spells read through the compat file, red marks per character, professions matched by skill line, old window removed
+- Packaging leaves out the logo sources, project logo path fixed, summary names trainers, vendors and recipes
+- Forever: Leatherworking trainer Waldor in Wailing Caverns, new Spiritcaller icons from a 70888 hotfix
+- Forever: camp items give no skill-ups past their learn level and Tanning Rack is learned at 125 (70888 hotfixes)
+- Bumped version to v2026.11.12
+
+
 ## v2026.11.05h (2026-11-05)
 
 - Forever: Starshards rank 1 comes from Returning Home (Laurna Morninglight, Teldrassil); Camping 101: Enchanting and Tailoring from Lyreena Duskblade; Alanna Raveneye teaches Enchanting and Radnaal Maneweaver Skinning in Teldrassil

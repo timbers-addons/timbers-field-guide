@@ -29,3 +29,41 @@ jobs:
             *)        TITLE="$TAG"; PRE=false ;;
           esac
           gh release edit "$TAG" --title "$TITLE" --prerelease=$PRE
+      - name: Check for a CurseForge token
+        id: curseforge
+        env:
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
+        run: |
+          if [ -n "$CF_API_KEY" ]; then echo "upload=true" >> "$GITHUB_OUTPUT"; fi
+      - name: Read release clients
+        id: clients
+        if: steps.curseforge.outputs.upload == 'true'
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          file=.publish/release-clients
+          if [ ! -f "$file" ]; then
+            echo "No $file: uploading for every client the TOCs declare."
+            exit 0
+          fi
+          read -r for_tag versions < "$file" || true
+          versions=${versions%$'\r'}
+          if [ "$for_tag" != "$TAG" ]; then
+            echo "$file is for another tag: uploading for every client the TOCs declare."
+            exit 0
+          fi
+          if ! [[ "$versions" =~ ^[0-9]+\.[0-9]+\.[0-9]+(,[0-9]+\.[0-9]+\.[0-9]+)*$ ]]; then
+            echo "::error::$file does not hold a game version list for $TAG"
+            exit 1
+          fi
+          echo "Uploading for $versions only."
+          # A single game type would add its name to the file name; keep the
+          # name the same as an upload for every client.
+          echo "args=-g $versions -n {package-name}-{project-version}{nolib}:{project-version}{nolib}" >> "$GITHUB_OUTPUT"
+      - name: Upload to CurseForge
+        if: steps.curseforge.outputs.upload == 'true'
+        uses: BigWigsMods/packager@v2
+        with:
+          args: ${{ steps.clients.outputs.args }}
+        env:
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
