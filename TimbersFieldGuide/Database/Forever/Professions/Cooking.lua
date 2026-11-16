@@ -1318,8 +1318,12 @@ TFG.COOKING_FOREVER = {
             icon = "inv_misc_bowl_01",
             source = {
                 {
-                    type = "Item",
+                    type = "Quest",
                     item_id = 3681,
+                    location = "James Halloran, Wetlands",
+                    faction = "Alliance",
+                    quest_id = 471,
+                    quest_name = "Apprentice's Duties",
                 },
             },
             product = { item_id = 3664, qty = 1 },
@@ -1451,8 +1455,12 @@ TFG.COOKING_FOREVER = {
             icon = "inv_egg_04",
             source = {
                 {
-                    type = "Item",
+                    type = "Quest",
                     item_id = 3682,
+                    location = "Ormer Ironbraid, Wetlands",
+                    faction = "Alliance",
+                    quest_id = 296,
+                    quest_name = "Ormer's Revenge",
                 },
             },
             product = { item_id = 3665, qty = 1 },

@@ -60,6 +60,13 @@ TFG.FIRST_AID_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 100,
+                    location = "Fremal Doohickey, Wetlands",
+                    position = { map = 1437, x = 10.8, y = 61.3 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 100,
                     location = "Dannelor, Darnassus",
                     position = { map = 1457, x = 51.7, y = 12.5 },
                     faction = "Alliance",
@@ -128,6 +135,13 @@ TFG.FIRST_AID_FOREVER = {
                     cost = 500,
                     location = "Michelle Belle, Lion's Pride Inn",
                     position = { map = 1429, x = 43.4, y = 65.7 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 500,
+                    location = "Fremal Doohickey, Wetlands",
+                    position = { map = 1437, x = 10.8, y = 61.3 },
                     faction = "Alliance",
                 },
                 {

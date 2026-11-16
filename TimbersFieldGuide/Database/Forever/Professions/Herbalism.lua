@@ -22,6 +22,13 @@ TFG.HERBALISM_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 10,
+                    location = "Telurinon Moonshadow, Wetlands",
+                    position = { map = 1437, x = 8, y = 56 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 10,
                     location = "Kali Healtouch, Loch Modan",
                     position = { map = 1432, x = 36.5, y = 48.4 },
                     faction = "Alliance",
@@ -31,6 +38,13 @@ TFG.HERBALISM_FOREVER = {
                     cost = 10,
                     location = "Malorne Bladeleaf, Teldrassil",
                     position = { map = 1438, x = 57.7, y = 60.7 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 10,
+                    location = "Tannysa, Stormwind City",
+                    position = { map = 1453, x = 54.4, y = 84 },
                     faction = "Alliance",
                 },
                 {
@@ -106,6 +120,13 @@ TFG.HERBALISM_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 500,
+                    location = "Telurinon Moonshadow, Wetlands",
+                    position = { map = 1437, x = 8, y = 56 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 500,
                     location = "Kali Healtouch, Loch Modan",
                     position = { map = 1432, x = 36.5, y = 48.4 },
                     faction = "Alliance",
@@ -115,6 +136,13 @@ TFG.HERBALISM_FOREVER = {
                     cost = 500,
                     location = "Malorne Bladeleaf, Teldrassil",
                     position = { map = 1438, x = 57.7, y = 60.7 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 500,
+                    location = "Tannysa, Stormwind City",
+                    position = { map = 1453, x = 54.4, y = 84 },
                     faction = "Alliance",
                 },
                 {
@@ -191,6 +219,13 @@ TFG.HERBALISM_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 5000,
+                    location = "Telurinon Moonshadow, Wetlands",
+                    position = { map = 1437, x = 8, y = 56 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 5000,
                     location = "Kali Healtouch, Loch Modan",
                     position = { map = 1432, x = 36.5, y = 48.4 },
                     faction = "Alliance",
@@ -200,6 +235,13 @@ TFG.HERBALISM_FOREVER = {
                     cost = 5000,
                     location = "Malorne Bladeleaf, Teldrassil",
                     position = { map = 1438, x = 57.7, y = 60.7 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 5000,
+                    location = "Tannysa, Stormwind City",
+                    position = { map = 1453, x = 54.4, y = 84 },
                     faction = "Alliance",
                 },
                 {
@@ -297,6 +339,13 @@ TFG.HERBALISM_FOREVER = {
                 {
                     type = "Trainer",
                     cost = 50000,
+                    location = "Telurinon Moonshadow, Wetlands",
+                    position = { map = 1437, x = 8, y = 56 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 50000,
                     location = "Kali Healtouch, Loch Modan",
                     position = { map = 1432, x = 36.5, y = 48.4 },
                     faction = "Alliance",
@@ -306,6 +355,13 @@ TFG.HERBALISM_FOREVER = {
                     cost = 50000,
                     location = "Malorne Bladeleaf, Teldrassil",
                     position = { map = 1438, x = 57.7, y = 60.7 },
+                    faction = "Alliance",
+                },
+                {
+                    type = "Trainer",
+                    cost = 50000,
+                    location = "Tannysa, Stormwind City",
+                    position = { map = 1453, x = 54.4, y = 84 },
                     faction = "Alliance",
                 },
                 {

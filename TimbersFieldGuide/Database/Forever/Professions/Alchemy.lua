@@ -1473,6 +1473,25 @@ TFG.ALCHEMY_FOREVER = {
     },
     [180] = {
         {
+            spell_id = 11447,
+            name = "Draught of Water Walking",
+            categories = { "Draughts" },
+            icon = "inv_potion_15",
+            source = {
+                {
+                    type = "Item",
+                    item_id = 288206,
+                },
+            },
+            product = { item_id = 8827, qty = 1 },
+            materials = {
+                { item_id = 6370, qty = 1 },
+                { item_id = 3357, qty = 1 },
+                { item_id = 3372, qty = 1 },
+            },
+            levels = { 180, 190, 210, 230 },
+        },
+        {
             spell_id = 1251744,
             name = "Greater Mender's Potion",
             categories = { "Potions" },
@@ -3692,19 +3711,6 @@ TFG.ALCHEMY_FOREVER = {
         },
     },
     [980] = {
-        {
-            spell_id = 11447,
-            name = "Draught of Water Walking",
-            categories = { "Draughts" },
-            icon = "inv_potion_15",
-            product = { item_id = 8827, qty = 1 },
-            materials = {
-                { item_id = 6370, qty = 1 },
-                { item_id = 3357, qty = 1 },
-                { item_id = 3372, qty = 1 },
-            },
-            levels = { 0, 190, 210, 230 },
-        },
         {
             spell_id = 22430,
             name = "Refined Scale of Onyxia",

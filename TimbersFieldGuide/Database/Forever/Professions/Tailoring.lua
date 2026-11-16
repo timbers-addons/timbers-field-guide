@@ -1649,7 +1649,7 @@ TFG.TAILORING_FOREVER = {
             },
             product = { item_id = 4241, qty = 1 },
             materials = {
-                { item_id = 2997, qty = 4 },
+                { item_id = 2997, qty = 5 },
                 { item_id = 2605, qty = 1 },
                 { item_id = 2321, qty = 1 },
             },
@@ -1710,8 +1710,10 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_boots_09",
             source = {
                 {
-                    type = "Item",
+                    type = "Drop",
                     item_id = 4345,
+                    location = "Murloc Minor Tidecaller, Redridge Mountains",
+                    position = { map = 1433, x = 43.5, y = 71.3 },
                 },
             },
             product = { item_id = 4313, qty = 1 },
@@ -2142,7 +2144,7 @@ TFG.TAILORING_FOREVER = {
             },
             product = { item_id = 5763, qty = 1 },
             materials = {
-                { item_id = 2997, qty = 4 },
+                { item_id = 2997, qty = 5 },
                 { item_id = 2604, qty = 1 },
                 { item_id = 2321, qty = 1 },
             },
@@ -2887,8 +2889,10 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_gauntlets_22",
             source = {
                 {
-                    type = "Item",
+                    type = "Drop",
                     item_id = 7092,
+                    location = "Blackrock Tracker, Redridge Mountains",
+                    position = { map = 1433, x = 32.1, y = 9.3 },
                 },
             },
             product = { item_id = 7047, qty = 1 },
@@ -3714,7 +3718,7 @@ TFG.TAILORING_FOREVER = {
             },
             product = { item_id = 5764, qty = 1 },
             materials = {
-                { item_id = 4305, qty = 4 },
+                { item_id = 4305, qty = 5 },
                 { item_id = 4234, qty = 3 },
                 { item_id = 2321, qty = 3 },
                 { item_id = 2605, qty = 1 },
@@ -3938,7 +3942,7 @@ TFG.TAILORING_FOREVER = {
             },
             product = { item_id = 5765, qty = 1 },
             materials = {
-                { item_id = 4305, qty = 5 },
+                { item_id = 4305, qty = 6 },
                 { item_id = 2325, qty = 1 },
                 { item_id = 2321, qty = 4 },
             },
@@ -8896,7 +8900,7 @@ TFG.TAILORING_FOREVER = {
             icon = "inv_misc_bag_10_red",
             product = { item_id = 10051, qty = 1 },
             materials = {
-                { item_id = 4339, qty = 4 },
+                { item_id = 4339, qty = 5 },
                 { item_id = 2604, qty = 2 },
                 { item_id = 8343, qty = 2 },
             },
