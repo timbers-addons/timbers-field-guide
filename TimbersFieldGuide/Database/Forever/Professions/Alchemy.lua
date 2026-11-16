@@ -1479,8 +1479,9 @@ TFG.ALCHEMY_FOREVER = {
             icon = "inv_potion_15",
             source = {
                 {
-                    type = "Item",
+                    type = "Drop",
                     item_id = 288206,
+                    location = "Fishing, Mount Hyjal",
                 },
             },
             product = { item_id = 8827, qty = 1 },
